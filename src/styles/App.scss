@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--primary: rgb(82, 82, 176);
+	--secondary: white;
+	--tertiary: #cfcfcf;
+
+	--background: #f6f6f8;
+	--foreground: black;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	color: var(--foreground);
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 1rem;
+	background-color: var(--background);
+}
+
+img,
+svg,
+video {
+	height: auto;
+	max-width: 100%;
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+button {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}

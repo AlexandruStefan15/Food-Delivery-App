@@ -1,0 +1,29 @@
+{
+	"restaurants": [
+		{
+			"id": 1,
+			"title": "Sakura House",
+			"cousine": "Japanese",
+			"main_food_category": "Ramen",
+			"labels": ["premium"],
+			"dishes_ids": [],
+			"card_image": "/images/restaurants/sakura.jpg",
+			"cover_image": "/images/restaurants/sakura-cover.jpg",
+			"delivery_time": "40-50 min",
+			"delivery_fee": 2.99,
+			"rating": 4.9
+		}
+	],
+
+	"food_categories": [],
+
+	"menu_categories": [],
+
+	"dishes": [
+		{
+			"vegan": true,
+			"gluten-free": true,
+			"vegetarian": true
+		}
+	]
+}

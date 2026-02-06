@@ -17,6 +17,8 @@
 		{ "id": 5, "title": "Desserts" }
 	],
 
+	"favorites_restaurants_ids": [],
+
 	"restaurants": [
 		{
 			"id": 1,

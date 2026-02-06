@@ -1,29 +1,93 @@
 {
+	"food_categories": [
+		{ "id": 1, "title": "Pizza" },
+		{ "id": 2, "title": "Burgers" },
+		{ "id": 3, "title": "Sushi" },
+		{ "id": 4, "title": "Desserts" },
+		{ "id": 5, "title": "Mexican" },
+		{ "id": 6, "title": "Pasta" },
+		{ "id": 7, "title": "Steak" }
+	],
+
+	"menu_categories": [
+		{ "id": 1, "title": "Appetizers" },
+		{ "id": 2, "title": "Signature Mains" },
+		{ "id": 3, "title": "Side Dishes" },
+		{ "id": 4, "title": "Beverages" },
+		{ "id": 5, "title": "Desserts" }
+	],
+
 	"restaurants": [
 		{
 			"id": 1,
-			"title": "Sakura House",
-			"cousine": "Japanese",
-			"main_food_category": "Ramen",
-			"labels": ["premium"],
-			"dishes_ids": [],
+			"name": "Sakura House",
+			"cuisine": "Japanese",
 			"card_image": "/images/restaurants/sakura.jpg",
 			"cover_image": "/images/restaurants/sakura-cover.jpg",
-			"delivery_time": "40-50 min",
+			"delivery_time": "25-30 min",
 			"delivery_fee": 2.99,
-			"rating": 4.9
+			"rating": 4.9,
+			"distance": 1.8,
+			"closing_at": "10:30 PM",
+			"food_categories_ids": [3]
+		},
+		{
+			"id": 2,
+			"name": "The Golden Olive Bistro",
+			"cuisine": "International",
+			"card_image": "/images/restaurants/GoldenOliveBistro.jpg",
+			"cover_image": "/images/restaurants/GoldenOliveBistro-cover.jpg",
+			"delivery_time": "30-35 min",
+			"delivery_fee": 3.5,
+			"rating": 4.5,
+			"distance": 1.2,
+			"closing_at": "10:00 PM",
+			"food_categories_ids": [4, 6, 7]
 		}
 	],
 
-	"food_categories": [],
-
-	"menu_categories": [],
-
 	"dishes": [
 		{
-			"vegan": true,
-			"gluten-free": true,
-			"vegetarian": true
+			"id": 1,
+			"title": "Roasted Lamb Shoulder",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"price": 32,
+			"calories": 725,
+			"prep_time": "15-20 min",
+			"rating": 4.9,
+			"card_image": "/images/dishes/RoastedLambShoulder.jpg",
+			"cover_image": "/images/dishes/RoastedLambShoulder-cover.jpg",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 2
+		},
+		{
+			"id": 2,
+			"title": "Rice",
+			"price": 4,
+			"restaurant_id": 1,
+			"menu_category_id": 3,
+			"dietary": {
+				"vegan": true,
+				"gluten_free": true,
+				"vegetarian": true
+			}
+		},
+		{
+			"id": 3,
+			"title": "French Fries",
+			"price": 5,
+			"restaurant_id": 2,
+			"menu_category_id": 3,
+			"dietary": {
+				"vegan": true,
+				"gluten_free": true,
+				"vegetarian": true
+			}
 		}
 	]
 }

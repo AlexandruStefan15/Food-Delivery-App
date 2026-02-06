@@ -7,19 +7,19 @@
 }
 
 :root {
-	--primary: #9a5f4c;
-	--secondary: white;
-	--tertiary: black;
-	--accent: #ec4913;
+	--primary-white: white;
+	--secondary-brown-dark: #1b110d;
+	--accent-orange: #ec4913;
 	--accent-muted: #e7d5cf;
 
 	--background: #f8f6f6;
-	--foreground: black;
+	--foreground-black: black;
+	--foreground-brown: #9a5f4c;
 }
 
 body {
-	font-family: "Open Sans", sans-serif;
-	color: var(--foreground);
+	font-family: "Plus Jakarta Sans", "Open Sans", sans-serif;
+	color: var(--foreground-black);
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;

@@ -30,7 +30,7 @@
 			"delivery_fee": 2.99,
 			"rating": 4.9,
 			"distance": 1.8,
-			"closing_at": "10:30 PM",
+			"closing_time": "10:30 PM",
 			"food_categories_ids": [3]
 		},
 		{
@@ -43,7 +43,7 @@
 			"delivery_fee": 3.5,
 			"rating": 4.5,
 			"distance": 1.2,
-			"closing_at": "10:00 PM",
+			"closing_time": "10:00 PM",
 			"food_categories_ids": [4, 6, 7]
 		}
 	],
@@ -71,25 +71,79 @@
 			"id": 2,
 			"title": "Rice",
 			"price": 4,
-			"restaurant_id": 1,
-			"menu_category_id": 3,
 			"dietary": {
 				"vegan": true,
 				"gluten_free": true,
 				"vegetarian": true
-			}
+			},
+			"restaurant_id": 1,
+			"menu_category_id": 3
 		},
 		{
 			"id": 3,
 			"title": "French Fries",
 			"price": 5,
-			"restaurant_id": 2,
-			"menu_category_id": 3,
 			"dietary": {
 				"vegan": true,
 				"gluten_free": true,
 				"vegetarian": true
-			}
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 3
+		},
+		{
+			"id": 4,
+			"title": "Truffle Mushroom Risotto",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"price": 26.5,
+			"calories": 525,
+			"prep_time": "15-18 min",
+			"rating": 4.5,
+			"card_image": "/images/dishes/TruffleMushroomRisotto.jpg",
+			"cover_image": "/images/dishes/TruffleMushroomRisotto-cover.jpg",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 2
+		},
+		{
+			"id": 5,
+			"title": "Classic Bruschetta",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"price": 12.5,
+			"calories": 125,
+			"prep_time": "5 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/ClassicBruschetta.jpg",
+			"cover_image": "/images/dishes/ClassicBruschetta-cover.jpg",
+			"dietary": {
+				"vegan": true,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 1
+		},
+		{
+			"id": 6,
+			"title": "Crispy Calamari",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"price": 15,
+			"calories": 110,
+			"prep_time": "5 min",
+			"rating": 4.8,
+			"card_image": "/images/dishes/CrispyCalamari.jpg",
+			"cover_image": "/images/dishes/CrispyCalamari-cover.jpg",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 1
 		}
 	]
 }

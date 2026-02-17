@@ -24,8 +24,8 @@
 			"id": 1,
 			"name": "Sakura House",
 			"cuisine": "Japanese",
-			"card_image": "/images/restaurants/sakura.jpg",
-			"cover_image": "/images/restaurants/sakura-cover.jpg",
+			"card_image": "/images/restaurants/sakura.png",
+			"cover_image": "/images/restaurants/sakura-cover.png",
 			"delivery_time": "25-30 min",
 			"delivery_fee": 2.99,
 			"rating": 4.9,
@@ -37,8 +37,8 @@
 			"id": 2,
 			"name": "The Golden Olive Bistro",
 			"cuisine": "International",
-			"card_image": "/images/restaurants/GoldenOliveBistro.jpg",
-			"cover_image": "/images/restaurants/GoldenOliveBistro-cover.jpg",
+			"card_image": "/images/restaurants/goldenOliveBistro.png",
+			"cover_image": "/images/restaurants/goldenOliveBistro-cover.png",
 			"delivery_time": "30-35 min",
 			"delivery_fee": 3.5,
 			"rating": 4.5,
@@ -57,8 +57,8 @@
 			"calories": 725,
 			"prep_time": "15-20 min",
 			"rating": 4.9,
-			"card_image": "/images/dishes/RoastedLambShoulder.jpg",
-			"cover_image": "/images/dishes/RoastedLambShoulder-cover.jpg",
+			"card_image": "/images/dishes/roastedLambShoulder.png",
+			"cover_image": "/images/dishes/roastedLambShoulder-cover.png",
 			"dietary": {
 				"vegan": false,
 				"gluten_free": true,
@@ -99,8 +99,8 @@
 			"calories": 525,
 			"prep_time": "15-18 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/TruffleMushroomRisotto.jpg",
-			"cover_image": "/images/dishes/TruffleMushroomRisotto-cover.jpg",
+			"card_image": "/images/dishes/truffleMushroomRisotto.png",
+			"cover_image": "/images/dishes/truffleMushroomRisotto-cover.png",
 			"dietary": {
 				"vegan": false,
 				"gluten_free": true,
@@ -117,8 +117,8 @@
 			"calories": 125,
 			"prep_time": "5 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/ClassicBruschetta.jpg",
-			"cover_image": "/images/dishes/ClassicBruschetta-cover.jpg",
+			"card_image": "/images/dishes/classicBruschetta.png",
+			"cover_image": "/images/dishes/classicBruschetta-cover.png",
 			"dietary": {
 				"vegan": true,
 				"gluten_free": false,
@@ -135,8 +135,8 @@
 			"calories": 110,
 			"prep_time": "5 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/CrispyCalamari.jpg",
-			"cover_image": "/images/dishes/CrispyCalamari-cover.jpg",
+			"card_image": "/images/dishes/crispyCalamari.png",
+			"cover_image": "/images/dishes/crispyCalamari-cover.png",
 			"dietary": {
 				"vegan": false,
 				"gluten_free": false,
@@ -144,6 +144,60 @@
 			},
 			"restaurant_id": 2,
 			"menu_category_id": 1
+		},
+		{
+			"id": 7,
+			"title": "Pan-Seared Sea Bass",
+			"description": "A delicate fillet of wild-caught sea bass served over a bed of wilted baby spinach and a citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts for a balanced, light, yet rich flavor profile.",
+			"price": 34.5,
+			"calories": 480,
+			"prep_time": "20-25 min",
+			"rating": 4.8,
+			"card_image": "/images/dishes/panSearedSeaBass.png",
+			"cover_image": "/images/dishes/panSearedSeaBass-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 2
+		},
+		{
+			"id": 8,
+			"title": "Braised Beef Short Rib",
+			"description": "Slow-cooked for 12 hours in a red wine reduction, served atop creamy Yukon Gold mashed potatoes and glazed heirloom carrots. The meat is fork-tender and deeply savory, making it a signature comfort classic.",
+			"price": 38,
+			"calories": 890,
+			"prep_time": "12-15 min",
+			"rating": 4.9,
+			"card_image": "/images/dishes/braisedBeefShortRib.png",
+			"cover_image": "/images/dishes/braisedBeefShortRib-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 2
+		},
+		{
+			"id": 9,
+			"title": "Eggplant Parmigiana Stack",
+			"description": "Crispy layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan. Baked until golden and bubbling, served with a side of arugula salad.",
+			"price": 24,
+			"calories": 610,
+			"prep_time": "18-22 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/eggplantParmigiana.png",
+			"cover_image": "/images/dishes/eggplantParmigiana-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 2
 		}
 	]
 }

@@ -1,5 +1,5 @@
 import "./styles/App.scss";
-import { Routes, Route, Navigate, Outlet } from "react-router";
+import { Routes, Route } from "react-router";
 
 //pages
 import Home from "./pages/Home/Home";

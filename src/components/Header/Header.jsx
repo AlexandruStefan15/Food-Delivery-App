@@ -1,8 +1,14 @@
-import React, { forwardRef, useState, useEffect } from "react";
+import React, { forwardRef } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router";
 
-function Header({ className = "", navbarClassName = "", navbarProps, ...props }, ref) {
+export default function Header({
+	className = "",
+	navbarClassName = "",
+	navbarProps,
+	ref,
+	...props
+}) {
 	return (
 		<header ref={ref} className={styles.header + ` ${className}`} {...props}>
 			<nav className={styles.nav}>
@@ -41,5 +47,3 @@ function Header({ className = "", navbarClassName = "", navbarProps, ...props },
 		</header>
 	);
 }
-
-export default forwardRef(Header);

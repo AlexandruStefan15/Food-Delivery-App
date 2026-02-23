@@ -1,0 +1,36 @@
+import { useQuery } from "@tanstack/react-query";
+
+export const useRestaurantFoodCategories = (restaurant) => {
+	// Destructure and rename properties using the "key: newName" syntax
+	const {
+		data: restaurantFoodCategories,
+		isLoading: restaurantFoodCategoriesIsLoading,
+		error: restaurantFoodCategoriesError,
+	} = useQuery({
+		queryKey: ["food-categories", restaurant?.id],
+		queryFn: async () => {
+			const res = await fetch(`${process.env.REACT_APP_API_URL}/food_categories`);
+
+			if (!res.ok) {
+				throw new Error("Failed to fetch food categories");
+			}
+
+			const allCats = await res.json();
+
+			// Get the IDs from the restaurant object
+			const ids = restaurant?.food_categories_ids || [];
+
+			// Filter global categories to only return the ones this restaurant has
+			return allCats.filter((cat) => ids.includes(cat.id));
+		},
+		// The query only runs if restaurant exists and has category IDs
+		enabled: !!restaurant?.food_categories_ids?.length,
+	});
+
+	// Return the renamed variables in an object
+	return {
+		restaurantFoodCategories,
+		restaurantFoodCategoriesIsLoading,
+		restaurantFoodCategoriesError,
+	};
+};

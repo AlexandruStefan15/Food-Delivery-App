@@ -1,0 +1,37 @@
+.form {
+	display: flex;
+	width: fit-content;
+	flex-direction: row-reverse;
+	align-content: center;
+	gap: 0rem;
+	border-radius: 25px;
+	padding-inline: 5px;
+	outline: 2px solid #a9a9a9;
+
+	.input {
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 5px;
+		background-color: transparent;
+		color: black;
+		font-size: 0.88rem;
+		padding-block: 16px;
+
+		&::placeholder {
+			color: #717171;
+		}
+	}
+
+	.button {
+		border: none;
+		background: transparent;
+		cursor: pointer;
+		padding-right: 0.5rem;
+		padding-left: 0.75rem;
+		.icon {
+			width: 28px;
+			color: var(--primary);
+		}
+	}
+}

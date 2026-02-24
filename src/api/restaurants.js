@@ -7,7 +7,7 @@ export const useRestaurants = () => {
 		queryFn: async () => {
 			const response = await fetch(`${process.env.REACT_APP_API_URL}/restaurants`);
 			if (!response.ok) {
-				throw new Error("Failed to fetch restaurants");
+				throw new Error(`Failed to fetch restaurants (Status: ${res.status})`);
 			}
 			return response.json();
 		},

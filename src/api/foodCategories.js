@@ -6,7 +6,7 @@ export const useFoodCategories = () => {
 		queryFn: () =>
 			fetch(`${process.env.REACT_APP_API_URL}/food-categories`).then((res) => {
 				if (!res.ok) {
-					throw new Error("Failed to fetch food categories");
+					throw new Error(`Failed to fetch food categories (Status: ${res.status})`);
 				}
 				return res.json();
 			}),

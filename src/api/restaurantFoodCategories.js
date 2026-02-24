@@ -4,7 +4,7 @@ export const useRestaurantFoodCategories = (restaurant) => {
 	// Destructure and rename properties using the "key: newName" syntax
 	const {
 		data: restaurantFoodCategories,
-		isLoading: restaurantFoodCategoriesIsLoading,
+		isLoading: restaurantFoodCategoriesAreLoading,
 		error: restaurantFoodCategoriesError,
 	} = useQuery({
 		queryKey: ["food-categories", restaurant?.id],
@@ -12,16 +12,16 @@ export const useRestaurantFoodCategories = (restaurant) => {
 			const res = await fetch(`${process.env.REACT_APP_API_URL}/food_categories`);
 
 			if (!res.ok) {
-				throw new Error("Failed to fetch food categories");
+				throw new Error(`Failed to fetch food categories (Status: ${res.status})`);
 			}
 
-			const allCats = await res.json();
+			const allCat = await res.json();
 
 			// Get the IDs from the restaurant object
 			const ids = restaurant?.food_categories_ids || [];
 
 			// Filter global categories to only return the ones this restaurant has
-			return allCats.filter((cat) => ids.includes(cat.id));
+			return allCat.filter((cat) => ids.includes(cat.id));
 		},
 		// The query only runs if restaurant exists and has category IDs
 		enabled: !!restaurant?.food_categories_ids?.length,
@@ -30,7 +30,7 @@ export const useRestaurantFoodCategories = (restaurant) => {
 	// Return the renamed variables in an object
 	return {
 		restaurantFoodCategories,
-		restaurantFoodCategoriesIsLoading,
+		restaurantFoodCategoriesAreLoading,
 		restaurantFoodCategoriesError,
 	};
 };

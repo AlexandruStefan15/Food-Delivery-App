@@ -14,7 +14,7 @@ export const useFavoriteRestaurants = () => {
 					(async () => {
 						const response = await fetch(`${process.env.REACT_APP_API_URL}/restaurants`);
 						if (!response.ok) {
-							throw new Error(`Failed to fetch restaurants (Status: ${res.status})`);
+							throw new Error(`Failed to fetch restaurants (Status: ${response.status})`);
 						}
 						return response.json();
 					})(),

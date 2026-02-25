@@ -1,7 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
 export const useFoodCategories = () => {
-	return useQuery({
+	const {
+		data: foodCategories,
+		isLoading: foodCategoriesAreLoading,
+		error: foodCategoriesError,
+	} = useQuery({
 		queryKey: ["food-categories"],
 		queryFn: () =>
 			fetch(`${process.env.REACT_APP_API_URL}/food-categories`).then((res) => {
@@ -11,4 +15,10 @@ export const useFoodCategories = () => {
 				return res.json();
 			}),
 	});
+
+	return {
+		foodCategories,
+		foodCategoriesAreLoading,
+		foodCategoriesError,
+	};
 };

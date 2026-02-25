@@ -1,9 +1,9 @@
 @use "../../styles/breakpoints" as media;
 
 .footer {
+	background-color: var(--secondary-black);
 	padding-top: 4em;
 	padding-bottom: 4em;
-	background: rgb(0 0 0 / 77%);
 
 	@include media.mobile {
 		padding-inline: 2em;
@@ -43,7 +43,7 @@
 }
 
 .title {
-	color: white;
+	color: var(--primary-white);
 	font-size: 1rem;
 	font-weight: bold;
 	font-family: "Plus Jakarta Sans", sans-serif;

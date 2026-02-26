@@ -49,7 +49,7 @@ export default function Footer({
 	);
 }
 
-export function LinkList({ title, links, className = "" }: LinkListProps) {
+function LinkList({ title, links, className = "" }: LinkListProps) {
 	return (
 		<div className={styles.linkListContainer + ` ${className}`}>
 			<Title>{title}</Title>
@@ -66,7 +66,7 @@ export function LinkList({ title, links, className = "" }: LinkListProps) {
 	);
 }
 
-export function Title({ className = "", children, ...props }: TitleProps) {
+function Title({ className = "", children, ...props }: TitleProps) {
 	return (
 		<h3 className={styles.title} {...props}>
 			{children}

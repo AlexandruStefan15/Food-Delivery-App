@@ -9,7 +9,7 @@ export const useRestaurantFoodCategories = (restaurant) => {
 	} = useQuery({
 		queryKey: ["food-categories", restaurant?.id],
 		queryFn: async () => {
-			const res = await fetch(`${process.env.REACT_APP_API_URL}/food_categories`);
+			const res = await fetch(`http://localhost:3001/food_categories`);
 
 			if (!res.ok) {
 				throw new Error(`Failed to fetch food categories (Status: ${res.status})`);

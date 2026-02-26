@@ -12,13 +12,13 @@ export const useFavoriteRestaurants = () => {
 			try {
 				const [allRestaurants, favIds] = await Promise.all([
 					(async () => {
-						const response = await fetch(`${process.env.REACT_APP_API_URL}/restaurants`);
+						const response = await fetch(`http://localhost:3001/restaurants`);
 						if (!response.ok) {
 							throw new Error(`Failed to fetch restaurants (Status: ${response.status})`);
 						}
 						return response.json();
 					})(),
-					fetch(`${process.env.REACT_APP_API_URL}/favorites_restaurants_ids`).then((res) => {
+					fetch(`http://localhost:3001/favorites_restaurants_ids`).then((res) => {
 						if (!res.ok) {
 							throw new Error(`Failed to fetch food categories (Status: ${res.status})`);
 						}

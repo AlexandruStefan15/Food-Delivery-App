@@ -8,7 +8,7 @@ export const useFoodCategories = () => {
 	} = useQuery({
 		queryKey: ["food-categories"],
 		queryFn: () =>
-			fetch(`${process.env.REACT_APP_API_URL}/food-categories`).then((res) => {
+			fetch(`http://localhost:3001/food-categories`).then((res) => {
 				if (!res.ok) {
 					throw new Error(`Failed to fetch food categories (Status: ${res.status})`);
 				}

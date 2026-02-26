@@ -5,7 +5,7 @@ export const useDishes = (restaurantId) => {
 	return useQuery({
 		queryKey: ["dishes", restaurantId],
 		queryFn: () =>
-			fetch(`${process.env.REACT_APP_API_URL}/dishes?restaurantId=${restaurantId}`).then((res) => {
+			fetch(`http://localhost:3001/dishes?restaurantId=${restaurantId}`).then((res) => {
 				if (!res.ok) {
 					throw new Error("Failed to fetch dishes");
 				}

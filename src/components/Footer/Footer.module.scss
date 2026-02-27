@@ -21,12 +21,19 @@
 		@include media.mobile {
 			grid-template-columns: repeat(2, minmax(130px, 1fr));
 		}
+
+		.newsletter {
+			.description {
+				color: var(--foreground-grey);
+				margin-top: 1.25rem;
+			}
+		}
 	}
 }
 
 .linkListContainer {
 	.navList {
-		margin-top: 1.5rem;
+		margin-top: 1.25rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.75em;

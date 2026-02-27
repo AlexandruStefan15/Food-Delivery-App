@@ -42,7 +42,7 @@ export default function Footer({
 				))}
 				<div className={styles.newsletter}>
 					<Title>Newsletter</Title>
-					<p>Get the latest deals and new restaurant alerts.</p>
+					<p className={styles.description}>Get the latest deals and new restaurant alerts.</p>
 				</div>
 			</nav>
 		</footer>

@@ -2,4 +2,32 @@
 
 .header {
 	background: transparent;
+
+	.navigation {
+		padding-inline: 3rem;
+		margin-inline: auto;
+		display: flex;
+		justify-content: space-between;
+		max-width: 1450px;
+
+		.primaryNavigation {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+
+			.navList {
+				display: flex;
+				gap: 2rem;
+			}
+		}
+
+		.secondaryNavigation {
+			flex: 0 320px;
+			display: flex;
+
+			.searchBar {
+				width: 100%;
+			}
+		}
+	}
 }

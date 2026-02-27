@@ -5,7 +5,6 @@ import { NavLink } from "react-router";
 interface LogoProps extends React.ComponentPropsWithoutRef<"div"> {
 	src: string;
 	href?: string;
-	className?: string;
 }
 
 export default function Logo({ className = "", src, href = "/", ...props }: LogoProps) {

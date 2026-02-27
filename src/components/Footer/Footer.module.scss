@@ -26,17 +26,15 @@
 
 .linkListContainer {
 	.navList {
+		margin-top: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 0.75em;
+		color: var(--foreground-grey);
 
 		.listItem {
 			.link {
 				font-size: 0.82rem;
-
-				&:hover {
-					text-decoration: underline;
-				}
 			}
 		}
 	}

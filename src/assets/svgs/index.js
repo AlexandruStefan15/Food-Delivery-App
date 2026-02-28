@@ -1,6 +1,7 @@
+import cart from "./cart.svg";
 import logo from "./logo.svg";
 
-const svgs = { logo };
+const svgs = { cart, logo };
 
 export default svgs;
 
@@ -9,21 +10,24 @@ export const inline_svgs = {
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
-			role="img"
-			viewBox="0 0 24 24"
-			width="23"
-			height="23"
-			data-icon="MagnifyingGlassStandard"
-			aria-hidden="true"
-			className="search-icon"
-			{...props}
+			width="800px"
+			height="800px"
+			viewBox="0 0 48 48"
 		>
-			<path
-				fillRule="evenodd"
-				clipRule="evenodd"
-				d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z"
-				fill="currentColor"
-			></path>
+			<title>search</title>
+			<g id="Layer_2" data-name="Layer 2">
+				<g id="invisible_box" data-name="invisible box">
+					<rect width="48" height="48" fill="none" />
+				</g>
+				<g id="icons_Q2" data-name="icons Q2">
+					<path
+						d="M30.9,28.1a14.8,14.8,0,0,0,3-10.9A15.2,15.2,0,0,0,20.1,4a15,15,0,0,0-3,29.9,15.3,15.3,0,0,0,11-2.9L40.6,43.4a1.9,1.9,0,0,0,2.8,0h0a1.9,1.9,0,0,0,0-2.8ZM20.8,29.9A11,11,0,0,1,8.2,17.1a10.8,10.8,0,0,1,8.9-8.9A10.9,10.9,0,0,1,29.8,20.9,11.1,11.1,0,0,1,20.8,29.9Z"
+						fill="currentColor"
+						stroke="currentColor"
+						strokeWidth="0.5"
+					/>
+				</g>
+			</g>
 		</svg>
 	),
 };

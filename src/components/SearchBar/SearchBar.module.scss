@@ -6,20 +6,21 @@
 	gap: 0rem;
 	border-radius: 25px;
 	padding-inline: 5px;
-	outline: 2px solid #a9a9a9;
+	background-color: var(--accent-muted);
+	overflow: hidden;
 
 	.input {
 		width: 100%;
 		border: none;
 		outline: none;
 		padding: 5px;
-		background-color: transparent;
 		color: black;
 		font-size: 0.88rem;
 		padding-block: 12px;
+		background-color: var(--accent-muted);
 
 		&::placeholder {
-			color: #717171;
+			color: var(--foreground-brown);
 		}
 	}
 
@@ -30,8 +31,8 @@
 		padding-right: 0.5rem;
 		padding-left: 0.75rem;
 		.icon {
-			width: 28px;
-			color: var(--primary);
+			width: 22px;
+			color: var(--icon-primary-color);
 		}
 	}
 }

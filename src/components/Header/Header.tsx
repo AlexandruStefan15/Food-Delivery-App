@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 import { HeaderProps, NavigationItem } from "./Header.types";
 
 //assets
-import logo_path from "../../assets/images/logo.png";
+import svgs from "../../assets/svgs/index";
 
 //components
 import Logo from "../Logo/Logo";
@@ -29,7 +29,7 @@ export default function Header({
 		<header className={styles.header + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
 				<div className={styles.primaryNavigation}>
-					<Logo className={styles.logo} src={logo_path} />
+					<Logo className={styles.logo} src={svgs.logo} />
 					<ul className={styles.navList}>
 						{primaryNavigation.map((item, index) => (
 							<li className={styles.listItem} key={index}>

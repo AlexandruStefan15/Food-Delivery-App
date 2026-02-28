@@ -4,11 +4,12 @@
 	background: transparent;
 
 	.navigation {
+		min-height: 70px;
 		padding-inline: 3rem;
 		margin-inline: auto;
 		display: flex;
 		justify-content: space-between;
-		max-width: 1450px;
+		max-width: 1550px;
 
 		.primaryNavigation {
 			display: flex;
@@ -23,10 +24,10 @@
 
 		.secondaryNavigation {
 			flex: 0 320px;
-			display: flex;
 
 			.searchBar {
 				width: 100%;
+				margin-block: auto;
 			}
 		}
 	}

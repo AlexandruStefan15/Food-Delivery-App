@@ -17,17 +17,16 @@ export const useRestaurantFoodCategories = (restaurant) => {
 
 			const allCat = await res.json();
 
-			// Get the IDs from the restaurant object
+			// get the IDs from the restaurant object
 			const ids = restaurant?.food_categories_ids || [];
 
-			// Filter global categories to only return the ones this restaurant has
+			// filter global categories to only return the ones this restaurant has
 			return allCat.filter((cat) => ids.includes(cat.id));
 		},
-		// The query only runs if restaurant exists and has category IDs
+		// the query only runs if restaurant exists and has category IDs
 		enabled: !!restaurant?.food_categories_ids?.length,
 	});
 
-	// Return the renamed variables in an object
 	return {
 		restaurantFoodCategories,
 		restaurantFoodCategoriesAreLoading,

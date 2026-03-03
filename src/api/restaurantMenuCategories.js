@@ -1,17 +1,39 @@
 import { useQuery } from "@tanstack/react-query";
 
-export const useRestaurantFoodCategories = (restaurant) => {
-	return useQuery({
-		queryKey: ["food-categories", restaurant?.id],
-		queryFn: async () => {
-			const allCategories = await fetch(`http://localhost:3001/food-categories`).then((res) => {
-				if (!res.ok) {
-					throw new Error(`Failed to fetch food categories (Status: ${res.status})`);
-				}
-				return res.json();
-			});
-			return allCategories.filter((cat) => restaurant.food_categories_ids.includes(cat.id));
-		},
-		enabled: !!restaurant,
+const fetchMenuCategoriesByRestaurant = async (restaurantId) => {
+	const [categoriesRes, dishesRes] = await Promise.all([
+		fetch("http://localhost:3001/menu_categories"),
+		fetch(`http://localhost:3001/dishes?restaurant_id=${restaurantId}`),
+	]);
+
+	if (!categoriesRes.ok || !dishesRes.ok) {
+		throw new Error("Failed to fetch menu data");
+	}
+
+	const allCategories = await categoriesRes.json();
+	const restaurantDishes = await dishesRes.json();
+
+	// 1. Get unique menu_category_ids from the restaurant's dishes
+	const usedCategoryIds = [...new Set(restaurantDishes.map((dish) => dish.menu_category_id))];
+
+	// 2. Filter the master category list to only include those IDs
+	return allCategories.filter((cat) => usedCategoryIds.includes(cat.id));
+};
+
+export const useRestaurantMenuCategories = (restaurantId) => {
+	const {
+		data: restaurantMenuCategories,
+		isLoading: restaurantMenuCategoriesAreLoading,
+		error: restaurantMenuCategoriesError,
+	} = useQuery({
+		queryKey: ["menuCategories", restaurantId],
+		queryFn: () => fetchMenuCategoriesByRestaurant(restaurantId),
+		enabled: !!restaurantId, // Only run if ID is provided
 	});
+
+	return {
+		restaurantMenuCategories,
+		restaurantMenuCategoriesAreLoading,
+		restaurantMenuCategoriesError,
+	};
 };

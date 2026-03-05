@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 import { HeaderProps, NavigationItem } from "./Header.types";
 
 //assets
-import svgs from "../../assets/svgs/index";
+import svgs, { inline_svgs } from "../../assets/svgs/index";
 
 //components
 import Logo from "../Logo/Logo";
@@ -14,8 +14,8 @@ import SearchBar from "../SearchBar/SearchBar";
 
 const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Home", path: "#" },
-	{ label: "Restaurants", path: "movies" },
-	{ label: "Orders", path: "tv-series" },
+	{ label: "Restaurants", path: "#" },
+	{ label: "Orders", path: "#" },
 	{ label: "Contact", path: "#" },
 	{ label: "Lista mea", path: "#" },
 ];
@@ -42,6 +42,9 @@ export default function Header({
 				</div>
 				<div className={styles.secondaryNavigation}>
 					<SearchBar className={styles.searchBar} placeholder="Search..." />
+					<div className={styles.icon}>
+						<inline_svgs.cart />
+					</div>
 				</div>
 			</nav>
 		</header>

@@ -24,11 +24,22 @@
 		}
 
 		.secondaryNavigation {
-			flex: 0 320px;
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			flex: 0 375px;
 
 			.searchBar {
-				width: 100%;
+				flex: 1;
 				margin-block: auto;
+			}
+
+			.icon {
+				flex: 0 40px;
+
+				svg {
+					width: 100%;
+				}
 			}
 		}
 	}

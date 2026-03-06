@@ -1,8 +1,9 @@
 import styles from "./index.module.scss";
 import cart from "./cart.svg";
 import logo from "./logo.svg";
+import search from "./search.svg";
 
-const svgs = { cart, logo };
+const svgs = { cart, logo, search };
 
 export default svgs;
 

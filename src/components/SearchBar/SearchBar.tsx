@@ -9,13 +9,13 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({
+const SearchBar = ({
 	placeholder = "Search...",
 	onSearch,
 	onChange,
 	className = "",
 	...props
-}) => {
+}: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
 	const [isFocused, setIsFocused] = useState<boolean>(false);
 	const inputRef = useRef<HTMLInputElement>(null);

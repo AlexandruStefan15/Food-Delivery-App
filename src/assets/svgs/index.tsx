@@ -6,9 +6,9 @@ const svgs = { cart, logo };
 
 export default svgs;
 
-type InlineSvgProps = React.ComponentPropsWithoutRef<"svg"> & {
+interface InlineSvgProps extends React.ComponentPropsWithoutRef<"svg"> {
 	wrapperProps?: React.ComponentPropsWithoutRef<"div">;
-};
+}
 
 export const inline_svgs = {
 	search: ({ wrapperProps, ...props }: InlineSvgProps) => (

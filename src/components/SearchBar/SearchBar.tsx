@@ -60,9 +60,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 					handleSubmit(e);
 				}}
 			>
-				<div className={styles.icon}>
-					<inline_svgs.search />
-				</div>
+				<inline_svgs.search wrapperProps={{ className: styles.icon }} />
 			</button>
 		</form>
 	);

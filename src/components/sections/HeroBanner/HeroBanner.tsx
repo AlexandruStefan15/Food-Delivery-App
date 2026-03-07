@@ -13,7 +13,12 @@ export default function HeroBanner({
 			<div className={styles.container}>
 				<h1 className={styles.title}>{title}</h1>
 				<h3 className={styles.subtitle}>{subtitle}</h3>
-				<SearchBar className={styles.searchBar} />
+				<SearchBar
+					formProps={{ className: styles.searchBar }}
+					searchButtonContent="Find Food"
+					searchButtonProps={{ className: styles.btn }}
+					className={styles.input}
+				/>
 			</div>
 		</section>
 	);

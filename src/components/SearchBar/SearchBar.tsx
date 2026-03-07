@@ -1,4 +1,4 @@
-import React, { useState, useRef, ChangeEvent } from "react";
+import React, { useState, useRef, ChangeEvent, ReactNode } from "react";
 import styles from "./SearchBar.module.scss";
 import { inline_svgs } from "../../assets/svgs";
 
@@ -7,15 +7,22 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	onSearch?: (query: string) => void;
 	onChange?: (value: string) => void;
 	className?: string;
+	children?: ReactNode;
+	searchButtonContent?: ReactNode;
+	searchButtonProps?: React.ComponentPropsWithoutRef<"button">;
+	formProps?: React.ComponentPropsWithoutRef<"form">; // Now explicitly in the interface
 }
 
 const SearchBar = ({
 	placeholder = "Search...",
 	onSearch,
 	onChange,
-	className = "",
+	className = "", // Applied to the input for specific styling
 	children,
-	...props
+	searchButtonContent = <inline_svgs.search wrapperProps={{ className: styles.icon }} />,
+	searchButtonProps,
+	formProps,
+	...props // These are the "input-specific" props (e.g., name, disabled, readOnly)
 }: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
 	const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -24,24 +31,19 @@ const SearchBar = ({
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
 		setQuery(value);
-
-		if (onChange) {
-			onChange(value);
-		}
+		onChange?.(value);
 	};
 
-	const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement> | React.MouseEvent) => {
+	const handleSubmit = (e: React.FormEvent | React.MouseEvent) => {
 		e.preventDefault();
-
-		if (onSearch) {
-			onSearch(query);
-		}
+		onSearch?.(query);
 	};
 
 	return (
 		<form
+			{...formProps}
 			onSubmit={handleSubmit}
-			className={`${styles.form} ${isFocused ? styles.active : ""} ${className}`}
+			className={`${styles.form} ${isFocused ? styles.active : ""} ${formProps?.className || ""}`}
 		>
 			{children}
 			<input
@@ -50,19 +52,27 @@ const SearchBar = ({
 				ref={inputRef}
 				onChange={handleChange}
 				placeholder={placeholder}
-				className={styles.input}
-				onFocus={() => setIsFocused(true)}
-				onBlur={() => setIsFocused(false)}
+				className={`${styles.input} ${className}`}
+				onFocus={(e) => {
+					setIsFocused(true);
+					props.onFocus?.(e);
+				}}
+				onBlur={(e) => {
+					setIsFocused(false);
+					props.onBlur?.(e);
+				}}
 				{...props}
 			/>
 			<button
-				type="button"
+				type="submit"
 				className={styles.button}
+				{...searchButtonProps}
 				onClick={(e) => {
 					handleSubmit(e);
+					searchButtonProps?.onClick?.(e);
 				}}
 			>
-				<inline_svgs.search wrapperProps={{ className: styles.icon }} />
+				{searchButtonContent}
 			</button>
 		</form>
 	);

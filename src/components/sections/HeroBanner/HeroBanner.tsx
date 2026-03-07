@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./HeroBanner.module.scss";
 
+//assets
+import { inline_svgs } from "../../../assets/svgs";
+
 //componets
 import SearchBar from "../../SearchBar/SearchBar";
 
@@ -19,7 +22,9 @@ export default function HeroBanner({
 					searchButtonProps={{ className: styles.btn }}
 					className={styles.input}
 					placeholder="Enter you delivery address..."
-				/>
+				>
+					<inline_svgs.location wrapperProps={{ className: styles.locationIcon }} />
+				</SearchBar>
 			</div>
 		</section>
 	);

@@ -18,6 +18,7 @@ export default function HeroBanner({
 					searchButtonContent="Find Food"
 					searchButtonProps={{ className: styles.btn }}
 					className={styles.input}
+					placeholder="Enter you delivery address..."
 				/>
 			</div>
 		</section>

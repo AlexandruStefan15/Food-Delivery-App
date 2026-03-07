@@ -5,12 +5,13 @@
 
 	.navigation {
 		min-height: 70px;
-		padding-inline: 3rem;
+		padding-inline: 5rem;
 		margin-inline: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 1550px;
+		max-width: 1650px;
+		gap: 2rem;
 
 		.primaryNavigation {
 			display: flex;
@@ -27,7 +28,7 @@
 			display: flex;
 			align-items: center;
 			gap: 1.5rem;
-			flex: 0 375px;
+			flex: 0 400px;
 
 			.searchBar {
 				flex: 1;

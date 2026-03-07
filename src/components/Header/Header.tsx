@@ -41,7 +41,7 @@ export default function Header({
 					</ul>
 				</div>
 				<div className={styles.secondaryNavigation}>
-					<SearchBar className={styles.searchBar} placeholder="Search..." />
+					<SearchBar formProps={{ className: styles.searchBar }} placeholder="Search..." />
 					<inline_svgs.cart wrapperProps={{ className: styles.icon }} />
 				</div>
 			</nav>

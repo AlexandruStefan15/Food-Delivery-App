@@ -65,7 +65,7 @@
 				transition-property: all;
 				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 				transition-duration: 150ms;
-				background-color: #ec4913;
+				background-color: var(--button-primary-bg);
 				border: none;
 				outline: none;
 				border-radius: 999px;

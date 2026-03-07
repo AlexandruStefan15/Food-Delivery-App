@@ -10,19 +10,19 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	children?: ReactNode;
 	searchButtonContent?: ReactNode;
 	searchButtonProps?: React.ComponentPropsWithoutRef<"button">;
-	formProps?: React.ComponentPropsWithoutRef<"form">; // Now explicitly in the interface
+	formProps?: React.ComponentPropsWithoutRef<"form">;
 }
 
 const SearchBar = ({
 	placeholder = "Search...",
 	onSearch,
 	onChange,
-	className = "", // Applied to the input for specific styling
+	className = "",
 	children,
 	searchButtonContent = <inline_svgs.search wrapperProps={{ className: styles.icon }} />,
 	searchButtonProps,
 	formProps,
-	...props // These are the "input-specific" props (e.g., name, disabled, readOnly)
+	...props
 }: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
 	const [isFocused, setIsFocused] = useState<boolean>(false);
@@ -34,7 +34,7 @@ const SearchBar = ({
 		onChange?.(value);
 	};
 
-	const handleSubmit = (e: React.FormEvent | React.MouseEvent) => {
+	const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement> | React.MouseEvent) => {
 		e.preventDefault();
 		onSearch?.(query);
 	};

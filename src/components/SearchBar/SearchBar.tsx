@@ -14,6 +14,7 @@ const SearchBar = ({
 	onSearch,
 	onChange,
 	className = "",
+	children,
 	...props
 }: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
@@ -42,6 +43,7 @@ const SearchBar = ({
 			onSubmit={handleSubmit}
 			className={`${styles.form} ${isFocused ? styles.active : ""} ${className}`}
 		>
+			{children}
 			<input
 				type="text"
 				value={query}

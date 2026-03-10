@@ -1,0 +1,14 @@
+import React from "react";
+import styles from "./FoodCard.module.scss";
+import { FoodCardProps } from "./FoodCard.types";
+
+export default function FoodCard({ variant = "circle", className = "", data }: FoodCardProps) {
+	return (
+		<div className={styles[`foodCard_${variant}`] + ` ${className}`}>
+			<div className={styles.imageWrapper}>
+				<img className={styles.cls} src={data.image.src} alt={data.image.alt}></img>
+			</div>
+			<h3 className={styles.title}>{data.title}</h3>
+		</div>
+	);
+}

@@ -1,3 +1,4 @@
-import type { Category } from "./common";
-
-export type MenuCategory = Category;
+export interface MenuCategory {
+  id: number;
+  title: string;
+}

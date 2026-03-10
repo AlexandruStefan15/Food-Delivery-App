@@ -14,9 +14,9 @@ export default function Cuisines() {
 		<section className={styles.cuisines}>
 			<div className={styles.container}>
 				<ul className={styles.cuisineList}>
-					{foodCategories.map((cuisine, i) => (
-						<li className={styles.listItem} key={i}>
-							<FoodCard data={cuisine} />
+					{foodCategories.map((category) => (
+						<li className={styles.listItem} key={category.id}>
+							<FoodCard data={category} />
 						</li>
 					))}
 				</ul>

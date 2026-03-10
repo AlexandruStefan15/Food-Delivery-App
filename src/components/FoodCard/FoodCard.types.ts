@@ -1,7 +1,8 @@
 export interface FoodCardData {
+  id: number;
   title: string;
   image: {
-    src: string;
+    url: string;
     alt: string;
   };
 }

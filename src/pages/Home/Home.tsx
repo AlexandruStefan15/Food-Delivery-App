@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./Home.module.scss";
 
+//sections
+import HeroBanner from "../../components/sections/HeroBanner/HeroBanner";
+import Cuisines from "../../components/sections/Cuisines/Cuisines";
+
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import HeroBanner from "../../components/sections/HeroBanner/HeroBanner";
 
 export default function Home() {
 	return (
@@ -12,6 +15,7 @@ export default function Home() {
 			<Header />
 			<main className={styles.main}>
 				<HeroBanner />
+				<Cuisines />
 			</main>
 			<Footer />
 		</div>

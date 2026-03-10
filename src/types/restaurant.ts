@@ -1,7 +1,5 @@
-import type { ID } from "./common";
-
 export interface Restaurant {
-  id: ID;
+  id: number;
   name: string;
   cuisine: string;
   card_image: string;
@@ -11,5 +9,5 @@ export interface Restaurant {
   rating: number;
   distance: number;
   closing_time: string;
-  food_categories_ids: ID[];
+  food_categories_ids: number[];
 }

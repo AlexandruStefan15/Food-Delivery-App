@@ -1,5 +1,3 @@
-import type { ID } from "./common";
-
 export interface Dietary {
   vegan: boolean;
   gluten_free: boolean;
@@ -7,7 +5,7 @@ export interface Dietary {
 }
 
 export interface Dish {
-  id: ID;
+  id: number;
   title: string;
   description?: string;
   calories?: number;
@@ -17,6 +15,6 @@ export interface Dish {
   cover_image?: string;
   price: number;
   dietary: Dietary;
-  restaurant_id: ID;
-  menu_category_id: ID;
+  restaurant_id: number;
+  menu_category_id: number;
 }

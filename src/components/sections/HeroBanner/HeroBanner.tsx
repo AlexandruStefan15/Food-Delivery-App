@@ -19,7 +19,7 @@ export default function HeroBanner({
 				<SearchBar
 					formProps={{ className: styles.searchBar }}
 					searchButtonContent="Find Food"
-					searchButtonProps={{ className: styles.btn }}
+					searchButtonProps={{ variant: "animated" }}
 					className={styles.input}
 					placeholder="Enter you delivery address..."
 				>

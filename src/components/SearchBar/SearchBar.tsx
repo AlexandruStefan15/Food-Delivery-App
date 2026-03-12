@@ -2,6 +2,9 @@ import React, { useState, useRef, ChangeEvent, ReactNode } from "react";
 import styles from "./SearchBar.module.scss";
 import { inline_svgs } from "../../assets/svgs";
 
+//components
+import Button from "../Button/Button";
+
 interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "onChange"> {
 	placeholder?: string;
 	onSearch?: (query: string) => void;
@@ -9,7 +12,7 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	className?: string;
 	children?: ReactNode;
 	searchButtonContent?: ReactNode;
-	searchButtonProps?: React.ComponentPropsWithoutRef<"button">;
+	searchButtonProps?: React.ComponentPropsWithoutRef<typeof Button>;
 	formProps?: React.ComponentPropsWithoutRef<"form">;
 }
 
@@ -63,9 +66,10 @@ const SearchBar = ({
 				}}
 				{...props}
 			/>
-			<button
+			<Button
+				className={styles.btn}
+				variant="transparent"
 				type="submit"
-				className={styles.button}
 				{...searchButtonProps}
 				onClick={(e) => {
 					handleSubmit(e);
@@ -73,7 +77,7 @@ const SearchBar = ({
 				}}
 			>
 				{searchButtonContent}
-			</button>
+			</Button>
 		</form>
 	);
 };

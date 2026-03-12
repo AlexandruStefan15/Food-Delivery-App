@@ -1,6 +1,10 @@
 {
 	"food_categories": [
-		{ "id": 1, "title": "Pizza", "image": { "url": "asd", "alt": "asd" } },
+		{
+			"id": 1,
+			"title": "Pizza",
+			"image": { "url": "/images/foodCategories/pizza.jpg", "alt": "asd" }
+		},
 		{ "id": 2, "title": "Burgers", "image": { "url": "asd", "alt": "asd" } },
 		{ "id": 3, "title": "Sushi", "image": { "url": "asd", "alt": "asd" } },
 		{ "id": 4, "title": "Desserts", "image": { "url": "asd", "alt": "asd" } },

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Explore.module.scss";
+import { NavLink } from "react-router";
 
 //components
 import FoodCard from "../../FoodCard/FoodCard";
@@ -11,12 +12,15 @@ export default function Explore() {
 	const { foodCategories, foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 
 	return (
-		<section className={styles.cuisines}>
+		<section className={styles.exploreSection}>
 			<div className={styles.container}>
-				<ul className={styles.cuisineList}>
+				<h2 className={styles.title}>Explore Cuisines</h2>
+				<ul className={styles.exploreList}>
 					{foodCategories.map((category) => (
 						<li className={styles.listItem} key={category.id}>
-							<FoodCard data={category} />
+							<NavLink to="#">
+								<FoodCard data={category} />
+							</NavLink>
 						</li>
 					))}
 				</ul>

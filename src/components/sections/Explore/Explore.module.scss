@@ -1,0 +1,19 @@
+.exploreSection {
+	padding-block: 2rem;
+	padding-inline: 5rem;
+
+	.container {
+		max-width: 1150px;
+		margin-inline: auto;
+
+		.title {
+			margin-bottom: 2rem;
+		}
+
+		.exploreList {
+			display: flex;
+			gap: 1.5rem;
+			justify-content: space-between;
+		}
+	}
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Cuisines.module.scss";
+import styles from "./Explore.module.scss";
 
 //components
 import FoodCard from "../../FoodCard/FoodCard";
@@ -7,7 +7,7 @@ import FoodCard from "../../FoodCard/FoodCard";
 //data
 import { useFoodCategories } from "../../../api/foodCategories";
 
-export default function Cuisines() {
+export default function Explore() {
 	const { foodCategories, foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 
 	return (

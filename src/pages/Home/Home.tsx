@@ -3,7 +3,7 @@ import styles from "./Home.module.scss";
 
 //sections
 import HeroBanner from "../../components/sections/HeroBanner/HeroBanner";
-import Cuisines from "../../components/sections/Cuisines/Cuisines";
+import Explore from "../../components/sections/Explore/Explore";
 
 //components
 import Header from "../../components/Header/Header";
@@ -15,7 +15,7 @@ export default function Home() {
 			<Header />
 			<main className={styles.main}>
 				<HeroBanner />
-				<Cuisines />
+				<Explore />
 			</main>
 			<Footer />
 		</div>

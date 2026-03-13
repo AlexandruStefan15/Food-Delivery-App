@@ -12,4 +12,18 @@ export default function Card({ data, variant = "default", className = "" }: Card
 				<h3 className={styles.title}>{data.title}</h3>
 			</div>
 		);
+
+	return (
+		<div className={styles[`card_${variant}`] + ` ${className}`}>
+			<header className={styles.header}>
+				<div className={styles.imgWrapper}>
+					<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
+				</div>
+			</header>
+			<div className={styles.body}>
+				<h3 className={styles.title}>{data.title}</h3>
+			</div>
+			<footer className={styles.footer}></footer>
+		</div>
+	);
 }

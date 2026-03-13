@@ -8,7 +8,7 @@ export interface FoodCardData {
 }
 
 export interface FoodCardProps {
-  variant?: string;
+  variant?: "default" | "circle";
   className?: string;
   data: FoodCardData;
 }

@@ -12,7 +12,7 @@ export default function Explore() {
 	const { foodCategories, foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 
 	return (
-		<section className={styles.exploreSection}>
+		<section className={styles.section}>
 			<div className={styles.container}>
 				<h2 className={styles.title}>Explore Cuisines</h2>
 				<ul className={styles.exploreList}>

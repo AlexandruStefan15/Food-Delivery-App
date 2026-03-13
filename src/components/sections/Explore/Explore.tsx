@@ -3,7 +3,7 @@ import styles from "./Explore.module.scss";
 import { NavLink } from "react-router";
 
 //components
-import FoodCard from "../../FoodCard/FoodCard";
+import Card from "../../Card/Card";
 
 //data
 import { useFoodCategories } from "../../../api/foodCategories";
@@ -19,7 +19,7 @@ export default function Explore() {
 					{foodCategories.map((category) => (
 						<li className={styles.listItem} key={category.id}>
 							<NavLink to={`/restaurants?category=${encodeURIComponent(category.title)}`}>
-								<FoodCard data={category} />
+								<Card data={category} variant="circle" />
 							</NavLink>
 						</li>
 					))}

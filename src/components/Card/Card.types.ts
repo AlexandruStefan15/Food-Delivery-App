@@ -1,4 +1,4 @@
-export interface FoodCardData {
+export interface CardData {
   id: number;
   title: string;
   image: {
@@ -7,8 +7,8 @@ export interface FoodCardData {
   };
 }
 
-export interface FoodCardProps {
+export interface CardProps {
   variant?: "default" | "circle";
   className?: string;
-  data: FoodCardData;
+  data: CardData;
 }

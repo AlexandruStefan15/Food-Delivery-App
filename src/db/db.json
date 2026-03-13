@@ -3,14 +3,38 @@
 		{
 			"id": 1,
 			"title": "Pizza",
-			"image": { "url": "/images/foodCategories/pizza.jpg", "alt": "asd" }
+			"image": { "url": "/images/foodCategories/pizza.jpg", "alt": "pizza" }
 		},
-		{ "id": 2, "title": "Burgers", "image": { "url": "asd", "alt": "asd" } },
-		{ "id": 3, "title": "Sushi", "image": { "url": "asd", "alt": "asd" } },
-		{ "id": 4, "title": "Desserts", "image": { "url": "asd", "alt": "asd" } },
-		{ "id": 5, "title": "Mexican", "image": { "url": "asd", "alt": "asd" } },
-		{ "id": 6, "title": "Pasta", "image": { "url": "asd", "alt": "asd" } },
-		{ "id": 7, "title": "Steak", "image": { "url": "asd", "alt": "asd" } }
+		{
+			"id": 2,
+			"title": "Burgers",
+			"image": { "url": "/images/foodCategories/burgers.jpg", "alt": "burgers" }
+		},
+		{
+			"id": 3,
+			"title": "Sushi",
+			"image": { "url": "/images/foodCategories/sushi.jpg", "alt": "sushi" }
+		},
+		{
+			"id": 4,
+			"title": "Vegan",
+			"image": { "url": "/images/foodCategories/vegan.jpg", "alt": "vegan" }
+		},
+		{
+			"id": 5,
+			"title": "Desserts",
+			"image": { "url": "/images/foodCategories/desserts.jpg", "alt": "desserts" }
+		},
+		{
+			"id": 6,
+			"title": "Mexican",
+			"image": { "url": "/images/foodCategories/mexican.jpg", "alt": "mexican" }
+		},
+		{
+			"id": 7,
+			"title": "Pasta",
+			"image": { "url": "/images/foodCategories/pasta.jpg", "alt": "pasta" }
+		}
 	],
 
 	"menu_categories": [

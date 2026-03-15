@@ -1,12 +1,12 @@
 export interface CardData {
   id: number;
-  title: string;
-  subtitle?: string;
   image?: {
     url: string;
     alt: string;
   };
-  time?: string;
+  title: string;
+  subtitle?: string;
+  deliveryTime?: string;
   deliveryFee?: number
 }
 

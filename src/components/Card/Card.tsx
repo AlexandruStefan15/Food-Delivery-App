@@ -21,16 +21,16 @@ export default function Card({ data, variant = "default", className = "", ...pro
 				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
 			</div>
 			<footer className={styles.footer}>
-				{data.time && (
+				{data.deliveryTime && (
 					<span className={styles.time}>
 						<BsClock />
-						<span>{data.time}</span>
+						<span>{data.deliveryTime}</span>
 					</span>
 				)}
 				{data.deliveryFee !== undefined && (
 					<span className={styles.deliveryFee}>
 						<MdOutlineDeliveryDining />
-						{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}
+						<span>{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}</span>
 					</span>
 				)}
 			</footer>

@@ -23,7 +23,7 @@ export interface CardData {
 }
 
 export interface CardProps extends React.ComponentPropsWithoutRef<"div"> {
-  variant?: "default" | "circle";
+  variant?: "default" | "circle" | "basic";
   className?: string;
   data: CardData;
   children?: React.ReactNode;

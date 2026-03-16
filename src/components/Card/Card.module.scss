@@ -1,4 +1,4 @@
-.card_default {
+.card_basic {
 	display: flex;
 	flex-direction: column;
 	max-width: 368px;
@@ -10,6 +10,8 @@
 	transition-duration: 150ms;
 	border: 1px solid var(--primary-brown);
 	border-radius: 15px;
+	padding: 1rem 2rem;
+	text-align: center;
 
 	/* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
 }

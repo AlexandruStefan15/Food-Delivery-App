@@ -1,7 +1,9 @@
 .section {
+	padding-block: 2rem;
+
 	.container {
 		display: flex;
-		max-width: 1200px;
+		max-width: 1300px;
 		padding-inline: 5rem;
 		gap: 2rem;
 		justify-content: space-between;

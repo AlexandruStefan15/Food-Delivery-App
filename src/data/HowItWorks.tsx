@@ -1,5 +1,9 @@
-import { MdOutlineShoppingBag } from "react-icons/md";
 import type { IconType } from "react-icons";
+
+//icons
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { MdRestaurant } from "react-icons/md";
+import { MdOutlineDeliveryDining } from "react-icons/md";
 
 type ItemIcon =
 	| {
@@ -35,7 +39,7 @@ export const howItWorks_data: Item[] = [
 		subtitle: "Our partner chefs prepare your meal fresh to your exact order.",
 		icon: {
 			type: "component",
-			component: MdOutlineShoppingBag,
+			component: MdRestaurant,
 		},
 	},
 	{
@@ -44,7 +48,7 @@ export const howItWorks_data: Item[] = [
 		subtitle: "Track your order in real-time right to your front door.",
 		icon: {
 			type: "component",
-			component: MdOutlineShoppingBag,
+			component: MdOutlineDeliveryDining,
 		},
 	},
 ];

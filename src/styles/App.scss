@@ -8,16 +8,25 @@
 
 :root {
 	--color-brown-500: #9a5f4c;
+	--color-pink-500: #e7d5cf;
+	--color-pink-200: #f3eae7;
+
+	--color-brown-500-shade: #9a604c49;
+	--color-pink-500-shade: #ec49131a;
 
 	--primary-white: white;
 	--primary-brown: #9a5f4c;
 	--secondary-black: #1b110d;
+	--secondary-pink: var(--color-pink-500);
 	--tertiary-grey: #6b7280;
 	--accent-orange: #ec4913;
-	--accent-muted: #f3eae7;
+	--accent-muted: var(--color-pink-200);
 
 	--button-primary-bg: var(--accent-orange);
 	--icon-primary-color: var(--color-brown-500);
+	--icon-secondary-color: var(--accent-orange);
+	--icon-primary-bg: var(--color-pink-500-shade);
+	--border-primary-color: var(--color-brown-500-shade);
 
 	--background: #f8f6f6;
 	--foreground-black: black;

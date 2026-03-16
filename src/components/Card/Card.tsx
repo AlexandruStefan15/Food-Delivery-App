@@ -16,9 +16,9 @@ export default function Card({ data, variant = "default", className = "", ...pro
 					</div>
 				)}
 				{data.icon && (
-					<div className={styles.icon}>
+					<div className={styles.iconWrapper}>
 						{data.icon.type === "component" ? (
-							<data.icon.component />
+							<data.icon.component className={styles.icon} />
 						) : (
 							<img src={data.icon.src} alt={data.icon.alt} />
 						)}

@@ -22,7 +22,7 @@ const SearchBar = ({
 	onChange,
 	className = "",
 	children,
-	searchButtonContent = <inlineSvgs.search className={styles.icon} />,
+	searchButtonContent = <inlineSvgs.search wrapperClassName={styles.icon} />,
 	searchButtonProps,
 	formProps,
 	...props

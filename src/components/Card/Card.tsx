@@ -7,8 +7,22 @@ import { BsClock } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
 export default function Card({ data, variant = "default", className = "", ...props }: CardProps) {
+	if (variant === "basic")
+		return (
+			<div className={styles.card_basic + ` ${className}`} {...props}>
+				{data.image && (
+					<div className={styles.imgWrapper}>
+						<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
+					</div>
+				)}
+				<div className={styles.content}>
+					<h3 className={styles.title}>{data.title}</h3>
+				</div>
+			</div>
+		);
+
 	return (
-		<div className={styles[`card_${variant}`] + ` ${className}`} {...props}>
+		<div className={styles.card_default + ` ${className}`} {...props}>
 			<header className={styles.header}>
 				{data.image && (
 					<div className={styles.imgWrapper}>

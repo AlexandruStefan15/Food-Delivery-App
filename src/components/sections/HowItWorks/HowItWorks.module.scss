@@ -3,10 +3,14 @@
 
 	.container {
 		display: flex;
-		max-width: 1300px;
+		max-width: 1340px;
 		padding-inline: 5rem;
 		gap: 2rem;
-		justify-content: space-between;
+		justify-content: center;
 		margin-inline: auto;
+
+		.card {
+			flex: 0 370px;
+		}
 	}
 }

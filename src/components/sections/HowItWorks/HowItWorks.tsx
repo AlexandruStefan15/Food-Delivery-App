@@ -12,7 +12,7 @@ export default function HowItWorks() {
 		<section className={styles.section}>
 			<div className={styles.container}>
 				{howItWorks_data.map((item) => (
-					<Card data={item} variant="basic" key={item.id} />
+					<Card data={item} className={styles.card} key={item.id} />
 				))}
 			</div>
 		</section>

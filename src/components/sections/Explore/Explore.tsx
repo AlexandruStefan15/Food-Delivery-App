@@ -19,7 +19,7 @@ export default function Explore() {
 					{foodCategories.map((category) => (
 						<li className={styles.listItem} key={category.id}>
 							<NavLink to={`/restaurants?category=${encodeURIComponent(category.title)}`}>
-								<Card data={category} variant="circle" />
+								<Card data={category} variant="basic" />
 							</NavLink>
 						</li>
 					))}

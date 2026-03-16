@@ -20,9 +20,12 @@ const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Lista mea", path: "#" },
 ];
 
+const defaultSecondaryNavigation: NavigationItem[] = [];
+
 export default function Header({
 	className = "",
 	primaryNavigation = defaultPrimaryNavigation,
+	secondaryNavigation = defaultSecondaryNavigation,
 	...props
 }: HeaderProps) {
 	return (
@@ -30,19 +33,32 @@ export default function Header({
 			<nav className={styles.navigation}>
 				<div className={styles.primaryNavigation}>
 					<Logo className={styles.logo} src={svgs.logo} />
-					<ul className={styles.navList}>
-						{primaryNavigation.map((item, index) => (
-							<li className={styles.listItem} key={index}>
-								<NavLink className={styles.link} to={item.path}>
-									{item.label}
-								</NavLink>
-							</li>
-						))}
-					</ul>
+					{primaryNavigation.length > 0 && (
+						<ul className={styles.navList}>
+							{primaryNavigation.map((item, index) => (
+								<li className={styles.listItem} key={index}>
+									<NavLink className={styles.link} to={item.path}>
+										{item.label}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					)}
 				</div>
 				<div className={styles.secondaryNavigation}>
 					<SearchBar formProps={{ className: styles.searchBar }} placeholder="Search..." />
 					<inlineSvgs.cart className={styles.icon} />
+					{secondaryNavigation.length > 0 && (
+						<ul className={styles.navList}>
+							{secondaryNavigation.map((item, index) => (
+								<li className={styles.listItem} key={index}>
+									<NavLink className={styles.link} to={item.path}>
+										{item.label}
+									</NavLink>
+								</li>
+							))}
+						</ul>
+					)}
 				</div>
 			</nav>
 		</header>

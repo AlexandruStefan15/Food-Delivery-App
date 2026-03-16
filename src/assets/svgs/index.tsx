@@ -1,4 +1,3 @@
-import styles from "./index.module.scss";
 import cart from "./cart.svg";
 import logo from "./logo.svg";
 import search from "./search.svg";
@@ -7,14 +6,11 @@ const svgs = { cart, logo, search };
 
 export default svgs;
 
-interface InlineSvgProps extends React.ComponentPropsWithoutRef<"svg"> {
-	className?: string | undefined;
-}
+type InlineSvgProps = React.ComponentPropsWithoutRef<"svg">;
 
 export const inlineSvgs = {
-	search: ({ className, ...props }: InlineSvgProps) => (
+	search: ({ ...props }: InlineSvgProps) => (
 		<svg
-			className={`${styles.svg} ${className}`}
 			xmlns="http://www.w3.org/2000/svg"
 			fill="currentColor"
 			width="800px"
@@ -39,9 +35,8 @@ export const inlineSvgs = {
 		</svg>
 	),
 
-	cart: ({ className, ...props }: InlineSvgProps) => (
+	cart: ({ ...props }: InlineSvgProps) => (
 		<svg
-			className={`${styles.svg} ${className}`}
 			width="24px"
 			height="24px"
 			viewBox="0 0 24 24"
@@ -58,9 +53,8 @@ export const inlineSvgs = {
 		</svg>
 	),
 
-	location: ({ className, ...props }: InlineSvgProps) => (
+	location: ({ ...props }: InlineSvgProps) => (
 		<svg
-			className={`${styles.svg} ${className}`}
 			xmlns="http://www.w3.org/2000/svg"
 			width="25"
 			height="28"

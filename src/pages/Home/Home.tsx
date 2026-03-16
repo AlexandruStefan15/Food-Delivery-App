@@ -4,6 +4,7 @@ import styles from "./Home.module.scss";
 //sections
 import HeroBanner from "../../components/sections/HeroBanner/HeroBanner";
 import Explore from "../../components/sections/Explore/Explore";
+import HowItWorks from "../../components/sections/HowItWorks/HowItWorks";
 
 //components
 import Header from "../../components/Header/Header";
@@ -16,6 +17,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<HeroBanner />
 				<Explore />
+				<HowItWorks />
 			</main>
 			<Footer />
 		</div>

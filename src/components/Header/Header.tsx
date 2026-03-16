@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 import { HeaderProps, NavigationItem } from "./Header.types";
 
 //assets
-import svgs, { inline_svgs } from "../../assets/svgs/index";
+import svgs, { inlineSvgs } from "../../assets/svgs/index";
 
 //components
 import Logo from "../Logo/Logo";
@@ -42,7 +42,7 @@ export default function Header({
 				</div>
 				<div className={styles.secondaryNavigation}>
 					<SearchBar formProps={{ className: styles.searchBar }} placeholder="Search..." />
-					<inline_svgs.cart wrapperProps={{ className: styles.icon }} />
+					<inlineSvgs.cart className={styles.icon} />
 				</div>
 			</nav>
 		</header>

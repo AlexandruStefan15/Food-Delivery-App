@@ -1,3 +1,19 @@
+.card_default {
+	display: flex;
+	flex-direction: column;
+	max-width: 368px;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+	transition-property: box-shadow;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+	border: 1px solid var(--primary-brown);
+	border-radius: 15px;
+
+	/* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); */
+}
+
 .card_circle {
 	display: flex;
 	flex-direction: column;

@@ -11,9 +11,9 @@ interface InlineSvgProps extends React.ComponentPropsWithoutRef<"svg"> {
 	wrapperProps?: React.ComponentPropsWithoutRef<"div">;
 }
 
-export const inline_svgs = {
-	search: ({ wrapperProps, ...props }: InlineSvgProps) => (
-		<div className={styles.searchSvgWrapper} {...wrapperProps}>
+export const inlineSvgs = {
+	search: ({ wrapperProps, className, ...props }: InlineSvgProps) => (
+		<div className={`${styles.cartSvgWrapper} ${className} `} {...wrapperProps}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="currentColor"
@@ -40,8 +40,8 @@ export const inline_svgs = {
 		</div>
 	),
 
-	cart: ({ wrapperProps, ...props }: InlineSvgProps) => (
-		<div className={styles.cartSvgWrapper} {...wrapperProps}>
+	cart: ({ wrapperProps, className, ...props }: InlineSvgProps) => (
+		<div className={`${styles.cartSvgWrapper} ${className} `} {...wrapperProps}>
 			<svg
 				width="24px"
 				height="24px"
@@ -60,8 +60,8 @@ export const inline_svgs = {
 		</div>
 	),
 
-	location: ({ wrapperProps, ...props }: InlineSvgProps) => (
-		<div className={styles.cartSvgWrapper} {...wrapperProps}>
+	location: ({ wrapperProps, className, ...props }: InlineSvgProps) => (
+		<div className={`${styles.cartSvgWrapper} ${className} `} {...wrapperProps}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="25"

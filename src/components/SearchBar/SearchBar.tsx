@@ -1,6 +1,6 @@
 import React, { useState, useRef, ChangeEvent, ReactNode } from "react";
 import styles from "./SearchBar.module.scss";
-import { inline_svgs } from "../../assets/svgs";
+import { inlineSvgs } from "../../assets/svgs";
 
 //components
 import Button from "../Button/Button";
@@ -22,7 +22,7 @@ const SearchBar = ({
 	onChange,
 	className = "",
 	children,
-	searchButtonContent = <inline_svgs.search wrapperProps={{ className: styles.icon }} />,
+	searchButtonContent = <inlineSvgs.search className={styles.icon} />,
 	searchButtonProps,
 	formProps,
 	...props

@@ -15,24 +15,37 @@ export default function Card({ data, variant = "default", className = "", ...pro
 						<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
 					</div>
 				)}
+				{data.icon && (
+					<div className={styles.icon}>
+						{data.icon.type === "component" ? (
+							<data.icon.component />
+						) : (
+							<img src={data.icon.src} alt={data.icon.alt} />
+						)}
+					</div>
+				)}
 			</header>
 			<div className={styles.body}>
 				<h3 className={styles.title}>{data.title}</h3>
 				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
 			</div>
 			<footer className={styles.footer}>
-				{data.deliveryTime && (
-					<span className={styles.time}>
-						<BsClock />
-						<span>{data.deliveryTime}</span>
-					</span>
-				)}
-				{data.deliveryFee !== undefined && (
-					<span className={styles.deliveryFee}>
-						<MdOutlineDeliveryDining />
-						<span>{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}</span>
-					</span>
-				)}
+				<div className={styles.metaData}>
+					{data.deliveryTime && (
+						<span className={styles.metaItem}>
+							<BsClock />
+							<span>{data.deliveryTime}</span>
+						</span>
+					)}
+					{data.deliveryFee !== undefined && (
+						<span className={styles.metaItem}>
+							<MdOutlineDeliveryDining />
+							<span>
+								{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}
+							</span>
+						</span>
+					)}
+				</div>
 			</footer>
 		</div>
 	);

@@ -1,7 +1,19 @@
+import type { IconType } from "react-icons";
+
 export interface CardData {
   id: number;
   image?: {
     url: string;
+    alt: string;
+  };
+  icon?:
+  {
+    type: "component";
+    component: IconType;
+  }
+  | {
+    type: "image";
+    src: string;
     alt: string;
   };
   title: string;

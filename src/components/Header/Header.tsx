@@ -13,7 +13,7 @@ import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
 
 const defaultPrimaryNavigation: NavigationItem[] = [
-	{ label: "Home", path: "#" },
+	{ label: "Homes", path: "#" },
 	{ label: "Restaurants", path: "#" },
 	{ label: "Orders", path: "#" },
 	{ label: "Contact", path: "#" },

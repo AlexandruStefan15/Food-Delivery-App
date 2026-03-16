@@ -23,7 +23,7 @@ export default function HeroBanner({
 					className={styles.input}
 					placeholder="Enter you delivery address..."
 				>
-					<inlineSvgs.location wrapperClassName={styles.locationIcon} />
+					<inlineSvgs.location className={styles.locationIcon} />
 				</SearchBar>
 			</div>
 		</section>

@@ -23,6 +23,12 @@ interface Item {
 	icon: ItemIcon;
 }
 
+interface Data {
+	title: string;
+	subtitle: string;
+	cards: Item[];
+}
+
 export const howItWorks_data: Item[] = [
 	{
 		id: 1,

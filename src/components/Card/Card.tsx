@@ -55,9 +55,7 @@ export default function Card({ data, variant = "default", className = "", ...pro
 						{data.deliveryFee !== undefined && (
 							<span className={styles.metaItem}>
 								<MdOutlineDeliveryDining />
-								<span>
-									{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}
-								</span>
+								<span>{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}</span>
 							</span>
 						)}
 					</div>

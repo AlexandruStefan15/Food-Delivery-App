@@ -10,22 +10,30 @@
 	}
 
 	.navigation {
-		max-width: 1100px;
+		max-width: 1230px;
 		margin: 0 auto;
 		padding-inline: 3em;
 		flex: 1;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-		gap: 1.5em;
+		gap: 2.5rem;
 
 		@include media.mobile {
 			grid-template-columns: repeat(2, minmax(130px, 1fr));
+		}
+
+		.intro {
+			.description {
+				color: var(--foreground-grey);
+				font-size: 0.875rem;
+			}
 		}
 
 		.newsletter {
 			.description {
 				color: var(--foreground-grey);
 				margin-top: 1.25rem;
+				font-size: 0.875rem;
 			}
 		}
 	}
@@ -41,7 +49,7 @@
 
 		.listItem {
 			.link {
-				font-size: 0.82rem;
+				font-size: 0.875rem;
 			}
 		}
 	}

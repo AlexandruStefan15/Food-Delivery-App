@@ -8,6 +8,9 @@ import { HeaderProps, NavigationItem } from "./Header.types";
 //assets
 import svgs, { inlineSvgs } from "../../assets/svgs/index";
 
+//icons
+import { MdOutlineShoppingBag } from "react-icons/md";
+
 //components
 import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
@@ -47,7 +50,7 @@ export default function Header({
 				</div>
 				<div className={styles.secondaryNavigation}>
 					<SearchBar formProps={{ className: styles.searchBar }} placeholder="Search..." />
-					<inlineSvgs.cart className={styles.icon} />
+					<MdOutlineShoppingBag className={styles.icon} />
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>
 							{secondaryNavigation.map((item, index) => (

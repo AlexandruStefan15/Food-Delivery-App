@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "./Footer.module.scss";
+import { NavLink } from "react-router";
 
 // types
 import type { FooterProps, LinkListProps, NavigationItem, TitleProps } from "./Footer.types";
 
 //components
-import { NavLink } from "react-router";
+import Logo from "../Logo/Logo";
 
 const defaultNavigation: NavigationItem[] = [
 	{
@@ -29,14 +30,17 @@ const defaultNavigation: NavigationItem[] = [
 	},
 ];
 
-export default function Footer({
-	className = "",
-	navigation = defaultNavigation,
-	...props
-}: FooterProps) {
+export default function Footer({ className = "", navigation = defaultNavigation, ...props }: FooterProps) {
 	return (
 		<footer className={styles.footer + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
+				<div className={styles.intro}>
+					<Logo className={styles.logo} />
+					<p className={styles.description}>
+						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness
+						guaranteed.
+					</p>
+				</div>
 				{navigation.map((item, index) => (
 					<LinkList key={index} title={item.title} links={item.links} />
 				))}

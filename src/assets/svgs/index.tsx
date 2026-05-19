@@ -2,9 +2,12 @@ import cart from "./cart.svg";
 import logo from "./logo.svg";
 import search from "./search.svg";
 
-const svgs = { cart, logo, search };
+/* Svgs paths */
 
+const svgs = { cart, logo, search };
 export default svgs;
+
+/* Inline Svgs */
 
 type InlineSvgProps = React.ComponentPropsWithoutRef<"svg">;
 

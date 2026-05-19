@@ -3,6 +3,8 @@
 .header {
 	background: transparent;
 	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+	font-size: 0.9rem;
+	font-weight: 600;
 
 	.navigation {
 		min-height: 70px;
@@ -37,7 +39,7 @@
 			}
 
 			.icon {
-				flex: 0 39px;
+				flex: 0 31px;
 				cursor: pointer;
 			}
 		}

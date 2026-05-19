@@ -5,6 +5,11 @@ import { NavLink } from "react-router";
 // types
 import type { FooterProps, LinkListProps, NavigationItem, TitleProps } from "./Footer.types";
 
+//icons
+import { FaGlobeAmericas } from "react-icons/fa";
+import { IoShareSocialOutline } from "react-icons/io5";
+import { MdGroup } from "react-icons/md";
+
 //components
 import Logo from "../Logo/Logo";
 
@@ -34,20 +39,24 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 	return (
 		<footer className={styles.footer + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
-				<div className={styles.intro}>
+				<Col className={styles.intro}>
 					<Logo className={styles.logo} />
 					<p className={styles.description}>
-						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness
-						guaranteed.
+						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness guaranteed.
 					</p>
-				</div>
+					<div className={styles.utilities}>
+						<FaGlobeAmericas size={21} />
+						<IoShareSocialOutline size={23} />
+						<MdGroup size={26} />
+					</div>
+				</Col>
 				{navigation.map((item, index) => (
 					<LinkList key={index} title={item.title} links={item.links} />
 				))}
-				<div className={styles.newsletter}>
+				<Col className={styles.newsletter}>
 					<Title>Newsletter</Title>
 					<p className={styles.description}>Get the latest deals and new restaurant alerts.</p>
-				</div>
+				</Col>
 			</nav>
 		</footer>
 	);
@@ -75,5 +84,13 @@ function Title({ className = "", children, ...props }: TitleProps) {
 		<h3 className={styles.title} {...props}>
 			{children}
 		</h3>
+	);
+}
+
+function Col({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"div">) {
+	return (
+		<div className={`${styles.col} ${className}`} {...props}>
+			{children}
+		</div>
 	);
 }

@@ -19,32 +19,35 @@
 		gap: 2.5rem;
 
 		@include media.mobile {
-			grid-template-columns: repeat(2, minmax(130px, 1fr));
+			grid-template-columns: repeat(1, minmax(0, 1fr));
+			padding-inline: 1rem;
 		}
 
-		.intro {
-			.description {
-				color: var(--foreground-grey);
-				font-size: 0.875rem;
-			}
-		}
+		.col {
+			color: var(--foreground-grey);
+			font-size: 0.875rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			line-height: 1.55;
+			justify-content: space-between;
 
-		.newsletter {
-			.description {
-				color: var(--foreground-grey);
-				margin-top: 1.25rem;
-				font-size: 0.875rem;
+			.utilities {
+				display: flex;
+				gap: 1rem;
 			}
 		}
 	}
 }
 
 .linkListContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 	.navList {
-		margin-top: 1.25rem;
 		display: flex;
 		flex-direction: column;
-		gap: 0.75em;
+		gap: 0.75rem;
 		color: var(--foreground-grey);
 
 		.listItem {

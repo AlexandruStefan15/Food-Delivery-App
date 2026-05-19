@@ -13,7 +13,7 @@ interface LogoProps extends React.ComponentPropsWithoutRef<"div"> {
 export default function Logo({ className = "", src = svgs.logo, href = "/", ...props }: LogoProps) {
 	return (
 		<div className={styles.logo + ` ${className}`} {...props}>
-			<NavLink to={href}>
+			<NavLink className={styles.link} to={href}>
 				<img className={styles.img} src={src} alt="logo" />
 			</NavLink>
 		</div>

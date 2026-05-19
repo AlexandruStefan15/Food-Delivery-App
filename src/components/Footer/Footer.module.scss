@@ -32,6 +32,10 @@
 			line-height: 1.55;
 			justify-content: space-between;
 
+			.logo {
+				max-width: 160px;
+			}
+
 			.utilities {
 				display: flex;
 				gap: 1rem;

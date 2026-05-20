@@ -5,7 +5,6 @@ type ButtonVariant = "default" | "primary" | "secondary" | "tertiary" | "animate
 
 interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
 	variant?: ButtonVariant;
-	icon?: ReactNode;
 }
 
 export default function Button({
@@ -13,13 +12,11 @@ export default function Button({
 	children,
 	type = "button",
 	variant = "default",
-	icon,
 	...props
 }: ButtonProps) {
 	return (
 		<button className={styles[`btn_${variant}`] + ` ${className}`} type={type} {...props}>
-			{icon && <span className={styles.btn_icon}>{icon}</span>}
-			<span className={styles.btn_text}>{children}</span>
+			{children}
 		</button>
 	);
 }

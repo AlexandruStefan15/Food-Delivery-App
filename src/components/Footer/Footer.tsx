@@ -42,12 +42,19 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 				<Col className={styles.intro}>
 					<Logo className={styles.logo} />
 					<p className={styles.description}>
-						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness guaranteed.
+						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness
+						guaranteed.
 					</p>
 					<div className={styles.utilities}>
-						<FaGlobeAmericas size={21} />
-						<IoShareSocialOutline size={23} />
-						<MdGroup size={26} />
+						<NavLink to="#">
+							<FaGlobeAmericas size={21} />
+						</NavLink>
+						<NavLink to="#">
+							<IoShareSocialOutline size={23} />
+						</NavLink>
+						<NavLink to="#">
+							<MdGroup size={26} />
+						</NavLink>
 					</div>
 				</Col>
 				{navigation.map((item, index) => (

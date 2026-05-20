@@ -39,6 +39,10 @@
 			.utilities {
 				display: flex;
 				gap: 1rem;
+
+				a:hover {
+					color: var(--accent-orange);
+				}
 			}
 		}
 	}

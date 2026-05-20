@@ -7,26 +7,33 @@
 }
 
 :root {
-	--color-pink-500: #e7d5cf;
-	--color-pink-200: #f3eae7;
+	--color-brown-light-300: #e7d5cf;
+	--color-brown-light-200: #f3eae7;
 
-	--color-brown-500-shade: #9a604c49;
+	--color-brown-shade-600: #ec49131a;
+	--color-brown-shade-500: #9a604c49;
+
+	--color-brown-700: #815040;
+	--color-brown-600: #8d5846;
 	--color-brown-500: #9a5f4c;
-	--color-pink-500-shade: #ec49131a;
+	--color-brown-400: #a66752;
+	--color-brown-300: #b5715a;
+	--color-brown-200: #c07860;
+	--color-brown-100: #cf8268;
 
 	--primary-white: white;
-	--primary-brown: #9a5f4c;
+	--primary-brown: var(--color-brown-500);
+	--secondary-brown-light: var(--color-brown-light-300);
 	--secondary-black: #1b110d;
-	--secondary-pink: var(--color-pink-500);
 	--tertiary-grey: #6b7280;
 	--accent-orange: #ec4913;
-	--accent-muted: var(--color-pink-200);
+	--accent-muted: var(--color-brown-light-200);
 
 	--button-primary-bg: var(--accent-orange);
 	--icon-primary-color: var(--color-brown-500);
 	--icon-secondary-color: var(--accent-orange);
-	--icon-primary-bg: var(--color-pink-500-shade);
-	--border-primary-color: var(--color-brown-500-shade);
+	--icon-primary-bg: var(--color-brown-shade-600);
+	--border-primary-color: var(--color-brown-shade-500);
 
 	--background: #f8f6f6;
 	--foreground-black: black;

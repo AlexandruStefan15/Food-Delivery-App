@@ -10,10 +10,18 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	onSearch?: (query: string) => void;
 	onChange?: (value: string) => void;
 	className?: string;
+	classNames?: ClassNames;
 	children?: ReactNode;
 	searchButtonContent?: ReactNode;
 	searchButtonProps?: React.ComponentPropsWithoutRef<typeof Button>;
 	formProps?: React.ComponentPropsWithoutRef<"form">;
+	showSearchBtn?: boolean;
+	variant?: string;
+}
+
+interface ClassNames {
+	input?: string;
+	btn?: string;
 }
 
 const SearchBar = ({
@@ -21,10 +29,13 @@ const SearchBar = ({
 	onSearch,
 	onChange,
 	className = "",
+	classNames = {},
 	children,
 	searchButtonContent = <inlineSvgs.search className={styles.icon} />,
 	searchButtonProps,
 	formProps,
+	showSearchBtn = true,
+	variant = "default",
 	...props
 }: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
@@ -46,7 +57,7 @@ const SearchBar = ({
 		<form
 			{...formProps}
 			onSubmit={handleSubmit}
-			className={`${styles.form} ${isFocused ? styles.active : ""} ${formProps?.className || ""}`}
+			className={`${styles[`form_${variant}`]} ${isFocused ? styles.active : ""} ${formProps?.className || ""}`}
 		>
 			{children}
 			<input
@@ -55,7 +66,7 @@ const SearchBar = ({
 				ref={inputRef}
 				onChange={handleChange}
 				placeholder={placeholder}
-				className={`${styles.input} ${className}`}
+				className={`${styles.input} ${classNames.input}`}
 				onFocus={(e) => {
 					setIsFocused(true);
 					props.onFocus?.(e);
@@ -66,18 +77,20 @@ const SearchBar = ({
 				}}
 				{...props}
 			/>
-			<Button
-				className={styles.btn}
-				variant="transparent"
-				type="submit"
-				{...searchButtonProps}
-				onClick={(e) => {
-					handleSubmit(e);
-					searchButtonProps?.onClick?.(e);
-				}}
-			>
-				{searchButtonContent}
-			</Button>
+			{showSearchBtn && (
+				<Button
+					className={`${styles.btn} ${classNames.btn}`}
+					variant="transparent"
+					type="submit"
+					{...searchButtonProps}
+					onClick={(e) => {
+						handleSubmit(e);
+						searchButtonProps?.onClick?.(e);
+					}}
+				>
+					{searchButtonContent}
+				</Button>
+			)}
 		</form>
 	);
 };

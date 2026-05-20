@@ -10,6 +10,8 @@
 	--color-brown-light-300: #e7d5cf;
 	--color-brown-light-200: #f3eae7;
 
+	--color-brown-dark-500: #221510;
+
 	--color-brown-shade-600: #ec49131a;
 	--color-brown-shade-500: #9a604c49;
 
@@ -21,10 +23,13 @@
 	--color-brown-200: #c07860;
 	--color-brown-100: #cf8268;
 
+	--color-black-500: #1b110d;
+
 	--primary-white: white;
 	--primary-brown: var(--color-brown-500);
+	--primary-brown-dark: var(--color-brown-dark-500);
+	--primary-black: var(--color-black-500);
 	--secondary-brown-light: var(--color-brown-light-300);
-	--secondary-black: #1b110d;
 	--tertiary-grey: #6b7280;
 	--accent-orange: #ec4913;
 	--accent-muted: var(--color-brown-light-200);

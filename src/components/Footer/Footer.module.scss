@@ -1,7 +1,7 @@
 @use "../../styles/breakpoints" as media;
 
 .footer {
-	background-color: var(--secondary-black);
+	background-color: var(--primary-black);
 	padding-top: 4em;
 	padding-bottom: 4em;
 
@@ -31,6 +31,18 @@
 			gap: 1rem;
 			line-height: 1.55;
 			justify-content: space-between;
+
+			&.newsletter {
+				justify-content: flex-start;
+
+				.input {
+					min-height: 43px;
+					color: white;
+					&::placeholder {
+						color: var(--foreground-grey);
+					}
+				}
+			}
 
 			.logo {
 				max-width: 160px;

@@ -1,4 +1,4 @@
-.form {
+.form_default {
 	display: flex;
 	width: fit-content;
 	flex-direction: row-reverse;
@@ -28,6 +28,51 @@
 		.icon {
 			width: 22px;
 			color: var(--icon-primary-color);
+		}
+	}
+}
+
+/* variants */
+
+.form_2 {
+	display: flex;
+	width: fit-content;
+	gap: 0.5rem;
+	border-radius: 25px;
+	overflow: hidden;
+
+	.input {
+		width: 100%;
+		border: none;
+		outline: none;
+		padding: 5px;
+		color: white;
+		font-size: 0.88rem;
+		padding-block: 12px;
+		padding-left: 15px;
+		background-color: var(--primary-brown-dark);
+		border-radius: 25px;
+
+		&::placeholder {
+			color: var(--foreground-brown);
+		}
+	}
+
+	.btn {
+		flex: 0 47px;
+		background-color: var(--accent-orange);
+		border-radius: 100%;
+		padding: 0.75em;
+		aspect-ratio: 1/1;
+
+		.icon {
+			width: 100%;
+			color: white;
+		}
+
+		> svg,
+		img {
+			width: 100%;
 		}
 	}
 }

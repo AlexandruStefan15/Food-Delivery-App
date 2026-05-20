@@ -9,9 +9,11 @@ import type { FooterProps, LinkListProps, NavigationItem, TitleProps } from "./F
 import { FaGlobeAmericas } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { MdGroup } from "react-icons/md";
+import { BiSend } from "react-icons/bi";
 
 //components
 import Logo from "../Logo/Logo";
+import SearchBar from "../SearchBar/SearchBar";
 
 const defaultNavigation: NavigationItem[] = [
 	{
@@ -62,7 +64,15 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 				))}
 				<Col className={styles.newsletter}>
 					<Title>Newsletter</Title>
-					<p className={styles.description}>Get the latest deals and new restaurant alerts.</p>
+					<p className={styles.description}>
+						Get the latest deals and new restaurant alerts. Don't miss anything.
+					</p>
+					<SearchBar
+						className={styles.searchBar}
+						classNames={{ input: styles.input }}
+						searchButtonContent={<BiSend size={22} color="white" />}
+						variant="2"
+					/>
 				</Col>
 			</nav>
 		</footer>

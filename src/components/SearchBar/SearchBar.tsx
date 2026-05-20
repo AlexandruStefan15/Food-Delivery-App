@@ -66,7 +66,7 @@ const SearchBar = ({
 				ref={inputRef}
 				onChange={handleChange}
 				placeholder={placeholder}
-				className={`${styles.input} ${classNames.input}`}
+				className={`${styles.input} ${className}`}
 				onFocus={(e) => {
 					setIsFocused(true);
 					props.onFocus?.(e);

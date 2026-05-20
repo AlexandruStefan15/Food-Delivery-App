@@ -14,7 +14,7 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	children?: ReactNode;
 	searchButtonContent?: ReactNode;
 	searchButtonProps?: React.ComponentPropsWithoutRef<typeof Button>;
-	formProps?: React.ComponentPropsWithoutRef<"form">;
+	wrapperClassname?: ReactNode;
 	showSearchBtn?: boolean;
 	variant?: string;
 }
@@ -29,11 +29,11 @@ const SearchBar = ({
 	onSearch,
 	onChange,
 	className = "",
+	wrapperClassname = "",
 	classNames = {},
 	children,
 	searchButtonContent = <inlineSvgs.search className={styles.icon} />,
 	searchButtonProps,
-	formProps,
 	showSearchBtn = true,
 	variant = "default",
 	...props
@@ -55,9 +55,8 @@ const SearchBar = ({
 
 	return (
 		<form
-			{...formProps}
 			onSubmit={handleSubmit}
-			className={`${styles[`form_${variant}`]} ${isFocused ? styles.active : ""} ${formProps?.className || ""}`}
+			className={`${styles[`form_${variant}`]} ${isFocused ? styles.active : ""} ${wrapperClassname}`}
 		>
 			{children}
 			<input

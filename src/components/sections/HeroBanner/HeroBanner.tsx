@@ -17,10 +17,10 @@ export default function HeroBanner({
 				<h1 className={styles.title}>{title}</h1>
 				<h3 className={styles.subtitle}>{subtitle}</h3>
 				<SearchBar
-					formProps={{ className: styles.searchBar }}
+					className={styles.input}
+					wrapperClassname={styles.searchBar}
 					searchButtonContent="Find Food"
 					searchButtonProps={{ variant: "animated" }}
-					className={styles.input}
 					placeholder="Enter you delivery address..."
 				>
 					<inlineSvgs.location className={styles.locationIcon} />

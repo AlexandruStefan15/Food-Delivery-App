@@ -2,33 +2,40 @@ import React from "react";
 import styles from "./Card.module.scss";
 import { CardProps } from "./Card.types";
 
-//icons
 import { BsClock } from "react-icons/bs";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
-export default function Card({ data, variant = "default", className = "", ...props }: CardProps) {
-	if (variant === "basic")
+export default function Card(props: CardProps) {
+	if (props.variant === "basic") {
+		const { data, className = "", variant, ...divProps } = props;
+
 		return (
-			<div className={styles.card_basic + ` ${className}`} {...props}>
+			<div className={`${styles.card_basic} ${className}`} {...divProps}>
 				{data.image && (
 					<div className={styles.imgWrapper}>
-						<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
+						<img className={styles.img} src={data.image.url} alt={data.image.alt} />
 					</div>
 				)}
+
 				<div className={styles.content}>
 					<h3 className={styles.title}>{data.title}</h3>
 				</div>
 			</div>
 		);
+	}
 
-	if (variant === "featured")
+	if (props.variant === "featured") {
+		const { data, className = "", variant, ...divProps } = props;
+
 		return (
-			<div className={styles.card_featured + ` ${className}`} {...props}>
+			<div className={`${styles.card_featured} ${className}`} {...divProps}>
 				<header className={styles.header}>
-					{data.card_image && <img className={styles.img} src={data.card_image} alt={"restaurant card image"}></img>}
+					{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
 				</header>
+
 				<div className={styles.body}>
 					<h3 className={styles.title}>{data.name}</h3>
+
 					{data.cuisine && <h4 className={styles.subtitle}>{data.cuisine}</h4>}
 
 					<div className={styles.metadata}>
@@ -38,6 +45,7 @@ export default function Card({ data, variant = "default", className = "", ...pro
 								<span>{data.delivery_time}</span>
 							</span>
 						)}
+
 						{data.delivery_fee !== undefined && data.delivery_fee !== null && (
 							<span className={styles.metaItem}>
 								<MdOutlineDeliveryDining />
@@ -48,9 +56,12 @@ export default function Card({ data, variant = "default", className = "", ...pro
 				</div>
 			</div>
 		);
+	}
+
+	const { data, className = "", variant, ...divProps } = props;
 
 	return (
-		<div className={styles.card_default + ` ${className}`} {...props}>
+		<div className={`${styles.card_default} ${className}`} {...divProps}>
 			<header className={styles.header}>
 				{data.icon && (
 					<div className={styles.iconWrapper}>
@@ -62,8 +73,10 @@ export default function Card({ data, variant = "default", className = "", ...pro
 					</div>
 				)}
 			</header>
+
 			<div className={styles.body}>
 				<h3 className={styles.title}>{data.title}</h3>
+
 				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
 			</div>
 		</div>

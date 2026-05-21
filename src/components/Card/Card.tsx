@@ -30,15 +30,6 @@ export default function Card({ data, variant = "default", className = "", ...pro
 							<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
 						</div>
 					)}
-					{data.icon && (
-						<div className={styles.iconWrapper}>
-							{data.icon.type === "component" ? (
-								<data.icon.component className={styles.icon} />
-							) : (
-								<img src={data.icon.src} alt={data.icon.alt} />
-							)}
-						</div>
-					)}
 				</header>
 				<div className={styles.body}>
 					<h3 className={styles.title}>{data.title}</h3>

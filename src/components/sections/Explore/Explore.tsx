@@ -9,7 +9,7 @@ import Card from "../../Card/Card";
 import { useFoodCategories } from "../../../api/foodCategories";
 
 export default function Explore() {
-	const { foodCategories, foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
+	const { foodCategories } = useFoodCategories();
 
 	return (
 		<section className={styles.section}>

@@ -50,7 +50,7 @@
 	"restaurants": [
 		{
 			"id": 1,
-			"name": "Sakura House",
+			"name": "Sakura Sushi House",
 			"cuisine": "Japanese",
 			"card_image": "/images/restaurants/sakura/cards/sakura-card.png",
 			"cover_image": "/images/restaurants/sakura/covers/sakura-cover.png",
@@ -86,6 +86,19 @@
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [1]
+		},
+		{
+			"id": 4,
+			"name": "Cantina Street Tacos",
+			"cuisine": "Mexican",
+			"card_image": "/images/cantinaStreetTacos/cards/cantinaStreetTacos-card.jpg",
+			"cover_image": "",
+			"delivery_time": "35-45 min",
+			"delivery_fee": 0,
+			"rating": 4.7,
+			"distance": 1.2,
+			"closing_time": "10:00 PM",
+			"food_categories_ids": [6]
 		}
 	],
 

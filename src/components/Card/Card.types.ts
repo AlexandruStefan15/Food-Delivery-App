@@ -16,10 +16,13 @@ export interface CardData {
 				src: string;
 				alt: string;
 		  };
-	title: string;
+	title?: string;
+	name?: string;
 	subtitle?: string;
-	deliveryTime?: string;
-	deliveryFee?: number;
+	delivery_time?: string;
+	delivery_fee?: number;
+	cuisine?: string;
+	card_image?: string;
 }
 
 export interface CardProps extends React.ComponentPropsWithoutRef<"div"> {

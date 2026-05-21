@@ -63,3 +63,41 @@
 		}
 	}
 }
+
+.card_featured {
+	display: flex;
+	flex-direction: column;
+	border-radius: 20px;
+	overflow: hidden;
+	border: 1px solid var(--border-primary-color);
+	cursor: pointer;
+
+	.header {
+		flex: 0 192px;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.body {
+		padding: 1rem;
+
+		.metadata {
+			display: flex;
+			gap: 1rem;
+			padding-top: 1rem;
+			margin-top: 1rem;
+			border-top: 1px solid var(--border-primary-color);
+
+			.metaItem {
+				display: flex;
+				gap: 0.5rem;
+			}
+		}
+	}
+}

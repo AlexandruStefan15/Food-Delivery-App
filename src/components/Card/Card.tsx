@@ -25,43 +25,33 @@ export default function Card({ data, variant = "default", className = "", ...pro
 		return (
 			<div className={styles.card_featured + ` ${className}`} {...props}>
 				<header className={styles.header}>
-					{data.image && (
-						<div className={styles.imgWrapper}>
-							<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
-						</div>
-					)}
+					{data.card_image && <img className={styles.img} src={data.card_image} alt={"restaurant card image"}></img>}
 				</header>
 				<div className={styles.body}>
-					<h3 className={styles.title}>{data.title}</h3>
-					{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
-				</div>
-				<footer className={styles.footer}>
-					<div className={styles.metaData}>
-						{data.deliveryTime && (
+					<h3 className={styles.title}>{data.name}</h3>
+					{data.cuisine && <h4 className={styles.subtitle}>{data.cuisine}</h4>}
+
+					<div className={styles.metadata}>
+						{data.delivery_time && (
 							<span className={styles.metaItem}>
 								<BsClock />
-								<span>{data.deliveryTime}</span>
+								<span>{data.delivery_time}</span>
 							</span>
 						)}
-						{data.deliveryFee !== undefined && (
+						{data.delivery_fee !== undefined && data.delivery_fee !== null && (
 							<span className={styles.metaItem}>
 								<MdOutlineDeliveryDining />
-								<span>{data.deliveryFee > 0 ? `$${data.deliveryFee} delivery` : "Free delivery"}</span>
+								<span>{data.delivery_fee > 0 ? `$${data.delivery_fee} delivery` : "Free delivery"}</span>
 							</span>
 						)}
 					</div>
-				</footer>
+				</div>
 			</div>
 		);
 
 	return (
 		<div className={styles.card_default + ` ${className}`} {...props}>
 			<header className={styles.header}>
-				{data.image && (
-					<div className={styles.imgWrapper}>
-						<img className={styles.img} src={data.image.url} alt={data.image.alt}></img>
-					</div>
-				)}
 				{data.icon && (
 					<div className={styles.iconWrapper}>
 						{data.icon.type === "component" ? (

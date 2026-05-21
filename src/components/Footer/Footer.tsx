@@ -44,8 +44,7 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 				<Col className={styles.intro}>
 					<Logo className={styles.logo} />
 					<p className={styles.description}>
-						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness
-						guaranteed.
+						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness guaranteed.
 					</p>
 					<div className={styles.utilities}>
 						<NavLink to="#">
@@ -64,15 +63,8 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 				))}
 				<Col className={styles.newsletter}>
 					<Title>Newsletter</Title>
-					<p className={styles.description}>
-						Get the latest deals and new restaurant alerts. Don't miss anything.
-					</p>
-					<SearchBar
-						className={styles.searchBar}
-						classNames={{ input: styles.input }}
-						searchButtonContent={<BiSend size={22} color="white" />}
-						variant="2"
-					/>
+					<p className={styles.description}>Get the latest deals and new restaurant alerts. Don't miss anything.</p>
+					<SearchBar searchButtonContent={<BiSend size={22} color="white" />} variant="2" />
 				</Col>
 			</nav>
 		</footer>

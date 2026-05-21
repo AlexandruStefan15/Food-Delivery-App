@@ -10,18 +10,12 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	onSearch?: (query: string) => void;
 	onChange?: (value: string) => void;
 	className?: string;
-	classNames?: ClassNames;
+	wrapperClassname?: string;
 	children?: ReactNode;
 	searchButtonContent?: ReactNode;
 	searchButtonProps?: React.ComponentPropsWithoutRef<typeof Button>;
-	wrapperClassname?: ReactNode;
 	showSearchBtn?: boolean;
 	variant?: string;
-}
-
-interface ClassNames {
-	input?: string;
-	btn?: string;
 }
 
 const SearchBar = ({
@@ -30,12 +24,13 @@ const SearchBar = ({
 	onChange,
 	className = "",
 	wrapperClassname = "",
-	classNames = {},
 	children,
 	searchButtonContent = <inlineSvgs.search className={styles.icon} />,
 	searchButtonProps,
 	showSearchBtn = true,
 	variant = "default",
+	onFocus,
+	onBlur,
 	...props
 }: SearchBarProps) => {
 	const [query, setQuery] = useState<string>("");
@@ -68,20 +63,20 @@ const SearchBar = ({
 				className={`${styles.input} ${className}`}
 				onFocus={(e) => {
 					setIsFocused(true);
-					props.onFocus?.(e);
+					onFocus?.(e);
 				}}
 				onBlur={(e) => {
 					setIsFocused(false);
-					props.onBlur?.(e);
+					onBlur?.(e);
 				}}
 				{...props}
 			/>
 			{showSearchBtn && (
 				<Button
-					className={`${styles.btn} ${classNames.btn}`}
 					variant="transparent"
 					type="submit"
 					{...searchButtonProps}
+					className={`${styles.btn} ${searchButtonProps?.className}`}
 					onClick={(e) => {
 						handleSubmit(e);
 						searchButtonProps?.onClick?.(e);

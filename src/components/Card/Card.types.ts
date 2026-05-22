@@ -1,11 +1,9 @@
 import type { IconType } from "react-icons";
 
-export interface CardData {
+type DefaultCardData = {
 	id: number;
-	image?: {
-		url: string;
-		alt: string;
-	};
+	title: string;
+	subtitle?: string;
 	icon?:
 		| {
 				type: "component";
@@ -16,18 +14,40 @@ export interface CardData {
 				src: string;
 				alt: string;
 		  };
-	title?: string;
-	name?: string;
-	subtitle?: string;
-	delivery_time?: string;
-	delivery_fee?: number;
+};
+
+type BasicCardData = {
+	id: number;
+	title: string;
+	image?: {
+		url: string;
+		alt: string;
+	};
+};
+
+type FeaturedCardData = {
+	id: number;
+	name: string;
 	cuisine?: string;
 	card_image?: string;
-}
+	delivery_time?: string;
+	delivery_fee?: number;
+};
 
-export interface CardProps extends React.ComponentPropsWithoutRef<"div"> {
-	variant?: "default" | "basic" | "featured";
+type BaseCardProps = React.ComponentPropsWithoutRef<"div"> & {
 	className?: string;
-	data: CardData;
-	children?: React.ReactNode;
-}
+};
+
+export type CardProps =
+	| (BaseCardProps & {
+			variant?: "default";
+			data: DefaultCardData;
+	  })
+	| (BaseCardProps & {
+			variant: "basic";
+			data: BasicCardData;
+	  })
+	| (BaseCardProps & {
+			variant: "featured";
+			data: FeaturedCardData;
+	  });

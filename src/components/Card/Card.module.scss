@@ -1,103 +1,12 @@
-.card_default {
-	display: flex;
-	flex-direction: column;
-	max-width: 370px;
-	gap: 1.5rem;
+.card {
 	transition-property: box-shadow;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 	border: 1px solid var(--border-primary-color);
-	border-radius: 50px;
-	padding: 2.2rem 1.75rem;
-	text-align: center;
-	background-color: var(--primary-white);
+	border-radius: 48px;
+	overflow: hidden;
 
 	&:hover {
 		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-	}
-
-	.header {
-		display: flex;
-		justify-content: center;
-		.iconWrapper {
-			background-color: var(--icon-primary-bg);
-			padding: 1.1em;
-			border-radius: 50%;
-			width: 68px;
-
-			.icon {
-				width: 100%;
-				fill: var(--icon-secondary-color);
-			}
-		}
-	}
-
-	.body {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-
-		.subtitle {
-			font-size: 0.88rem;
-			color: var(--primary-brown);
-			font-weight: 500;
-		}
-	}
-}
-
-.card_basic {
-	display: flex;
-	flex-direction: column;
-	max-width: 117px;
-	align-items: center;
-	gap: 0.5rem;
-	cursor: pointer;
-
-	.imgWrapper {
-		border-radius: 150px;
-		overflow: hidden;
-
-		.img {
-			width: 100%;
-			object-fit: cover;
-		}
-	}
-}
-
-.card_featured {
-	display: flex;
-	flex-direction: column;
-	border-radius: 20px;
-	overflow: hidden;
-	border: 1px solid var(--border-primary-color);
-	cursor: pointer;
-
-	.header {
-		flex: 0 192px;
-		overflow: hidden;
-		position: relative;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
-
-	.body {
-		padding: 1rem;
-
-		.metadata {
-			display: flex;
-			gap: 1rem;
-			padding-top: 1rem;
-			margin-top: 1rem;
-			border-top: 1px solid var(--border-primary-color);
-
-			.metaItem {
-				display: flex;
-				gap: 0.5rem;
-			}
-		}
 	}
 }

@@ -3,18 +3,9 @@
 	flex-direction: column;
 	max-width: 370px;
 	gap: 1.5rem;
-	transition-property: box-shadow;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
-	border: 1px solid var(--border-primary-color);
-	border-radius: 50px;
 	padding: 2.2rem 1.75rem;
 	text-align: center;
 	background-color: var(--primary-white);
-
-	&:hover {
-		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-	}
 
 	.header {
 		display: flex;

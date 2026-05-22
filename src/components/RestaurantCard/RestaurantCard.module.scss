@@ -1,9 +1,6 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	border-radius: 20px;
-	overflow: hidden;
-	border: 1px solid var(--border-primary-color);
 	cursor: pointer;
 
 	.header {

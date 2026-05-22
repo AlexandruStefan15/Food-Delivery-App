@@ -4,9 +4,12 @@ import styles from "./FeatureCard.module.scss";
 //types
 import { FeatureCardProps } from "./FeatureCard.types";
 
+//components
+import Card from "../Card/Card";
+
 export default function FeatureCard({ data, className = "", ...props }: FeatureCardProps) {
 	return (
-		<div className={`${styles.card} ${className}`} {...props}>
+		<Card className={`${styles.card} ${className}`} {...props}>
 			<header className={styles.header}>
 				{data.icon && (
 					<div className={styles.iconWrapper}>
@@ -22,6 +25,6 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 				<h3 className={styles.title}>{data.title}</h3>
 				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
 			</div>
-		</div>
+		</Card>
 	);
 }

@@ -8,9 +8,12 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 //types
 import { RestaurantCardProps } from "./RestaurantCard.types";
 
+//components
+import Card from "../Card/Card";
+
 export default function RestaurantCard({ data, className = "", ...props }: RestaurantCardProps) {
 	return (
-		<div className={`${styles.card} ${className}`} {...props}>
+		<Card className={`${styles.card} ${className}`} {...props}>
 			<header className={styles.header}>
 				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
 			</header>
@@ -32,6 +35,6 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 					)}
 				</div>
 			</div>
-		</div>
+		</Card>
 	);
 }

@@ -6,26 +6,30 @@ import { NavLink } from "react-router";
 import { useRestaurants } from "../../../api/restaurants";
 
 //components
-import Card from "../../Card/Card";
+import RestaurantCard from "../../RestaurantCard/RestaurantCard";
 
 export default function PopularNearYou() {
 	const { restaurants } = useRestaurants();
 
 	const selectedRestaurantsIds = [1, 3, 4];
-	const displayedRestaurants = restaurants.filter((restaurant) => selectedRestaurantsIds.includes(restaurant.id));
+	const displayedRestaurants = restaurants.filter((restaurant) =>
+		selectedRestaurantsIds.includes(Number(restaurant.id)),
+	);
 
 	return (
 		<section className={styles.section}>
-			<div className={styles.section_container}>
+			<div className={styles.container}>
 				<header className={styles.header}>
 					<h2 className={styles.title}>Popular near you</h2>
 					<NavLink to="/restaurants">see more</NavLink>
 				</header>
-				<div className={styles.restaurants_container}>
+				<ul className={styles.restaurantList}>
 					{displayedRestaurants.map((restaurant) => (
-						<Card data={restaurant} variant="featured" key={restaurant.id} />
+						<li className={styles.listItem}>
+							<RestaurantCard data={restaurant} key={restaurant.id} />
+						</li>
 					))}
-				</div>
+				</ul>
 			</div>
 		</section>
 	);

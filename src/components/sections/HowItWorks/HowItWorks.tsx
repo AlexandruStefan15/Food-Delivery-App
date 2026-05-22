@@ -5,7 +5,7 @@ import styles from "./HowItWorks.module.scss";
 import { howItWorks_data } from "../../../data/HowItWorks";
 
 //components
-import Card from "../../Card/Card";
+import FeatureCard from "../../FeatureCard/FeatureCard";
 
 export default function HowItWorks() {
 	const { title, subtitle, cards } = howItWorks_data;
@@ -20,7 +20,7 @@ export default function HowItWorks() {
 				<ul className={styles.cardList}>
 					{cards.map((item) => (
 						<li className={styles.listItem} key={item.id}>
-							<Card data={item} className={styles.card} />
+							<FeatureCard data={item} className={styles.card} />
 						</li>
 					))}
 				</ul>

@@ -49,7 +49,7 @@ export default function Header({
 					)}
 				</div>
 				<div className={styles.secondaryNavigation}>
-					<SearchBar formProps={{ className: styles.searchBar }} placeholder="Search..." />
+					<SearchBar wrapperClassname={styles.searchBar} placeholder="Search..." />
 					<MdOutlineShoppingBag className={styles.icon} />
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>

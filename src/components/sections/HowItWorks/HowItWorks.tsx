@@ -20,7 +20,7 @@ export default function HowItWorks() {
 				<ul className={styles.cardList}>
 					{cards.map((item) => (
 						<li className={styles.listItem} key={item.id}>
-							<FeatureCard data={item} className={styles.card} />
+							<FeatureCard data={item} />
 						</li>
 					))}
 				</ul>

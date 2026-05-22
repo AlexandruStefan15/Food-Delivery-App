@@ -17,10 +17,10 @@
 		.restaurantList {
 			display: flex;
 			gap: 2rem;
-			align-items: center;
 
-			> * {
+			.listItem {
 				flex: 0 371px;
+				display: flex;
 			}
 		}
 	}

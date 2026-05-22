@@ -1,9 +1,9 @@
-import styles from "./Card.module.scss";
+import styles from "./CircularCard.module.scss";
 
 //types
-import { FoodCategoryCardProps } from "./FoodCategoryCard.types";
+import { FoodCategoryCardProps } from "./CircularCard.types";
 
-export default function FoodCategoryCard({ data, className = "", ...props }: FoodCategoryCardProps) {
+export default function CircularCard({ data, className = "", ...props }: FoodCategoryCardProps) {
 	return (
 		<div className={`${styles.card} ${className}`} {...props}>
 			{data.image && (

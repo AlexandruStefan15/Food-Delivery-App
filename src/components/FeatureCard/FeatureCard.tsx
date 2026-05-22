@@ -18,10 +18,8 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 					</div>
 				)}
 			</header>
-
 			<div className={styles.body}>
 				<h3 className={styles.title}>{data.title}</h3>
-
 				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
 			</div>
 		</div>

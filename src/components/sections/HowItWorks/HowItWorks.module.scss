@@ -43,20 +43,18 @@
 			gap: 2rem;
 			justify-content: center;
 
-			@include media.tablet_sm {
-				flex-direction: column;
-			}
-
 			.listItem {
 				display: flex;
 				flex: 0 371px;
+			}
 
-				@include media.tablet_sm {
+			@include media.tablet_lg {
+				flex-direction: column;
+
+				.listItem {
 					flex: 0 auto;
-				}
 
-				.card {
-					@include media.tablet_sm {
+					.card {
 						max-width: none;
 						width: 100%;
 					}

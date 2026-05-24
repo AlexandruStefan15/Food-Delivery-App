@@ -1,3 +1,5 @@
+@use "../../../styles/breakpoints" as media;
+
 .section {
 	padding-block: 2rem;
 	.container {
@@ -8,6 +10,14 @@
 		padding-inline: 5rem;
 		margin-inline: auto;
 
+		@include media.tablet_lg {
+			padding-inline: 3rem;
+		}
+
+		@include media.mobile {
+			padding-inline: 1rem;
+		}
+
 		.header {
 			display: flex;
 			justify-content: space-between;
@@ -15,13 +25,25 @@
 		}
 
 		.restaurantList {
-			display: flex;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
 			gap: 2rem;
-			justify-content: center;
+
+			@include media.tablet_lg {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include media.tablet_sm {
+				grid-template-columns: repeat(1, 1fr);
+			}
 
 			.listItem {
-				flex: 0 371px;
 				display: flex;
+
+				.card {
+					max-width: none;
+					width: 100%;
+				}
 			}
 		}
 	}

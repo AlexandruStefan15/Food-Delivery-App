@@ -1,3 +1,5 @@
+@use "../../../styles/breakpoints" as media;
+
 .section {
 	padding-block: 5rem;
 	background-color: #ffffff80;
@@ -9,6 +11,14 @@
 		flex-direction: column;
 		margin-inline: auto;
 		gap: 2.4rem;
+
+		@include media.tablet_sm {
+			padding-inline: 3rem;
+		}
+
+		@include media.mobile {
+			padding-inline: 1rem;
+		}
 
 		.header {
 			text-align: center;
@@ -33,9 +43,24 @@
 			gap: 2rem;
 			justify-content: center;
 
+			@include media.tablet_sm {
+				flex-direction: column;
+			}
+
 			.listItem {
 				display: flex;
 				flex: 0 371px;
+
+				@include media.tablet_sm {
+					flex: 0 auto;
+				}
+
+				.card {
+					@include media.tablet_sm {
+						max-width: none;
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

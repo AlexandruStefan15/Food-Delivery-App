@@ -26,7 +26,7 @@ export default function PopularNearYou() {
 				<ul className={styles.restaurantList}>
 					{displayedRestaurants.map((restaurant) => (
 						<li className={styles.listItem} key={restaurant.id}>
-							<RestaurantCard data={restaurant} />
+							<RestaurantCard className={styles.card} data={restaurant} />
 						</li>
 					))}
 				</ul>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./RestaurantCard.module.scss";
 
 //icons
-import { BsClock } from "react-icons/bs";
+import { MdAccessTime } from "react-icons/md";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
 //types
@@ -22,16 +22,16 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 				{data.cuisine && <Card.Subtitle className={styles.subtitle}>{data.cuisine}</Card.Subtitle>}
 				<div className={styles.metadata}>
 					{data.delivery_time && (
-						<span className={styles.metaItem}>
-							<BsClock />
-							<span>{data.delivery_time}</span>
-						</span>
+						<div className={styles.metaItem}>
+							<MdAccessTime size={17} color="#6b7280" />
+							<Card.Text>{data.delivery_time}</Card.Text>
+						</div>
 					)}
 					{data.delivery_fee !== undefined && data.delivery_fee !== null && (
-						<span className={styles.metaItem}>
-							<MdOutlineDeliveryDining />
-							<span>{data.delivery_fee > 0 ? `$${data.delivery_fee} delivery` : "Free delivery"}</span>
-						</span>
+						<div className={styles.metaItem}>
+							<MdOutlineDeliveryDining size={18} color="#6b7280" />
+							<Card.Text>{data.delivery_fee > 0 ? `$${data.delivery_fee} delivery` : "Free delivery"}</Card.Text>
+						</div>
 					)}
 				</div>
 			</div>

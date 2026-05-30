@@ -14,7 +14,12 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 				{data.icon && (
 					<div className={styles.iconWrapper}>
 						{data.icon.type === "component" ? (
-							<data.icon.component className={styles.icon} />
+							(() => {
+								const Icon = data.icon.component;
+								return <Icon className={styles.icon} />;
+							})()
+						) : data.icon.type === "node" ? (
+							data.icon.component
 						) : (
 							<img src={data.icon.src} alt={data.icon.alt} />
 						)}
@@ -22,8 +27,8 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 				)}
 			</header>
 			<div className={styles.body}>
-				<h3 className={styles.title}>{data.title}</h3>
-				{data.subtitle && <h4 className={styles.subtitle}>{data.subtitle}</h4>}
+				<Card.Title>{data.title}</Card.Title>
+				{data.subtitle && <Card.Subtitle>{data.subtitle}</Card.Subtitle>}
 			</div>
 		</Card>
 	);

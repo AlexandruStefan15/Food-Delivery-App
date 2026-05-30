@@ -19,7 +19,7 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 			</header>
 			<div className={styles.body}>
 				<h3 className={styles.title}>{data.name}</h3>
-				{data.cuisine && <h4 className={styles.subtitle}>{data.cuisine}</h4>}
+				{data.cuisine && <Card.Subtitle className={styles.subtitle}>{data.cuisine}</Card.Subtitle>}
 				<div className={styles.metadata}>
 					{data.delivery_time && (
 						<span className={styles.metaItem}>

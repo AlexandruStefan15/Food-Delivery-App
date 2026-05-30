@@ -19,6 +19,10 @@
 	.body {
 		padding: 1rem;
 
+		.subtitle {
+			margin-top: 0.25rem;
+		}
+
 		.metadata {
 			display: flex;
 			gap: 1rem;

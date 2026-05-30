@@ -10,6 +10,10 @@ interface CardData {
 				component: IconType;
 		  }
 		| {
+				type: "node";
+				component: React.ReactNode;
+		  }
+		| {
 				type: "image";
 				src: string;
 				alt: string;

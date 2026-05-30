@@ -55,12 +55,12 @@ const SearchBar = ({
 		>
 			{children}
 			<input
+				className={`${styles.input} ${className}`}
 				type="text"
 				value={query}
 				ref={inputRef}
 				onChange={handleChange}
 				placeholder={placeholder}
-				className={`${styles.input} ${className}`}
 				onFocus={(e) => {
 					setIsFocused(true);
 					onFocus?.(e);

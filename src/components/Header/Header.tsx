@@ -6,7 +6,7 @@ import { NavLink } from "react-router";
 import { HeaderProps, NavigationItem } from "./Header.types";
 
 //assets
-import svgs, { inlineSvgs } from "../../assets/svgs/index";
+import svgs, { InlineSvgs } from "../../assets/svgs/index";
 
 //icons
 import { MdOutlineShoppingBag } from "react-icons/md";

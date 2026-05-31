@@ -11,7 +11,7 @@ interface CardData {
 		  }
 		| {
 				type: "node";
-				component: React.ReactNode;
+				node: React.ReactNode;
 		  }
 		| {
 				type: "image";

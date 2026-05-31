@@ -12,7 +12,7 @@ type ItemIcon =
 	  }
 	| {
 			type: "node";
-			component: React.ReactNode;
+			node: React.ReactNode;
 	  }
 	| {
 			type: "image";

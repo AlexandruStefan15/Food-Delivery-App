@@ -12,7 +12,7 @@ export default svgs;
 
 type InlineSvgProps = React.ComponentPropsWithoutRef<"svg">;
 
-export const inlineSvgs = {
+export const InlineSvgs = {
 	search: ({ ...props }: InlineSvgProps) => (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"

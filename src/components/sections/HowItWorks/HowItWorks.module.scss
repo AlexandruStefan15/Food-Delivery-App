@@ -6,7 +6,7 @@
 
 	.container {
 		display: flex;
-		max-width: 1340px;
+		max-width: 1241px;
 		padding-inline: 2rem;
 		flex-direction: column;
 		margin-inline: auto;
@@ -37,7 +37,7 @@
 		.cardList {
 			display: flex;
 			gap: 2rem;
-			justify-content: center;
+			justify-content: space-between;
 
 			.listItem {
 				display: flex;

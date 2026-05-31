@@ -4,6 +4,12 @@
 	cursor: pointer;
 	max-width: 371px;
 
+	&:hover {
+		.title {
+			color: var(--accent-orange);
+		}
+	}
+
 	.header {
 		flex: 0 192px;
 		overflow: hidden;
@@ -18,9 +24,13 @@
 
 	.body {
 		padding: 1rem;
+		background-color: white;
 
 		.title {
 			font-size: 1.17rem;
+			transition-property: color;
+			transition-timing-function: ease;
+			transition-duration: 150ms;
 		}
 
 		.subtitle {
@@ -33,7 +43,7 @@
 			padding-top: 1rem;
 			padding-left: 5px;
 			margin-top: 1rem;
-			border-top: 1px solid var(--border-primary-color);
+			border-top: 1px solid var(--border-secondary-color);
 
 			.metaItem {
 				display: flex;

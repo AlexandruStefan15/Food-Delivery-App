@@ -1,25 +1,15 @@
 .card {
-	transition-property: box-shadow;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 150ms;
 	border: 1px solid var(--border-primary-color);
 	border-radius: 48px;
 	overflow: hidden;
 
 	&:hover {
 		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-
-		.title {
-			color: var(--accent-orange);
-		}
 	}
 }
 
 .title {
 	font-size: 1.25rem;
-	transition-property: color;
-	transition-timing-function: ease;
-	transition-duration: 150ms;
 }
 
 .subtitle {

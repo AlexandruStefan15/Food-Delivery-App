@@ -18,7 +18,7 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
 			</header>
 			<div className={styles.body}>
-				<h3 className={styles.title}>{data.name}</h3>
+				<Card.Title className={styles.title}>{data.name}</Card.Title>
 				{data.cuisine && <Card.Subtitle className={styles.subtitle}>{data.cuisine}</Card.Subtitle>}
 				<div className={styles.metadata}>
 					{data.delivery_time && (

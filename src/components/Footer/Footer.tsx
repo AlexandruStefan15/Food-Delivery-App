@@ -5,6 +5,9 @@ import { NavLink } from "react-router";
 // types
 import type { FooterProps, LinkListProps, NavigationItem, TitleProps } from "./Footer.types";
 
+//svgs
+import svgs from "../../assets/svgs";
+
 //icons
 import { FaGlobeAmericas } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
@@ -42,7 +45,7 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 		<footer className={styles.footer + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
 				<Col className={styles.intro}>
-					<Logo className={styles.logo} />
+					<Logo className={styles.logo} src={svgs.logo_text_white} />
 					<p className={styles.description}>
 						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness guaranteed.
 					</p>

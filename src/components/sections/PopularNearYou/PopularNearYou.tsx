@@ -21,7 +21,9 @@ export default function PopularNearYou() {
 			<div className={styles.container}>
 				<header className={styles.header}>
 					<h2 className={styles.title}>Popular near you</h2>
-					<NavLink to="/restaurants">see more</NavLink>
+					<NavLink className={styles.viewAllLink} to="/restaurants">
+						View All
+					</NavLink>
 				</header>
 				<ul className={styles.restaurantList}>
 					{displayedRestaurants.map((restaurant) => (

@@ -38,7 +38,7 @@
 		.searchBar {
 			margin-top: 1rem;
 			flex-direction: row;
-			align-items: center;
+			align-items: stretch;
 			min-height: 80px;
 			width: 100%;
 			max-width: 590px;
@@ -60,27 +60,6 @@
 				&::placeholder {
 					color: rgba(128, 128, 128, 0.636);
 					font-size: 1rem;
-				}
-			}
-
-			.btn {
-				transition-property: all;
-				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-				transition-duration: 150ms;
-				background-color: var(--button-primary-bg);
-				border: none;
-				outline: none;
-				border-radius: 999px;
-				padding-inline: 2em;
-				padding-block: 1rem;
-				align-self: stretch;
-				white-space: nowrap;
-				color: white;
-				font-weight: 600;
-				line-height: 1;
-
-				&:hover {
-					transform: scale(1.02);
 				}
 			}
 		}

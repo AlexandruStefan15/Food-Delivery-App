@@ -16,10 +16,18 @@
 		max-width: 1600px;
 		gap: 2rem;
 
+		@include media.tablet {
+			padding-inline: 2.5rem;
+		}
+
 		.primaryNavigation {
 			display: flex;
 			align-items: center;
 			gap: 2rem;
+
+			.logo {
+				flex: 0 0 auto;
+			}
 
 			.navList {
 				display: flex;

@@ -7,14 +7,10 @@
 	.container {
 		display: flex;
 		max-width: 1340px;
-		padding-inline: 5rem;
+		padding-inline: 2rem;
 		flex-direction: column;
 		margin-inline: auto;
 		gap: 2.4rem;
-
-		@include media.tablet_sm {
-			padding-inline: 3rem;
-		}
 
 		@include media.mobile {
 			padding-inline: 1rem;
@@ -48,7 +44,7 @@
 				flex: 0 371px;
 			}
 
-			@include media.tablet_lg {
+			@include media.tablet_sm {
 				flex-direction: column;
 
 				.listItem {

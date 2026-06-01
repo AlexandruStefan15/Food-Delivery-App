@@ -44,36 +44,23 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 }
 
 function RatingBadge({ rating }: RatingBadgeProps) {
-	const badgeColor = (rating: number) => {
+	const colorScheme = (rating: number) => {
 		switch (true) {
 			case rating > 4:
-				return "#15803d";
+				return { color: "#15803d", background: "#dcfce7" };
 
 			case 3.5 <= rating && rating <= 4.5:
-				return "#e79500";
+				return { color: "#e79500", background: "#ffaa0037" };
 
 			default:
-				return "#d70000";
-		}
-	};
-
-	const badgeBackgroundColor = (rating: number) => {
-		switch (true) {
-			case rating > 4:
-				return "#dcfce7";
-
-			case 3.5 <= rating && rating <= 4.5:
-				return "#ffaa0037";
-
-			default:
-				return "#c800002b";
+				return { color: "#d70000", background: "#c800002b" };
 		}
 	};
 
 	return (
 		<span
 			className={styles.ratingBadge}
-			style={{ color: badgeColor(rating), backgroundColor: badgeBackgroundColor(rating) }}
+			style={{ color: colorScheme(rating).color, backgroundColor: colorScheme(rating).background }}
 		>
 			<IoMdStar size={15.5} />
 			<span className={styles.text}>{rating}</span>

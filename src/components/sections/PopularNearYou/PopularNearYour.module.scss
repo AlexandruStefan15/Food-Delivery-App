@@ -42,6 +42,10 @@
 			.listItem {
 				display: flex;
 
+				.link {
+					width: 100%;
+				}
+
 				.card {
 					max-width: none;
 					width: 100%;

@@ -20,7 +20,6 @@ const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Restaurants", path: "#" },
 	{ label: "Orders", path: "#" },
 	{ label: "Contact", path: "#" },
-	{ label: "Lista mea", path: "#" },
 ];
 
 const defaultSecondaryNavigation: NavigationItem[] = [];
@@ -49,7 +48,7 @@ export default function Header({
 					)}
 				</div>
 				<div className={styles.secondaryNavigation}>
-					<SearchBar wrapperClassname={styles.searchBar} placeholder="Search..." />
+					<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
 					<MdOutlineShoppingBag className={styles.icon} />
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>

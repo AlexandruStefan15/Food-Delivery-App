@@ -7,6 +7,8 @@
 }
 
 :root {
+	--color-orange-shade-500: #ec491380;
+
 	--color-brown-light-400: #e7d5cf;
 	--color-brown-light-300: #e7d5cf;
 	--color-brown-light-200: #f3eae7;
@@ -44,6 +46,7 @@
 	--icon-primary-bg: var(--color-brown-shade-600);
 	--border-primary-color: var(--color-brown-shade-500);
 	--border-secondary-color: var(--color-brown-light-400);
+	--border-tertiary-color: var(--color-orange-shade-500);
 
 	--background: #f8f6f6;
 	--foreground-black: black;

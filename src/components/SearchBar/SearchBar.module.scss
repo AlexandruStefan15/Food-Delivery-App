@@ -9,6 +9,10 @@
 	background-color: var(--accent-muted);
 	overflow: hidden;
 
+	&:has(.input:focus) {
+		outline: 2px solid var(--border-tertiary-color);
+	}
+
 	.input {
 		width: 100%;
 		border: none;

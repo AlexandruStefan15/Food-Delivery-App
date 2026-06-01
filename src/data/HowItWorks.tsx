@@ -7,7 +7,7 @@ import { MdOutlineDeliveryDining } from "react-icons/md";
 
 type ItemIcon =
 	| {
-			type: "component";
+			type: "reactIcon";
 			component: IconType;
 	  }
 	| {
@@ -42,7 +42,7 @@ export const howItWorks_data: Data = {
 			title: "Choose your meal",
 			subtitle: "Browse hundreds of local restaurants and curated menus.",
 			icon: {
-				type: "component",
+				type: "reactIcon",
 				component: MdOutlineShoppingBag,
 			},
 		},
@@ -51,7 +51,7 @@ export const howItWorks_data: Data = {
 			title: "We cook with love",
 			subtitle: "Our partner chefs prepare your meal fresh to your exact order.",
 			icon: {
-				type: "component",
+				type: "reactIcon",
 				component: MdRestaurant,
 			},
 		},
@@ -60,7 +60,7 @@ export const howItWorks_data: Data = {
 			title: "Fast delivery",
 			subtitle: "Track your order in real-time right to your front door.",
 			icon: {
-				type: "component",
+				type: "reactIcon",
 				component: MdOutlineDeliveryDining,
 			},
 		},

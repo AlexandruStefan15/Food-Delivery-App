@@ -4,9 +4,10 @@ import styles from "./RestaurantCard.module.scss";
 //icons
 import { MdAccessTime } from "react-icons/md";
 import { MdOutlineDeliveryDining } from "react-icons/md";
+import { IoMdStar } from "react-icons/io";
 
 //types
-import { RestaurantCardProps } from "./RestaurantCard.types";
+import { RestaurantCardProps, RatingBadgeProps } from "./RestaurantCard.types";
 
 //components
 import Card from "../Card/Card";
@@ -18,7 +19,10 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
 			</header>
 			<div className={styles.body}>
-				<h3 className={styles.title}>{data.name}</h3>
+				<div className={styles.titleWrapper}>
+					<h3 className={styles.title}>{data.name}</h3>
+					{data.rating && <RatingBadge rating={data.rating} />}
+				</div>
 				{data.cuisine && <Card.Subtitle className={styles.subtitle}>{data.cuisine}</Card.Subtitle>}
 				<div className={styles.metadata}>
 					{data.delivery_time && (
@@ -36,5 +40,14 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 				</div>
 			</div>
 		</Card>
+	);
+}
+
+function RatingBadge({ rating }: RatingBadgeProps) {
+	return (
+		<span className={styles.ratingBadge}>
+			<IoMdStar size={15.5} />
+			<span className={styles.text}>{rating}</span>
+		</span>
 	);
 }

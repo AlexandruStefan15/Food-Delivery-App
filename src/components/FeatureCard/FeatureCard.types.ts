@@ -6,7 +6,7 @@ interface CardData {
 	subtitle?: string;
 	icon?:
 		| {
-				type: "component";
+				type: "reactIcon";
 				component: IconType;
 		  }
 		| {

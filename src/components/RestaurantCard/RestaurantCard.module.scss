@@ -26,11 +26,17 @@
 		padding: 1rem;
 		background-color: white;
 
-		.title {
-			font-size: 1.17rem;
-			transition-property: color;
-			transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-			transition-duration: 150ms;
+		.titleWrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			.title {
+				font-size: 1.17rem;
+				transition-property: color;
+				transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+				transition-duration: 150ms;
+			}
 		}
 
 		.subtitle {
@@ -50,5 +56,24 @@
 				gap: 0.35rem;
 			}
 		}
+	}
+}
+
+.ratingBadge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+
+	color: #15803d;
+	background-color: #dcfce7;
+	padding: 3.5px 0.5em;
+	padding-bottom: 4.5px;
+	border-radius: 20px;
+
+	.text {
+		font-size: 0.75rem;
+		font-weight: 700;
+		top: 1px;
+		position: relative;
 	}
 }

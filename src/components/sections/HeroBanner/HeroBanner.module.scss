@@ -29,7 +29,7 @@
 			border-radius: 0;
 			height: 100vh;
 			justify-content: center;
-			padding-inline: 1.25rem;
+			padding-inline: 1.35rem;
 		}
 
 		.title {
@@ -84,6 +84,10 @@
 					color: rgba(128, 128, 128, 0.636);
 					font-size: 1rem;
 				}
+			}
+
+			@include media.mobile {
+				min-height: 0;
 			}
 		}
 	}

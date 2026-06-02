@@ -4,6 +4,9 @@ import styles from "./HeroBanner.module.scss";
 //assets
 import { InlineSvgs } from "../../../assets/svgs";
 
+//hooks
+import { useIsMobile } from "../../../hooks/useIsMobile";
+
 //componets
 import SearchBar from "../../SearchBar/SearchBar";
 
@@ -11,6 +14,8 @@ export default function HeroBanner({
 	title = "Cravings delivered to your doorstep.",
 	subtitle = "Order from your favorite local restaurants with ease. Fast, fresh, and reliable.",
 }) {
+	const isMobile = useIsMobile();
+
 	return (
 		<section className={styles.section}>
 			<div className={styles.container}>
@@ -20,8 +25,8 @@ export default function HeroBanner({
 					className={styles.input}
 					wrapperClassname={styles.searchBar}
 					searchButtonContent="Find Food"
-					searchButtonProps={{ variant: "animated" }}
-					placeholder="Enter you delivery address..."
+					searchButtonProps={{ variant: "animated", className: styles.searchBtn }}
+					placeholder={isMobile ? "Enter your address..." : "Enter your delivery address..."}
 				>
 					<InlineSvgs.location className={styles.locationIcon} />
 				</SearchBar>

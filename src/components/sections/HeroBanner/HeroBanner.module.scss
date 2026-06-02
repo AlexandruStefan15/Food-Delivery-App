@@ -29,7 +29,7 @@
 			border-radius: 0;
 			height: 100vh;
 			justify-content: center;
-			padding-inline: 1.35rem;
+			padding-inline: 1rem;
 		}
 
 		.title {
@@ -86,8 +86,16 @@
 				}
 			}
 
+			.searchBtn {
+				font-weight: 700;
+			}
+
 			@include media.mobile {
 				min-height: 0;
+
+				.searchBtn {
+					padding-inline: 1.5em;
+				}
 			}
 		}
 	}

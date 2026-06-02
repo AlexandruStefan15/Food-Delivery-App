@@ -19,9 +19,9 @@
 			align-items: center;
 			overflow-x: auto;
 
-			/* &::-webkit-scrollbar {
+			&::-webkit-scrollbar {
 				display: none;
-			} */
+			}
 		}
 	}
 
@@ -49,7 +49,7 @@
 			}
 
 			.exploreList {
-				padding-left: 1rem;
+				padding-inline: 1rem;
 			}
 		}
 	}

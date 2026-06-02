@@ -67,7 +67,12 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 				<Col className={styles.newsletter}>
 					<Title>Newsletter</Title>
 					<p className={styles.description}>Get the latest deals and new restaurant alerts. Don't miss anything.</p>
-					<SearchBar searchButtonContent={<BiSend size={22} color="white" />} variant="2" placeholder="Your email..." />
+					<SearchBar
+						wrapperClassname={styles.searchBar}
+						searchButtonContent={<BiSend size={22} color="white" />}
+						variant="2"
+						placeholder="Your email..."
+					/>
 				</Col>
 			</nav>
 		</footer>

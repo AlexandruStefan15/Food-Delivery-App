@@ -1,3 +1,5 @@
+@use "../../../styles/breakpoints" as media;
+
 .section {
 	padding-block: 3rem;
 
@@ -15,6 +17,36 @@
 			gap: 1.5rem;
 			justify-content: space-between;
 			align-items: center;
+			overflow-x: auto;
+		}
+	}
+
+	@include media.tablet_lg {
+		.container {
+			padding-inline: 0;
+
+			.title {
+				padding-left: 2rem;
+			}
+
+			.exploreList {
+				padding-left: 2rem;
+				.listItem {
+					flex: 0 0 auto;
+				}
+			}
+		}
+	}
+
+	@include media.mobile {
+		.container {
+			.title {
+				padding-left: 1rem;
+			}
+
+			.exploreList {
+				padding-left: 1rem;
+			}
 		}
 	}
 }

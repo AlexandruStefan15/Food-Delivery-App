@@ -8,6 +8,10 @@ import { HeaderProps, NavigationItem } from "./Header.types";
 //assets
 import svgs, { InlineSvgs } from "../../assets/svgs/index";
 
+//hooks
+
+import { useIsTabletSmall } from "../../hooks/useIsTabletSmall";
+
 //icons
 import { MdOutlineShoppingBag } from "react-icons/md";
 
@@ -30,6 +34,8 @@ export default function Header({
 	secondaryNavigation = defaultSecondaryNavigation,
 	...props
 }: HeaderProps) {
+	const isTabletSmall = useIsTabletSmall();
+
 	return (
 		<header className={styles.header + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
@@ -48,7 +54,11 @@ export default function Header({
 					)}
 				</div>
 				<div className={styles.secondaryNavigation}>
-					<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
+					{isTabletSmall ? (
+						<InlineSvgs.search className={styles.searchIcon} />
+					) : (
+						<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
+					)}
 					<MdOutlineShoppingBag className={styles.icon} />
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>

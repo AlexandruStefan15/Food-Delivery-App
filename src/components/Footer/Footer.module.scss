@@ -34,7 +34,7 @@
 			justify-content: space-between;
 
 			.logo {
-				max-width: 160px;
+				max-width: 162px;
 			}
 
 			.utilities {
@@ -46,8 +46,18 @@
 				}
 			}
 
+			&.intro {
+				justify-content: flex-start;
+				gap: 1rem;
+
+				.utilities {
+					margin-top: 10px;
+				}
+			}
+
 			&.newsletter {
 				justify-content: flex-start;
+				gap: 1.1rem;
 
 				.input {
 					min-height: 43px;
@@ -55,15 +65,6 @@
 					&::placeholder {
 						color: var(--foreground-grey);
 					}
-				}
-			}
-
-			&.intro {
-				justify-content: flex-start;
-				gap: 1.2rem;
-
-				.utilities {
-					margin-top: 7px;
 				}
 			}
 		}

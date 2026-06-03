@@ -9,11 +9,11 @@ import { HeaderProps, NavigationItem } from "./Header.types";
 import svgs, { InlineSvgs } from "../../assets/svgs/index";
 
 //hooks
-
-import { useIsTabletSmall } from "../../hooks/useIsTabletSmall";
+import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
 //icons
 import { MdOutlineShoppingBag } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 //components
 import Logo from "../Logo/Logo";
@@ -34,7 +34,7 @@ export default function Header({
 	secondaryNavigation = defaultSecondaryNavigation,
 	...props
 }: HeaderProps) {
-	const isTabletSmall = useIsTabletSmall();
+	const isTabletLarge = useIsTabletLarge();
 
 	return (
 		<header className={styles.header + ` ${className}`} {...props}>
@@ -54,8 +54,12 @@ export default function Header({
 					)}
 				</div>
 				<div className={styles.secondaryNavigation}>
-					{isTabletSmall ? (
-						<InlineSvgs.search className={styles.searchIcon} />
+					{isTabletLarge ? (
+						<div className={styles.hamburgerMenu}>
+							<span />
+							<span />
+							<span />
+						</div>
 					) : (
 						<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
 					)}

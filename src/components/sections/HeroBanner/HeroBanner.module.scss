@@ -30,6 +30,8 @@
 			height: 100vh;
 			justify-content: center;
 			padding-inline: 1rem;
+			background-color: #00000047;
+			background-blend-mode: color-burn;
 		}
 
 		.title {
@@ -74,6 +76,11 @@
 				flex: 0 40px;
 				margin-right: 0.5rem;
 				color: var(--icon-primary-color);
+
+				@include media.mobile {
+					flex: 0 45px;
+					margin-right: 2%;
+				}
 			}
 
 			.input {
@@ -84,6 +91,10 @@
 					color: rgba(128, 128, 128, 0.636);
 					font-size: 1rem;
 				}
+
+				@include media.mobile {
+					padding-top: 13px;
+				}
 			}
 
 			.searchBtn {
@@ -92,6 +103,7 @@
 
 			@include media.mobile {
 				min-height: 0;
+				margin-top: 0.5rem;
 
 				.searchBtn {
 					padding-inline: 1.5em;

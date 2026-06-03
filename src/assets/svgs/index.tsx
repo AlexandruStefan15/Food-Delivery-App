@@ -65,4 +65,22 @@ export const InlineSvgs = {
 			/>
 		</svg>
 	),
+
+	cancel: ({ ...props }: InlineSvgProps) => (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			fill="#000000"
+			width="800px"
+			height="800px"
+			viewBox="0 0 128 128"
+			id="Layer_1"
+			version="1.1"
+			{...props}
+		>
+			<g>
+				<polygon points="82.4,40 64,58.3 45.6,40 40,45.6 58.3,64 40,82.4 45.6,88 64,69.7 82.4,88 88,82.4 69.7,64 88,45.6  " />
+				<path d="M1,127h126V1H1V127z M9,9h110v110H9V9z" />
+			</g>
+		</svg>
+	),
 };

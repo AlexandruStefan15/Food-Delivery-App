@@ -8,6 +8,9 @@ import { HeaderProps, NavigationItem } from "./Header.types";
 //assets
 import svgs, { InlineSvgs } from "../../assets/svgs/index";
 
+//context
+import { useSidebarContext } from "../../context/SidebarContext";
+
 //hooks
 import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
@@ -35,6 +38,7 @@ export default function Header({
 	...props
 }: HeaderProps) {
 	const isTabletLarge = useIsTabletLarge();
+	const { setIsOpen } = useSidebarContext();
 
 	return (
 		<header className={styles.header + ` ${className}`} {...props}>
@@ -55,7 +59,7 @@ export default function Header({
 				</div>
 				<div className={styles.secondaryNavigation}>
 					{isTabletLarge ? (
-						<div className={styles.hamburgerMenu}>
+						<div className={styles.hamburgerMenu} onClick={() => setIsOpen((prev) => !prev)}>
 							<span />
 							<span />
 							<span />

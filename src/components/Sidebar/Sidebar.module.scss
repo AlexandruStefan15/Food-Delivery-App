@@ -1,0 +1,48 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 220px;
+	position: fixed;
+	transform: translateX(220px);
+	right: 0;
+	top: 0;
+	padding-block: 4rem;
+	background: black;
+	color: white;
+	height: 100vh;
+	text-align: center;
+	font-size: 1rem;
+	transition: transform 0.5s ease;
+	z-index: 999;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	.header {
+		.cancelIcon {
+			fill: white;
+			width: 35px;
+			cursor: pointer;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+	}
+
+	.body {
+		.navigation {
+			margin-top: 2.5rem;
+			.linkList {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+
+				.link {
+					color: white;
+					padding-block: 1rem;
+				}
+			}
+		}
+	}
+}

@@ -106,9 +106,13 @@
 				flex: 1;
 			}
 
-			.icon {
+			.cartLink {
 				flex: 0 0 32px;
-				cursor: pointer;
+
+				.icon {
+					width: 100%;
+					cursor: pointer;
+				}
 			}
 		}
 	}

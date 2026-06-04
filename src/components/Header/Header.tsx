@@ -67,7 +67,9 @@ export default function Header({
 					) : (
 						<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
 					)}
-					<MdOutlineShoppingBag className={styles.icon} />
+					<NavLink className={styles.cartLink} to="/cart">
+						<MdOutlineShoppingBag className={styles.icon} />
+					</NavLink>
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>
 							{secondaryNavigation.map((item, index) => (

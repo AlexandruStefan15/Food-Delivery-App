@@ -1,8 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import type { Dish } from "../types";
 
-export const useDishes = (restaurantId: number | null) => {
-	return useQuery<Dish[], Error>({
+export const useDishesByRestaurant = (restaurantId: number | null) => {
+	const {
+		data: dishes = [],
+		isLoading: dishesAreLoading,
+		error: dishesError,
+	} = useQuery<Dish[], Error>({
 		queryKey: ["dishes", restaurantId],
 		queryFn: async (): Promise<Dish[]> => {
 			const res = await fetch(`http://localhost:3001/dishes?restaurant_id=${restaurantId}`);
@@ -15,6 +19,29 @@ export const useDishes = (restaurantId: number | null) => {
 		},
 		enabled: !!restaurantId,
 	});
+
+	return { dishes, dishesAreLoading, dishesError };
+};
+
+export const useAllDishes = () => {
+	const {
+		data = [],
+		isLoading,
+		error,
+	} = useQuery<Dish[], Error>({
+		queryKey: ["dishes"],
+		queryFn: async (): Promise<Dish[]> => {
+			const res = await fetch(`http://localhost:3001/dishes`);
+
+			if (!res.ok) {
+				throw new Error(`Failed to fetch dishes (Status: ${res.status})`);
+			}
+
+			return res.json();
+		},
+	});
+
+	return { data, isLoading, error };
 };
 
 export const useAddDish = () => {

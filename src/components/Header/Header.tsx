@@ -39,6 +39,7 @@ export default function Header({
 	...props
 }: HeaderProps) {
 	const [searchValue, setSearchValue] = useState("");
+	const [isSearchResultsListActive, setIsSearchResultsListActive] = useState(false);
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
 
@@ -73,8 +74,12 @@ export default function Header({
 								value={searchValue}
 								onChange={(value) => setSearchValue(value)}
 								placeholder="Search menu items..."
+								onBlur={() => setIsSearchResultsListActive(false)}
+								onFocus={() => setIsSearchResultsListActive(true)}
 							/>
-							<SearchResultsList searchValue={searchValue} className={styles.searchResultsList} />
+							{isSearchResultsListActive && (
+								<SearchResultsList searchValue={searchValue} className={styles.searchResultsList} />
+							)}
 						</div>
 					)}
 					<NavLink className={styles.cartLink} to="/cart">

@@ -20,7 +20,7 @@ type ItemIcon =
 			alt: string;
 	  };
 
-interface Item {
+interface CardItem {
 	id: number;
 	title: string;
 	subtitle: string;
@@ -30,7 +30,7 @@ interface Item {
 interface Data {
 	title: string;
 	subtitle: string;
-	cards: Item[];
+	cards: CardItem[];
 }
 
 export const howItWorks_data: Data = {

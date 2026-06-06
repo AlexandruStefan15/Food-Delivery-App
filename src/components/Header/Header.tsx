@@ -1,6 +1,7 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router";
+import { useSearchParams } from "react-router";
 
 // Types
 import { HeaderProps, NavigationItem } from "./Header.types";
@@ -16,11 +17,11 @@ import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
 //icons
 import { MdOutlineShoppingBag } from "react-icons/md";
-import { RxHamburgerMenu } from "react-icons/rx";
 
 //components
 import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
+import { SearchResultsList } from "../SearchResultsList/SearchResultsList";
 
 const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Home", path: "#" },
@@ -37,6 +38,7 @@ export default function Header({
 	secondaryNavigation = defaultSecondaryNavigation,
 	...props
 }: HeaderProps) {
+	const [searchValue, setSearchValue] = useState("");
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
 
@@ -65,7 +67,15 @@ export default function Header({
 							<span />
 						</div>
 					) : (
-						<SearchBar wrapperClassname={styles.searchBar} placeholder="Search menu items..." />
+						<div className={styles.searchBarContainer}>
+							<SearchBar
+								wrapperClassname={styles.searchBarWrapper}
+								value={searchValue}
+								onChange={(value) => setSearchValue(value)}
+								placeholder="Search menu items..."
+							/>
+							<SearchResultsList searchValue={searchValue} className={styles.searchResultsList} />
+						</div>
 					)}
 					<NavLink className={styles.cartLink} to="/cart">
 						<MdOutlineShoppingBag className={styles.icon} />

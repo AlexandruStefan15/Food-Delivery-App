@@ -1,11 +1,9 @@
+export interface NavigationItem {
+	label: string;
+	path: string;
+}
 
 export interface HeaderProps extends React.ComponentPropsWithoutRef<"header"> {
-  primaryNavigation?: NavigationItem[];
-  secondaryNavigation?: NavigationItem[];
+	primaryNavigation?: NavigationItem[];
+	secondaryNavigation?: NavigationItem[];
 }
-
-export interface NavigationItem {
-  label: string;
-  path: string;
-}
-

@@ -69,7 +69,7 @@ export const useAddDish = () => {
 		},
 		onSuccess: (data) => {
 			queryClient.invalidateQueries({
-				queryKey: ["dishes", data.restaurant_id],
+				queryKey: ["dishes"],
 			});
 		},
 	});

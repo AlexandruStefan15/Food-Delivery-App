@@ -21,7 +21,7 @@ export default function ActivityIndicator({
 			role="status"
 			aria-label={label}
 			aria-live="polite"
-			className={`${styles.root} ${className}`}
+			className={`${styles.wrapper} ${className}`}
 			style={{
 				width: size,
 				height: size,

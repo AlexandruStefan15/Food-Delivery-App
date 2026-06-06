@@ -17,7 +17,9 @@ import { NavLink } from "react-router";
 const defaultNavigation: NavigationItem[] = [
 	{ label: "Home", path: "/" },
 	{ label: "Restaurants", path: "/restaurants" },
+	{ label: "Search", path: "/search" },
 	{ label: "My orders", path: "/my-orders" },
+
 	{ label: "Contact", path: "/contact" },
 ];
 

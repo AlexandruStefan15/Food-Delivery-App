@@ -37,7 +37,14 @@ export function SearchResultsList({ searchValue, className = "" }: SearchResults
 			</p>
 		);
 
-	if ((filteredDishes.length === 0 && filteredRestaurants.length === 0) || !currentSearchValue) return null;
+	if (!currentSearchValue) return null;
+
+	if (filteredDishes.length === 0 && filteredRestaurants.length === 0)
+		return (
+			<div className={styles.searchResultsContainer + ` ${className}`}>
+				<p className={styles.cls}>No items found.</p>
+			</div>
+		);
 
 	if (dishesAreLoading || restaurantsAreLoading) {
 		return (

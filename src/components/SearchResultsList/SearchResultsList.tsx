@@ -32,9 +32,11 @@ export function SearchResultsList({ searchValue, className = "" }: SearchResults
 
 	if (dishesError || restaurantsError)
 		return (
-			<p style={{ color: "red" }} className={styles.error}>
-				Error: {dishesError?.message || restaurantsError?.message || "Failed to fetch"}
-			</p>
+			<div className={styles.searchResultsContainer + ` ${className}`}>
+				<p style={{ color: "red" }} className={styles.error}>
+					Error: {dishesError?.message || restaurantsError?.message || "Failed to fetch"}
+				</p>
+			</div>
 		);
 
 	if (!currentSearchValue) return null;

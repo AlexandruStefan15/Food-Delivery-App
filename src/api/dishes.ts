@@ -46,7 +46,6 @@ export const useAllDishes = () => {
 
 export const useAddDish = () => {
 	const queryClient = useQueryClient();
-
 	const {
 		mutate: addDish,
 		isPending: addDishIsPending,

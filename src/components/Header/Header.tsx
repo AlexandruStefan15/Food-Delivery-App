@@ -24,10 +24,10 @@ import SearchBar from "../SearchBar/SearchBar";
 import { SearchResultsList } from "../SearchResultsList/SearchResultsList";
 
 const defaultPrimaryNavigation: NavigationItem[] = [
-	{ label: "Home", path: "#" },
-	{ label: "Restaurants", path: "#" },
-	{ label: "Orders", path: "#" },
-	{ label: "Contact", path: "#" },
+	{ label: "Home", path: "/" },
+	{ label: "Restaurants", path: "/restaurants" },
+	{ label: "Orders", path: "/orders" },
+	{ label: "Contact", path: "/contact" },
 ];
 
 const defaultSecondaryNavigation: NavigationItem[] = [];
@@ -78,7 +78,14 @@ export default function Header({
 								onFocus={() => setIsSearchResultsListActive(true)}
 							/>
 							{isSearchResultsListActive && (
-								<SearchResultsList searchValue={searchValue} className={styles.searchResultsList} />
+								<SearchResultsList
+									className={styles.searchResultsList}
+									searchValue={searchValue}
+									onMouseDown={(e) => {
+										e.preventDefault(); // prevents input blur
+										setIsSearchResultsListActive(true);
+									}}
+								/>
 							)}
 						</div>
 					)}

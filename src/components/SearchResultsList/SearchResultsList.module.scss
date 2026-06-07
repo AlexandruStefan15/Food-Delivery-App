@@ -3,4 +3,15 @@
 	border-radius: 10px;
 	padding: 0.5rem;
 	background-color: var(--background);
+
+	.seeMoreLink {
+		display: block;
+		margin: auto;
+		width: fit-content;
+		margin-block: 0.5rem;
+		margin-top: 1rem;
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: var(--accent-orange);
+	}
 }

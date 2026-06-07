@@ -48,9 +48,9 @@ export const useAddDish = () => {
 	const queryClient = useQueryClient();
 
 	const {
-		mutate: createProject,
-		isPending: isCreating,
-		error: createError,
+		mutate: addDish,
+		isPending: addDishIsPending,
+		error: addDishError,
 	} = useMutation<Dish, Error, Omit<Dish, "id">>({
 		mutationFn: async (newDish): Promise<Dish> => {
 			const res = await fetch("http://localhost:3001/dishes", {
@@ -75,8 +75,8 @@ export const useAddDish = () => {
 	});
 
 	return {
-		createProject,
-		isCreating,
-		createError,
+		addDish,
+		addDishIsPending,
+		addDishError,
 	};
 };

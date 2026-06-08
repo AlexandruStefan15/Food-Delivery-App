@@ -12,15 +12,11 @@ import { RestaurantCardProps, RatingBadgeProps } from "./RestaurantCard.types";
 //components
 import Card from "../Card/Card";
 
-export default function RestaurantCard({ data, className = "", variant = "default", ...props }: RestaurantCardProps) {
+export default function RestaurantCard({ data, className = "", variant = "search", ...props }: RestaurantCardProps) {
 	return (
 		<Card className={`${styles[`card_${variant}`]} ${className}`} {...props}>
 			<header className={styles.header}>
-				{data.card_image && (
-					<div className={styles.imgWrapper}>
-						<img className={styles.img} src={data.card_image} alt="restaurant card image" />
-					</div>
-				)}
+				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
 			</header>
 			<div className={styles.body}>
 				<div className={styles.titleWrapper}>

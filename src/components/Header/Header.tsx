@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router";
-import { useSearchParams } from "react-router";
+import { useSearchParams, useNavigate } from "react-router";
 
 // Types
 import { HeaderProps, NavigationItem } from "./Header.types";
@@ -42,6 +42,7 @@ export default function Header({
 	const [isSearchResultsListActive, setIsSearchResultsListActive] = useState(false);
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
+	const navigate = useNavigate();
 
 	return (
 		<header className={styles.header + ` ${className}`} {...props}>
@@ -74,6 +75,7 @@ export default function Header({
 								value={searchValue}
 								onChange={(value) => setSearchValue(value)}
 								placeholder="Search menu items..."
+								onSearch={(query) => navigate(`/restaurants?q=${query}`)}
 								onBlur={() => setIsSearchResultsListActive(false)}
 								onFocus={() => setIsSearchResultsListActive(true)}
 							/>

@@ -12,16 +12,20 @@ import { RestaurantCardProps, RatingBadgeProps } from "./RestaurantCard.types";
 //components
 import Card from "../Card/Card";
 
-export default function RestaurantCard({ data, className = "", ...props }: RestaurantCardProps) {
+export default function RestaurantCard({ data, className = "", variant = "default", ...props }: RestaurantCardProps) {
 	return (
-		<Card className={`${styles.card} ${className}`} {...props}>
+		<Card className={`${styles[`card_${variant}`]} ${className}`} {...props}>
 			<header className={styles.header}>
-				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
+				{data.card_image && (
+					<div className={styles.imgWrapper}>
+						<img className={styles.img} src={data.card_image} alt="restaurant card image" />
+					</div>
+				)}
 			</header>
 			<div className={styles.body}>
 				<div className={styles.titleWrapper}>
 					<h3 className={styles.title}>{data.name}</h3>
-					{data.rating && <RatingBadge rating={data.rating} />}
+					{data.rating && <RatingBadge className={styles.ratingBadge} rating={data.rating} />}
 				</div>
 				{data.cuisine && <Card.Subtitle className={styles.subtitle}>{data.cuisine}</Card.Subtitle>}
 				<div className={styles.metadata}>
@@ -43,7 +47,7 @@ export default function RestaurantCard({ data, className = "", ...props }: Resta
 	);
 }
 
-function RatingBadge({ rating }: RatingBadgeProps) {
+function RatingBadge({ rating, className = "" }: RatingBadgeProps) {
 	const colorScheme = (rating: number) => {
 		switch (true) {
 			case rating > 4:
@@ -59,7 +63,7 @@ function RatingBadge({ rating }: RatingBadgeProps) {
 
 	return (
 		<span
-			className={styles.ratingBadge}
+			className={styles.ratingBadge + ` ${className}`}
 			style={{ color: colorScheme(rating).color, backgroundColor: colorScheme(rating).background }}
 		>
 			<IoMdStar size={15.5} />

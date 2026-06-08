@@ -15,16 +15,16 @@ interface SearchResultsListProps extends React.ComponentPropsWithRef<"div"> {
 	className?: string;
 }
 
-export function SearchResultsList({ searchValue, showOnly = 2, className = "", ...props }: SearchResultsListProps) {
+export function SearchResultsList({
+	searchValue = "",
+	showOnly = 6,
+	className = "",
+	...props
+}: SearchResultsListProps) {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
 
-	const [searchParams] = useSearchParams();
-	const currentSearchValue = searchValue || searchParams.get("query") || "";
-
-	const filteredRestaurants = currentSearchValue
-		? restaurants.filter((restaurant) =>
-				restaurant.name.toLowerCase().includes(currentSearchValue?.trim().toLowerCase()),
-			)
+	const filteredRestaurants = searchValue
+		? restaurants.filter((restaurant) => restaurant.name.toLowerCase().includes(searchValue?.trim().toLowerCase()))
 		: [];
 
 	if (restaurantsError)
@@ -36,7 +36,7 @@ export function SearchResultsList({ searchValue, showOnly = 2, className = "", .
 			</div>
 		);
 
-	if (!currentSearchValue) return null;
+	if (!searchValue) return null;
 
 	if (filteredRestaurants.length === 0)
 		return (

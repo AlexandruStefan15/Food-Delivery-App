@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./SearchResultsList.module.scss";
-import { useSearchParams } from "react-router";
+import { NavLink } from "react-router";
 
 //data
 import { useRestaurants } from "../../api/restaurants";
 
 //comopnents
 import ActivityIndicator from "../ActivityIndicator/ActivityIndicator";
-import { NavLink } from "react-router";
+import RestaurantCard from "../RestaurantCard/RestaurantCard";
 
 interface SearchResultsListProps extends React.ComponentPropsWithRef<"div"> {
 	searchValue: string;
@@ -17,7 +17,7 @@ interface SearchResultsListProps extends React.ComponentPropsWithRef<"div"> {
 
 export function SearchResultsList({
 	searchValue = "",
-	showOnly = 6,
+	showOnly = 5,
 	className = "",
 	...props
 }: SearchResultsListProps) {
@@ -61,13 +61,17 @@ export function SearchResultsList({
 						if (showOnly && index < showOnly)
 							return (
 								<li className={styles.listItem} key={restaurant.id}>
-									{restaurant.name}
+									<NavLink to={`/restaurants/${restaurant.id}`}>
+										<RestaurantCard className={styles.restaurantCard} variant="search" data={restaurant} />
+									</NavLink>
 								</li>
 							);
 						else if (!showOnly)
 							return (
 								<li className={styles.listItem} key={restaurant.id}>
-									{restaurant.name}
+									<NavLink to={`/restaurants/${restaurant.id}`}>
+										<RestaurantCard className={styles.restaurantCard} variant="search" data={restaurant} />
+									</NavLink>
 								</li>
 							);
 					})}

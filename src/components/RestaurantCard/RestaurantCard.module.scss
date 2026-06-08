@@ -60,6 +60,7 @@
 }
 
 .card_search {
+	cursor: pointer;
 	max-width: 366px;
 	display: flex;
 	flex-direction: row;
@@ -95,8 +96,10 @@
 			}
 
 			.ratingBadge {
-				font-size: 11.5px;
+				font-size: 11px;
 				padding-right: 0.6rem;
+				position: relative;
+				top: 2px;
 
 				svg {
 					width: 14px;

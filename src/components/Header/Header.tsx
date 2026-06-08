@@ -74,7 +74,7 @@ export default function Header({
 								wrapperClassname={styles.searchBarWrapper}
 								value={searchValue}
 								onChange={(value) => setSearchValue(value)}
-								placeholder="Search menu items..."
+								placeholder="Search restaurants..."
 								onSearch={(query) => navigate(`/restaurants?q=${query}`)}
 								onBlur={() => setIsSearchResultsListActive(false)}
 								onFocus={() => setIsSearchResultsListActive(true)}

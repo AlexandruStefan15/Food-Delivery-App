@@ -12,7 +12,7 @@ import { RestaurantCardProps, RatingBadgeProps } from "./RestaurantCard.types";
 //components
 import Card from "../Card/Card";
 
-export default function RestaurantCard({ data, className = "", variant = "search", ...props }: RestaurantCardProps) {
+export default function RestaurantCard({ data, className = "", variant = "default", ...props }: RestaurantCardProps) {
 	return (
 		<Card className={`${styles[`card_${variant}`]} ${className}`} {...props}>
 			<header className={styles.header}>

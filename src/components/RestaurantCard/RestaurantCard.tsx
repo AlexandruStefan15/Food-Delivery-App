@@ -16,7 +16,15 @@ export default function RestaurantCard({ data, className = "", variant = "defaul
 	return (
 		<Card className={`${styles[`card_${variant}`]} ${className}`} {...props}>
 			<header className={styles.header}>
-				{data.card_image && <img className={styles.img} src={data.card_image} alt="restaurant card image" />}
+				{data.card_image && (
+					<img
+						className={styles.img}
+						src={data.card_image}
+						loading="eager"
+						fetchPriority="high"
+						alt="restaurant card image"
+					/>
+				)}
 			</header>
 			<div className={styles.body}>
 				<div className={styles.titleWrapper}>

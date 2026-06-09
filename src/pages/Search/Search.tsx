@@ -18,7 +18,7 @@ export default function Search() {
 
 	return (
 		<div className={styles.page}>
-			<Header className={styles.header} classNames={{ hamburgerMenuSpan: styles.hamburgerMenuSpan }}>
+			<Header className={styles.header} classNames={{ hamburgerMenu: styles.hamburgerMenu }}>
 				<SearchBar
 					wrapperClassname={styles.searchBarWrapper}
 					className={styles.input}

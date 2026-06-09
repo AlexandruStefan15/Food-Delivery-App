@@ -65,10 +65,13 @@ export default function Header({
 				</div>
 				<div className={styles.secondaryNavigation}>
 					{isTabletLarge ? (
-						<div className={styles.hamburgerMenu} onClick={() => setIsOpen((prev) => !prev)}>
-							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
-							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
-							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
+						<div
+							className={styles.hamburgerMenu + ` ${classNames.hamburgerMenu}`}
+							onClick={() => setIsOpen((prev) => !prev)}
+						>
+							<span />
+							<span />
+							<span />
 						</div>
 					) : (
 						<div className={styles.searchBarContainer}>

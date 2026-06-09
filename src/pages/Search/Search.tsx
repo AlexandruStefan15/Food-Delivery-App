@@ -11,7 +11,7 @@ export default function Search() {
 
 	return (
 		<div className={styles.page}>
-			<Header>
+			<Header className={styles.header}>
 				<SearchBar
 					wrapperClassname={styles.searchBarWrapper}
 					className={styles.input}

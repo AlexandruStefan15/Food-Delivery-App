@@ -1,22 +1,33 @@
 .page {
-	.main {
+	.header {
+		padding-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		margin-top: 70px;
-		padding: 1rem;
-		background-image: linear-gradient(to right, #0d0d0d, #0d0d0d, #080808);
-		height: calc(100vh - 70px);
-		overflow-y: auto;
+
+		nav {
+			margin: 0;
+		}
 
 		.searchBarWrapper {
-			width: 100%;
-			flex-shrink: 0;
+			width: calc(100% - 2rem);
+			margin-inline: auto;
 
 			.input {
 				min-height: 44px;
 			}
 		}
+	}
+
+	.main {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin-top: 129px;
+		padding: 1rem;
+		padding-top: 0rem;
+		background-image: linear-gradient(to right, #0d0d0d, #0d0d0d, #080808);
+		height: calc(100vh - 129px);
+		overflow-y: auto;
 
 		.searchResultsList {
 			background-color: transparent;

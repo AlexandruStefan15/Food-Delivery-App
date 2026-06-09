@@ -34,6 +34,7 @@ const defaultSecondaryNavigation: NavigationItem[] = [];
 
 export default function Header({
 	className = "",
+	classNames = {},
 	primaryNavigation = defaultPrimaryNavigation,
 	secondaryNavigation = defaultSecondaryNavigation,
 	children,
@@ -65,9 +66,9 @@ export default function Header({
 				<div className={styles.secondaryNavigation}>
 					{isTabletLarge ? (
 						<div className={styles.hamburgerMenu} onClick={() => setIsOpen((prev) => !prev)}>
-							<span />
-							<span />
-							<span />
+							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
+							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
+							<span className={`${styles.hamburgerMenuSpan} ${classNames.hamburgerMenuSpan}`} />
 						</div>
 					) : (
 						<div className={styles.searchBarContainer}>

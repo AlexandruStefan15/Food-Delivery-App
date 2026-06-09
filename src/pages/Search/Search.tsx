@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Search.module.scss";
+import { Navigate } from "react-router";
+
+//hooks
+import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
 //components
 import Header from "../../components/Header/Header";
@@ -8,10 +12,13 @@ import SearchResultsList from "../../components/SearchResultsList/SearchResultsL
 
 export default function Search() {
 	const [searchValue, setSearchValue] = useState("");
+	const isTabletLarge = useIsTabletLarge();
+
+	if (!isTabletLarge) return <Navigate to="/restaurants" replace />;
 
 	return (
 		<div className={styles.page}>
-			<Header className={styles.header}>
+			<Header className={styles.header} classNames={{ hamburgerMenuSpan: styles.hamburgerMenuSpan }}>
 				<SearchBar
 					wrapperClassname={styles.searchBarWrapper}
 					className={styles.input}

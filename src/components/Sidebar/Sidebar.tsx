@@ -19,7 +19,6 @@ const defaultNavigation: NavigationItem[] = [
 	{ label: "Restaurants", path: "/restaurants" },
 	{ label: "Search", path: "/search" },
 	{ label: "My orders", path: "/my-orders" },
-
 	{ label: "Contact", path: "/contact" },
 ];
 

@@ -17,6 +17,7 @@ export default function Search() {
 					className={styles.input}
 					value={searchValue}
 					onChange={setSearchValue}
+					placeholder="Search restaurants..."
 				/>
 			</Header>
 			<main className={styles.main}>

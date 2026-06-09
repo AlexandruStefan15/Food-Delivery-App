@@ -16,17 +16,18 @@
 		.listItem {
 			a {
 				width: 100%;
-				.restaurantCard {
-					border: none;
-					border-radius: 0;
-					padding: 10px 0.8rem;
-					box-shadow: none;
-
-					&:hover {
-						background-color: var(--hover-card-primary-background);
-					}
-				}
 			}
+		}
+	}
+
+	.restaurantCard {
+		border: none;
+		border-radius: 0;
+		padding: 10px 0.8rem;
+		box-shadow: none;
+
+		&:hover {
+			background-color: var(--hover-card-primary-background);
 		}
 	}
 

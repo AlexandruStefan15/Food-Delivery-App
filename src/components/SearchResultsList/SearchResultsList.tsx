@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./SearchResultsList.module.scss";
 import { NavLink } from "react-router";
 
+//types
+import { RestaurantCardProps } from "../RestaurantCard/RestaurantCard.types";
+
 //data
 import { useRestaurants } from "../../api/restaurants";
 
@@ -13,12 +16,14 @@ interface SearchResultsListProps extends React.ComponentPropsWithRef<"div"> {
 	searchValue: string;
 	showOnly?: number | null;
 	className?: string;
+	restaurantCardProps?: Omit<RestaurantCardProps, "data">;
 }
 
-export function SearchResultsList({
+export default function SearchResultsList({
 	searchValue = "",
 	showOnly = 5,
 	className = "",
+	restaurantCardProps,
 	...props
 }: SearchResultsListProps) {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
@@ -62,7 +67,12 @@ export function SearchResultsList({
 							return (
 								<li className={styles.listItem} key={restaurant.id}>
 									<NavLink to={`/restaurants/${restaurant.id}`}>
-										<RestaurantCard className={styles.restaurantCard} variant="search" data={restaurant} />
+										<RestaurantCard
+											variant="search"
+											data={restaurant}
+											{...restaurantCardProps}
+											className={styles.restaurantCard + ` ${restaurantCardProps?.className}`}
+										/>
 									</NavLink>
 								</li>
 							);
@@ -70,7 +80,12 @@ export function SearchResultsList({
 							return (
 								<li className={styles.listItem} key={restaurant.id}>
 									<NavLink to={`/restaurants/${restaurant.id}`}>
-										<RestaurantCard className={styles.restaurantCard} variant="search" data={restaurant} />
+										<RestaurantCard
+											variant="search"
+											data={restaurant}
+											{...restaurantCardProps}
+											className={styles.restaurantCard + ` ${restaurantCardProps?.className}`}
+										/>
 									</NavLink>
 								</li>
 							);

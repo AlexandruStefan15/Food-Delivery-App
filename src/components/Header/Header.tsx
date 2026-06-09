@@ -21,7 +21,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 //components
 import Logo from "../Logo/Logo";
 import SearchBar from "../SearchBar/SearchBar";
-import { SearchResultsList } from "../SearchResultsList/SearchResultsList";
+import SearchResultsList from "../SearchResultsList/SearchResultsList";
 
 const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Home", path: "/" },
@@ -36,6 +36,7 @@ export default function Header({
 	className = "",
 	primaryNavigation = defaultPrimaryNavigation,
 	secondaryNavigation = defaultSecondaryNavigation,
+	children,
 	...props
 }: HeaderProps) {
 	const [searchValue, setSearchValue] = useState("");
@@ -107,6 +108,7 @@ export default function Header({
 					)}
 				</div>
 			</nav>
+			{children}
 		</header>
 	);
 }

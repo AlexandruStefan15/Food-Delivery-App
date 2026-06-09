@@ -19,6 +19,7 @@
 	--color-brown-dark-600: #2e1d16;
 	--color-brown-dark-500: #221510;
 	--color-brown-dark-400: #180f0b;
+	--color-brown-dark-300: #1b110d;
 
 	--color-brown-shade-600: #ec49131a;
 	--color-brown-shade-500: #9a604c49;
@@ -34,9 +35,10 @@
 	--color-black-500: #1b110d;
 
 	--primary-white: white;
+	--secondary-white: rgb(214, 214, 214);
 	--primary-brown: var(--color-brown-500);
 	--primary-brown-dark: var(--color-brown-dark-500);
-	--primary-black: var(--color-black-500);
+	--primary-black: var(--color-brown-dark-300);
 	--secondary-brown-light: var(--color-brown-light-300);
 	--tertiary-grey: #6b7280;
 	--accent-orange: #ec4913;
@@ -50,8 +52,10 @@
 	--border-secondary-color: var(--color-brown-light-shade-400);
 	--border-tertiary-color: var(--color-orange-shade-500);
 	--hover-card-primary-background: var(--color-brown-light-200);
+	--hover-card-secondary-background: var(--color-brown-shade-500);
 
 	--background: #f8f6f6;
+	--foreground-white: var(--secondary-white);
 	--foreground-black: black;
 	--foreground-brown: var(--color-brown-500);
 	--foreground-grey: #9ca3af;

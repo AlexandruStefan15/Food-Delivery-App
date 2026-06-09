@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as media;
+
 .page {
 	.header {
 		padding-bottom: 1rem;
@@ -19,8 +21,15 @@
 		}
 
 		.searchBarWrapper {
-			width: calc(100% - 2rem);
 			margin-inline: auto;
+
+			@include media.tablet_lg {
+				width: calc(100% - 4rem);
+			}
+
+			@include media.mobile {
+				width: calc(100% - 2rem);
+			}
 
 			.input {
 				min-height: 44px;
@@ -33,11 +42,19 @@
 		flex-direction: column;
 		gap: 1rem;
 		margin-top: 134px;
-		padding: 1rem;
+		padding-bottom: 1rem;
 		padding-top: 0rem;
 		background-image: linear-gradient(to right, #0d0d0d, #0d0d0d, #080808);
 		height: calc(100vh - 134px);
 		overflow-y: auto;
+
+		@include media.tablet_lg {
+			padding-inline: 2rem;
+		}
+
+		@include media.mobile {
+			padding-inline: 1rem;
+		}
 
 		.searchResultsList {
 			background-color: transparent;

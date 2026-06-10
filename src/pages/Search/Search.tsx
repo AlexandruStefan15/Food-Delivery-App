@@ -14,7 +14,7 @@ export default function Search() {
 	const [searchValue, setSearchValue] = useState("");
 	const isTabletLarge = useIsTabletLarge();
 
-	if (!isTabletLarge) return <Navigate to="/restaurants" replace />;
+	if (!isTabletLarge) return <Navigate to="/" replace />;
 
 	return (
 		<div className={styles.page}>

@@ -5,14 +5,14 @@
 	align-items: center;
 	gap: 0.5rem;
 	cursor: pointer;
+}
 
-	.imgWrapper {
-		border-radius: 150px;
-		overflow: hidden;
+.imgWrapper {
+	border-radius: 150px;
+	overflow: hidden;
 
-		.img {
-			width: 100%;
-			object-fit: cover;
-		}
+	.img {
+		width: 100%;
+		object-fit: cover;
 	}
 }

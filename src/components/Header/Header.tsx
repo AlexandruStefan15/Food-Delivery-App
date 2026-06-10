@@ -7,7 +7,7 @@ import { useSearchParams, useNavigate } from "react-router";
 import { HeaderProps, NavigationItem } from "./Header.types";
 
 //assets
-import svgs, { InlineSvgs } from "../../assets/svgs/index";
+import svgs from "../../assets/svgs/index";
 
 //context
 import { useSidebarContext } from "../../context/SidebarContext";
@@ -69,9 +69,9 @@ export default function Header({
 							className={styles.hamburgerMenu + ` ${classNames.hamburgerMenu}`}
 							onClick={() => setIsOpen((prev) => !prev)}
 						>
-							<span />
-							<span />
-							<span />
+							<span className={styles.hamburgerMenuLine} />
+							<span className={styles.hamburgerMenuLine} />
+							<span className={styles.hamburgerMenuLine} />
 						</div>
 					) : (
 						<div className={styles.searchBarContainer}>

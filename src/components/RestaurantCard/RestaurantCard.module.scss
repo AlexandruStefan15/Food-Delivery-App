@@ -99,6 +99,7 @@
 		flex-direction: column;
 
 		@include media.tablet_lg {
+			flex: 1 1 300px;
 			gap: 0.25rem;
 
 			.title {
@@ -111,7 +112,9 @@
 		}
 
 		@include media.mobile {
+			flex: 1 1 280px;
 			gap: 0;
+
 			.title {
 				font-size: 0.92rem;
 			}

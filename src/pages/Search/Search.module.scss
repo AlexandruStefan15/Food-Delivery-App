@@ -24,11 +24,11 @@
 			margin-inline: auto;
 
 			@include media.tablet_lg {
-				width: calc(100% - 4rem);
+				width: calc(100% - 4.5rem);
 			}
 
 			@include media.mobile {
-				width: calc(100% - 2rem);
+				width: calc(100% - 2.4rem);
 			}
 
 			.input {

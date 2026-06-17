@@ -22,7 +22,7 @@
 
 		.searchBarWrapper {
 			margin-inline: auto;
-			border-radius: 10px;
+			border-radius: 8px;
 
 			@include media.tablet_lg {
 				width: calc(100% - 4.5rem);

@@ -45,6 +45,8 @@ export const useAllDishes = () => {
 };
 
 export const useAddDish = () => {
+	const queryClient = useQueryClient();
+
 	const {
 		mutate: addDish,
 		isPending: addDishIsPending,
@@ -66,7 +68,6 @@ export const useAddDish = () => {
 			return res.json();
 		},
 		onSuccess: (data) => {
-			const queryClient = useQueryClient();
 			queryClient.invalidateQueries({
 				queryKey: ["dishes"],
 			});

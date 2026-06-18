@@ -33,6 +33,8 @@ export default function Search() {
 					showOnly={10}
 					searchValue={searchValue}
 					restaurantCardProps={{ className: styles.restaurantCard }}
+					showSeeMoreBtn={true}
+					showSeeAllBtn={false}
 				/>
 			</main>
 		</div>

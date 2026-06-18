@@ -5,6 +5,8 @@ import { InlineSvgs } from "../../assets/svgs";
 //components
 import Button from "../Button/Button";
 
+type SearchBarVariant = "default" | "v2";
+
 interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "onChange"> {
 	placeholder?: string;
 	onSearch?: (query: string) => void;
@@ -15,7 +17,7 @@ interface SearchBarProps extends Omit<React.ComponentPropsWithoutRef<"input">, "
 	searchButtonContent?: ReactNode;
 	searchButtonProps?: React.ComponentPropsWithoutRef<typeof Button>;
 	showSearchBtn?: boolean;
-	variant?: string;
+	variant?: SearchBarVariant;
 }
 
 const SearchBar = ({

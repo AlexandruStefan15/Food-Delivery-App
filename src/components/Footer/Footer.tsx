@@ -70,7 +70,7 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 					<SearchBar
 						wrapperClassname={styles.searchBar}
 						searchButtonContent={<BiSend size={22} color="white" />}
-						variant="2"
+						variant="v2"
 						placeholder="Your email..."
 					/>
 				</Col>

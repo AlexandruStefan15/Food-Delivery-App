@@ -39,7 +39,7 @@ export default function Sidebar({ navigation = defaultNavigation }: SidebarProps
 				<nav className={styles.navigation}>
 					<ul className={styles.linkList}>
 						{navigation.map((item) => (
-							<NavLink className={styles.link} to={item.path}>
+							<NavLink className={styles.link} to={item.path} key={item.label}>
 								<li className={styles.listItem}>{item.label}</li>
 							</NavLink>
 						))}

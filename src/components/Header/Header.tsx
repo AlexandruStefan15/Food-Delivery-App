@@ -90,7 +90,6 @@ export default function Header({
 									searchValue={searchValue}
 									onMouseDown={(e) => {
 										e.preventDefault(); // prevents input blur
-										setIsSearchResultsListActive(true);
 									}}
 								/>
 							)}

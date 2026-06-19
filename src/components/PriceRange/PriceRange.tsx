@@ -45,10 +45,18 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 		onChange({ min: minVal, max: maxVal });
 	}, [minVal, maxVal]);
 
+	useEffect(() => {
+		setMinVal(min);
+		setMaxVal(max);
+		minValRef.current = min;
+		maxValRef.current = max;
+	}, [min, max]);
+
 	return (
 		<div className={styles.priceRangeContainer}>
 			{title && <h2 className={styles.title}>{title}</h2>}
 			<RangeInput
+				className={styles.thumbLeft}
 				min={min}
 				max={max}
 				value={minVal}
@@ -58,11 +66,11 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 					setMinVal(value);
 					minValRef.current = value;
 				}}
-				className={`${styles.thumb} ${styles.thumbLeft}`}
 				style={{ zIndex: minVal > max - 100 ? "5" : undefined }}
 			/>
 
 			<RangeInput
+				className={styles.thumbRight}
 				min={min}
 				max={max}
 				value={maxVal}
@@ -72,7 +80,6 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 					setMaxVal(value);
 					maxValRef.current = value;
 				}}
-				className={`${styles.thumb} ${styles.thumbRight}`}
 			/>
 
 			<div className={styles.slider}>

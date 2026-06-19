@@ -1,14 +1,18 @@
 import React, { useCallback, useEffect, useState, useRef, ChangeEvent } from "react";
 import styles from "./PriceRange.module.scss";
 
+//components
+import RangeInput from "../RangeInput/RangeInput";
+
 interface PriceRangeProps {
+	title?: string;
 	min: number;
 	max: number;
 	step?: number;
 	onChange: (values: { min: number; max: number }) => void;
 }
 
-export default function PriceRange({ min, max, step = 1, onChange }: PriceRangeProps) {
+export default function PriceRange({ title = "Price Range", min, max, step = 1, onChange }: PriceRangeProps) {
 	const [minVal, setMinVal] = useState<number>(min);
 	const [maxVal, setMaxVal] = useState<number>(max);
 
@@ -39,12 +43,12 @@ export default function PriceRange({ min, max, step = 1, onChange }: PriceRangeP
 
 	useEffect(() => {
 		onChange({ min: minVal, max: maxVal });
-	}, [minVal, maxVal, onChange]);
+	}, [minVal, maxVal]);
 
 	return (
 		<div className={styles.priceRangeContainer}>
-			<input
-				type="range"
+			{title && <h2 className={styles.title}>{title}</h2>}
+			<RangeInput
 				min={min}
 				max={max}
 				value={minVal}
@@ -58,8 +62,7 @@ export default function PriceRange({ min, max, step = 1, onChange }: PriceRangeP
 				style={{ zIndex: minVal > max - 100 ? "5" : undefined }}
 			/>
 
-			<input
-				type="range"
+			<RangeInput
 				min={min}
 				max={max}
 				value={maxVal}

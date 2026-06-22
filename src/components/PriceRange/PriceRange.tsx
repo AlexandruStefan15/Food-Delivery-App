@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState, useRef, ChangeEvent } from "re
 import styles from "./PriceRange.module.scss";
 
 //components
-import RangeInput from "../RangeInput/RangeInput";
+import Input from "../Input/Input";
 
 interface PriceRangeProps {
 	title?: string;
@@ -55,8 +55,9 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 	return (
 		<div className={styles.priceRangeContainer}>
 			{title && <h2 className={styles.title}>{title}</h2>}
-			<RangeInput
-				className={styles.thumbLeft}
+			<input
+				className={`${styles.thumb} ${styles.thumbLeft}`}
+				type="range"
 				min={min}
 				max={max}
 				value={minVal}
@@ -69,8 +70,9 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 				style={{ zIndex: minVal > max - 100 ? "5" : undefined }}
 			/>
 
-			<RangeInput
-				className={styles.thumbRight}
+			<input
+				className={`${styles.thumb} ${styles.thumbRight}`}
+				type="range"
 				min={min}
 				max={max}
 				value={maxVal}

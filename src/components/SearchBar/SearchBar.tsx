@@ -35,8 +35,8 @@ const SearchBar = ({
 	onBlur,
 	...props
 }: SearchBarProps) => {
-	const [query, setQuery] = useState<string>("");
-	const [isFocused, setIsFocused] = useState<boolean>(false);
+	const [query, setQuery] = useState("");
+	const [isFocused, setIsFocused] = useState(false);
 	const inputRef = useRef<HTMLInputElement>(null);
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

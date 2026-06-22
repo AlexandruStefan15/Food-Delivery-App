@@ -51,7 +51,7 @@ export default function RestaurantCard({ data, className = "", variant = "defaul
 	);
 }
 
-function RatingBadge({ rating, className = "" }: RatingBadgeProps) {
+function RatingBadge({ rating, icon, className = "" }: RatingBadgeProps) {
 	const colorScheme = (rating: number) => {
 		switch (true) {
 			case rating > 4:
@@ -70,7 +70,7 @@ function RatingBadge({ rating, className = "" }: RatingBadgeProps) {
 			className={styles.ratingBadge + ` ${className}`}
 			style={{ color: colorScheme(rating).color, backgroundColor: colorScheme(rating).background }}
 		>
-			<IoMdStar size={15.5} />
+			{icon ? icon : <IoMdStar size={15} />}
 			<span className={styles.text}>{rating}</span>
 		</span>
 	);

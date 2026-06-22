@@ -15,4 +15,5 @@ export interface RestaurantCardProps extends React.ComponentPropsWithoutRef<"div
 
 export interface RatingBadgeProps extends React.ComponentPropsWithoutRef<"span"> {
 	rating: number;
+	icon?: React.ReactNode;
 }

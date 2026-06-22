@@ -6,8 +6,12 @@ interface CardData {
 	subtitle?: string;
 	icon?:
 		| {
-				type: "reactIcon";
+				type: "reactIconsComponent";
 				component: IconType;
+		  }
+		| {
+				type: "reactComponent";
+				component: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>;
 		  }
 		| {
 				type: "node";

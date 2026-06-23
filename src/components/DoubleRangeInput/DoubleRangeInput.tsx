@@ -1,29 +1,34 @@
 import React, { useCallback, useEffect, useState, useRef, ChangeEvent } from "react";
-import styles from "./PriceRange.module.scss";
+import styles from "./DoubleRangeInput.module.scss";
 
 interface DoubleRangeInputProps {
-	title?: string;
 	min: number;
 	max: number;
 	step?: number;
 	wrapperClassname?: string;
+	valueIcon?: React.ReactNode;
 	onChange: (values: { min: number; max: number }) => void;
 }
 
 export default function DoubleRangeInput({
-	title = "Price Range",
 	min,
 	max,
 	step = 1,
 	wrapperClassname = "",
+	valueIcon,
 	onChange,
 }: DoubleRangeInputProps) {
 	const [minVal, setMinVal] = useState(min);
 	const [maxVal, setMaxVal] = useState(max);
-
 	const rangeRef = useRef<HTMLDivElement>(null);
 
-	const getPercent = useCallback((value: number) => Math.round(((value - min) / (max - min)) * 100), [min, max]);
+	const getPercent = useCallback(
+		(value: number) => {
+			if (max === min) return 0;
+			return Math.round(((value - min) / (max - min)) * 100);
+		},
+		[min, max],
+	);
 
 	useEffect(() => {
 		const minPercent = getPercent(minVal);
@@ -46,8 +51,6 @@ export default function DoubleRangeInput({
 
 	return (
 		<div className={`${styles.doubleRangeInputContainer} ${wrapperClassname}`}>
-			{title && <h2 className={styles.title}>{title}</h2>}
-
 			<input
 				className={`${styles.thumb} ${styles.thumbLeft}`}
 				type="range"
@@ -78,10 +81,15 @@ export default function DoubleRangeInput({
 			<div className={styles.slider}>
 				<div className={styles.sliderTrack} />
 				<div ref={rangeRef} className={styles.sliderRange} />
-
 				<div className={styles.sliderValues}>
-					<span>{minVal}</span>
-					<span>{maxVal}</span>
+					<span className={styles.wrapper}>
+						{valueIcon && <span className={styles.valueIcon}>{valueIcon}</span>}
+						<span>{minVal}</span>
+					</span>
+					<span className={styles.wrapper}>
+						{valueIcon && <span className={styles.valueIcon}>{valueIcon}</span>}
+						<span>{maxVal}</span>
+					</span>
 				</div>
 			</div>
 		</div>

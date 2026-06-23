@@ -2,6 +2,7 @@
 	border: 1px solid var(--border-primary-color);
 	border-radius: 48px;
 	overflow: hidden;
+	transition: all 0.2s ease;
 
 	&:hover {
 		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);

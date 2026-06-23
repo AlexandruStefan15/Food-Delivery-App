@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Restaurants.module.scss";
+import { useLocation, useSearchParams } from "react-router";
 
 //api
 import { useRestaurants } from "../../api/restaurants";
@@ -11,6 +12,11 @@ import Filters from "../../components/Filters/Filters";
 
 export default function Restaurants() {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
+	const [searchParams, setSearchParams] = useSearchParams();
+
+	useEffect(() => {
+		setSearchParams({});
+	}, []);
 
 	return (
 		<div className={styles.page}>

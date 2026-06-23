@@ -16,7 +16,7 @@ export default function Filters({ className = "", title = "Filters", subtitle = 
 			</header>
 			<div className={styles.content}>
 				<div className={styles.priceRange}>
-					<h3 className={styles.priceRangeTitle}>Price Range</h3>
+					<h4 className={styles.title}>Price Range</h4>
 					<DoubleRangeInput
 						min={0}
 						max={100}

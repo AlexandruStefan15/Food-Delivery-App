@@ -42,7 +42,7 @@ export default function DoubleRangeInput({
 
 	useEffect(() => {
 		onChange({ min: minVal, max: maxVal });
-	}, [minVal, maxVal, onChange]);
+	}, [minVal, maxVal]);
 
 	useEffect(() => {
 		setMinVal(min);

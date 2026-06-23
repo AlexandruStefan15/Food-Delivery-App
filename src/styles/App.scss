@@ -7,13 +7,14 @@
 }
 
 :root {
+	/* Palettes */
 	--color-orange-shade-500: #ec491380;
 
-	--color-brown-light-400: #e7d5cf;
+	--color-brown-light-400: #e0cdc7;
 	--color-brown-light-300: #e7d5cf;
 	--color-brown-light-200: #f3eae7;
 
-	--color-brown-light-shade-400: #e7d5cf9f;
+	--color-brown-light-shade-300: #e7d5cf9f;
 
 	--color-brown-dark-700: #39241b;
 	--color-brown-dark-600: #2e1d16;
@@ -35,32 +36,34 @@
 
 	--color-black-500: #1b110d;
 
-	--primary-white: white;
+	/* Semantic tokens */
+	--primary-white: rgb(255, 255, 255);
 	--secondary-white: rgb(214, 214, 214);
 	--primary-brown: var(--color-brown-500);
 	--primary-brown-dark: var(--color-brown-dark-500);
+	--primary-brown-light: var(--color-brown-light-200);
 	--primary-black: var(--color-brown-dark-300);
 	--secondary-brown-light: var(--color-brown-light-300);
-	--tertiary-grey: #6b7280;
+	--primary-grey: #6b7280;
 	--accent-orange: #ec4913;
 	--accent-muted: var(--color-brown-light-200);
-
-	--button-primary-bg: var(--accent-orange);
-	--icon-primary-color: var(--color-brown-500);
-	--icon-secondary-color: var(--accent-orange);
-	--icon-primary-bg: var(--color-brown-shade-600);
-	--border-primary-color: var(--color-brown-shade-500);
-	--border-secondary-color: var(--color-brown-light-shade-400);
-	--border-tertiary-color: var(--color-orange-shade-500);
-	--hover-card-primary-background: var(--color-brown-light-200);
-	--hover-card-secondary-background: var(--color-brown-shade-500);
-	--hover-card-tertiary-background: var(--color-brown-shade-400);
-
 	--background: #f8f6f6;
 	--foreground-white: var(--secondary-white);
 	--foreground-black: black;
 	--foreground-brown: var(--color-brown-500);
 	--foreground-grey: #9ca3af;
+
+	/* Component tokens */
+	--button-primary-bg: var(--accent-orange);
+	--icon-primary-color: var(--color-brown-500);
+	--icon-secondary-color: var(--accent-orange);
+	--icon-primary-bg: var(--color-brown-shade-600);
+	--border-primary-color: var(--color-brown-shade-500);
+	--border-secondary-color: var(--color-brown-light-shade-300);
+	--border-tertiary-color: var(--color-orange-shade-500);
+	--card-hover-primary-background: var(--color-brown-light-200);
+	--card-hover-secondary-background: var(--color-brown-shade-500);
+	--card-hover-tertiary-background: var(--color-brown-shade-400);
 }
 
 body {

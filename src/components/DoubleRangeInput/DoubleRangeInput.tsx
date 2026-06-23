@@ -1,60 +1,53 @@
 import React, { useCallback, useEffect, useState, useRef, ChangeEvent } from "react";
 import styles from "./PriceRange.module.scss";
 
-//components
-import Input from "../Input/Input";
-
-interface PriceRangeProps {
+interface DoubleRangeInputProps {
 	title?: string;
 	min: number;
 	max: number;
 	step?: number;
+	wrapperClassname?: string;
 	onChange: (values: { min: number; max: number }) => void;
 }
 
-export default function PriceRange({ title = "Price Range", min, max, step = 1, onChange }: PriceRangeProps) {
-	const [minVal, setMinVal] = useState<number>(min);
-	const [maxVal, setMaxVal] = useState<number>(max);
+export default function DoubleRangeInput({
+	title = "Price Range",
+	min,
+	max,
+	step = 1,
+	wrapperClassname = "",
+	onChange,
+}: DoubleRangeInputProps) {
+	const [minVal, setMinVal] = useState(min);
+	const [maxVal, setMaxVal] = useState(max);
 
-	const minValRef = useRef<number>(min);
-	const maxValRef = useRef<number>(max);
 	const rangeRef = useRef<HTMLDivElement>(null);
 
 	const getPercent = useCallback((value: number) => Math.round(((value - min) / (max - min)) * 100), [min, max]);
 
 	useEffect(() => {
 		const minPercent = getPercent(minVal);
-		const maxPercent = getPercent(maxValRef.current);
+		const maxPercent = getPercent(maxVal);
 
 		if (rangeRef.current) {
 			rangeRef.current.style.left = `${minPercent}%`;
 			rangeRef.current.style.width = `${maxPercent - minPercent}%`;
 		}
-	}, [minVal, getPercent]);
-
-	useEffect(() => {
-		const minPercent = getPercent(minValRef.current);
-		const maxPercent = getPercent(maxVal);
-
-		if (rangeRef.current) {
-			rangeRef.current.style.width = `${maxPercent - minPercent}%`;
-		}
-	}, [maxVal, getPercent]);
+	}, [minVal, maxVal, getPercent]);
 
 	useEffect(() => {
 		onChange({ min: minVal, max: maxVal });
-	}, [minVal, maxVal]);
+	}, [minVal, maxVal, onChange]);
 
 	useEffect(() => {
 		setMinVal(min);
 		setMaxVal(max);
-		minValRef.current = min;
-		maxValRef.current = max;
 	}, [min, max]);
 
 	return (
-		<div className={styles.priceRangeContainer}>
+		<div className={`${styles.doubleRangeInputContainer} ${wrapperClassname}`}>
 			{title && <h2 className={styles.title}>{title}</h2>}
+
 			<input
 				className={`${styles.thumb} ${styles.thumbLeft}`}
 				type="range"
@@ -65,7 +58,6 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 				onChange={(event: ChangeEvent<HTMLInputElement>) => {
 					const value = Math.min(Number(event.target.value), maxVal - step);
 					setMinVal(value);
-					minValRef.current = value;
 				}}
 				style={{ zIndex: minVal > max - 100 ? "5" : undefined }}
 			/>
@@ -80,7 +72,6 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 				onChange={(event: ChangeEvent<HTMLInputElement>) => {
 					const value = Math.max(Number(event.target.value), minVal + step);
 					setMaxVal(value);
-					maxValRef.current = value;
 				}}
 			/>
 
@@ -89,8 +80,8 @@ export default function PriceRange({ title = "Price Range", min, max, step = 1, 
 				<div ref={rangeRef} className={styles.sliderRange} />
 
 				<div className={styles.sliderValues}>
-					<span>${minVal}</span>
-					<span>${maxVal}</span>
+					<span>{minVal}</span>
+					<span>{maxVal}</span>
 				</div>
 			</div>
 		</div>

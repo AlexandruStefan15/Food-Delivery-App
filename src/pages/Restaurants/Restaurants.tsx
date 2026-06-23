@@ -22,7 +22,7 @@ export default function Restaurants() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<Filters />
+				<Filters className={styles.filters} />
 				<div className={styles.content}>
 					<h1 className={styles.title}>Showing {restaurants.length} restaurants near downtown</h1>
 					<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>

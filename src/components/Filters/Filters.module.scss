@@ -5,12 +5,13 @@
 	gap: 1rem;
 	padding: 1rem;
 	border: 1px solid var(--border-primary-color);
-	border-radius: 15px;
+	border-radius: 20px;
 	background-color: white;
 
 	.header {
 		padding: 0.5rem;
-		border-bottom: 1px solid var(--primary-brown);
+		padding-bottom: 1rem;
+		border-bottom: 1px solid var(--accent-muted);
 
 		.title {
 			font-size: 1.2rem;

@@ -7,9 +7,19 @@
 		margin-inline: auto;
 		padding-inline: 5.5rem;
 		gap: 2rem;
+		margin-top: 2rem;
 
 		@include media.tablet {
 			padding-inline: 2.5rem;
+		}
+
+		.filters {
+			max-width: none;
+			flex: 0 0 280px;
+		}
+
+		.content {
+			flex: 1;
 		}
 	}
 }

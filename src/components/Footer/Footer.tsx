@@ -44,7 +44,7 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 	return (
 		<footer className={styles.footer + ` ${className}`} {...props}>
 			<nav className={styles.navigation}>
-				<Col className={styles.intro}>
+				<div className={styles.intro}>
 					<Logo className={styles.logo} src={svgs.logo_text_white} />
 					<p className={styles.description}>
 						Delicious meals from your favorite local restaurants, delivered straight to your door. Freshness guaranteed.
@@ -60,11 +60,11 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 							<MdGroup size={26} />
 						</NavLink>
 					</div>
-				</Col>
+				</div>
 				{navigation.map((item, index) => (
 					<LinkList key={index} title={item.title} links={item.links} />
 				))}
-				<Col className={styles.newsletter}>
+				<div className={styles.newsletter}>
 					<Title>Newsletter</Title>
 					<p className={styles.description}>Get the latest deals and new restaurant alerts. Don't miss anything.</p>
 					<SearchBar
@@ -73,7 +73,7 @@ export default function Footer({ className = "", navigation = defaultNavigation,
 						variant="v2"
 						placeholder="Your email..."
 					/>
-				</Col>
+				</div>
 			</nav>
 		</footer>
 	);
@@ -101,13 +101,5 @@ function Title({ className = "", children, ...props }: TitleProps) {
 		<h3 className={styles.title} {...props}>
 			{children}
 		</h3>
-	);
-}
-
-function Col({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"div">) {
-	return (
-		<div className={`${styles.col} ${className}`} {...props}>
-			{children}
-		</div>
 	);
 }

@@ -26,31 +26,37 @@
 	}
 }
 
-.col {
+.intro {
 	color: var(--foreground-grey);
 	font-size: 0.875rem;
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	line-height: 1.55;
-	justify-content: space-between;
+	justify-content: flex-start;
+	gap: 1rem;
 
-	&.intro {
-		justify-content: flex-start;
-		gap: 1rem;
+	.logo img {
+		object-position: 0px -3px;
 	}
+}
 
-	&.newsletter {
-		justify-content: flex-start;
-		gap: 1.1rem;
+.newsletter {
+	color: var(--foreground-grey);
+	font-size: 0.875rem;
+	display: flex;
+	flex-direction: column;
 
-		.input {
-			min-height: 43px;
-			color: white;
+	line-height: 1.55;
+	justify-content: flex-start;
+	gap: 1.1rem;
 
-			&::placeholder {
-				color: var(--foreground-grey);
-			}
+	.input {
+		min-height: 43px;
+		color: white;
+
+		&::placeholder {
+			color: var(--foreground-grey);
 		}
 	}
 }

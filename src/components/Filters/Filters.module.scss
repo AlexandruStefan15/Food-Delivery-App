@@ -75,5 +75,18 @@
 			font-size: 0.9rem;
 			font-weight: 600;
 		}
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+
+			.listItem {
+				display: flex;
+				gap: 0.5rem;
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+		}
 	}
 }

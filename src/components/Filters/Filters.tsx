@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import styles from "./Filters.module.scss";
 import { useSearchParams } from "react-router";
 
+//types
+import { TextProps } from "./Filters.types";
+
 //components
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
 
@@ -43,6 +46,7 @@ export default function Filters({
 						<DoubleRangeInput
 							min={0}
 							max={100}
+							valueIcon="$"
 							onChange={({ min, max }) => {
 								setPriceRange({ min, max });
 							}}
@@ -57,7 +61,7 @@ export default function Filters({
 								<li className={styles.listItem} key={label}>
 									<input className={styles.input} type="checkbox" />
 									<span className={styles.text}>
-										{rating}+ ({label})
+										{rating}+ &nbsp; ({label})
 									</span>
 								</li>
 							))}
@@ -81,3 +85,12 @@ export default function Filters({
 		</div>
 	);
 }
+
+Filters.Text = <T extends React.ElementType = "span">({ children, className = "", as, ...props }: TextProps<T>) => {
+	const Element = as || "span";
+	return (
+		<Element className={`${styles.text} ${className}`} {...props}>
+			{children}
+		</Element>
+	);
+};

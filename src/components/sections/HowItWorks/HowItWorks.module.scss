@@ -1,8 +1,7 @@
 @use "../../../styles/breakpoints" as media;
 
 .section {
-	padding-block: 5rem;
-	background-color: #ffffff80;
+	padding-block: 3rem;
 
 	@include media.mobile {
 		padding-block: 3.5rem;

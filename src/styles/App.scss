@@ -8,23 +8,32 @@
 
 :root {
 	/* Palettes */
-	--color-orange-shade-500: #ec491380;
+	--color-orange-alpha-500: #ec491380;
 
+	--color-grey-500: #6b7280;
+	--color-grey-400: #828995;
+	--color-grey-300: #9ca3af;
+	--color-grey-200: #a6adb9;
+
+	--color-brown-light-alpha-300: #e7d5cf9f;
+
+	--color-brown-light-700: #d5b7ae;
+	--color-brown-light-600: #d2bab3;
+	--color-brown-light-500: #d6c2bc;
 	--color-brown-light-400: #e0cdc7;
 	--color-brown-light-300: #e7d5cf;
 	--color-brown-light-200: #f3eae7;
 
-	--color-brown-light-shade-300: #e7d5cf9f;
-
+	--color-brown-dark-800: #3f281e;
 	--color-brown-dark-700: #39241b;
 	--color-brown-dark-600: #2e1d16;
 	--color-brown-dark-500: #221510;
 	--color-brown-dark-400: #180f0b;
 	--color-brown-dark-300: #1b110d;
 
-	--color-brown-shade-600: #ec49131a;
-	--color-brown-shade-500: #9a604c49;
-	--color-brown-shade-400: #b1725d3b;
+	--color-brown-alpha-600: #ec49131a;
+	--color-brown-alpha-500: #9a604c49;
+	--color-brown-alpha-400: #b1725d3b;
 
 	--color-brown-700: #815040;
 	--color-brown-600: #8d5846;
@@ -34,41 +43,53 @@
 	--color-brown-200: #c07860;
 	--color-brown-100: #cf8268;
 
-	--color-black-500: #1b110d;
+	--color-black-100: #000000;
+
+	--color-white-200: #f8f6f6;
+	--color-white-100: #ffffff;
 
 	/* Semantic tokens */
+	--background: var(--color-white-200);
+	--accent: #ec4913;
+	--accent-muted: var(--color-brown-light-200);
+	--success: green;
+	--error: red;
+
 	--primary-white: rgb(255, 255, 255);
-	--secondary-white: rgb(214, 214, 214);
 	--primary-brown: var(--color-brown-500);
 	--primary-brown-dark: var(--color-brown-dark-500);
 	--primary-brown-light: var(--color-brown-light-200);
-	--primary-black: var(--color-brown-dark-300);
 	--secondary-brown-light: var(--color-brown-light-300);
-	--primary-grey: #6b7280;
+	--secondary-brown-dark: var(--color-brown-dark-300);
+	--primary-grey: var(--color-grey-500);
+	--secondary-grey: var(--color-grey-300);
+
 	--accent-orange: #ec4913;
 	--accent-muted: var(--color-brown-light-200);
-	--background: #f8f6f6;
-	--foreground-white: var(--secondary-white);
-	--foreground-black: black;
-	--foreground-brown: var(--color-brown-500);
-	--foreground-grey: #9ca3af;
+	--primary-background: #f8f6f6;
 
 	/* Component tokens */
+	--text-primary-color: black;
+	--text-secondary-color: var(--color-brown-500);
+	--text-tertiary-color: var(--color-grey-300);
 	--button-primary-bg: var(--accent-orange);
 	--icon-primary-color: var(--color-brown-500);
 	--icon-secondary-color: var(--accent-orange);
-	--icon-primary-bg: var(--color-brown-shade-600);
-	--border-primary-color: var(--color-brown-shade-500);
-	--border-secondary-color: var(--color-brown-light-shade-300);
-	--border-tertiary-color: var(--color-orange-shade-500);
-	--card-hover-primary-background: var(--color-brown-light-200);
-	--card-hover-secondary-background: var(--color-brown-shade-500);
-	--card-hover-tertiary-background: var(--color-brown-shade-400);
+	--icon-primary-bg: var(--color-brown-alpha-600);
+	--border-primary-color: var(--color-brown-alpha-500);
+	--border-secondary-color: var(--color-brown-light-alpha-300);
+	--border-tertiary-color: var(--color-orange-alpha-500);
+	--card-primary-bg: rgb(255, 255, 255);
+	--card-primary-hover-bg: var(--color-brown-light-200);
+	--card-secondary-hover-bg: var(--color-brown-alpha-500);
+	--card-tertiary-hover-bg: var(--color-brown-alpha-400);
+	--footer-primary-color: var(--color-grey-300);
+	--footer-primary-bg: var(--secondary-brown-dark);
 }
 
 body {
 	font-family: "Plus Jakarta Sans", "Open Sans", sans-serif;
-	color: var(--foreground-black);
+	color: var(--text-primary-color);
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;

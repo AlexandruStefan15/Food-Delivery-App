@@ -90,3 +90,17 @@
 		}
 	}
 }
+
+/* Subcomponents */
+
+.text {
+	display: flex;
+	gap: 0.5rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.title {
+	font-size: 0.9rem;
+	font-weight: 600;
+}

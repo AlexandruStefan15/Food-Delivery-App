@@ -37,7 +37,7 @@ export default function Filters({
 			<div className={styles.content}>
 				{showPriceRange && (
 					<div className={styles.priceRange}>
-						<h3 className={styles.title}>Price Range</h3>
+						<Filters.Title>Price Range</Filters.Title>
 						<DoubleRangeInput
 							min={0}
 							max={100}
@@ -50,14 +50,14 @@ export default function Filters({
 				)}
 				{showCustomerRating && (
 					<div className={styles.customerRating}>
-						<h3 className={styles.title}>Customer Rating</h3>
+						<Filters.Title>Customer Rating</Filters.Title>
 						<ul className={styles.list}>
 							{customerRating.map(({ rating, label }) => (
 								<li className={styles.listItem} key={label}>
 									<input className={styles.input} type="checkbox" />
-									<span className={styles.text}>
+									<Filters.Text>
 										{rating}+ &nbsp; ({label})
-									</span>
+									</Filters.Text>
 								</li>
 							))}
 						</ul>
@@ -65,12 +65,12 @@ export default function Filters({
 				)}
 				{showDietary && (
 					<div className={styles.dietary}>
-						<h3 className={styles.title}>Dietary Needs</h3>
+						<Filters.Title>Dietary Needs</Filters.Title>
 						<ul className={styles.list}>
 							{dietaryNeeds.map((value) => (
 								<li className={styles.listItem} key={value}>
 									<input className={styles.input} type="checkbox" />
-									<span className={styles.text}>{value}</span>
+									<Filters.Text>{value}</Filters.Text>
 								</li>
 							))}
 						</ul>

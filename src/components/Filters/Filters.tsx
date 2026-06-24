@@ -3,15 +3,10 @@ import styles from "./Filters.module.scss";
 import { useSearchParams } from "react-router";
 
 //types
-import { TextProps } from "./Filters.types";
+import { TextProps, PriceRange } from "./Filters.types";
 
 //components
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
-
-interface PriceRange {
-	min: number | null;
-	max: number | null;
-}
 
 const customerRating = [
 	{ rating: 4.5, label: "Excellent" },
@@ -86,11 +81,18 @@ export default function Filters({
 	);
 }
 
-Filters.Text = <T extends React.ElementType = "span">({ children, className = "", as, ...props }: TextProps<T>) => {
-	const Element = as || "span";
+Filters.Text = ({ children, className = "", as: Element = "span", ...props }: TextProps) => {
 	return (
 		<Element className={`${styles.text} ${className}`} {...props}>
 			{children}
 		</Element>
+	);
+};
+
+Filters.Title = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"div">) => {
+	return (
+		<h2 className={`${styles.title} ${className}`} {...props}>
+			{children}
+		</h2>
 	);
 };

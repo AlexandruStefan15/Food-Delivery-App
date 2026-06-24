@@ -1,5 +1,9 @@
-export type TextProps<T extends React.ElementType = "span"> = {
-	as?: T;
-	className?: string;
+export interface TextProps extends React.HTMLAttributes<HTMLElement> {
+	as?: React.ElementType;
 	children?: React.ReactNode;
-} & React.ComponentPropsWithoutRef<T>;
+}
+
+export interface PriceRange {
+	min: number | null;
+	max: number | null;
+}

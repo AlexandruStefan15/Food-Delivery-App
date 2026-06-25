@@ -1,7 +1,7 @@
 @use "../../styles/breakpoints" as media;
 
 .header {
-	background: var(--header-primary-bg);
+	background: var(--header-bg);
 	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 	font-size: 0.9rem;
 	font-weight: 600;

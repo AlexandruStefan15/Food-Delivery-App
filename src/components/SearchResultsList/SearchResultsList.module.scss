@@ -1,5 +1,5 @@
 .searchResultsContainer {
-	border: 1px solid var(--border-primary-color);
+	border: 1px solid var(--border-color);
 	border-radius: 10px;
 	padding: 0.75rem 1rem;
 	overflow: hidden;
@@ -26,7 +26,7 @@
 		box-shadow: none;
 
 		&:hover {
-			background-color: var(--card-tertiary-hover-bg);
+			background-color: var(--card-hover-bg-v3);
 		}
 	}
 

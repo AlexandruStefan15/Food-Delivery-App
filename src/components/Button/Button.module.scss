@@ -3,7 +3,7 @@
 	background: transparent;
 	cursor: pointer;
 	padding: 1rem 2rem;
-	background-color: var(--button-primary-bg);
+	background-color: var(--button-bg);
 }
 
 .btn_animated {
@@ -11,7 +11,7 @@
 	transition-property: all;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
-	background-color: var(--button-primary-bg);
+	background-color: var(--button-bg);
 	border: none;
 	outline: none;
 	border-radius: 999px;

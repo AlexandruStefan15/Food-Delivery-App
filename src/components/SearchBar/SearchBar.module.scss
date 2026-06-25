@@ -10,7 +10,7 @@
 	overflow: hidden;
 
 	&:has(.input:focus) {
-		outline: 2px solid var(--border-tertiary-color);
+		outline: 2px solid var(--border-color-v3);
 	}
 
 	.input {
@@ -31,7 +31,7 @@
 	.btn {
 		.icon {
 			width: 22px;
-			color: var(--icon-primary-color);
+			color: var(--icon-color);
 		}
 	}
 }
@@ -58,7 +58,7 @@
 		border-radius: 25px;
 
 		&::placeholder {
-			color: var(--text-secondary-color);
+			color: var(--text-color-v2);
 		}
 	}
 

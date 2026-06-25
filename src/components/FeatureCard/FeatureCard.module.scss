@@ -5,7 +5,7 @@
 	gap: 1.5rem;
 	padding: 2.2rem 1.75rem;
 	text-align: center;
-	background-color: var(--card-primary-bg);
+	background-color: var(--card-bg);
 }
 
 .header {
@@ -14,14 +14,14 @@
 }
 
 .iconWrapper {
-	background-color: var(--icon-primary-bg);
+	background-color: var(--icon-bg);
 	padding: 1.1em;
 	border-radius: 50%;
 	width: 68px;
 
 	.icon {
 		width: 100%;
-		fill: var(--icon-secondary-color);
+		fill: var(--icon-color-v2);
 	}
 }
 

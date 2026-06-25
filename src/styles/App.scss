@@ -78,25 +78,25 @@
 	}
 
 	/* Component tokens */
-	--app-background-v1: var(--base);
+	--app-background: var(--base);
 	--app-background-v2: var(--base-v2);
 	--text-color: var(--generic);
-	--text-secondary-color: var(--primary);
-	--text-tertiary-color: var(--secondary);
-	--button-primary-bg: var(--accent);
-	--icon-primary-color: var(--primary);
-	--icon-secondary-color: var(--accent);
-	--icon-primary-bg: var(--primary-alpha);
-	--border-primary-color: var(--primary-alpha-v2);
-	--border-secondary-color: var(--primary-alpha-v3);
-	--border-tertiary-color: var(--accent-alpha);
-	--card-primary-bg: var(--base-v2);
-	--card-primary-hover-bg: var(--primary-v2);
-	--card-secondary-hover-bg: var(--primary-alpha-v2);
-	--card-tertiary-hover-bg: var(--primary-alpha-v4);
-	--header-primary-bg: var(--base);
-	--footer-primary-color: var(--secondary);
-	--footer-primary-bg: var(--primary-v3);
+	--text-color-v2: var(--primary);
+	--text-color-v3: var(--secondary);
+	--button-bg: var(--accent);
+	--icon-color: var(--primary);
+	--icon-color-v2: var(--accent);
+	--icon-bg: var(--primary-alpha);
+	--border-color: var(--primary-alpha-v2);
+	--border-color-v2: var(--primary-alpha-v3);
+	--border-color-v3: var(--accent-alpha);
+	--card-bg: var(--base-v2);
+	--card-hover-bg: var(--primary-v2);
+	--card-hover-bg-v2: var(--primary-alpha-v2);
+	--card-hover-bg-v3: var(--primary-alpha-v4);
+	--header-bg: var(--base);
+	--footer-color: var(--secondary);
+	--footer-bg: var(--primary-v3);
 }
 
 body {
@@ -105,7 +105,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;
-	background-color: var(--app-background-v1);
+	background-color: var(--app-background);
 }
 
 img,

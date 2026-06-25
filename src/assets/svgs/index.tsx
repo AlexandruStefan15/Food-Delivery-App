@@ -4,12 +4,10 @@ import logo_text_white from "./logo_text_white.svg";
 import search from "./search.svg";
 
 /* Svgs paths */
-
 const svgs = { cart, logo, logo_text_white, search };
 export default svgs;
 
 /* Inline Svgs */
-
 type InlineSvgProps = React.ComponentPropsWithoutRef<"svg">;
 
 export const InlineSvgs = {

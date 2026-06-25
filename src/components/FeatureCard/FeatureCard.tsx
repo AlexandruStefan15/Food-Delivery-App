@@ -23,10 +23,8 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 								const Icon = data.icon.component;
 								return <Icon className={styles.icon} />;
 							})()
-						) : data.icon.type === "image" ? (
-							<img src={data.icon.src} alt={data.icon.alt} className={styles.icon} />
 						) : (
-							data.icon.node
+							<img src={data.icon.src} alt={data.icon.alt} className={styles.icon} />
 						)}
 					</div>
 				)}

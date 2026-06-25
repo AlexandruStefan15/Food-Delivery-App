@@ -15,10 +15,6 @@ type ItemIcon =
 			component: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>;
 	  }
 	| {
-			type: "node";
-			node: React.ReactNode;
-	  }
-	| {
 			type: "image";
 			src: string;
 			alt: string;

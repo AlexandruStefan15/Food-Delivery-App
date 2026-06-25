@@ -8,7 +8,10 @@
 
 :root {
 	/* Palettes */
+
 	--color-orange-alpha-500: #ec491380;
+
+	--color-orange-700: #ec4913;
 
 	--color-grey-500: #6b7280;
 	--color-grey-400: #828995;
@@ -48,16 +51,30 @@
 	--color-white-200: #f8f6f6;
 	--color-white-100: #ffffff;
 
-	/* Semantic tokens */
-	--background: var(--color-white-200);
-	--background-2: var(--color-white-100);
-	--foreground: var(--color-black-100);
-	--foreground-2: var(--color-brown-500);
-	--foreground-3: var(--color-grey-300);
-	--accent: #ec4913;
-	--accent-muted: var(--color-brown-light-200);
+	/* Semantic tokens (token-variant-theme) */
+
+	--primary: var(--color-brown-500);
+	--primary-v2: var(--color-brown-light-200);
+	--primary-v3: var(--color-brown-dark-300);
+	--primary-alpha: var(--color-brown-alpha-600);
+	--primary-alpha-v2: var(--color-brown-alpha-500);
+	--primary-alpha-v3: var(--color-brown-light-alpha-300);
+	--primary-alpha-v4: var(--color-brown-alpha-400);
+	--secondary: var(--color-grey-300);
+	--accent: var(--color-orange-700);
+	--accent-alpha: var(--color-orange-alpha-500);
 	--success: green;
 	--danger: red;
+
+	--background: var(--color-white-200);
+	--background-v2: var(--color-white-100);
+	--foreground: var(--color-black-100);
+	--foreground-v2: var(--color-brown-500);
+	--foreground-v3: var(--color-grey-300);
+
+	&.dark {
+		display: none;
+	}
 
 	--primary-white: rgb(255, 255, 255);
 	--primary-brown: var(--color-brown-500);
@@ -73,24 +90,24 @@
 	--primary-background: #f8f6f6;
 
 	/* Component tokens */
-	--app-background-1: var(--background);
-	--app-background-2: var(--background-2);
+	--app-background-v1: var(--background);
+	--app-background-v2: var(--background-v2);
 	--text-primary-color: var(--foreground);
-	--text-secondary-color: var(--foreground-2);
-	--text-tertiary-color: var(--foreground-3);
-	--button-primary-bg: var(--accent-orange);
-	--icon-primary-color: var(--color-brown-500);
-	--icon-secondary-color: var(--accent-orange);
-	--icon-primary-bg: var(--color-brown-alpha-600);
-	--border-primary-color: var(--color-brown-alpha-500);
-	--border-secondary-color: var(--color-brown-light-alpha-300);
-	--border-tertiary-color: var(--color-orange-alpha-500);
-	--card-primary-bg: rgb(255, 255, 255);
-	--card-primary-hover-bg: var(--color-brown-light-200);
-	--card-secondary-hover-bg: var(--color-brown-alpha-500);
-	--card-tertiary-hover-bg: var(--color-brown-alpha-400);
-	--footer-primary-color: var(--color-grey-300);
-	--footer-primary-bg: var(--secondary-brown-dark);
+	--text-secondary-color: var(--foreground-v2);
+	--text-tertiary-color: var(--foreground-v3);
+	--button-primary-bg: var(--accent);
+	--icon-primary-color: var(--primary);
+	--icon-secondary-color: var(--accent);
+	--icon-primary-bg: var(--primary-alpha);
+	--border-primary-color: var(--primary-alpha-v2);
+	--border-secondary-color: var(--primary-alpha-v3);
+	--border-tertiary-color: var(--accent-alpha);
+	--card-primary-bg: var(--background-v2);
+	--card-primary-hover-bg: var(--primary-v2);
+	--card-secondary-hover-bg: var(--primary-alpha-v2);
+	--card-tertiary-hover-bg: var(--primary-alpha-v4);
+	--footer-primary-color: var(--secondary);
+	--footer-primary-bg: var(--primary-v3);
 }
 
 body {
@@ -99,7 +116,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;
-	background-color: var(--background);
+	background-color: var(--app-background-v1);
 }
 
 img,

@@ -8,6 +8,7 @@ export const useDishesByRestaurant = (restaurantId: number | null) => {
 		error: dishesError,
 	} = useQuery<Dish[], Error>({
 		queryKey: ["dishes", restaurantId],
+		enabled: !!restaurantId,
 		queryFn: async (): Promise<Dish[]> => {
 			const res = await fetch(`http://localhost:3001/dishes?restaurant_id=${restaurantId}`);
 
@@ -17,7 +18,6 @@ export const useDishesByRestaurant = (restaurantId: number | null) => {
 
 			return res.json();
 		},
-		enabled: !!restaurantId,
 	});
 
 	return { dishes, dishesAreLoading, dishesError };

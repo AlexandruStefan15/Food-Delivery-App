@@ -11,7 +11,7 @@
 	.header {
 		padding-inline: 0;
 		padding-bottom: 1rem;
-		border-bottom: 1px solid var(--accent-muted);
+		border-bottom: 1px solid var(--primary-v2);
 
 		.title {
 			font-size: 1.2rem;
@@ -21,7 +21,7 @@
 		.subtitle {
 			font-size: 0.9rem;
 			font-weight: 400;
-			color: var(--primary-brown);
+			color: var(--primary);
 		}
 	}
 
@@ -105,12 +105,12 @@
 	top: -1.5px;
 
 	&:hover {
-		border-color: var(--accent-orange);
+		border-color: var(--accent);
 	}
 
 	&:checked {
-		background-color: var(--accent-orange);
-		border-color: var(--accent-orange);
+		background-color: var(--accent);
+		border-color: var(--accent);
 	}
 
 	&:checked::before {

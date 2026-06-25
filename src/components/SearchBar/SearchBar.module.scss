@@ -6,7 +6,7 @@
 	gap: 0rem;
 	border-radius: 25px;
 	padding-inline: 5px;
-	background-color: var(--accent-muted);
+	background-color: var(--primary-v2);
 	overflow: hidden;
 
 	&:has(.input:focus) {
@@ -54,7 +54,7 @@
 		font-size: 0.88rem;
 		padding-block: 12px;
 		padding-left: 15px;
-		background-color: var(--primary-brown-dark);
+		background-color: var(--primary-v4);
 		border-radius: 25px;
 
 		&::placeholder {
@@ -64,7 +64,7 @@
 
 	.btn {
 		flex: 0 0 41px;
-		background-color: var(--accent-orange);
+		background-color: var(--accent);
 		border-radius: 100%;
 		padding: 0.7em;
 		aspect-ratio: 1/1;

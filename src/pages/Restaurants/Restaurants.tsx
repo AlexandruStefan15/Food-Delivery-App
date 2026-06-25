@@ -14,10 +14,6 @@ export default function Restaurants() {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
 	const [searchParams, setSearchParams] = useSearchParams();
 
-	useEffect(() => {
-		setSearchParams({});
-	}, []);
-
 	return (
 		<div className={styles.page}>
 			<Header />

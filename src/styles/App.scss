@@ -12,6 +12,9 @@
 	--color-orange-alpha-500: #ec491380;
 
 	--color-orange-700: #ec4913;
+	--color-orange-600: #de4613;
+	--color-orange-500: #d14212;
+	--color-orange-400: #c13d11;
 
 	--color-grey-500: #6b7280;
 	--color-grey-400: #828995;
@@ -56,6 +59,7 @@
 	--primary: var(--color-brown-500);
 	--primary-v2: var(--color-brown-light-200);
 	--primary-v3: var(--color-brown-dark-300);
+	--primary-v4: var(--color-brown-dark-500);
 	--primary-alpha: var(--color-brown-alpha-600);
 	--primary-alpha-v2: var(--color-brown-alpha-500);
 	--primary-alpha-v3: var(--color-brown-light-alpha-300);
@@ -65,36 +69,20 @@
 	--accent-alpha: var(--color-orange-alpha-500);
 	--success: green;
 	--danger: red;
-
-	--background: var(--color-white-200);
-	--background-v2: var(--color-white-100);
-	--foreground: var(--color-black-100);
-	--foreground-v2: var(--color-brown-500);
-	--foreground-v3: var(--color-grey-300);
+	--base: var(--color-white-200);
+	--base-v2: var(--color-white-100);
+	--generic: var(--color-black-100);
 
 	&.dark {
 		display: none;
 	}
 
-	--primary-white: rgb(255, 255, 255);
-	--primary-brown: var(--color-brown-500);
-	--primary-brown-dark: var(--color-brown-dark-500);
-	--primary-brown-light: var(--color-brown-light-200);
-	--secondary-brown-light: var(--color-brown-light-300);
-	--secondary-brown-dark: var(--color-brown-dark-300);
-	--primary-grey: var(--color-grey-500);
-	--secondary-grey: var(--color-grey-300);
-
-	--accent-orange: #ec4913;
-	--accent-muted: var(--color-brown-light-200);
-	--primary-background: #f8f6f6;
-
 	/* Component tokens */
-	--app-background-v1: var(--background);
-	--app-background-v2: var(--background-v2);
-	--text-primary-color: var(--foreground);
-	--text-secondary-color: var(--foreground-v2);
-	--text-tertiary-color: var(--foreground-v3);
+	--app-background-v1: var(--base);
+	--app-background-v2: var(--base-v2);
+	--text-color: var(--generic);
+	--text-secondary-color: var(--primary);
+	--text-tertiary-color: var(--secondary);
 	--button-primary-bg: var(--accent);
 	--icon-primary-color: var(--primary);
 	--icon-secondary-color: var(--accent);
@@ -102,17 +90,18 @@
 	--border-primary-color: var(--primary-alpha-v2);
 	--border-secondary-color: var(--primary-alpha-v3);
 	--border-tertiary-color: var(--accent-alpha);
-	--card-primary-bg: var(--background-v2);
+	--card-primary-bg: var(--base-v2);
 	--card-primary-hover-bg: var(--primary-v2);
 	--card-secondary-hover-bg: var(--primary-alpha-v2);
 	--card-tertiary-hover-bg: var(--primary-alpha-v4);
+	--header-primary-bg: var(--base);
 	--footer-primary-color: var(--secondary);
 	--footer-primary-bg: var(--primary-v3);
 }
 
 body {
 	font-family: "Plus Jakarta Sans", "Open Sans", sans-serif;
-	color: var(--text-primary-color);
+	color: var(--text-color);
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;

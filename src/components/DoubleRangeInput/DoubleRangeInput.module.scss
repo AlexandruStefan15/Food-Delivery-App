@@ -25,7 +25,7 @@
 			margin-top: 4px;
 			border: 2px solid #ffffff;
 			border-radius: 50%;
-			background-color: var(--accent-orange);
+			background-color: var(--accent);
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 			cursor: pointer;
 			pointer-events: all;
@@ -38,7 +38,7 @@
 			height: 18px;
 			border: 2px solid #ffffff;
 			border-radius: 50%;
-			background-color: var(--accent-orange);
+			background-color: var(--accent);
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 			cursor: pointer;
 			pointer-events: all;
@@ -67,12 +67,12 @@
 		.sliderTrack {
 			z-index: 1;
 			width: 100%;
-			background-color: var(--accent-muted);
+			background-color: var(--primary-v2);
 		}
 
 		.sliderRange {
 			z-index: 2;
-			background-color: var(--accent-orange);
+			background-color: var(--accent);
 		}
 
 		.sliderValues {

@@ -1,6 +1,5 @@
 .container {
 	--range-height: 6px;
-	--range-thumb-size: 17px;
 	--range-progress: 0%;
 
 	--range-bg: var(--primary-v2);
@@ -25,19 +24,18 @@
 
 .sliderWrap {
 	position: relative;
-	padding-top: 36px;
 }
 
 .valueBubble {
-	position: absolute;
-	top: 0;
+	position: relative;
+	top: -6px;
 	transform: translateX(-50%);
-	min-width: 50px;
-	padding: 8px 10px;
+	width: 50px;
+	padding: 8px;
 	border-radius: 3px;
 	background: var(--range-bubble-bg);
 	color: var(--range-bubble-text);
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	font-weight: 700;
 	line-height: 1;
 	text-align: center;
@@ -48,7 +46,7 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		bottom: -7px;
+		bottom: -5px;
 		transform: translateX(-50%);
 		border-left: 7px solid transparent;
 		border-right: 7px solid transparent;
@@ -127,7 +125,7 @@
 .labels {
 	position: relative;
 	height: 28px;
-	margin-top: 6px;
+	margin-top: 5px;
 }
 
 .rangeLabel {
@@ -135,7 +133,7 @@
 	top: 0;
 	transform: translateX(-50%);
 	color: var(--range-muted);
-	font-size: 0.875rem;
+	font-size: 0.8rem;
 	font-weight: 500;
 	white-space: nowrap;
 

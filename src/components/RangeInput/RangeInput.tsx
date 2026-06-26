@@ -3,6 +3,8 @@ import styles from "./RangeInput.module.scss";
 
 import { RangeInputProps, RangeInputLabel } from "./RangeInput.types";
 
+const THUMB_SIZE = 17;
+
 export default function RangeInput({
 	value,
 	defaultValue,
@@ -14,7 +16,7 @@ export default function RangeInput({
 	markers = [],
 	showValueBubble = true,
 	disabled = false,
-	className,
+	className = "",
 	onChange,
 	formatValue,
 	formatLabel,
@@ -23,16 +25,23 @@ export default function RangeInput({
 
 	const isControlled = value !== undefined;
 
-	const [internalValue, setInternalValue] = useState(defaultValue ?? min);
+	const [internalValue, setInternalValue] = useState<number>(defaultValue ?? min);
 
 	const currentValue = isControlled ? value : internalValue;
 
 	const percent = useMemo(() => {
 		if (max === min) return 0;
-		return ((currentValue - min) / (max - min)) * 100;
+
+		const rawPercent = ((currentValue - min) / (max - min)) * 100;
+
+		return Math.min(100, Math.max(0, rawPercent));
 	}, [currentValue, min, max]);
 
-	const clampPercent = Math.min(100, Math.max(0, percent));
+	const bubbleLeft = useMemo(() => {
+		const correction = (0.5 - percent / 100) * THUMB_SIZE;
+
+		return `calc(${percent}% + ${correction}px)`;
+	}, [percent]);
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const nextValue = Number(event.target.value);
@@ -46,26 +55,43 @@ export default function RangeInput({
 
 	const renderValue = (nextValue: number) => {
 		if (formatValue) return formatValue(nextValue);
-		return `${nextValue} ${unit}`;
+
+		return unit ? `${nextValue} ${unit}` : nextValue;
 	};
 
 	const renderLabel = (nextValue: number) => {
 		if (formatLabel) return formatLabel(nextValue);
-		return `${nextValue} ${unit}`;
+
+		return unit ? `${nextValue} ${unit}` : nextValue;
 	};
 
-	const allLabels: RangeInputLabel[] = [
-		{ value: min, label: renderLabel(min) },
+	const getPercentByValue = (nextValue: number) => {
+		if (max === min) return 0;
+
+		const rawPercent = ((nextValue - min) / (max - min)) * 100;
+
+		return Math.min(100, Math.max(0, rawPercent));
+	};
+
+	const labels: RangeInputLabel[] = [
+		{
+			value: min,
+			label: renderLabel(min),
+		},
 		...markers,
-		{ value: max, label: renderLabel(max) },
+		{
+			value: max,
+			label: renderLabel(max),
+		},
 	];
 
 	return (
 		<div
-			className={`${styles.container} ${className ?? ""}`}
+			className={`${styles.container} ${className}`}
 			style={
 				{
-					"--range-progress": `${clampPercent}%`,
+					"--range-progress": `${percent}%`,
+					"--range-thumb-size": `${THUMB_SIZE}px`,
 				} as React.CSSProperties
 			}
 		>
@@ -81,7 +107,7 @@ export default function RangeInput({
 						className={styles.valueBubble}
 						style={
 							{
-								left: `${clampPercent}%`,
+								left: bubbleLeft,
 							} as React.CSSProperties
 						}
 					>
@@ -93,18 +119,18 @@ export default function RangeInput({
 					id={id}
 					className={styles.input}
 					type="range"
-					value={currentValue}
 					min={min}
 					max={max}
 					step={step}
+					value={currentValue}
 					disabled={disabled}
 					onChange={handleChange}
 				/>
 			</div>
 
 			<div className={styles.labels}>
-				{allLabels.map((item) => {
-					const itemPercent = max === min ? 0 : ((item.value - min) / (max - min)) * 100;
+				{labels.map((item) => {
+					const itemPercent = getPercentByValue(item.value);
 
 					return (
 						<span

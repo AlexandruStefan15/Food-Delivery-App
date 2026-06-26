@@ -9,6 +9,7 @@ import { useRestaurants } from "../../api/restaurants";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import RestaurantFilters from "../../components/RestaurantFilters/RestaurantFilters";
+import RestaurantList from "../../components/RestaurantList/RestaurantList";
 
 export default function Restaurants() {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
@@ -22,7 +23,7 @@ export default function Restaurants() {
 				<div className={styles.content}>
 					<h1 className={styles.title}>Showing {restaurants.length} restaurants near downtown</h1>
 					<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
-					{/* <RestaurantList/> */}
+					<RestaurantList className={styles.restaurantList} restaurants={restaurants} />
 				</div>
 			</main>
 			<Footer />

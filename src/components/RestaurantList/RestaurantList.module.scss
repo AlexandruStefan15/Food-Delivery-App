@@ -1,7 +1,17 @@
+@use "../../styles/breakpoints" as media;
+
 .restaurantList {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-columns: repeat(3, minmax(0px, 1fr));
 	gap: 1.5rem;
+
+	@include media.tablet {
+		grid-template-columns: repeat(2, minmax(0px, 1fr));
+	}
+
+	@include media.mobile {
+		grid-template-columns: repeat(1, minmax(0px, 1fr));
+	}
 
 	.listItem {
 		.restaurantCard {

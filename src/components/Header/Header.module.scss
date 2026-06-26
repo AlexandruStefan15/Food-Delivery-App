@@ -10,7 +10,7 @@
 	z-index: 999;
 
 	@include media.mobile {
-		position: fixed;
+		position: sticky;
 		width: 100%;
 		color: white;
 		background-image: linear-gradient(to right, #0d0d0d, #0d0d0d, #080808);
@@ -20,17 +20,13 @@
 
 	.navigation {
 		min-height: 70px;
-		padding-inline: 5.5rem;
+		padding-inline: 2.5rem;
 		margin-inline: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		max-width: 1700px;
 		gap: 2rem;
-
-		@include media.tablet {
-			padding-inline: 2.5rem;
-		}
 
 		@include media.mobile {
 			padding-inline: 1.2rem;

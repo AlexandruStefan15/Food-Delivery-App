@@ -80,10 +80,10 @@ export default function RestaurantFilters({
 				)}
 				{showDeliveryTime && (
 					<div className={styles.deliveryTime}>
-						<RestaurantFilters.Title>Delivery Time (minutes)</RestaurantFilters.Title>
+						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>
 						<RangeInput
 							className={styles.rangeInput}
-							showValueBubble={true}
+							showValueBubble={false}
 							min={15}
 							max={60}
 							step={5}

@@ -15,6 +15,7 @@ export type RangeInputProps = {
 	showValueBubble?: boolean;
 	disabled?: boolean;
 	className?: string;
+	upsideDown?: boolean;
 	onChange?: (value: number) => void;
 	formatValue?: (value: number) => React.ReactNode;
 	formatLabel?: (value: number) => React.ReactNode;

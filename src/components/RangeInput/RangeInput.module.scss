@@ -1,6 +1,7 @@
 .container {
 	--range-height: 6px;
 	--range-progress: 0%;
+	--range-thumb-size: 17px;
 
 	--range-bg: var(--primary-v2);
 	--range-fill: var(--accent);
@@ -24,12 +25,13 @@
 
 .sliderWrap {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 
 .valueBubble {
 	position: relative;
 	top: -6px;
-	transform: translateX(-50%);
 	width: 50px;
 	padding: 8px;
 	border-radius: 3px;
@@ -41,6 +43,7 @@
 	text-align: center;
 	pointer-events: none;
 	white-space: nowrap;
+	transform: translateX(-50%);
 
 	&::after {
 		content: "";
@@ -51,6 +54,18 @@
 		border-left: 7px solid transparent;
 		border-right: 7px solid transparent;
 		border-top: 7px solid var(--range-bubble-bg);
+	}
+}
+
+.valueBubbleBottom {
+	top: auto;
+	margin-top: 8px;
+
+	&::after {
+		top: -6px;
+		bottom: auto;
+		border-top: none;
+		border-bottom: 7px solid var(--range-bubble-bg);
 	}
 }
 
@@ -111,21 +126,18 @@
 
 	&:focus-visible {
 		outline: none;
-
-		&::-webkit-slider-thumb {
-			box-shadow: 0 0 0 4px rgba(143, 200, 245, 0.25);
-		}
-
-		&::-moz-range-thumb {
-			box-shadow: 0 0 0 4px rgba(143, 200, 245, 0.25);
-		}
 	}
 }
 
 .labels {
 	position: relative;
 	height: 28px;
-	margin-top: 5px;
+	margin-top: 6px;
+}
+
+.labelsTop {
+	margin-top: 0;
+	margin-bottom: 5px;
 }
 
 .rangeLabel {

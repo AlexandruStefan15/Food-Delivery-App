@@ -3,7 +3,7 @@ import styles from "./RangeInput.module.scss";
 
 import { RangeInputProps, RangeInputLabel } from "./RangeInput.types";
 
-const THUMB_SIZE = 17;
+const THUMB_SIZE = 16;
 
 export default function RangeInput({
 	value,
@@ -15,6 +15,7 @@ export default function RangeInput({
 	unit = "",
 	markers = [],
 	showValueBubble = true,
+	upsideDown = false,
 	disabled = false,
 	className = "",
 	onChange,
@@ -43,6 +44,14 @@ export default function RangeInput({
 		return `calc(${percent}% + ${correction}px)`;
 	}, [percent]);
 
+	const getPercentByValue = (nextValue: number) => {
+		if (max === min) return 0;
+
+		const rawPercent = ((nextValue - min) / (max - min)) * 100;
+
+		return Math.min(100, Math.max(0, rawPercent));
+	};
+
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const nextValue = Number(event.target.value);
 
@@ -65,14 +74,6 @@ export default function RangeInput({
 		return unit ? `${nextValue} ${unit}` : nextValue;
 	};
 
-	const getPercentByValue = (nextValue: number) => {
-		if (max === min) return 0;
-
-		const rawPercent = ((nextValue - min) / (max - min)) * 100;
-
-		return Math.min(100, Math.max(0, rawPercent));
-	};
-
 	const labels: RangeInputLabel[] = [
 		{
 			value: min,
@@ -85,9 +86,45 @@ export default function RangeInput({
 		},
 	];
 
+	const valueBubble = showValueBubble ? (
+		<div
+			className={`${styles.valueBubble} ${upsideDown ? styles.valueBubbleBottom : ""}`}
+			style={
+				{
+					left: bubbleLeft,
+				} as React.CSSProperties
+			}
+		>
+			{renderValue(currentValue)}
+		</div>
+	) : null;
+
+	const labelsElement = (
+		<div className={`${styles.labels} ${upsideDown ? styles.labelsTop : ""}`}>
+			{labels.map((item, index) => {
+				const itemPercent = getPercentByValue(item.value);
+				const isActive = item.value === currentValue;
+
+				return (
+					<span
+						key={`${item.value}-${index}`}
+						className={isActive ? `${styles.rangeLabel} ${styles.activeLabel}` : styles.rangeLabel}
+						style={
+							{
+								left: `${itemPercent}%`,
+							} as React.CSSProperties
+						}
+					>
+						{item.label ?? renderLabel(item.value)}
+					</span>
+				);
+			})}
+		</div>
+	);
+
 	return (
 		<div
-			className={`${styles.container} ${className}`}
+			className={`${styles.container} ${upsideDown ? styles.upsideDown : ""} ${className}`}
 			style={
 				{
 					"--range-progress": `${percent}%`,
@@ -101,19 +138,10 @@ export default function RangeInput({
 				</label>
 			)}
 
+			{upsideDown && labelsElement}
+
 			<div className={styles.sliderWrap}>
-				{showValueBubble && (
-					<div
-						className={styles.valueBubble}
-						style={
-							{
-								left: bubbleLeft,
-							} as React.CSSProperties
-						}
-					>
-						{renderValue(currentValue)}
-					</div>
-				)}
+				{!upsideDown && valueBubble}
 
 				<input
 					id={id}
@@ -126,27 +154,11 @@ export default function RangeInput({
 					disabled={disabled}
 					onChange={handleChange}
 				/>
+
+				{upsideDown && valueBubble}
 			</div>
 
-			<div className={styles.labels}>
-				{labels.map((item) => {
-					const itemPercent = getPercentByValue(item.value);
-
-					return (
-						<span
-							key={`${item.value}-${String(item.label)}`}
-							className={item.value === currentValue ? `${styles.rangeLabel} ${styles.activeLabel}` : styles.rangeLabel}
-							style={
-								{
-									left: `${itemPercent}%`,
-								} as React.CSSProperties
-							}
-						>
-							{item.label ?? renderLabel(item.value)}
-						</span>
-					);
-				})}
-			</div>
+			{!upsideDown && labelsElement}
 		</div>
 	);
 }

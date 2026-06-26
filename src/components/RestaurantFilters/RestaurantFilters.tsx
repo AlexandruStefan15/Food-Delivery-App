@@ -7,6 +7,7 @@ import { TextProps, PriceRange } from "./RestaurantFilters.types";
 
 //components
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
+import RangeInput from "../RangeInput/RangeInput";
 
 const customerRating = [
 	{ rating: 4.5, label: "Excellent" },
@@ -23,10 +24,11 @@ export default function RestaurantFilters({
 	showPriceRange = true,
 	showCustomerRating = true,
 	showDietary = true,
+	showDeliveryTime = true,
 }) {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
-	const [deliveryTime, setDeliveryTime] = useState(null);
+	const [deliveryTime, setDeliveryTime] = useState(15);
 
 	return (
 		<div className={styles.filtersContainer + ` ${className}`}>
@@ -74,6 +76,25 @@ export default function RestaurantFilters({
 								</li>
 							))}
 						</ul>
+					</div>
+				)}
+				{showDeliveryTime && (
+					<div className={styles.deliveryTime}>
+						<RestaurantFilters.Title>Delivery Time</RestaurantFilters.Title>
+						<RangeInput
+							min={15}
+							max={60}
+							step={5}
+							value={deliveryTime}
+							onChange={setDeliveryTime}
+							unit="min"
+							markers={[
+								{
+									value: 35,
+									label: "35 min",
+								},
+							]}
+						/>
 					</div>
 				)}
 			</div>

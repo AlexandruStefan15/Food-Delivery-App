@@ -83,7 +83,7 @@ export default function RestaurantFilters({
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>
 						<RangeInput
 							className={styles.rangeInput}
-							showValueBubble={false}
+							upsideDown={true}
 							min={15}
 							max={60}
 							step={5}

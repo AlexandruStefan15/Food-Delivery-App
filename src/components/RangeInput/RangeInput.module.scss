@@ -27,12 +27,21 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+
+	&:has(.input:hover) {
+		.valueBubble {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
 }
 
 .valueBubble {
+	visibility: hidden;
+	opacity: 0;
 	position: relative;
 	top: -6px;
-	width: 50px;
+	width: fit-content;
 	padding: 8px;
 	border-radius: 3px;
 	background: var(--range-bubble-bg);
@@ -137,7 +146,6 @@
 
 .labelsTop {
 	margin-top: 0;
-	margin-bottom: 5px;
 }
 
 .rangeLabel {

@@ -13,6 +13,7 @@ export type RangeInputProps = {
 	unit?: string;
 	markers?: RangeInputLabel[];
 	showValueBubble?: boolean;
+	showLabelsElement?: boolean;
 	disabled?: boolean;
 	className?: string;
 	upsideDown?: boolean;

@@ -15,6 +15,7 @@ export default function RangeInput({
 	unit = "",
 	markers = [],
 	showValueBubble = true,
+	showLabelsElement = true,
 	upsideDown = false,
 	disabled = false,
 	className = "",
@@ -138,7 +139,7 @@ export default function RangeInput({
 				</label>
 			)}
 
-			{upsideDown && labelsElement}
+			{upsideDown && showLabelsElement && labelsElement}
 
 			<div className={styles.sliderWrap}>
 				{!upsideDown && valueBubble}
@@ -158,7 +159,7 @@ export default function RangeInput({
 				{upsideDown && valueBubble}
 			</div>
 
-			{!upsideDown && labelsElement}
+			{!upsideDown && showLabelsElement && labelsElement}
 		</div>
 	);
 }

@@ -15,7 +15,7 @@ export default function RestaurantList({ restaurants = [], className = "" }: Res
 	return (
 		<ul className={styles.restaurantList + ` ${className}`}>
 			{restaurants.map((restaurant) => (
-				<li className={styles.listItem}>
+				<li className={styles.listItem} key={restaurant.id}>
 					<RestaurantCard className={styles.restaurantCard} data={restaurant} />
 				</li>
 			))}

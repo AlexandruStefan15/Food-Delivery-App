@@ -8,6 +8,7 @@ import { TextProps, PriceRange } from "./RestaurantFilters.types";
 //components
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
 import RangeInput from "../RangeInput/RangeInput";
+import Button from "../Button/Button";
 
 const customerRating = [
 	{ rating: 4.5, label: "Excellent" },
@@ -99,6 +100,10 @@ export default function RestaurantFilters({
 						/>
 					</div>
 				)}
+				<div className={styles.actions}>
+					<Button className={styles.btn}>Apply Filters</Button>
+					<Button className={styles.btnMuted}>Reset All</Button>
+				</div>
 			</div>
 		</div>
 	);

@@ -57,7 +57,20 @@ export default function RestaurantFilters({
 						<ul className={styles.list}>
 							{customerRating.map(({ rating, label }) => (
 								<li className={styles.listItem} key={label}>
-									<RestaurantFilters.Checkbox />
+									<RestaurantFilters.Checkbox
+										value={rating}
+										checked={searchParams.get("rating") === rating.toString()}
+										onChange={(e) => {
+											const newParams = new URLSearchParams(searchParams);
+											if (e.target.checked) {
+												newParams.set("rating", rating.toString());
+												setSearchParams(newParams);
+											} else {
+												newParams.delete("rating");
+												setSearchParams(newParams);
+											}
+										}}
+									/>
 									<RestaurantFilters.Text>
 										{rating}+ &nbsp; ({label})
 									</RestaurantFilters.Text>
@@ -72,7 +85,20 @@ export default function RestaurantFilters({
 						<ul className={styles.list}>
 							{dietaryNeeds.map((value) => (
 								<li className={styles.listItem} key={value}>
-									<RestaurantFilters.Checkbox />
+									<RestaurantFilters.Checkbox
+										value={value}
+										checked={searchParams.getAll("dietary").includes(value)}
+										onChange={(e) => {
+											const newParams = new URLSearchParams(searchParams);
+											const current = newParams.getAll("dietary");
+											newParams.delete("dietary");
+											const next = e.target.checked ? [...current, value] : current.filter((item) => item !== value);
+											next.forEach((item) => {
+												newParams.append("dietary", item);
+											});
+											setSearchParams(newParams);
+										}}
+									/>
 									<RestaurantFilters.Text>{value}</RestaurantFilters.Text>
 								</li>
 							))}

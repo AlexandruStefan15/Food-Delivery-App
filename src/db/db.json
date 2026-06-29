@@ -34,6 +34,11 @@
 			"id": 7,
 			"title": "Pasta",
 			"image": { "url": "/images/foodCategories/pasta.jpg", "alt": "pasta" }
+		},
+		{
+			"id": 8,
+			"title": "Salad",
+			"image": { "url": "/images/foodCategories/salad.jpg", "alt": "salad" }
 		}
 	],
 
@@ -99,6 +104,19 @@
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [6]
+		},
+		{
+			"id": 5,
+			"name": "Salad Box",
+			"cuisine": "Salad",
+			"card_image": "/images/restaurants/saladBox/saladBox-card.webp",
+			"cover_image": "",
+			"delivery_time": "30-35 min",
+			"delivery_fee": 0,
+			"rating": 3.8,
+			"distance": 1.2,
+			"closing_time": "10:00 PM",
+			"food_categories_ids": [8]
 		}
 	],
 

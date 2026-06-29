@@ -4,6 +4,15 @@
 	cursor: pointer;
 	padding: 1rem 2rem;
 	background-color: var(--button-bg);
+	color: var(--button-color);
+	font-weight: 600;
+	border-radius: 8px;
+}
+
+.btn_muted {
+	@extend .btn_default;
+	background-color: var(--button-muted-bg);
+	color: var(--button-muted-color);
 }
 
 .btn_animated {

@@ -80,6 +80,18 @@
 		flex-direction: column;
 		gap: 0.9rem;
 	}
+
+	.actions {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.btn {
+			font-size: 0.9rem;
+			border-radius: 25px;
+			padding-block: 0.85em;
+		}
+	}
 }
 
 /* Subcomponents */

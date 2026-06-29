@@ -1,7 +1,7 @@
 import React, { ComponentPropsWithoutRef, ReactNode } from "react";
 import styles from "./Button.module.scss";
 
-type ButtonVariant = "default" | "primary" | "secondary" | "tertiary" | "animated" | "transparent";
+type ButtonVariant = "default" | "muted" | "primary" | "secondary" | "tertiary" | "animated" | "transparent";
 
 interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
 	variant?: ButtonVariant;

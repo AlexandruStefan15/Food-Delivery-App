@@ -102,7 +102,9 @@ export default function RestaurantFilters({
 				)}
 				<div className={styles.actions}>
 					<Button className={styles.btn}>Apply Filters</Button>
-					<Button className={styles.btnMuted}>Reset All</Button>
+					<Button variant="muted" className={styles.btn}>
+						Reset All
+					</Button>
 				</div>
 			</div>
 		</div>

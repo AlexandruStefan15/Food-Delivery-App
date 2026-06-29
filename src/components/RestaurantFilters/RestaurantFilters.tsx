@@ -30,6 +30,8 @@ export default function RestaurantFilters({
 	const [searchParams, setSearchParams] = useSearchParams();
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
 	const [deliveryTime, setDeliveryTime] = useState(35);
+	const [rating, setRating] = useState([]);
+	const [dietary, setDietary] = useState([]);
 
 	return (
 		<div className={styles.filtersContainer + ` ${className}`}>

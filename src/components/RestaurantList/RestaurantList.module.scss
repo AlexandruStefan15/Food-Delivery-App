@@ -26,6 +26,20 @@
 		}
 	}
 
+	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.counterWrapper {
+		.text {
+			color: var(--text-color-v2);
+			font-size: 0.9rem;
+		}
+	}
+
 	.seeMoreBtn {
 		border-radius: 30px;
 		background-color: var(--base);

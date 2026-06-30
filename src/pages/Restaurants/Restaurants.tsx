@@ -13,7 +13,6 @@ import RestaurantList from "../../components/RestaurantList/RestaurantList";
 
 export default function Restaurants() {
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
-	const [searchParams, setSearchParams] = useSearchParams();
 
 	return (
 		<div className={styles.page}>

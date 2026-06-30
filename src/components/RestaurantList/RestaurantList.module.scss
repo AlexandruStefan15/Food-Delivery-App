@@ -1,21 +1,34 @@
 @use "../../styles/breakpoints" as media;
 
-.restaurantList {
-	display: grid;
-	grid-template-columns: repeat(3, minmax(0px, 1fr));
-	gap: 1.5rem;
+.restaurantListContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	align-items: center;
 
-	@include media.tablet {
-		grid-template-columns: repeat(2, minmax(0px, 1fr));
-	}
+	.restaurantList {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0px, 1fr));
+		gap: 1.5rem;
 
-	@include media.mobile {
-		grid-template-columns: repeat(1, minmax(0px, 1fr));
-	}
-
-	.listItem {
-		.restaurantCard {
-			max-width: none;
+		@include media.tablet {
+			grid-template-columns: repeat(2, minmax(0px, 1fr));
 		}
+
+		@include media.mobile {
+			grid-template-columns: repeat(1, minmax(0px, 1fr));
+		}
+
+		.listItem {
+			.restaurantCard {
+				max-width: none;
+			}
+		}
+	}
+
+	.seeMoreBtn {
+		border-radius: 30px;
+		background-color: var(--base-v2);
+		color: var(--generic);
 	}
 }

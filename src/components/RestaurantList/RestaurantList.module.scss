@@ -3,7 +3,7 @@
 .restaurantListContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
+	gap: 1.75rem;
 	align-items: center;
 
 	.restaurantList {
@@ -31,9 +31,26 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
+		padding-block: 2.5rem;
 	}
 
 	.counterWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0.55rem;
+		width: 100%;
+		text-align: center;
+
+		.rangeInput {
+			&::-webkit-slider-thumb {
+				display: none;
+			}
+
+			&::-webkit-slider-runnable-track {
+				height: 7px;
+			}
+		}
+
 		.text {
 			color: var(--text-color-v2);
 			font-size: 0.9rem;

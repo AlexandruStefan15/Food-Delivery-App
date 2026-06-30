@@ -16,6 +16,7 @@ export type RangeInputProps = {
 	showLabelsElement?: boolean;
 	disabled?: boolean;
 	className?: string;
+	wrapperClassName?: string;
 	upsideDown?: boolean;
 	onChange?: (value: number) => void;
 	formatValue?: (value: number) => React.ReactNode;

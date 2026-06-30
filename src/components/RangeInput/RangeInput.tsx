@@ -18,6 +18,7 @@ export default function RangeInput({
 	showLabelsElement = true,
 	upsideDown = false,
 	disabled = false,
+	wrapperClassName = "",
 	className = "",
 	onChange,
 	formatValue,
@@ -125,7 +126,7 @@ export default function RangeInput({
 
 	return (
 		<div
-			className={`${styles.container} ${upsideDown ? styles.upsideDown : ""} ${className}`}
+			className={`${styles.container} ${upsideDown ? styles.upsideDown : ""} ${wrapperClassName}`}
 			style={
 				{
 					"--range-progress": `${percent}%`,
@@ -146,7 +147,7 @@ export default function RangeInput({
 
 				<input
 					id={id}
-					className={styles.input}
+					className={styles.input + ` ${className}`}
 					type="range"
 					min={min}
 					max={max}

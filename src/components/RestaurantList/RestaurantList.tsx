@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithoutRef, useState } from "react";
+import React, { ComponentPropsWithoutRef, useState, useEffect } from "react";
 import styles from "./RestaurantList.module.scss";
 
 //components
@@ -14,8 +14,14 @@ interface RestaurantListProps extends ComponentPropsWithoutRef<"ul"> {
 	showOnly?: number;
 }
 
-export default function RestaurantList({ restaurants = [], className = "", showOnly = 6 }: RestaurantListProps) {
-	const [showedRestaurants, setShowedRestaurants] = useState(showOnly);
+export default function RestaurantList({ restaurants = [], className = "", showOnly = 2 }: RestaurantListProps) {
+	const [showedRestaurants, setShowedRestaurants] = useState(
+		showOnly < restaurants.length ? showOnly : restaurants.length,
+	);
+
+	useEffect(() => {
+		setShowedRestaurants(showOnly < restaurants.length ? showOnly : restaurants.length);
+	}, [restaurants, showOnly]);
 
 	return (
 		<div className={styles.restaurantListContainer}>
@@ -32,10 +38,10 @@ export default function RestaurantList({ restaurants = [], className = "", showO
 			<footer className={styles.footer}>
 				<div className={styles.counterWrapper}>
 					<p className={styles.text}>
-						Showing {showedRestaurants < restaurants.length ? showedRestaurants : restaurants.length} of{" "}
-						{restaurants.length} restaurants{" "}
+						Showing {showedRestaurants} of {restaurants.length} restaurants{" "}
 					</p>
 					<RangeInput
+						className={styles.rangeInput}
 						value={showedRestaurants}
 						min={0}
 						max={restaurants.length}
@@ -43,13 +49,13 @@ export default function RestaurantList({ restaurants = [], className = "", showO
 						showValueBubble={false}
 					/>
 				</div>
-				{showOnly && (
+				{showOnly && showedRestaurants < restaurants.length && (
 					<Button
 						className={styles.seeMoreBtn}
 						onClick={() => {
 							setShowedRestaurants((prev) => {
 								if (prev + showOnly <= restaurants.length) return prev + showOnly;
-								else return prev;
+								else return prev + (restaurants.length - prev);
 							});
 						}}
 					>

@@ -4,7 +4,6 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.75rem;
-	align-items: center;
 
 	.restaurantList {
 		display: grid;
@@ -38,8 +37,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.55rem;
-		width: 100%;
 		text-align: center;
+		max-width: 239px;
+		width: 100%;
 
 		.rangeInput {
 			&::-webkit-slider-thumb {

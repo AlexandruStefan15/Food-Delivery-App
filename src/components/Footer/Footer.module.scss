@@ -1,7 +1,7 @@
 @use "../../styles/breakpoints" as media;
 
 .footer {
-	background-color: var(--footer-bg);
+	background-color: var(--primary-v3);
 	padding-top: 4em;
 	padding-bottom: 4em;
 
@@ -26,7 +26,7 @@
 }
 
 .intro {
-	color: var(--footer-color);
+	color: var(--text-color-v3);
 	font-size: 0.875rem;
 	display: flex;
 	flex-direction: column;
@@ -41,7 +41,7 @@
 }
 
 .newsletter {
-	color: var(--footer-color);
+	color: var(--text-color-v3);
 	font-size: 0.875rem;
 	display: flex;
 	flex-direction: column;
@@ -55,7 +55,7 @@
 		color: white;
 
 		&::placeholder {
-			color: var(--footer-color);
+			color: var(--text-color-v3);
 		}
 	}
 }
@@ -95,7 +95,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
-	color: var(--footer-color);
+	color: var(--text-color-v3);
 
 	.link {
 		font-size: 0.875rem;
@@ -103,7 +103,7 @@
 }
 
 .title {
-	color: var(--base-v2);
+	color: var(--base);
 	font-size: 1rem;
 	font-weight: bold;
 	font-family: "Plus Jakarta Sans", sans-serif;

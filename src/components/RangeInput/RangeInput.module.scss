@@ -7,9 +7,9 @@
 	--range-fill: var(--accent);
 	--range-thumb: var(--accent);
 	--range-text: var(--accent);
-	--range-muted: #5d5f62;
-	--range-bubble-bg: #5d5f62;
-	--range-bubble-text: #ffffff;
+	--range-muted: var(--secondary-v2);
+	--range-bubble-bg: var(--secondary-v2);
+	--range-bubble-text: var(--text-color-v4);
 
 	width: 100%;
 	color: var(--range-text);

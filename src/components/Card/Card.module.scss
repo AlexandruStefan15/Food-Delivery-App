@@ -3,6 +3,7 @@
 	border-radius: 48px;
 	overflow: hidden;
 	transition: all 0.2s ease;
+	background-color: var(--base);
 
 	&:hover {
 		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -20,7 +21,7 @@
 }
 
 .text {
-	color: #6b7280;
+	color: var(--secondary-v2);
 	font-size: 0.76rem;
 	font-weight: 600;
 }

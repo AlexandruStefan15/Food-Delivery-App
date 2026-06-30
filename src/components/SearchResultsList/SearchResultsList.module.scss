@@ -3,6 +3,7 @@
 	border-radius: 10px;
 	padding: 0.75rem 1rem;
 	overflow: hidden;
+	background-color: var(--primary-v2);
 
 	&:has(.restaurantCard) {
 		padding: 0;

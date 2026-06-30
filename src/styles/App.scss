@@ -7,50 +7,78 @@
 }
 
 :root {
-	/* Semantic tokens */
-	--primary: #9a5f4c; //brown
-	--primary-v2: #f3eae7; //brown-light
-	--primary-v3: #1b110d; //brown-dark-900
-	--primary-v4: #221510; //brown-dark-850
-	--primary-alpha: #b1725d3b; //brown-alpha-300
-	--primary-alpha-v2: #9a604c49; //brown-alpha-500
-	--primary-alpha-v3: #e7d5cf9f; //brown-light-alpha
-	--secondary: #9ca3af; //grey
-	--accent: #ec4913; //orange
-	--accent-alpha: #ec491380; //orange-alpha
-	--success: #008000; //green
-	--danger: #ff0000; //red
-	--base: #f8f6f6; //white-50
-	--base-v2: #ffffff; //white
-	--generic: #000000; //black
+	/* Semantic tokens  */
 
 	&.dark {
-		display: none;
+		--primary: #c58d79; //brown-350
+		--primary-v2: #2c1b15; //brown-dark-800
+		--primary-v3: #1b110d; //brown-dark-850
+		--primary-v4: #160d0a; //brown-dark-900
+		--primary-alpha: #c58d7933; //brown-alpha-350
+		--primary-alpha-v2: #c58d7955; //brown-alpha-300
+		--primary-alpha-v3: #f3eae733; //brown-light-alpha-100
+		--secondary: #d1d5db; //grey-200
+		--secondary-v2: #9ca3af; //grey-400
+		--accent: #ff6a35; //orange
+		--accent-alpha: #ff6a3580; //orange-alpha
+		--success: #22c55e; //green
+		--danger: #ef4444; //red
+		--base: #1b110d; //brown-dark-850
+		--base-v2: #120b09; //brown-dark-950
+		--generic: #ffffff; //white
+		--generic-alpha: #ffffff33; //white-alpha
+	}
+
+	&.light {
+		--primary: #9a5f4c; //brown-500
+		--primary-v2: #f3eae7; //brown-light
+		--primary-v3: #1b110d; //brown-dark-900
+		--primary-v4: #221510; //brown-dark-850
+		--primary-alpha: #b1725d3b; //brown-alpha-300
+		--primary-alpha-v2: #9a604c49; //brown-alpha-500
+		--primary-alpha-v3: #e7d5cf9f; //brown-light-alpha
+		--secondary: #9ca3af; //grey-400
+		--secondary-v2: #6b7280; //grey-550
+		--accent: #ec4913; //orange
+		--accent-alpha: #ec491380; //orange-alpha
+		--success: #008000; //green
+		--danger: #ff0000; //red
+		--base: #ffffff; //white
+		--base-v2: #f8f6f6; //white-50
+		--generic: #000000; //black
+		--generic-alpha: #00000033; //black-alpha
 	}
 
 	/* Component tokens */
-	--app-background: var(--base);
-	--app-background-v2: var(--base-v2);
+	--app-background: var(--base-v2);
+	--app-background-v2: var(--base);
 	--text-color: var(--generic);
 	--text-color-v2: var(--primary);
 	--text-color-v3: var(--secondary);
-	--button-bg: var(--accent);
-	--button-color: var(--base-v2);
-	--button-muted-bg: var(--primary-v2);
-	--button-muted-color: var(--generic);
-	--icon-color: var(--primary);
-	--icon-color-v2: var(--accent);
-	--icon-bg: var(--primary-alpha);
+	--text-color-v4: var(--base);
 	--border-color: var(--primary-alpha-v2);
 	--border-color-v2: var(--primary-alpha-v3);
 	--border-color-v3: var(--accent-alpha);
-	--card-bg: var(--base-v2);
+	--icon-color: var(--primary);
+	--icon-color-v2: var(--accent);
+	--icon-bg: var(--primary-alpha);
+	--button-bg: var(--accent);
+	--button-color: var(--base);
+	--button-muted-bg: var(--primary-v2);
+	--button-muted-color: var(--generic);
+	--card-bg: var(--base);
 	--card-hover-bg: var(--primary-v2);
 	--card-hover-bg-v2: var(--primary-alpha-v2);
 	--card-hover-bg-v3: var(--primary-alpha);
-	--header-bg: var(--base);
-	--footer-color: var(--secondary);
+	--header-bg: var(--base-v2);
 	--footer-bg: var(--primary-v3);
+	--range-track-bg: var(--primary-v2);
+	--range-fill-bg: var(--accent);
+	--range-thumb-bg: var(--accent);
+	--range-thumb-border-color: var(--base);
+	--range-thumb-shadow: 0 2px 4px var(--generic-alpha);
+	--range-value-color: var(--text-color);
+	--searchBar-bg: var(--primary-v4);
 }
 
 body {

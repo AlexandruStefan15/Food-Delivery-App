@@ -3,7 +3,7 @@
 .restaurantListContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3rem;
 	align-items: center;
 
 	.restaurantList {
@@ -30,5 +30,10 @@
 		border-radius: 30px;
 		background-color: var(--base-v2);
 		color: var(--generic);
+		border: 1px solid var(--border-color);
+
+		&:hover {
+			background-color: var(--button-muted-bg);
+		}
 	}
 }

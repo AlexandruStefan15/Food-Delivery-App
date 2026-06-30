@@ -28,10 +28,60 @@ export default function RestaurantFilters({
 	showDeliveryTime = true,
 }) {
 	const [searchParams, setSearchParams] = useSearchParams();
+
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
 	const [deliveryTime, setDeliveryTime] = useState(35);
-	const [rating, setRating] = useState([]);
-	const [dietary, setDietary] = useState([]);
+	const [rating, setRating] = useState<number | null>(null);
+	const [dietary, setDietary] = useState<string[]>([]);
+
+	const handleApplyFilters = () => {
+		const newParams = new URLSearchParams(searchParams);
+
+		newParams.delete("minPrice");
+		newParams.delete("maxPrice");
+		newParams.delete("deliveryTime");
+		newParams.delete("rating");
+		newParams.delete("dietary");
+
+		if (priceRange.min !== null) {
+			newParams.set("minPrice", priceRange.min.toString());
+		}
+
+		if (priceRange.max !== null) {
+			newParams.set("maxPrice", priceRange.max.toString());
+		}
+
+		if (deliveryTime) {
+			newParams.set("deliveryTime", deliveryTime.toString());
+		}
+
+		if (rating !== null) {
+			newParams.set("rating", rating.toString());
+		}
+
+		dietary.forEach((item) => {
+			newParams.append("dietary", item);
+		});
+
+		setSearchParams(newParams);
+	};
+
+	const handleResetFilters = () => {
+		setPriceRange({ min: null, max: null });
+		setDeliveryTime(35);
+		setRating(null);
+		setDietary([]);
+
+		const newParams = new URLSearchParams(searchParams);
+
+		newParams.delete("minPrice");
+		newParams.delete("maxPrice");
+		newParams.delete("deliveryTime");
+		newParams.delete("rating");
+		newParams.delete("dietary");
+
+		setSearchParams(newParams);
+	};
 
 	return (
 		<div className={styles.filtersContainer + ` ${className}`}>
@@ -39,10 +89,12 @@ export default function RestaurantFilters({
 				<h2 className={styles.title}>{title}</h2>
 				<h3 className={styles.subtitle}>{subtitle}</h3>
 			</header>
+
 			<div className={styles.content}>
 				{showPriceRange && (
 					<div className={styles.priceRange}>
 						<RestaurantFilters.Title>Price Range</RestaurantFilters.Title>
+
 						<DoubleRangeInput
 							min={0}
 							max={100}
@@ -53,63 +105,65 @@ export default function RestaurantFilters({
 						/>
 					</div>
 				)}
+
 				{showCustomerRating && (
 					<div className={styles.customerRating}>
 						<RestaurantFilters.Title>Customer Rating</RestaurantFilters.Title>
+
 						<ul className={styles.list}>
-							{customerRating.map(({ rating, label }) => (
+							{customerRating.map(({ rating: ratingValue, label }) => (
 								<li className={styles.listItem} key={label}>
 									<RestaurantFilters.Checkbox
-										value={rating}
-										checked={searchParams.get("rating") === rating.toString()}
+										value={ratingValue}
+										checked={rating === ratingValue}
 										onChange={(e) => {
-											const newParams = new URLSearchParams(searchParams);
 											if (e.target.checked) {
-												newParams.set("rating", rating.toString());
-												setSearchParams(newParams);
+												setRating(ratingValue);
 											} else {
-												newParams.delete("rating");
-												setSearchParams(newParams);
+												setRating(null);
 											}
 										}}
 									/>
+
 									<RestaurantFilters.Text>
-										{rating}+ &nbsp; ({label})
+										{ratingValue}+ &nbsp; ({label})
 									</RestaurantFilters.Text>
 								</li>
 							))}
 						</ul>
 					</div>
 				)}
+
 				{showDietary && (
 					<div className={styles.dietary}>
 						<RestaurantFilters.Title>Dietary Needs</RestaurantFilters.Title>
+
 						<ul className={styles.list}>
 							{dietaryNeeds.map((value) => (
 								<li className={styles.listItem} key={value}>
 									<RestaurantFilters.Checkbox
 										value={value}
-										checked={searchParams.getAll("dietary").includes(value)}
+										checked={dietary.includes(value)}
 										onChange={(e) => {
-											const newParams = new URLSearchParams(searchParams);
-											const current = newParams.getAll("dietary");
-											newParams.delete("dietary");
-											const next = e.target.checked ? [...current, value] : current.filter((item) => item !== value);
-											next.forEach((item) => {
-												newParams.append("dietary", item);
-											});
-											setSearchParams(newParams);
+											if (e.target.checked) {
+												setDietary((prev) => [...prev, value]);
+											} else {
+												setDietary((prev) => prev.filter((item) => item !== value));
+											}
 										}}
 									/>
+
 									<RestaurantFilters.Text>{value}</RestaurantFilters.Text>
 								</li>
 							))}
 						</ul>
 					</div>
 				)}
+
 				{showDeliveryTime && (
 					<div className={styles.deliveryTime}>
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>
+
 						<RangeInput
 							className={styles.rangeInput}
 							upsideDown={true}
@@ -128,9 +182,13 @@ export default function RestaurantFilters({
 						/>
 					</div>
 				)}
+
 				<div className={styles.actions}>
-					<Button className={styles.btn}>Apply Filters</Button>
-					<Button variant="muted" className={styles.btn}>
+					<Button className={styles.btn} onClick={handleApplyFilters}>
+						Apply Filters
+					</Button>
+
+					<Button variant="muted" className={styles.btn} onClick={handleResetFilters}>
 						Reset All
 					</Button>
 				</div>
@@ -158,7 +216,7 @@ RestaurantFilters.Title = ({ className = "", children, ...props }: React.Compone
 RestaurantFilters.Checkbox = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"input">) => {
 	return (
 		<label className={styles.roundCheckbox}>
-			<input type="checkbox" className={`${styles.checkbox} ${styles.className}`} {...props} />
+			<input type="checkbox" className={`${styles.checkbox} ${className}`} {...props} />
 			<span className={styles.checkmark}></span>
 		</label>
 	);

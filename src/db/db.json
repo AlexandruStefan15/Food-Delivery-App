@@ -56,7 +56,7 @@
 		{
 			"id": 1,
 			"name": "Sakura Sushi House",
-			"category": "Japanese",
+			"main_category": "Japanese",
 			"card_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-card.jpg",
 			"cover_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-cover.jpg",
 			"delivery_time": "25-30 min",
@@ -69,7 +69,7 @@
 		{
 			"id": 2,
 			"name": "The Golden Olive Bistro",
-			"category": "International",
+			"main_category": "International",
 			"card_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-card.jpg",
 			"cover_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-cover.jpg",
 			"delivery_time": "30-35 min",
@@ -82,7 +82,7 @@
 		{
 			"id": 3,
 			"name": "Luigi's Authentic Pizza",
-			"category": "Pizza",
+			"main_category": "Pizza",
 			"card_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-card.jpg",
 			"cover_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-cover.jpg",
 			"delivery_time": "30-35 min",
@@ -95,7 +95,7 @@
 		{
 			"id": 4,
 			"name": "Cantina Street Tacos",
-			"category": "Mexican",
+			"main_category": "Mexican",
 			"card_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-card.jpg",
 			"cover_image": "",
 			"delivery_time": "35-45 min",
@@ -108,10 +108,10 @@
 		{
 			"id": 5,
 			"name": "Salad Box",
-			"category": "Salad",
+			"main_category": "Salad",
 			"card_image": "/images/restaurants/saladBox/saladBox-card.jpg",
 			"cover_image": "",
-			"delivery_time": "30-35 min",
+			"delivery_time": "25-30 min",
 			"delivery_fee": 0,
 			"rating": 3.8,
 			"distance": 1.2,

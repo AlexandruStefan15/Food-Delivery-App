@@ -25,7 +25,7 @@ export default function RestaurantCard({ data, className = "", variant = "defaul
 					<h3 className={styles.title}>{data.name}</h3>
 					{data.rating && <RatingBadge className={styles.ratingBadge} rating={data.rating} />}
 				</div>
-				{data.category && <Card.Subtitle className={styles.subtitle}>{data.category}</Card.Subtitle>}
+				{data.main_category && <Card.Subtitle className={styles.subtitle}>{data.main_category}</Card.Subtitle>}
 				<div className={styles.metadata}>
 					{data.delivery_time && (
 						<div className={styles.metaItem}>

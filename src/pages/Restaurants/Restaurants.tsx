@@ -41,9 +41,7 @@ export default function Restaurants() {
 		dishes
 			.filter((dish) => {
 				const matchesDietary = selectedDietary.length === 0 || selectedDietary.every((item) => dish.dietary[item]);
-
 				const matchesMinPrice = minPriceFilter === null || dish.price >= minPriceFilter;
-
 				const matchesMaxPrice = maxPriceFilter === null || dish.price <= maxPriceFilter;
 
 				return matchesDietary && matchesMinPrice && matchesMaxPrice;
@@ -53,9 +51,7 @@ export default function Restaurants() {
 
 	const filteredRestaurants = restaurants.filter((restaurant) => {
 		const matchesDishFilters = !hasDishFilters || matchingRestaurantIds.has(restaurant.id);
-
 		const matchesRating = ratingFilter === null || restaurant.rating >= ratingFilter;
-
 		const matchesDeliveryTime =
 			deliveryTimeFilter === null || Number.parseInt(restaurant.delivery_time) <= deliveryTimeFilter;
 
@@ -65,19 +61,14 @@ export default function Restaurants() {
 	return (
 		<div className={styles.page}>
 			<Header />
-
 			<main className={styles.main}>
 				<RestaurantFilters className={styles.filters} />
-
 				<div className={styles.content}>
 					<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>
-
 					<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
-
 					<RestaurantList className={styles.restaurantList} restaurants={filteredRestaurants} />
 				</div>
 			</main>
-
 			<Footer />
 		</div>
 	);

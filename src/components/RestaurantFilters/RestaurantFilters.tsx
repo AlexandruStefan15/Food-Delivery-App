@@ -98,7 +98,6 @@ export default function RestaurantFilters({
 				<h2 className={styles.title}>{title}</h2>
 				<h3 className={styles.subtitle}>{subtitle}</h3>
 			</header>
-
 			<div className={styles.content}>
 				{showPriceRange && (
 					<div className={styles.priceRange}>
@@ -114,11 +113,9 @@ export default function RestaurantFilters({
 						/>
 					</div>
 				)}
-
 				{showCustomerRating && (
 					<div className={styles.customerRating}>
 						<RestaurantFilters.Title>Customer Rating</RestaurantFilters.Title>
-
 						<ul className={styles.list}>
 							{customerRating.map(({ rating: ratingValue, label }) => (
 								<li className={styles.listItem} key={label}>
@@ -142,7 +139,6 @@ export default function RestaurantFilters({
 						</ul>
 					</div>
 				)}
-
 				{showDietary && (
 					<div className={styles.dietary}>
 						<RestaurantFilters.Title>Dietary Needs</RestaurantFilters.Title>
@@ -161,18 +157,15 @@ export default function RestaurantFilters({
 											}
 										}}
 									/>
-
 									<RestaurantFilters.Text>{label}</RestaurantFilters.Text>
 								</li>
 							))}
 						</ul>
 					</div>
 				)}
-
 				{showDeliveryTime && (
 					<div className={styles.deliveryTime}>
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>
-
 						<RangeInput
 							className={styles.rangeInput}
 							upsideDown={true}
@@ -191,12 +184,10 @@ export default function RestaurantFilters({
 						/>
 					</div>
 				)}
-
 				<div className={styles.actions}>
 					<Button className={styles.btn} onClick={handleApplyFilters}>
 						Apply Filters
 					</Button>
-
 					<Button variant="muted" className={styles.btn} onClick={handleResetFilters}>
 						Reset All
 					</Button>

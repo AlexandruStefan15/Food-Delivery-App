@@ -14,7 +14,7 @@ interface RestaurantListProps extends ComponentPropsWithoutRef<"ul"> {
 	showOnly?: number;
 }
 
-export default function RestaurantList({ restaurants = [], className = "", showOnly = 4 }: RestaurantListProps) {
+export default function RestaurantList({ restaurants = [], className = "", showOnly = 6 }: RestaurantListProps) {
 	const [showedRestaurants, setShowedRestaurants] = useState<number>(
 		showOnly < restaurants.length ? showOnly : restaurants.length,
 	);

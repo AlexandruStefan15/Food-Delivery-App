@@ -133,7 +133,7 @@
 			"cover_image": "/images/dishes/roastedLambShoulder-cover.png",
 			"dietary": {
 				"vegan": false,
-				"gluten_free": true,
+				"gluten_free": false,
 				"vegetarian": false
 			},
 			"restaurant_id": 2,
@@ -145,7 +145,7 @@
 			"price": 4,
 			"dietary": {
 				"vegan": true,
-				"gluten_free": true,
+				"gluten_free": false,
 				"vegetarian": true
 			},
 			"restaurant_id": 1,
@@ -157,7 +157,7 @@
 			"price": 5,
 			"dietary": {
 				"vegan": true,
-				"gluten_free": true,
+				"gluten_free": false,
 				"vegetarian": true
 			},
 			"restaurant_id": 2,
@@ -175,7 +175,7 @@
 			"cover_image": "/images/dishes/truffleMushroomRisotto-cover.png",
 			"dietary": {
 				"vegan": false,
-				"gluten_free": true,
+				"gluten_free": false,
 				"vegetarian": true
 			},
 			"restaurant_id": 2,

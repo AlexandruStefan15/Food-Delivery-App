@@ -16,7 +16,11 @@ const customerRating = [
 	{ rating: 3.5, label: "Good" },
 ];
 
-const dietaryNeeds = ["Vegan", "Gluten free", "Vegetarian"];
+const dietaryNeeds = [
+	{ label: "Vegan", value: "vegan" },
+	{ label: "Gluten free", value: "gluten_free" },
+	{ label: "Vegetarian", value: "vegetarian" },
+];
 
 export default function RestaurantFilters({
 	className = "",
@@ -31,8 +35,13 @@ export default function RestaurantFilters({
 
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
 	const [deliveryTime, setDeliveryTime] = useState(35);
-	const [rating, setRating] = useState<number | null>(null);
-	const [dietary, setDietary] = useState<string[]>([]);
+	const [rating, setRating] = useState<number | null>(() => {
+		const value = searchParams.get("rating");
+		return Number(value) || null;
+	});
+	const [dietary, setDietary] = useState<string[]>(() => {
+		return searchParams.getAll("dietary");
+	});
 
 	const handleApplyFilters = () => {
 		const newParams = new URLSearchParams(searchParams);
@@ -139,7 +148,7 @@ export default function RestaurantFilters({
 						<RestaurantFilters.Title>Dietary Needs</RestaurantFilters.Title>
 
 						<ul className={styles.list}>
-							{dietaryNeeds.map((value) => (
+							{dietaryNeeds.map(({ label, value }) => (
 								<li className={styles.listItem} key={value}>
 									<RestaurantFilters.Checkbox
 										value={value}
@@ -153,7 +162,7 @@ export default function RestaurantFilters({
 										}}
 									/>
 
-									<RestaurantFilters.Text>{value}</RestaurantFilters.Text>
+									<RestaurantFilters.Text>{label}</RestaurantFilters.Text>
 								</li>
 							))}
 						</ul>

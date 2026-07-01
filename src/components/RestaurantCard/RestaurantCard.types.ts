@@ -1,7 +1,15 @@
-import { Restaurant } from "../../types";
+interface CardData {
+	id: number;
+	name: string;
+	main_category?: string;
+	card_image?: string;
+	delivery_time?: string;
+	delivery_fee?: number;
+	rating?: number;
+}
 
 export interface RestaurantCardProps extends React.ComponentPropsWithoutRef<"div"> {
-	data: Restaurant;
+	data: CardData;
 	variant?: "default" | "search";
 }
 

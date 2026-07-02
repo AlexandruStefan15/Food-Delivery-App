@@ -15,8 +15,6 @@
 			max-width: none;
 			flex: 0 0 280px;
 			margin-top: 2px;
-			position: sticky;
-			top: 80px;
 
 			@include media.tablet_lg {
 				display: none;

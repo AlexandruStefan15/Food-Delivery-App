@@ -143,7 +143,7 @@
 		},
 		{
 			"id": 7,
-			"name": "Mc Donalds",
+			"name": "Restaurant Meridian",
 			"main_category": "Fast Food",
 			"card_image": "/images/restaurants/mcDonalds/mcDonalds-card.avif",
 			"cover_image": "",
@@ -151,6 +151,19 @@
 			"delivery_fee": 4,
 			"rating": 4.9,
 			"distance": 5.4,
+			"closing_time": "10:00 PM",
+			"food_categories_ids": [2, 10]
+		},
+		{
+			"id": 8,
+			"name": "Conacul Secuiesc",
+			"main_category": "Fast Food",
+			"card_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-card.jpg",
+			"cover_image": "",
+			"delivery_time": "10-25 min",
+			"delivery_fee": 3.9,
+			"rating": 4.0,
+			"distance": 7.6,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [2, 10]
 		}

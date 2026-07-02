@@ -50,8 +50,8 @@
 	}
 
 	/* Component tokens */
-	--app-background: var(--base-v2);
-	--app-background-v2: var(--base);
+	--background: var(--base-v2);
+	--background-v2: var(--base);
 	--text-color: var(--generic);
 	--text-color-v2: var(--primary);
 	--text-color-v3: var(--secondary);
@@ -87,7 +87,7 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1rem;
-	background-color: var(--app-background);
+	background-color: var(--background);
 }
 
 img,

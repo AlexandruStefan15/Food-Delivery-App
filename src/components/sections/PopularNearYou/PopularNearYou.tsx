@@ -28,7 +28,7 @@ export default function PopularNearYou() {
 				<ul className={styles.restaurantList}>
 					{displayedRestaurants.map((restaurant) => (
 						<li className={styles.listItem} key={restaurant.id}>
-							<NavLink className={styles.link} to="/restaurants/:restaurantId">
+							<NavLink className={styles.link} to={`/restaurants/${restaurant.id}`}>
 								<RestaurantCard className={styles.card} data={restaurant} />
 							</NavLink>
 						</li>

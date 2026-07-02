@@ -1,5 +1,6 @@
 import React, { ComponentPropsWithoutRef, useState, useEffect } from "react";
 import styles from "./RestaurantList.module.scss";
+import { NavLink } from "react-router";
 
 //components
 import RestaurantCard from "../RestaurantCard/RestaurantCard";
@@ -30,7 +31,9 @@ export default function RestaurantList({ restaurants = [], className = "", showO
 					(restaurant, i) =>
 						i < showedRestaurants && (
 							<li className={styles.listItem} key={restaurant.id}>
-								<RestaurantCard className={styles.restaurantCard} data={restaurant} />
+								<NavLink to={`/restaurants/${restaurant.id}`}>
+									<RestaurantCard className={styles.restaurantCard} data={restaurant} />
+								</NavLink>
 							</li>
 						),
 				)}

@@ -109,7 +109,7 @@ export default function SearchResultsList({
 
 			{showSeeAllBtn && itemsShowed && filteredRestaurants.length > itemsShowed && (
 				<NavLink className={styles.seeAllLink} to="/restaurants">
-					See all
+					See all results
 				</NavLink>
 			)}
 

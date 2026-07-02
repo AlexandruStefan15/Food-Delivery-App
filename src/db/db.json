@@ -44,6 +44,11 @@
 			"id": 9,
 			"title": "Asian",
 			"image": { "url": "/images/foodCategories/asian.jpg", "alt": "asian" }
+		},
+		{
+			"id": 10,
+			"title": "Fast food",
+			"image": { "url": "/images/foodCategories/fastFood.jpg", "alt": "fast-food" }
 		}
 	],
 
@@ -78,7 +83,7 @@
 			"card_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-card.jpg",
 			"cover_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-cover.jpg",
 			"delivery_time": "30-35 min",
-			"delivery_fee": 3.5,
+			"delivery_fee": 3.9,
 			"rating": 4.5,
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
@@ -135,6 +140,19 @@
 			"distance": 2.2,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [9]
+		},
+		{
+			"id": 7,
+			"name": "Mc Donalds",
+			"main_category": "Fast Food",
+			"card_image": "/images/restaurants/mcDonalds/mcDonalds-card.avif",
+			"cover_image": "",
+			"delivery_time": "10-25 min",
+			"delivery_fee": 4,
+			"rating": 4.9,
+			"distance": 5.4,
+			"closing_time": "10:00 PM",
+			"food_categories_ids": [2, 10]
 		}
 	],
 

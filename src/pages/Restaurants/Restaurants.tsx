@@ -17,7 +17,7 @@ type Dietary = "vegan" | "gluten_free" | "vegetarian";
 const dietaryKeys: Dietary[] = ["vegan", "gluten_free", "vegetarian"];
 
 export default function Restaurants() {
-	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
+	const { restaurants = [], restaurantsAreLoading, restaurantsError } = useRestaurants();
 	const { data: dishes = [], isLoading: dishesAreLoading, error: dishesError } = useAllDishes();
 	const [searchParams] = useSearchParams();
 

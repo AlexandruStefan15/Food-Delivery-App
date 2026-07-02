@@ -25,6 +25,7 @@
 		border-radius: 0;
 		padding: 10px 0.8rem;
 		box-shadow: none;
+		background-color: transparent;
 
 		&:hover {
 			background-color: var(--card-hover-bg-v3);
@@ -37,9 +38,14 @@
 		width: 100%;
 		text-align: center;
 		padding: 0.8em;
-		font-size: 0.875rem;
+		padding-block: 1em;
+		font-size: 0.87rem;
 		font-weight: 700;
 		color: var(--accent);
+
+		&:hover {
+			background-color: var(--card-hover-bg-v3);
+		}
 	}
 
 	.seeMoreBtn {

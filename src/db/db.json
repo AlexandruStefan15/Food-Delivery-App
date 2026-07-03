@@ -145,7 +145,7 @@
 			"id": 7,
 			"name": "Restaurant Meridian",
 			"main_category": "Fast Food",
-			"card_image": "/images/restaurants/mcDonalds/mcDonalds-card.avif",
+			"card_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-card.jpg",
 			"cover_image": "",
 			"delivery_time": "10-25 min",
 			"delivery_fee": 4,
@@ -162,7 +162,7 @@
 			"cover_image": "",
 			"delivery_time": "10-25 min",
 			"delivery_fee": 3.9,
-			"rating": 4.0,
+			"rating": 4.2,
 			"distance": 7.6,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [2, 10]

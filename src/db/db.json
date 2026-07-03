@@ -47,8 +47,13 @@
 		},
 		{
 			"id": 10,
-			"title": "Fast food",
-			"image": { "url": "/images/foodCategories/fastFood.jpg", "alt": "fast-food" }
+			"title": "Mediterranean",
+			"image": { "url": "/images/foodCategories/mediterranean.jpg", "alt": "mediterranean" }
+		},
+		{
+			"id": 11,
+			"title": "Traditional",
+			"image": { "url": "/images/foodCategories/traditional.jpg", "alt": "traditional" }
 		}
 	],
 
@@ -144,7 +149,7 @@
 		{
 			"id": 7,
 			"name": "Restaurant Meridian",
-			"main_category": "Fast Food",
+			"main_category": "Mediterranean",
 			"card_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-card.jpg",
 			"cover_image": "",
 			"delivery_time": "10-25 min",
@@ -152,12 +157,12 @@
 			"rating": 4.9,
 			"distance": 5.4,
 			"closing_time": "10:00 PM",
-			"food_categories_ids": [2, 10]
+			"food_categories_ids": [10]
 		},
 		{
 			"id": 8,
 			"name": "Conacul Secuiesc",
-			"main_category": "Fast Food",
+			"main_category": "Traditional",
 			"card_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-card.jpg",
 			"cover_image": "",
 			"delivery_time": "10-25 min",
@@ -165,7 +170,7 @@
 			"rating": 4.2,
 			"distance": 7.6,
 			"closing_time": "10:00 PM",
-			"food_categories_ids": [2, 10]
+			"food_categories_ids": [11]
 		}
 	],
 

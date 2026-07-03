@@ -1,7 +1,7 @@
 interface CardData {
 	id: number;
 	name: string;
-	main_category?: string;
+	main_cuisine?: string;
 	card_image?: string;
 	delivery_time?: string;
 	delivery_fee?: number;

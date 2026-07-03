@@ -27,8 +27,8 @@
 		},
 		{
 			"id": 6,
-			"title": "Mexican",
-			"image": { "url": "/images/foodCategories/mexican.jpg", "alt": "mexican" }
+			"title": "Tacos",
+			"image": { "url": "/images/foodCategories/tacos.jpg", "alt": "mexican" }
 		},
 		{
 			"id": 7,
@@ -37,23 +37,18 @@
 		},
 		{
 			"id": 8,
-			"title": "Salad",
-			"image": { "url": "/images/foodCategories/salad.jpg", "alt": "salad" }
+			"title": "Ramen",
+			"image": { "url": "", "alt": "ramen" }
 		},
 		{
 			"id": 9,
-			"title": "Asian",
-			"image": { "url": "/images/foodCategories/asian.jpg", "alt": "asian" }
+			"title": "Fish",
+			"image": { "url": "", "alt": "Fish" }
 		},
 		{
 			"id": 10,
-			"title": "Mediterranean",
-			"image": { "url": "/images/foodCategories/mediterranean.jpg", "alt": "mediterranean" }
-		},
-		{
-			"id": 11,
-			"title": "Traditional",
-			"image": { "url": "/images/foodCategories/traditional.jpg", "alt": "traditional" }
+			"title": "Soup",
+			"image": { "url": "", "alt": "soup" }
 		}
 	],
 
@@ -71,7 +66,7 @@
 		{
 			"id": 1,
 			"name": "Sakura Sushi House",
-			"main_category": "Japanese",
+			"main_cuisine": "Japanese",
 			"card_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-card.jpg",
 			"cover_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-cover.jpg",
 			"delivery_time": "25-30 min",
@@ -84,7 +79,7 @@
 		{
 			"id": 2,
 			"name": "The Golden Olive Bistro",
-			"main_category": "International",
+			"main_cuisine": "International",
 			"card_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-card.jpg",
 			"cover_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-cover.jpg",
 			"delivery_time": "30-35 min",
@@ -97,7 +92,7 @@
 		{
 			"id": 3,
 			"name": "Luigi's Authentic Pizza",
-			"main_category": "Pizza",
+			"main_cuisine": "Italian",
 			"card_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-card.jpg",
 			"cover_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-cover.jpg",
 			"delivery_time": "30-35 min",
@@ -110,7 +105,7 @@
 		{
 			"id": 4,
 			"name": "Cantina Street Tacos",
-			"main_category": "Mexican",
+			"main_cuisine": "Mexican",
 			"card_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-card.jpg",
 			"cover_image": "",
 			"delivery_time": "35-45 min",
@@ -122,13 +117,13 @@
 		},
 		{
 			"id": 5,
-			"name": "Salad Box",
-			"main_category": "Salad",
-			"card_image": "/images/restaurants/saladBox/saladBox-card.jpg",
+			"name": "Tokyo Ramen Bar",
+			"main_cuisine": "Japanese",
+			"card_image": "/images/restaurants/tokyoRamenBar/tokyoRamenBar-card.jpg",
 			"cover_image": "",
 			"delivery_time": "25-30 min",
 			"delivery_fee": 0,
-			"rating": 3.8,
+			"rating": 4.5,
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [8]
@@ -136,7 +131,7 @@
 		{
 			"id": 6,
 			"name": "Fresh Poke & Bowls",
-			"main_category": "Asian",
+			"main_cuisine": "Asian",
 			"card_image": "/images/restaurants/freshPokeBowls/freshPokeBowls-card.jpg",
 			"cover_image": "",
 			"delivery_time": "15-20 min",
@@ -149,7 +144,7 @@
 		{
 			"id": 7,
 			"name": "Restaurant Meridian",
-			"main_category": "Mediterranean",
+			"main_cuisine": "Mediterranean",
 			"card_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-card.jpg",
 			"cover_image": "",
 			"delivery_time": "10-25 min",
@@ -162,12 +157,12 @@
 		{
 			"id": 8,
 			"name": "Conacul Secuiesc",
-			"main_category": "Traditional",
+			"main_cuisine": "Traditional",
 			"card_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-card.jpg",
 			"cover_image": "",
 			"delivery_time": "10-25 min",
 			"delivery_fee": 3.9,
-			"rating": 4.2,
+			"rating": 3.5,
 			"distance": 7.6,
 			"closing_time": "10:00 PM",
 			"food_categories_ids": [11]

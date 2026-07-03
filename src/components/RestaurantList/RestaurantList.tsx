@@ -12,10 +12,18 @@ import { Restaurant } from "../../types";
 
 interface RestaurantListProps extends ComponentPropsWithoutRef<"ul"> {
 	restaurants: Restaurant[];
+	totalRestaurants: number;
+	wrapperClassname?: string;
 	showOnly?: number;
 }
 
-export default function RestaurantList({ restaurants = [], className = "", showOnly = 6 }: RestaurantListProps) {
+export default function RestaurantList({
+	restaurants = [],
+	totalRestaurants,
+	className = "",
+	wrapperClassname = "",
+	showOnly = 6,
+}: RestaurantListProps) {
 	const [showedRestaurants, setShowedRestaurants] = useState<number>(
 		showOnly < restaurants.length ? showOnly : restaurants.length,
 	);
@@ -25,7 +33,7 @@ export default function RestaurantList({ restaurants = [], className = "", showO
 	}, [restaurants, showOnly]);
 
 	return (
-		<div className={styles.restaurantListContainer}>
+		<div className={styles.restaurantListContainer + ` ${wrapperClassname}`}>
 			<ul className={styles.restaurantList + ` ${className}`}>
 				{restaurants.map(
 					(restaurant, i) =>
@@ -41,7 +49,7 @@ export default function RestaurantList({ restaurants = [], className = "", showO
 			<footer className={styles.footer}>
 				<div className={styles.counterWrapper}>
 					<p className={styles.text}>
-						Showing {showedRestaurants} of {restaurants.length} restaurants{" "}
+						Showing {showedRestaurants} of {totalRestaurants} restaurants{" "}
 					</p>
 					<RangeInput
 						className={styles.rangeInput}

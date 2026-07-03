@@ -24,6 +24,9 @@
 		.content {
 			flex: 1;
 			margin-bottom: 2rem;
+			min-height: 725px;
+			display: flex;
+			flex-direction: column;
 
 			.title {
 				font-size: 1.875rem;
@@ -36,8 +39,12 @@
 			}
 		}
 
-		.restaurantList {
-			margin-top: 1.5rem;
+		.restaurantListWrapper {
+			flex: 1;
+			justify-content: space-between;
+			.restaurantList {
+				margin-top: 1.5rem;
+			}
 		}
 	}
 }

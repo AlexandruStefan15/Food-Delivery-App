@@ -64,9 +64,17 @@ export default function Restaurants() {
 			<main className={styles.main}>
 				<RestaurantFilters className={styles.filters} />
 				<div className={styles.content}>
-					<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>
-					<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
-					<RestaurantList className={styles.restaurantList} restaurants={filteredRestaurants} />
+					<header className={styles.contentHeader}>
+						<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>
+						<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
+					</header>
+					<RestaurantList
+						className={styles.restaurantList}
+						wrapperClassname={styles.restaurantListWrapper}
+						restaurants={filteredRestaurants}
+						totalRestaurants={restaurants.length}
+						showOnly={6}
+					/>
 				</div>
 			</main>
 			<Footer />

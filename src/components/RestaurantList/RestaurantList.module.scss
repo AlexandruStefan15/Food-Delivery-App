@@ -42,6 +42,7 @@
 		width: 100%;
 
 		.rangeInput {
+			cursor: auto;
 			&::-webkit-slider-thumb {
 				display: none;
 			}

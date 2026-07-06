@@ -25,18 +25,15 @@ Card.Subtitle = function CardSubtitle({ className = "", children, ...props }: Re
 	);
 };
 
-Card.Text = function CardText({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"span">) {
+Card.Text = function CardText({
+	className = "",
+	as: Component = "span",
+	children,
+	...props
+}: React.ComponentPropsWithoutRef<"span"> & { as?: React.ElementType }) {
 	return (
-		<span className={styles.text + ` ${className}`} {...props}>
+		<Component className={styles.text + ` ${className}`} {...props}>
 			{children}
-		</span>
-	);
-};
-
-Card.Paragraph = function CardParagraph({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"p">) {
-	return (
-		<p className={styles.paragraph + ` ${className}`} {...props}>
-			{children}
-		</p>
+		</Component>
 	);
 };

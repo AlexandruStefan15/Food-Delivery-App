@@ -69,7 +69,7 @@ export default function Restaurants() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<RestaurantFilters className={styles.filters} />
+				<RestaurantFilters className={styles.filters} categories={foodCategories} />
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
 						<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>

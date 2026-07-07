@@ -75,6 +75,25 @@
 		}
 	}
 
+	.categories {
+		display: flex;
+		flex-direction: column;
+		gap: 0.7rem;
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			.listItem {
+				display: flex;
+				gap: 0.5rem;
+				font-size: 0.9rem;
+				font-weight: 500;
+			}
+		}
+	}
+
 	.deliveryTime {
 		display: flex;
 		flex-direction: column;

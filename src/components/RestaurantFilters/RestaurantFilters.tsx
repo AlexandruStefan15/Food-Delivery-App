@@ -3,7 +3,7 @@ import styles from "./RestaurantFilters.module.scss";
 import { useSearchParams } from "react-router";
 
 //types
-import { TextProps, PriceRange } from "./RestaurantFilters.types";
+import { TextProps, PriceRange, RestaurantFiltersProps } from "./RestaurantFilters.types";
 
 //components
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
@@ -30,11 +30,12 @@ export default function RestaurantFilters({
 	showCustomerRating = true,
 	showDietary = true,
 	showDeliveryTime = true,
-}) {
+	categories = [],
+}: RestaurantFiltersProps) {
 	const [searchParams, setSearchParams] = useSearchParams();
-
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
 	const [deliveryTime, setDeliveryTime] = useState(35);
+	const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "");
 	const [rating, setRating] = useState<number | null>(() => {
 		const value = searchParams.get("rating");
 		return Number(value) || null;
@@ -51,6 +52,7 @@ export default function RestaurantFilters({
 		newParams.delete("deliveryTime");
 		newParams.delete("rating");
 		newParams.delete("dietary");
+		newParams.delete("category");
 
 		if (priceRange.min !== null) {
 			newParams.set("minPrice", priceRange.min.toString());
@@ -68,6 +70,8 @@ export default function RestaurantFilters({
 			newParams.set("rating", rating.toString());
 		}
 
+		if (selectedCategory !== null) newParams.set("category", selectedCategory);
+
 		dietary.forEach((item) => {
 			newParams.append("dietary", item);
 		});
@@ -80,6 +84,7 @@ export default function RestaurantFilters({
 		setDeliveryTime(35);
 		setRating(null);
 		setDietary([]);
+		setSelectedCategory("");
 
 		setSearchParams({});
 	};
@@ -134,7 +139,6 @@ export default function RestaurantFilters({
 				{showDietary && (
 					<div className={styles.dietary}>
 						<RestaurantFilters.Title>Dietary Needs</RestaurantFilters.Title>
-
 						<ul className={styles.list}>
 							{dietaryNeeds.map(({ label, value }) => (
 								<li className={styles.listItem} key={value}>
@@ -155,6 +159,27 @@ export default function RestaurantFilters({
 						</ul>
 					</div>
 				)}
+				<div className={styles.categories}>
+					<RestaurantFilters.Title>Popular categories</RestaurantFilters.Title>
+					<ul className={styles.list}>
+						{categories.map((category) => (
+							<li className={styles.listItem} key={category.id}>
+								<RestaurantFilters.Checkbox
+									value={category.title}
+									checked={selectedCategory === category.title}
+									onChange={(e) => {
+										if (e.target.checked) {
+											setSelectedCategory(e.target.value);
+										} else {
+											setSelectedCategory("");
+										}
+									}}
+								/>
+								<RestaurantFilters.Text>{category.title}</RestaurantFilters.Text>
+							</li>
+						))}
+					</ul>
+				</div>
 				{showDeliveryTime && (
 					<div className={styles.deliveryTime}>
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>

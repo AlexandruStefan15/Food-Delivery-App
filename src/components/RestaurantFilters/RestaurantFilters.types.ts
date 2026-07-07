@@ -1,3 +1,16 @@
+import { FoodCategory } from "../../types";
+
+export interface RestaurantFiltersProps {
+	className?: string;
+	title?: string;
+	subtitle?: string;
+	showPriceRange?: boolean;
+	showCustomerRating?: boolean;
+	showDietary?: boolean;
+	showDeliveryTime?: boolean;
+	categories?: FoodCategory[];
+}
+
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
 	as?: React.ElementType;
 	children?: React.ReactNode;

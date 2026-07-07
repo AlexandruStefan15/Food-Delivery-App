@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router";
 //api
 import { useRestaurants } from "../../api/restaurants";
 import { useAllDishes } from "../../api/dishes";
+import { useFoodCategories } from "../../api/foodCategories";
 
 //components
 import Header from "../../components/Header/Header";
@@ -19,12 +20,14 @@ const dietaryKeys: Dietary[] = ["vegan", "gluten_free", "vegetarian"];
 export default function Restaurants() {
 	const { restaurants = [], restaurantsAreLoading, restaurantsError } = useRestaurants();
 	const { data: dishes = [], isLoading: dishesAreLoading, error: dishesError } = useAllDishes();
+	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 	const [searchParams] = useSearchParams();
 
 	const selectedDietary = searchParams
 		.getAll("dietary")
 		.filter((item): item is Dietary => dietaryKeys.includes(item as Dietary));
 
+	const selectedCategory = searchParams.get("category");
 	const selectedRating = searchParams.get("rating");
 	const selectedMinPrice = searchParams.get("minPrice");
 	const selectedMaxPrice = searchParams.get("maxPrice");
@@ -55,7 +58,11 @@ export default function Restaurants() {
 		const matchesDeliveryTime =
 			deliveryTimeFilter === null || Number.parseInt(restaurant.delivery_time) <= deliveryTimeFilter;
 
-		return matchesDishFilters && matchesRating && matchesDeliveryTime;
+		const matchesCategory =
+			!selectedCategory ||
+			foodCategories.some(({ id, title }) => title === selectedCategory && restaurant.food_categories_ids.includes(id));
+
+		return matchesDishFilters && matchesRating && matchesDeliveryTime && matchesCategory;
 	});
 
 	return (

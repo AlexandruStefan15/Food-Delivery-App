@@ -81,15 +81,7 @@ export default function RestaurantFilters({
 		setRating(null);
 		setDietary([]);
 
-		const newParams = new URLSearchParams(searchParams);
-
-		newParams.delete("minPrice");
-		newParams.delete("maxPrice");
-		newParams.delete("deliveryTime");
-		newParams.delete("rating");
-		newParams.delete("dietary");
-
-		setSearchParams(newParams);
+		setSearchParams({});
 	};
 
 	return (

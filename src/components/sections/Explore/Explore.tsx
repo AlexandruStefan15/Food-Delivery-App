@@ -14,7 +14,7 @@ export default function Explore({ showOnly = 7 }) {
 	return (
 		<section className={styles.section}>
 			<div className={styles.container}>
-				<h2 className={styles.title}>Explore food categories</h2>
+				<h2 className={styles.title}>Popular categories</h2>
 				<ul className={styles.exploreList}>
 					{foodCategories.map(
 						(category, i) =>

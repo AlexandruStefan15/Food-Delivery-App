@@ -5,7 +5,7 @@ import styles from "./Home.module.scss";
 import HeroBanner from "../../components/sections/HeroBanner/HeroBanner";
 import Explore from "../../components/sections/Explore/Explore";
 import HowItWorks from "../../components/sections/HowItWorks/HowItWorks";
-import PopularNearYou from "../../components/sections/PopularNearYou/PopularNearYou";
+import FeaturedRestaurants from "../../components/sections/PopularNearYou/FeaturedRestaurants";
 
 //components
 import Header from "../../components/Header/Header";
@@ -19,7 +19,7 @@ export default function Home() {
 				<HeroBanner />
 				<Explore />
 				<HowItWorks />
-				<PopularNearYou />
+				<FeaturedRestaurants />
 			</main>
 			<Footer />
 		</div>

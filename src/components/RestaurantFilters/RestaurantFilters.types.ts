@@ -8,6 +8,7 @@ export interface RestaurantFiltersProps {
 	showCustomerRating?: boolean;
 	showDietary?: boolean;
 	showDeliveryTime?: boolean;
+	showCategories?: boolean;
 	categories?: FoodCategory[];
 }
 

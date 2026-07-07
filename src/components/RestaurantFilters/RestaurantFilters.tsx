@@ -30,6 +30,7 @@ export default function RestaurantFilters({
 	showCustomerRating = true,
 	showDietary = true,
 	showDeliveryTime = true,
+	showCategories = true,
 	categories = [],
 }: RestaurantFiltersProps) {
 	const [searchParams, setSearchParams] = useSearchParams();
@@ -99,7 +100,6 @@ export default function RestaurantFilters({
 				{showPriceRange && (
 					<div className={styles.priceRange}>
 						<RestaurantFilters.Title>Price Range</RestaurantFilters.Title>
-
 						<DoubleRangeInput
 							min={0}
 							max={100}
@@ -159,27 +159,29 @@ export default function RestaurantFilters({
 						</ul>
 					</div>
 				)}
-				<div className={styles.categories}>
-					<RestaurantFilters.Title>Popular categories</RestaurantFilters.Title>
-					<ul className={styles.list}>
-						{categories.map((category) => (
-							<li className={styles.listItem} key={category.id}>
-								<RestaurantFilters.Checkbox
-									value={category.title}
-									checked={selectedCategory === category.title}
-									onChange={(e) => {
-										if (e.target.checked) {
-											setSelectedCategory(e.target.value);
-										} else {
-											setSelectedCategory("");
-										}
-									}}
-								/>
-								<RestaurantFilters.Text>{category.title}</RestaurantFilters.Text>
-							</li>
-						))}
-					</ul>
-				</div>
+				{showCategories && (
+					<div className={styles.categories}>
+						<RestaurantFilters.Title>Popular categories</RestaurantFilters.Title>
+						<ul className={styles.list}>
+							{categories.map((category) => (
+								<li className={styles.listItem} key={category.id}>
+									<RestaurantFilters.Checkbox
+										value={category.title}
+										checked={selectedCategory === category.title}
+										onChange={(e) => {
+											if (e.target.checked) {
+												setSelectedCategory(e.target.value);
+											} else {
+												setSelectedCategory("");
+											}
+										}}
+									/>
+									<RestaurantFilters.Text>{category.title}</RestaurantFilters.Text>
+								</li>
+							))}
+						</ul>
+					</div>
+				)}
 				{showDeliveryTime && (
 					<div className={styles.deliveryTime}>
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>

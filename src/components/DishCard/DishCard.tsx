@@ -2,7 +2,8 @@
 import styles from "./DishCard.module.scss";
 
 //types
-import { DishCardProps } from "./DishCard.types";
+import { DishCardProps, DietaryBadgeProps } from "./DishCard.types";
+import { Dietary } from "../../types";
 
 //components
 import Card from "../Card/Card";
@@ -24,10 +25,12 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 				</header>
 				<footer className={styles.contentFooter}>
 					<div className={styles.labels}>
-						{Object.entries(data.dietary)
+						{(Object.entries(data.dietary) as [keyof Dietary, boolean][])
 							.filter(([key, value]) => value === true)
 							.map(([key]) => (
-								<span key={key}>{key.replace("_", " ")}</span>
+								<DietaryBadge value={key} key={key}>
+									{key.replace("_", " ")}
+								</DietaryBadge>
 							))}
 					</div>
 					<Button className={styles.addBtn}>+ Add</Button>
@@ -36,3 +39,30 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 		</Card>
 	);
 }
+
+const DietaryBadge = ({ value, className = "", children, ...props }: DietaryBadgeProps) => {
+	const colorScheme: Record<keyof Dietary, { color: string; bg: string }> = {
+		vegan: {
+			color: "#2563eb",
+			bg: "#dbeafe",
+		},
+		vegetarian: {
+			color: "#16a34a",
+			bg: "#dcfce7",
+		},
+		gluten_free: {
+			color: "#a16207",
+			bg: "#fef9c3",
+		},
+	};
+
+	return (
+		<span
+			className={styles.dietaryBadge + ` ${className}`}
+			style={{ color: colorScheme[value].color, backgroundColor: colorScheme[value].bg }}
+			{...props}
+		>
+			{children}
+		</span>
+	);
+};

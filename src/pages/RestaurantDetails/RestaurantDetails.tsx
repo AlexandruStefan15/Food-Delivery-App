@@ -1,11 +1,20 @@
 import React from "react";
 import styles from "./RestaurantDetails.module.scss";
+import { useParams } from "react-router";
+
+//api
+import { useRestaurantById } from "../../api/restaurants";
+import { useDishesByRestaurant } from "../../api/dishes";
 
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 export default function RestaurantDetails() {
+	const { restaurantId } = useParams();
+	const { restaurant = {}, restaurantIsLoading, restaurantError } = useRestaurantById(restaurantId);
+	const { dishes = [], dishesAreLoading, dishesError } = useDishesByRestaurant(Number(restaurantId));
+
 	return (
 		<div className={styles.page}>
 			<Header />

@@ -15,6 +15,7 @@ export default function RestaurantDetails() {
 					<h2 className={styles.title}></h2>
 					<div className={styles.info}></div>
 				</div>
+				<div className={styles.content}></div>
 			</main>
 			<Footer />
 		</div>

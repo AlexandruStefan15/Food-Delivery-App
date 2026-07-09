@@ -1,0 +1,68 @@
+.page {
+	.main {
+		max-width: 1400px;
+		margin-inline: auto;
+		padding: 2rem;
+	}
+
+	.banner {
+		min-height: 330px;
+		border-radius: 40px;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			background-image: linear-gradient(to top, #000000b3, #00000000);
+			z-index: 9;
+		}
+
+		.backgroundImg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			object-fit: cover;
+		}
+
+		.infoWrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5rem;
+			position: absolute;
+			left: 2rem;
+			bottom: 2rem;
+			z-index: 99;
+			color: var(--base);
+
+			.title {
+				font-size: 2.25rem;
+				font-weight: 700;
+			}
+
+			.info {
+				display: flex;
+				gap: 1rem;
+				font-weight: 500;
+				font-size: 0.875rem;
+			}
+
+			.infoItem {
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+
+				&.closingTime {
+					color: var(--success-v2);
+				}
+
+				&.ratingWrapper {
+					background-color: var(--accent);
+					border-radius: 18px;
+					padding: 0.22em 0.75em;
+				}
+			}
+		}
+	}
+}

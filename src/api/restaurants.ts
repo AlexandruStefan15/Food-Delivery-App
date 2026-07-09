@@ -28,7 +28,7 @@ export const useRestaurants = () => {
 
 export const useRestaurantById = (id: number | string | undefined) => {
 	const {
-		data: restaurant = {},
+		data: restaurant,
 		isLoading: restaurantIsLoading,
 		error: restaurantError,
 	} = useQuery<Restaurant, Error>({

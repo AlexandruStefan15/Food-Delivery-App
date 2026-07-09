@@ -1,0 +1,11 @@
+import type { MenuCategory } from "../../types";
+import type { IconBaseProps } from "react-icons";
+
+export type MenuCategoriesProps = {
+	categories?: MenuCategory[];
+	className?: string;
+};
+
+export type CategoryIconProps = {
+	category: MenuCategory;
+} & IconBaseProps;

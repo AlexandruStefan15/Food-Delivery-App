@@ -35,6 +35,35 @@ export default function RestaurantDetails() {
 		menuCategoriesError,
 	} = useMenuCategories(Number(restaurantId));
 
+	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
+	const error = restaurantError || dishesError || menuCategoriesError;
+
+	const dishesByCategory = (categoryId: number) => dishes.filter((dish) => dish.menu_category_id === categoryId);
+
+	if (isLoading) {
+		return (
+			<div className={styles.page}>
+				<Header />
+				<main className={styles.main}>
+					<p>Loading restaurant...</p>
+				</main>
+				<Footer />
+			</div>
+		);
+	}
+
+	if (error) {
+		return (
+			<div className={styles.page}>
+				<Header />
+				<main className={styles.main}>
+					<p>{error.message}</p>
+				</main>
+				<Footer />
+			</div>
+		);
+	}
+
 	return (
 		<div className={styles.page}>
 			<Header />
@@ -60,9 +89,16 @@ export default function RestaurantDetails() {
 						</div>
 					</div>
 				</div>
-				<div className={styles.content}>
+				<div className={styles.body}>
 					<MenuCategories categories={menuCategories} />
-					<DishList dishes={dishes} />
+					<div className={styles.categorySectionsWrapper}>
+						{menuCategories.map((category) => (
+							<section className={styles.categorySection}>
+								<h2 className={styles.title}>{category.title}</h2>
+								<DishList dishes={dishesByCategory(category.id)} />
+							</section>
+						))}
+					</div>
 				</div>
 			</main>
 			<Footer />

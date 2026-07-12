@@ -27,7 +27,7 @@ export default function Restaurants() {
 		.getAll("dietary")
 		.filter((item): item is Dietary => dietaryKeys.includes(item as Dietary));
 
-	const selectedCategory = searchParams.get("category");
+	const selectedCategories = searchParams.getAll("category");
 	const selectedRating = searchParams.get("rating");
 	const selectedMinPrice = searchParams.get("minPrice");
 	const selectedMaxPrice = searchParams.get("maxPrice");
@@ -59,8 +59,10 @@ export default function Restaurants() {
 			deliveryTimeFilter === null || Number.parseInt(restaurant.delivery_time) <= deliveryTimeFilter;
 
 		const matchesCategory =
-			!selectedCategory ||
-			foodCategories.some(({ id, title }) => title === selectedCategory && restaurant.food_categories_ids.includes(id));
+			selectedCategories.length === 0 ||
+			foodCategories.some(
+				({ id, title }) => selectedCategories.includes(title) && restaurant.food_categories_ids.includes(id),
+			);
 
 		return matchesDishFilters && matchesRating && matchesDeliveryTime && matchesCategory;
 	});

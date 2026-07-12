@@ -36,7 +36,7 @@ export default function RestaurantFilters({
 	const [searchParams, setSearchParams] = useSearchParams();
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
 	const [deliveryTime, setDeliveryTime] = useState(35);
-	const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "");
+	const [selectedCategories, setSelectedCategories] = useState<string[]>(searchParams.getAll("category"));
 	const [rating, setRating] = useState<number | null>(() => {
 		const value = searchParams.get("rating");
 		return Number(value) || null;
@@ -71,7 +71,10 @@ export default function RestaurantFilters({
 			newParams.set("rating", rating.toString());
 		}
 
-		if (selectedCategory !== null) newParams.set("category", selectedCategory);
+		if (selectedCategories !== null)
+			selectedCategories.forEach((item) => {
+				newParams.append("category", item);
+			});
 
 		dietary.forEach((item) => {
 			newParams.append("dietary", item);
@@ -85,7 +88,7 @@ export default function RestaurantFilters({
 		setDeliveryTime(35);
 		setRating(null);
 		setDietary([]);
-		setSelectedCategory("");
+		setSelectedCategories([]);
 
 		setSearchParams({});
 	};
@@ -167,12 +170,12 @@ export default function RestaurantFilters({
 								<li className={styles.listItem} key={category.id}>
 									<RestaurantFilters.Checkbox
 										value={category.title}
-										checked={selectedCategory === category.title}
+										checked={selectedCategories.includes(category.title)}
 										onChange={(e) => {
 											if (e.target.checked) {
-												setSelectedCategory(e.target.value);
+												setSelectedCategories((prev) => [...prev, e.target.value]);
 											} else {
-												setSelectedCategory("");
+												setSelectedCategories((prev) => prev.filter((item) => item != e.target.value));
 											}
 										}}
 									/>

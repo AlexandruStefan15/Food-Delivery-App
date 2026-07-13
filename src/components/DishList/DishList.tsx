@@ -15,8 +15,8 @@ export default function DishList({ dishes = [] }: DishListProps) {
 	return (
 		<ul className={styles.list}>
 			{dishes.map((dish) => (
-				<li className={styles.listItem}>
-					<DishCard data={dish} />
+				<li className={styles.listItem} key={dish.id}>
+					<DishCard className={styles.dishCard} data={dish} />
 				</li>
 			))}
 		</ul>

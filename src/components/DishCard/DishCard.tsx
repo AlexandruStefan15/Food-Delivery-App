@@ -19,11 +19,9 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 				<header className={styles.contentHeader}>
 					<div className={styles.titleWrapper}>
 						<Card.Title>{data.title}</Card.Title>
-						<span className={styles.priceTag}>${data.price}</span>
+						<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
 					</div>
-					<Card.Subtitle>{data.description}</Card.Subtitle>
-				</header>
-				<footer className={styles.contentFooter}>
+					<Card.Subtitle className={styles.description}>{data.description}</Card.Subtitle>
 					<div className={styles.labels}>
 						{(Object.entries(data.dietary) as [keyof Dietary, boolean][])
 							.filter(([key, value]) => value === true)
@@ -33,7 +31,9 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 								</DietaryBadge>
 							))}
 					</div>
-					<Button className={styles.addBtn}>+ Add</Button>
+				</header>
+				<footer className={styles.contentFooter}>
+					<Button className={styles.addBtn}>+ Add to cart</Button>
 				</footer>
 			</div>
 		</Card>

@@ -1,0 +1,98 @@
+.dishCard {
+	padding: 1rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+
+	.imgWrapper {
+		height: 100%;
+		border-radius: 30px;
+		overflow: hidden;
+		flex: 0 150px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+		gap: 1.2rem;
+	}
+
+	.contentHeader {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.titleWrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.title {
+		font-size: 1.12rem;
+		font-weight: 700;
+	}
+
+	.priceTag {
+		font-size: 1.12rem;
+		color: var(--accent);
+		font-weight: 700;
+		margin-right: 0.7rem;
+	}
+
+	.description {
+		font-size: 0.875rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+
+	.labels {
+		margin-top: 5px;
+	}
+
+	.contentFooter {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.labels {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.addBtn {
+		margin-left: auto;
+		padding: 0.55em 1em;
+		font-size: 0.875rem;
+		border-radius: 25px;
+		margin-right: 0.5rem;
+		box-shadow:
+			0 0 #0000,
+			0 0 #0000,
+			0 10px 15px -3px rgb(0 0 0 / 0.1),
+			0 4px 6px -4px rgb(0 0 0 / 0.1);
+	}
+}
+
+/* Subcomponents */
+
+.dietaryBadge {
+	padding: 0.2em 0.7em;
+	border-radius: 25px;
+	font-size: 12px;
+	font-weight: 700;
+}

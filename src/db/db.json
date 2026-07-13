@@ -178,7 +178,7 @@
 			"calories": 725,
 			"prep_time": "15-20 min",
 			"rating": 4.9,
-			"card_image": "/images/dishes/roastedLambShoulder.png",
+			"card_image": "/images/dishes/roastedLambShoulder.jpg",
 			"cover_image": "/images/dishes/roastedLambShoulder-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -220,7 +220,7 @@
 			"calories": 525,
 			"prep_time": "15-18 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/truffleMushroomRisotto.png",
+			"card_image": "/images/dishes/truffleMushroomRisotto.jpg",
 			"cover_image": "/images/dishes/truffleMushroomRisotto-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -238,7 +238,7 @@
 			"calories": 125,
 			"prep_time": "5 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/classicBruschetta.png",
+			"card_image": "/images/dishes/classicBruschetta.jpg",
 			"cover_image": "/images/dishes/classicBruschetta-cover.png",
 			"dietary": {
 				"vegan": true,
@@ -256,7 +256,7 @@
 			"calories": 110,
 			"prep_time": "5 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/crispyCalamari.png",
+			"card_image": "/images/dishes/crispyCalamari.jpg",
 			"cover_image": "/images/dishes/crispyCalamari-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -274,7 +274,7 @@
 			"calories": 480,
 			"prep_time": "20-25 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/panSearedSeaBass.png",
+			"card_image": "/images/dishes/panSearedSeaBass.jpg",
 			"cover_image": "/images/dishes/panSearedSeaBass-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -292,7 +292,7 @@
 			"calories": 890,
 			"prep_time": "12-15 min",
 			"rating": 4.9,
-			"card_image": "/images/dishes/braisedBeefShortRib.png",
+			"card_image": "/images/dishes/braisedBeefShortRib.jpg",
 			"cover_image": "/images/dishes/braisedBeefShortRib-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -310,7 +310,7 @@
 			"calories": 610,
 			"prep_time": "18-22 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/eggplantParmigiana.png",
+			"card_image": "/images/dishes/eggplantParmigiana.jpg",
 			"cover_image": "/images/dishes/eggplantParmigiana-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -328,7 +328,7 @@
 			"calories": 420,
 			"prep_time": "10-15 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/salmonNigiriSet.png",
+			"card_image": "/images/dishes/salmonNigiriSet.jpg",
 			"cover_image": "/images/dishes/salmonNigiriSet-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -346,7 +346,7 @@
 			"calories": 520,
 			"prep_time": "10-15 min",
 			"rating": 4.7,
-			"card_image": "/images/dishes/spicyTunaRoll.png",
+			"card_image": "/images/dishes/spicyTunaRoll.jpg",
 			"cover_image": "/images/dishes/spicyTunaRoll-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -364,7 +364,7 @@
 			"calories": 90,
 			"prep_time": "5 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/misoSoup.png",
+			"card_image": "/images/dishes/misoSoup.jpg",
 			"cover_image": "/images/dishes/misoSoup-cover.png",
 			"dietary": {
 				"vegan": true,
@@ -383,7 +383,7 @@
 			"calories": 780,
 			"prep_time": "15-20 min",
 			"rating": 4.7,
-			"card_image": "/images/dishes/margheritaPizza.png",
+			"card_image": "/images/dishes/margheritaPizza.jpg",
 			"cover_image": "/images/dishes/margheritaPizza-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -401,7 +401,7 @@
 			"calories": 920,
 			"prep_time": "15-20 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/pepperoniPizza.png",
+			"card_image": "/images/dishes/pepperoniPizza.jpg",
 			"cover_image": "/images/dishes/pepperoniPizza-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -419,7 +419,7 @@
 			"calories": 360,
 			"prep_time": "8-10 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/garlicFocaccia.png",
+			"card_image": "/images/dishes/garlicFocaccia.jpg",
 			"cover_image": "/images/dishes/garlicFocaccia-cover.png",
 			"dietary": {
 				"vegan": true,
@@ -438,7 +438,7 @@
 			"calories": 760,
 			"prep_time": "15-20 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/beefBirriaTacos.png",
+			"card_image": "/images/dishes/beefBirriaTacos.jpg",
 			"cover_image": "/images/dishes/beefBirriaTacos-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -456,7 +456,7 @@
 			"calories": 690,
 			"prep_time": "12-15 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/chickenQuesadilla.png",
+			"card_image": "/images/dishes/chickenQuesadilla.jpg",
 			"cover_image": "/images/dishes/chickenQuesadilla-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -474,7 +474,7 @@
 			"calories": 430,
 			"prep_time": "8-10 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/churrosChocolate.png",
+			"card_image": "/images/dishes/churrosChocolate.jpg",
 			"cover_image": "/images/dishes/churrosChocolate-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -493,7 +493,7 @@
 			"calories": 850,
 			"prep_time": "15-20 min",
 			"rating": 4.7,
-			"card_image": "/images/dishes/tonkotsuRamen.png",
+			"card_image": "/images/dishes/tonkotsuRamen.jpg",
 			"cover_image": "/images/dishes/tonkotsuRamen-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -511,7 +511,7 @@
 			"calories": 620,
 			"prep_time": "15-18 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/vegetableShoyuRamen.png",
+			"card_image": "/images/dishes/vegetableShoyuRamen.jpg",
 			"cover_image": "/images/dishes/vegetableShoyuRamen-cover.png",
 			"dietary": {
 				"vegan": true,
@@ -529,7 +529,7 @@
 			"calories": 390,
 			"prep_time": "8-10 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/porkGyoza.png",
+			"card_image": "/images/dishes/porkGyoza.jpg",
 			"cover_image": "/images/dishes/porkGyoza-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -548,7 +548,7 @@
 			"calories": 650,
 			"prep_time": "10-15 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/salmonPokeBowl.png",
+			"card_image": "/images/dishes/salmonPokeBowl.jpg",
 			"cover_image": "/images/dishes/salmonPokeBowl-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -566,7 +566,7 @@
 			"calories": 590,
 			"prep_time": "10-15 min",
 			"rating": 4.4,
-			"card_image": "/images/dishes/tofuBuddhaBowl.png",
+			"card_image": "/images/dishes/tofuBuddhaBowl.jpg",
 			"cover_image": "/images/dishes/tofuBuddhaBowl-cover.png",
 			"dietary": {
 				"vegan": true,
@@ -585,7 +585,7 @@
 			"calories": 540,
 			"prep_time": "20-25 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/grilledSeaBream.png",
+			"card_image": "/images/dishes/grilledSeaBream.jpg",
 			"cover_image": "/images/dishes/grilledSeaBream-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -603,7 +603,7 @@
 			"calories": 760,
 			"prep_time": "18-22 min",
 			"rating": 4.7,
-			"card_image": "/images/dishes/seafoodLinguine.png",
+			"card_image": "/images/dishes/seafoodLinguine.jpg",
 			"cover_image": "/images/dishes/seafoodLinguine-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -621,7 +621,7 @@
 			"calories": 320,
 			"prep_time": "5-8 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/greekSalad.png",
+			"card_image": "/images/dishes/greekSalad.jpg",
 			"cover_image": "/images/dishes/greekSalad-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -640,7 +640,7 @@
 			"calories": 430,
 			"prep_time": "10-15 min",
 			"rating": 4.6,
-			"card_image": "/images/dishes/goulashSoup.png",
+			"card_image": "/images/dishes/goulashSoup.jpg",
 			"cover_image": "/images/dishes/goulashSoup-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -658,7 +658,7 @@
 			"calories": 820,
 			"prep_time": "15-20 min",
 			"rating": 4.5,
-			"card_image": "/images/dishes/szeklerPorkStew.png",
+			"card_image": "/images/dishes/szeklerPorkStew.jpg",
 			"cover_image": "/images/dishes/szeklerPorkStew-cover.png",
 			"dietary": {
 				"vegan": false,
@@ -676,7 +676,7 @@
 			"calories": 680,
 			"prep_time": "12-15 min",
 			"rating": 4.7,
-			"card_image": "/images/dishes/papanasi.png",
+			"card_image": "/images/dishes/papanasi.jpg",
 			"cover_image": "/images/dishes/papanasi-cover.png",
 			"dietary": {
 				"vegan": false,

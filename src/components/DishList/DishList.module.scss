@@ -1,4 +1,10 @@
 .list {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+
+	.dishCard {
+		width: 100%;
+		height: 100%;
+	}
 }

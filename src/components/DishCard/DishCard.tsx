@@ -18,7 +18,7 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 			<div className={styles.content}>
 				<header className={styles.contentHeader}>
 					<div className={styles.titleWrapper}>
-						<Card.Title>{data.title}</Card.Title>
+						<h2 className={styles.title}>{data.title}</h2>
 						<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
 					</div>
 					<Card.Subtitle className={styles.description}>{data.description}</Card.Subtitle>

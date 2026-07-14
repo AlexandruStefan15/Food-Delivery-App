@@ -4,6 +4,7 @@ import type { IconBaseProps } from "react-icons";
 export type MenuCategoriesProps = {
 	categories?: MenuCategory[];
 	className?: string;
+	activeCategoryId: number;
 };
 
 export type CategoryIconProps = {

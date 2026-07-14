@@ -2,13 +2,11 @@
 	padding: 1rem;
 	display: flex;
 	gap: 1rem;
-	align-items: center;
 
 	.imgWrapper {
-		height: 100%;
 		border-radius: 30px;
 		overflow: hidden;
-		flex: 0 150px;
+		flex: 0 160px;
 
 		img {
 			width: 100%;
@@ -22,7 +20,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 100%;
 		gap: 1.2rem;
 	}
 
@@ -35,15 +32,23 @@
 	.titleWrapper {
 		display: flex;
 		justify-content: space-between;
+		gap: 1rem;
 	}
 
 	.title {
-		font-size: 1.12rem;
+		font-size: 1.11rem;
 		font-weight: 700;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		line-clamp: 1;
+		-webkit-box-orient: vertical;
 	}
 
 	.priceTag {
-		font-size: 1.12rem;
+		font-size: 1.11rem;
 		color: var(--accent);
 		font-weight: 700;
 		margin-right: 0.7rem;

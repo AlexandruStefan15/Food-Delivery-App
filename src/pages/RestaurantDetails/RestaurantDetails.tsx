@@ -90,7 +90,7 @@ export default function RestaurantDetails() {
 					</div>
 				</div>
 				<div className={styles.body}>
-					<MenuCategories categories={menuCategories} />
+					<MenuCategories categories={menuCategories} activeCategoryId={1} />
 					<div className={styles.categorySectionsWrapper}>
 						{menuCategories.map((category) => (
 							<section className={styles.categorySection}>
@@ -106,19 +106,20 @@ export default function RestaurantDetails() {
 	);
 }
 
-const MenuCategories = ({ categories = [], className = "" }: MenuCategoriesProps) => {
+const MenuCategories = ({ categories = [], activeCategoryId, className = "" }: MenuCategoriesProps) => {
 	return (
 		<div className={styles.menuCategoriesContainer + ` ${className}`}>
-			<h2 className={styles.title}>Menu Categories</h2>
-
-			<ul className={styles.list}>
-				{categories.map((item) => (
-					<li className={styles.listItem} key={item.id}>
-						<CategoryIcon category={item} />
-						<span>{item.title}</span>
-					</li>
-				))}
-			</ul>
+			<div className={styles.innerWrapper}>
+				<h2 className={styles.title}>Menu Categories</h2>
+				<ul className={styles.list}>
+					{categories.map((item) => (
+						<li className={styles.listItem + ` ${activeCategoryId === item.id ? styles.active : ""}`} key={item.id}>
+							<CategoryIcon size={24} category={item} />
+							<span>{item.title}</span>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./RestaurantDetails.module.scss";
 import { useParams } from "react-router";
 
@@ -6,6 +6,9 @@ import { useParams } from "react-router";
 import { useRestaurantById } from "../../api/restaurants";
 import { useDishesByRestaurant } from "../../api/dishes";
 import { useMenuCategories } from "../../api/menuCategories";
+
+//hooks
+import { useActiveMenuCategory } from "../../hooks/useActiveMenuCategory";
 
 //icons
 import { IoMdStar } from "react-icons/io";
@@ -35,10 +38,17 @@ export default function RestaurantDetails() {
 		menuCategoriesError,
 	} = useMenuCategories(Number(restaurantId));
 
+	const selectedMenuCategory = useActiveMenuCategory({
+		sectionSelector: "[data-category-id]",
+		initialCategoryId: menuCategories[0]?.id ?? null,
+	});
+
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
 	const error = restaurantError || dishesError || menuCategoriesError;
 
 	const dishesByCategory = (categoryId: number) => dishes.filter((dish) => dish.menu_category_id === categoryId);
+
+	console.log(selectedMenuCategory);
 
 	if (isLoading) {
 		return (
@@ -90,10 +100,15 @@ export default function RestaurantDetails() {
 					</div>
 				</div>
 				<div className={styles.body}>
-					<MenuCategories categories={menuCategories} activeCategoryId={1} />
+					<MenuCategories categories={menuCategories} activeCategoryId={selectedMenuCategory} />
 					<div className={styles.categorySectionsWrapper}>
 						{menuCategories.map((category) => (
-							<section className={styles.categorySection}>
+							<section
+								className={styles.categorySection}
+								key={category.id}
+								id={`category-${category.id}`}
+								data-category-id={category.id}
+							>
 								<h2 className={styles.title}>{category.title}</h2>
 								<DishList dishes={dishesByCategory(category.id)} />
 							</section>
@@ -114,7 +129,7 @@ const MenuCategories = ({ categories = [], activeCategoryId, className = "" }: M
 				<ul className={styles.list}>
 					{categories.map((item) => (
 						<li className={styles.listItem + ` ${activeCategoryId === item.id ? styles.active : ""}`} key={item.id}>
-							<CategoryIcon size={24} category={item} />
+							<CategoryIcon size={23.5} category={item} />
 							<span>{item.title}</span>
 						</li>
 					))}

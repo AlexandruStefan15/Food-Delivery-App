@@ -41,14 +41,13 @@ export default function RestaurantDetails() {
 	const selectedMenuCategory = useActiveMenuCategory({
 		sectionSelector: "[data-category-id]",
 		initialCategoryId: menuCategories[0]?.id ?? null,
+		rootMargin: "",
 	});
 
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
 	const error = restaurantError || dishesError || menuCategoriesError;
 
 	const dishesByCategory = (categoryId: number) => dishes.filter((dish) => dish.menu_category_id === categoryId);
-
-	console.log(selectedMenuCategory);
 
 	if (isLoading) {
 		return (
@@ -122,13 +121,26 @@ export default function RestaurantDetails() {
 }
 
 const MenuCategories = ({ categories = [], activeCategoryId, className = "" }: MenuCategoriesProps) => {
+	const scrollToCategory = (categoryId: number) => {
+		const section = document.getElementById(`category-${categoryId}`);
+
+		section?.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	};
+
 	return (
 		<div className={styles.menuCategoriesContainer + ` ${className}`}>
 			<div className={styles.innerWrapper}>
 				<h2 className={styles.title}>Menu Categories</h2>
 				<ul className={styles.list}>
 					{categories.map((item) => (
-						<li className={styles.listItem + ` ${activeCategoryId === item.id ? styles.active : ""}`} key={item.id}>
+						<li
+							className={styles.listItem + ` ${activeCategoryId === item.id ? styles.active : ""}`}
+							key={item.id}
+							onClick={() => scrollToCategory(item.id)}
+						>
 							<CategoryIcon size={23.5} category={item} />
 							<span>{item.title}</span>
 						</li>

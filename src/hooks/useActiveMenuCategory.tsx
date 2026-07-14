@@ -10,8 +10,8 @@ type UseActiveMenuCategoryOptions = {
 export function useActiveMenuCategory({
 	sectionSelector = "[data-category-id]",
 	initialCategoryId = null,
-	rootMargin = "-160px 0px -65% 0px",
-	threshold = 0,
+	rootMargin = "-130px 0px -60% 0px",
+	threshold = 0.3,
 }: UseActiveMenuCategoryOptions = {}) {
 	const [activeCategoryId, setActiveCategoryId] = useState<number | null>(initialCategoryId);
 

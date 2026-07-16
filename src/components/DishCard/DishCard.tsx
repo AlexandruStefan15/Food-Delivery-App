@@ -5,6 +5,9 @@ import styles from "./DishCard.module.scss";
 import { DishCardProps, DietaryBadgeProps } from "./DishCard.types";
 import { Dietary } from "../../types";
 
+//icons
+import { MdAddShoppingCart } from "react-icons/md";
+
 //components
 import Card from "../Card/Card";
 import Button from "../Button/Button";
@@ -33,7 +36,10 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 					</div>
 				</header>
 				<footer className={styles.contentFooter}>
-					<Button className={styles.addBtn}>+ Add to cart</Button>
+					<Button className={styles.addBtn}>
+						<MdAddShoppingCart size={19} />
+						<span className={styles.cls}>Add to cart</span>
+					</Button>
 				</footer>
 			</div>
 		</Card>

@@ -883,6 +883,20 @@
 			},
 			"restaurant_id": 2,
 			"menu_category_id": 3
+		},
+		{
+			"id": 41,
+			"title": "Fried Rice",
+			"price": 5,
+			"card_image": "/images/dishes/friedRice.jpg",
+			"description": "Fragrant, wok-tossed rice stir-fried with scrambled eggs, sweet peas, carrots, and green onions, lightly seasoned with savory soy sauce and sesame oil.",
+			"dietary": {
+				"vegan": true,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 1,
+			"menu_category_id": 3
 		}
 	]
 }

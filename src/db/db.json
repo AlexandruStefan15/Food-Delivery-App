@@ -897,6 +897,60 @@
 			},
 			"restaurant_id": 1,
 			"menu_category_id": 3
+		},
+		{
+			"id": 40,
+			"title": "Teriyaki Chicken Rice Bowl",
+			"description": "Grilled chicken glazed with teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions.",
+			"price": 15.5,
+			"calories": 720,
+			"prep_time": "12-15 min",
+			"rating": 4.5,
+			"card_image": "/images/dishes/teriyakiChickenRiceBowl.jpg",
+			"cover_image": "/images/dishes/teriyakiChickenRiceBowl-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 6,
+			"menu_category_id": 2
+		},
+		{
+			"id": 41,
+			"title": "Shrimp Avocado Poke Bowl",
+			"description": "Juicy shrimp served over rice with avocado, cucumber, edamame, seaweed salad, pickled ginger, sesame seeds, and a light citrus soy dressing.",
+			"price": 16.5,
+			"calories": 610,
+			"prep_time": "10-15 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/shrimpAvocadoPokeBowl.jpg",
+			"cover_image": "/images/dishes/shrimpAvocadoPokeBowl-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 6,
+			"menu_category_id": 2
+		},
+		{
+			"id": 42,
+			"title": "Mango Coconut Chia Pudding",
+			"description": "Creamy coconut chia pudding layered with fresh mango puree, toasted coconut flakes, and seasonal berries.",
+			"price": 7.5,
+			"calories": 340,
+			"prep_time": "5 min",
+			"rating": 4.5,
+			"card_image": "/images/dishes/mangoCoconutChiaPudding.jpg",
+			"cover_image": "/images/dishes/mangoCoconutChiaPudding-cover.png",
+			"dietary": {
+				"vegan": true,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 6,
+			"menu_category_id": 5
 		}
 	]
 }

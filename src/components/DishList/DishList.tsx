@@ -20,7 +20,7 @@ export default function DishList({ dishes = [] }: DishListProps) {
 		<ul className={styles.list}>
 			{dishes.map((dish) => (
 				<li className={styles.listItem} key={dish.id}>
-					<NavLink to={`/restaurants/${restaurantId}/dishes/${dishId}`}>
+					<NavLink className={styles.link} to={`/restaurants/${restaurantId}/dishes/${dishId}`}>
 						<DishCard className={styles.dishCard} data={dish} />
 					</NavLink>
 				</li>

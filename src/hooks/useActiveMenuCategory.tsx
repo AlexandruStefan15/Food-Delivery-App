@@ -12,7 +12,7 @@ export function useActiveMenuCategory({
 	initialCategoryId = null,
 	rootMargin = "-50px 0px -50px 0px",
 	threshold = 0.8,
-}: UseActiveMenuCategoryOptions = {}) {
+}: UseActiveMenuCategoryOptions) {
 	const [activeCategoryId, setActiveCategoryId] = useState<number | null>(initialCategoryId);
 
 	useEffect(() => {

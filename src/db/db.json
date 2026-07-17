@@ -951,6 +951,132 @@
 			},
 			"restaurant_id": 6,
 			"menu_category_id": 5
+		},
+		{
+			"id": 43,
+			"title": "Matcha Cheesecake",
+			"description": "Creamy Japanese-style cheesecake flavored with matcha green tea, served with a light berry sauce and a dusting of powdered sugar.",
+			"price": 8.5,
+			"calories": 430,
+			"prep_time": "5 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/matchaCheesecake.jpg",
+			"cover_image": "/images/dishes/matchaCheesecake-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 1,
+			"menu_category_id": 5
+		},
+		{
+			"id": 44,
+			"title": "Chocolate Lava Cake",
+			"description": "Warm chocolate cake with a molten center, served with vanilla cream, fresh berries, and a light dusting of cocoa.",
+			"price": 9.5,
+			"calories": 560,
+			"prep_time": "8-10 min",
+			"rating": 4.8,
+			"card_image": "/images/dishes/chocolateLavaCake.jpg",
+			"cover_image": "/images/dishes/chocolateLavaCake-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 2,
+			"menu_category_id": 5
+		},
+		{
+			"id": 45,
+			"title": "Classic Tiramisu",
+			"description": "Traditional Italian dessert with espresso-soaked ladyfingers, mascarpone cream, cocoa powder, and a smooth coffee finish.",
+			"price": 8,
+			"calories": 470,
+			"prep_time": "5 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/classicTiramisu.jpg",
+			"cover_image": "/images/dishes/classicTiramisu-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 3,
+			"menu_category_id": 5
+		},
+		{
+			"id": 46,
+			"title": "Mochi Ice Cream Trio",
+			"description": "Three soft mochi pieces filled with creamy ice cream flavors: matcha, mango, and strawberry.",
+			"price": 7.5,
+			"calories": 360,
+			"prep_time": "5 min",
+			"rating": 4.5,
+			"card_image": "/images/dishes/mochiIceCreamTrio.jpg",
+			"cover_image": "/images/dishes/mochiIceCreamTrio-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 5,
+			"menu_category_id": 5
+		},
+		{
+			"id": 47,
+			"title": "Baklava with Pistachios",
+			"description": "Flaky Mediterranean pastry layered with honey, crushed pistachios, walnuts, and a light citrus syrup.",
+			"price": 7,
+			"calories": 420,
+			"prep_time": "5 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/baklavaPistachios.jpg",
+			"cover_image": "/images/dishes/baklavaPistachios-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": true
+			},
+			"restaurant_id": 7,
+			"menu_category_id": 5
+		},
+		{
+			"id": 48,
+			"title": "Diavola Pizza",
+			"description": "Spicy Italian pizza topped with tomato sauce, mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil.",
+			"price": 18,
+			"calories": 910,
+			"prep_time": "15-20 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/diavolaPizza.jpg",
+			"cover_image": "/images/dishes/diavolaPizza-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 3,
+			"menu_category_id": 2
+		},
+		{
+			"id": 49,
+			"title": "Carne Asada Tacos",
+			"description": "Grilled marinated beef tacos served on warm corn tortillas with onion, cilantro, lime, salsa verde, and a touch of chili.",
+			"price": 16,
+			"calories": 680,
+			"prep_time": "12-15 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/carneAsadaTacos.jpg",
+			"cover_image": "/images/dishes/carneAsadaTacos-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 4,
+			"menu_category_id": 2
 		}
 	]
 }

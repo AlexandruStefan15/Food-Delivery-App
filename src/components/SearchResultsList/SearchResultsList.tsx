@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./SearchResultsList.module.scss";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 
 //types
 import { RestaurantCardProps } from "../RestaurantCard/RestaurantCard.types";
@@ -31,7 +31,7 @@ export default function SearchResultsList({
 	restaurantCardProps,
 	...props
 }: SearchResultsListProps) {
-	const [itemsShowed, setItemsShowed] = useState(showOnly);
+	const [itemsShowed, setItemsShowed] = useState<number | null>(showOnly);
 	const { restaurants, restaurantsAreLoading, restaurantsError } = useRestaurants();
 
 	const filteredRestaurants = searchValue

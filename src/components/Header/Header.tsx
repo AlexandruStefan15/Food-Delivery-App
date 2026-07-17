@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router";
-import { useSearchParams, useNavigate } from "react-router";
+import { useSearchParams, useNavigate, useLocation } from "react-router";
 
 // Types
 import { HeaderProps, NavigationItem } from "./Header.types";
@@ -45,6 +45,11 @@ export default function Header({
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
 	const navigate = useNavigate();
+	const location = useLocation();
+
+	useEffect(() => {
+		setSearchValue("");
+	}, [location.pathname]);
 
 	return (
 		<header className={styles.header + ` ${className}`} {...props}>

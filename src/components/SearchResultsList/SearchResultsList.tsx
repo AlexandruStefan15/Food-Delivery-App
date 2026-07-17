@@ -55,6 +55,14 @@ export default function SearchResultsList({
 			</div>
 		);
 
+	if (restaurantsAreLoading) {
+		return (
+			<div className={styles.searchResultsContainer + ` ${className}`} {...props}>
+				<ActivityIndicator />
+			</div>
+		);
+	}
+
 	if (!searchValue) return null;
 
 	if (filteredRestaurants.length === 0)
@@ -63,14 +71,6 @@ export default function SearchResultsList({
 				<p className={styles.cls}>No items found.</p>
 			</div>
 		);
-
-	if (restaurantsAreLoading) {
-		return (
-			<div className={styles.searchResultsContainer + ` ${className}`} {...props}>
-				<ActivityIndicator />
-			</div>
-		);
-	}
 
 	return (
 		<div className={styles.searchResultsContainer + ` ${className}`} {...props}>

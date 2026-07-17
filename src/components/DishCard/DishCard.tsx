@@ -36,7 +36,12 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 					</div>
 				</header>
 				<footer className={styles.contentFooter}>
-					<Button className={styles.addBtn}>
+					<Button
+						className={styles.addBtn}
+						onClick={(e) => {
+							e.preventDefault();
+						}}
+					>
 						<MdAddShoppingCart size={19} />
 						<span className={styles.cls}>Add to cart</span>
 					</Button>

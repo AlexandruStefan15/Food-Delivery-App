@@ -27,6 +27,7 @@ import type { MenuCategoriesProps, CategoryIconProps } from "./RestaurantDetails
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import DishList from "../../components/DishList/DishList";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 export default function RestaurantDetails() {
 	const { restaurantId } = useParams();
@@ -41,7 +42,6 @@ export default function RestaurantDetails() {
 	const selectedMenuCategory = useActiveMenuCategory({
 		sectionSelector: "[data-category-id]",
 		initialCategoryId: menuCategories[0]?.id ?? null,
-		rootMargin: "",
 	});
 
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
@@ -98,9 +98,14 @@ export default function RestaurantDetails() {
 						</div>
 					</div>
 				</div>
-				<div className={styles.body}>
+				<div className={styles.pageBody}>
 					<MenuCategories categories={menuCategories} activeCategoryId={selectedMenuCategory} />
 					<div className={styles.categorySectionsWrapper}>
+						<SearchBar
+							wrapperClassname={styles.searchbarWrapper}
+							placeholder="Search for a dish..."
+							searchButtonProps={{ style: { width: "43px" } }}
+						/>
 						{menuCategories.map((category) => (
 							<section
 								className={styles.categorySection}

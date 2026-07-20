@@ -67,7 +67,7 @@
 		}
 	}
 
-	.body {
+	.pageBody {
 		display: grid;
 		grid-template-columns: 285px 1fr;
 		margin-block: 2rem;
@@ -78,6 +78,13 @@
 			flex-direction: column;
 			gap: 2rem;
 			padding-bottom: 2.5rem;
+
+			.searchbarWrapper {
+				width: 100%;
+				background-color: var(--base);
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+				padding: 5px;
+			}
 		}
 
 		.categorySection {

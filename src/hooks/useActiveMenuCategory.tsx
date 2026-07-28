@@ -11,16 +11,13 @@ type UseActiveMenuCategoryOptions = {
 export function useActiveMenuCategory({
 	sectionSelector = "[data-category-id]",
 	initialCategoryId = null,
-	// BEST ROOT MARGIN: -110px clears the fixed header perfectly,
-	// -85% cuts off the rest of the screen to create a highly accurate trigger strip
 	rootMargin = "-330px 0px -66% 0px",
 	threshold = 0,
-	debug = true,
+	debug = false,
 }: UseActiveMenuCategoryOptions) {
 	const [activeCategoryId, setActiveCategoryId] = useState<number | null>(initialCategoryId);
 	const visibleSectionsRef = useRef<Set<HTMLElement>>(new Set());
 
-	// Parse margins cleanly for the debug visual overlay boxes
 	const margins = rootMargin.split(" ").map((m) => m.trim());
 	const [topStr = "0px", , bottomStr = "0px"] = margins.length === 1 ? [margins[0], margins[0], margins[0]] : margins;
 
@@ -30,7 +27,6 @@ export function useActiveMenuCategory({
 		}
 	}, [initialCategoryId]);
 
-	// Debug Overlay Effect
 	useEffect(() => {
 		if (!debug) return;
 
@@ -87,9 +83,6 @@ export function useActiveMenuCategory({
 					}
 				});
 
-				// FIX: Sort elements inside the trigger strip by their positions.
-				// The element lowest down the page (largest/most-positive top value)
-				// is always the one the user is actively entering.
 				const activeElement = [...visibleSections].sort((a, b) => {
 					return b.getBoundingClientRect().top - a.getBoundingClientRect().top;
 				})[0];

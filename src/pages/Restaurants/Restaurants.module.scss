@@ -11,6 +11,10 @@
 		gap: 2rem;
 		min-height: calc(100vh - 70px);
 
+		@include media.mobile {
+			padding-inline: 1rem;
+		}
+
 		.filters {
 			max-width: none;
 			flex: 0 0 280px;
@@ -23,7 +27,6 @@
 
 		.content {
 			flex: 1;
-			margin-bottom: 2rem;
 			min-height: 725px;
 			display: flex;
 			flex-direction: column;

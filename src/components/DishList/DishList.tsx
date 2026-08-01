@@ -13,11 +13,11 @@ interface DishListProps extends React.ComponentPropsWithoutRef<"ul"> {
 	dishes: Dish[];
 }
 
-export default function DishList({ dishes = [] }: DishListProps) {
+export default function DishList({ dishes = [], className = "" }: DishListProps) {
 	const { restaurantId } = useParams();
 
 	return (
-		<ul className={styles.list}>
+		<ul className={styles.list + ` ${className}`}>
 			{dishes.map((dish) => (
 				<li className={styles.listItem} key={dish.id}>
 					<NavLink className={styles.link} to={`/restaurants/${restaurantId}/dishes/${dish.id}`}>

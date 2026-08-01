@@ -114,7 +114,7 @@ export default function RestaurantDetails() {
 								data-category-id={category.id}
 							>
 								<h2 className={styles.title}>{category.title}</h2>
-								<DishList dishes={dishesByCategory(category.id)} />
+								<DishList className={styles.dishList} dishes={dishesByCategory(category.id)} />
 							</section>
 						))}
 					</div>

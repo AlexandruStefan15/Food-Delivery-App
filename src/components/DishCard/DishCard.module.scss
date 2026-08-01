@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as media;
+
 .dishCard {
 	padding: 1rem;
 	display: flex;
@@ -98,6 +100,19 @@
 
 		&:hover {
 			transform: scale(1.05);
+		}
+	}
+
+	@include media.mobile {
+		flex-direction: column;
+		padding: 0;
+
+		.content {
+			padding: 0 1rem 1rem 1rem;
+		}
+
+		.imgWrapper {
+			border-radius: 0;
 		}
 	}
 }

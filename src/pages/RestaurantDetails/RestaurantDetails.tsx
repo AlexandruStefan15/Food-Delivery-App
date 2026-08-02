@@ -114,20 +114,29 @@ export default function RestaurantDetails() {
 							placeholder="Search for a dish..."
 							searchButtonProps={{ style: { width: "43px" } }}
 						/>
-						{menuCategories.map((category) => {
-							if (dishesByCategory(category.id).length > 0)
-								return (
-									<section
-										className={styles.categorySection}
-										key={category.id}
-										id={`category-${category.id}`}
-										data-category-id={category.id}
-									>
-										<h2 className={styles.title}>{category.title}</h2>
-										<DishList className={styles.dishList} dishes={dishesByCategory(category.id)} />
-									</section>
-								);
-						})}
+						{(() => {
+							let noItems = true;
+
+							const items = menuCategories.map((category) => {
+								if (dishesByCategory(category.id).length > 0) {
+									noItems = false;
+									return (
+										<section
+											className={styles.categorySection}
+											key={category.id}
+											id={`category-${category.id}`}
+											data-category-id={category.id}
+										>
+											<h2 className={styles.title}>{category.title}</h2>
+											<DishList className={styles.dishList} dishes={dishesByCategory(category.id)} />
+										</section>
+									);
+								}
+							});
+
+							if (noItems) return <p className={styles.cls}>No items found...</p>;
+							else return items;
+						})()}
 					</div>
 				</div>
 			</main>

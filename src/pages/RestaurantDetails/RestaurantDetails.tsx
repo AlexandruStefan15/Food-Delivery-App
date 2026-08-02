@@ -33,6 +33,7 @@ export default function RestaurantDetails() {
 	const { restaurantId } = useParams();
 	const { restaurant, restaurantIsLoading, restaurantError } = useRestaurantById(restaurantId);
 	const { dishes = [], dishesAreLoading, dishesError } = useDishesByRestaurant(Number(restaurantId));
+	const [searchValue, setSearchValue] = useState("");
 	const {
 		menuCategories = [],
 		menuCategoriesAreLoading,
@@ -44,10 +45,15 @@ export default function RestaurantDetails() {
 		initialCategoryId: menuCategories[0]?.id ?? null,
 	});
 
+	const filteredDishes = dishes.filter((dish) =>
+		dish.title.trim().toLowerCase().includes(searchValue.trim().toLowerCase()),
+	);
+
+	const dishesByCategory = (categoryId: number) =>
+		filteredDishes.filter((dish) => dish.menu_category_id === categoryId);
+
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
 	const error = restaurantError || dishesError || menuCategoriesError;
-
-	const dishesByCategory = (categoryId: number) => dishes.filter((dish) => dish.menu_category_id === categoryId);
 
 	if (isLoading) {
 		return (
@@ -103,6 +109,8 @@ export default function RestaurantDetails() {
 					<div className={styles.categorySectionsWrapper}>
 						<SearchBar
 							wrapperClassname={styles.searchbarWrapper}
+							value={searchValue}
+							onChange={(value) => setSearchValue(value)}
 							placeholder="Search for a dish..."
 							searchButtonProps={{ style: { width: "43px" } }}
 						/>

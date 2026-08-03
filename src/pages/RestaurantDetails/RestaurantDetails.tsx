@@ -134,7 +134,7 @@ export default function RestaurantDetails() {
 								}
 							});
 
-							if (noItems) return <p className={styles.cls}>No items found...</p>;
+							if (noItems) return <p className={styles.noResultsMessage}>No items found...</p>;
 							else return items;
 						})()}
 					</div>

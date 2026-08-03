@@ -8,6 +8,7 @@ export const useRestaurants = () => {
 		error: restaurantsError,
 	} = useQuery<Restaurant[], Error>({
 		queryKey: ["restaurants"],
+		staleTime: 1000 * 60 * 5, // 5 min
 		queryFn: async (): Promise<Restaurant[]> => {
 			const response = await fetch("http://localhost:3001/restaurants");
 

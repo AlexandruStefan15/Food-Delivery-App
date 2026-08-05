@@ -1077,6 +1077,78 @@
 			},
 			"restaurant_id": 4,
 			"menu_category_id": 2
+		},
+		{
+			"id": 50,
+			"title": "Cabbage Rolls with Smoked Pork",
+			"description": "Traditional cabbage rolls filled with minced pork and rice, slowly cooked in tomato sauce and served with sour cream and fresh herbs.",
+			"price": 18.5,
+			"calories": 780,
+			"prep_time": "15-20 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/cabbageRollsSmokedPork.jpg",
+			"cover_image": "/images/dishes/cabbageRollsSmokedPork-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 8,
+			"menu_category_id": 2
+		},
+		{
+			"id": 51,
+			"title": "Transylvanian Bean Soup",
+			"description": "Hearty bean soup with smoked pork, vegetables, paprika, and fresh parsley, served warm with rustic bread.",
+			"price": 11.5,
+			"calories": 520,
+			"prep_time": "10-15 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/transylvanianBeanSoup.jpg",
+			"cover_image": "/images/dishes/transylvanianBeanSoup-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 8,
+			"menu_category_id": 1
+		},
+		{
+			"id": 52,
+			"title": "Grilled Trout with Polenta",
+			"description": "Fresh grilled trout served with creamy polenta, garlic sauce, lemon, and seasonal greens.",
+			"price": 23,
+			"calories": 610,
+			"prep_time": "18-22 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/grilledTroutPolenta.jpg",
+			"cover_image": "/images/dishes/grilledTroutPolenta-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 8,
+			"menu_category_id": 2
+		},
+		{
+			"id": 53,
+			"title": "Crispy Pork Knuckle",
+			"description": "Slow-roasted pork knuckle with crispy skin, served with roasted potatoes, pickled cabbage, mustard, and horseradish.",
+			"price": 28,
+			"calories": 1050,
+			"prep_time": "20-25 min",
+			"rating": 4.8,
+			"card_image": "/images/dishes/crispyPorkKnuckle.jpg",
+			"cover_image": "/images/dishes/crispyPorkKnuckle-cover.png",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": false
+			},
+			"restaurant_id": 8,
+			"menu_category_id": 2
 		}
 	]
 }

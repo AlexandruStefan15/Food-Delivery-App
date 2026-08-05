@@ -40,17 +40,22 @@ export default function RestaurantDetails() {
 		menuCategoriesError,
 	} = useMenuCategories(Number(restaurantId));
 
-	const selectedMenuCategory = useActiveMenuCategory({
-		sectionSelector: "[data-category-id]",
-		initialCategoryId: menuCategories[0]?.id ?? null,
-	});
-
 	const filteredDishes = dishes.filter((dish) =>
 		dish.title.trim().toLowerCase().includes(searchValue.trim().toLowerCase()),
 	);
 
 	const dishesByCategory = (categoryId: number) =>
 		filteredDishes.filter((dish) => dish.menu_category_id === categoryId);
+
+	const visibleCategoryIds = menuCategories
+		.filter((category) => dishesByCategory(category.id).length > 0)
+		.map((category) => category.id);
+
+	const selectedMenuCategory = useActiveMenuCategory({
+		sectionSelector: "[data-category-id]",
+		initialCategoryId: visibleCategoryIds[0] ?? null,
+		observeKey: visibleCategoryIds.join(","),
+	});
 
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
 	const error = restaurantError || dishesError || menuCategoriesError;

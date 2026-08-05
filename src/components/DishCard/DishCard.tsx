@@ -1,6 +1,9 @@
 //styles
 import styles from "./DishCard.module.scss";
 
+//store
+import { useCartStore } from "../../store/cartStore";
+
 //types
 import { DishCardProps, DietaryBadgeProps } from "./DishCard.types";
 import { Dietary } from "../../types";
@@ -13,6 +16,8 @@ import Card from "../Card/Card";
 import Button from "../Button/Button";
 
 export default function DishCard({ data, className = "" }: DishCardProps) {
+	const addItem = useCartStore((state) => state.addItem);
+
 	return (
 		<Card className={styles.dishCard + ` ${className}`}>
 			<div className={styles.imgWrapper}>
@@ -40,6 +45,7 @@ export default function DishCard({ data, className = "" }: DishCardProps) {
 						className={styles.addBtn}
 						onClick={(e) => {
 							e.preventDefault();
+							addItem(data);
 						}}
 					>
 						<MdAddShoppingCart size={19} />

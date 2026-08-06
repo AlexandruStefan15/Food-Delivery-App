@@ -1,28 +1,21 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-export type CartDish = {
-	id: number;
-	title: string;
-	price: number;
-	image?: string;
-	restaurant_id: number;
-	menu_category_id?: number;
-};
+//types
+import { Dish } from "../types";
 
-export type CartItem = CartDish & {
+export type CartItem = Dish & {
 	quantity: number;
 };
 
 type CartStore = {
 	items: CartItem[];
 
-	addItem: (dish: CartDish) => void;
+	addItem: (dish: Dish) => void;
 	removeItem: (dishId: number) => void;
 	increaseQuantity: (dishId: number) => void;
 	decreaseQuantity: (dishId: number) => void;
 	clearCart: () => void;
-
 	totalItems: () => number;
 	totalPrice: () => number;
 };

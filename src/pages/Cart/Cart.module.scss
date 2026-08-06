@@ -4,4 +4,16 @@
 	max-width: 1200px;
 	padding-inline: 2rem;
 	margin: auto;
+
+	.itemListWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		.list {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+		}
+	}
 }

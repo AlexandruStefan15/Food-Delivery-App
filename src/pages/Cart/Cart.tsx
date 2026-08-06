@@ -34,8 +34,10 @@ export default function Cart() {
 
 const ItemList = function ({ items, className = "" }: ItemListProps) {
 	return (
-		<div className={styles.wrapper + ` ${className}`}>
-			<h2 className={styles.title}>Your Cart</h2>
+		<div className={styles.itemListWrapper + ` ${className}`}>
+			<h2 className={styles.title}>
+				Your Cart <span className={styles.itemsCount}>({items.length === 1 ? `1 item` : `${items.length} items`})</span>
+			</h2>
 			<ul className={styles.list}>
 				{items.map((item) => (
 					<li className={styles.listItem}>

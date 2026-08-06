@@ -1,6 +1,6 @@
 @use "../../styles/breakpoints" as media;
 
-.dishCard {
+.dishCard_default {
 	padding: 1rem;
 	display: flex;
 	gap: 1rem;
@@ -114,6 +114,15 @@
 		.imgWrapper {
 			border-radius: 0;
 		}
+	}
+}
+
+/* Variants */
+.dishCard_cart {
+	@extend .dishCard_default;
+
+	.imgWrapper {
+		flex: 0 120px;
 	}
 }
 

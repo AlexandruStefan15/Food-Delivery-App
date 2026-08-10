@@ -20,10 +20,8 @@ export default function DishCard(props: DishCardProps) {
 	const addItem = useCartStore((state) => state.addItem);
 	const removeItem = useCartStore((state) => state.removeItem);
 
-	const { data, className = "" } = props;
-
 	if (props.variant === "cart") {
-		const { data } = props;
+		const { data, className = "" } = props; // TypeScript correctly infers `props.data` as `CartItem`
 
 		return (
 			<Card className={`${styles.dishCard_cart} ${className}`}>
@@ -67,6 +65,8 @@ export default function DishCard(props: DishCardProps) {
 			</Card>
 		);
 	}
+
+	const { data, className = "" } = props; // TypeScript correctly infers `props.data` as `Dish`
 
 	return (
 		<Card className={`${styles.dishCard_default} ${className}`}>

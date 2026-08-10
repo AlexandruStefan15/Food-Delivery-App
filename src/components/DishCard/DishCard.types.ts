@@ -7,16 +7,14 @@ export interface ItemCounterProps {
 }
 
 type DefaultDishCardProps = {
-	data: Dish;
 	variant?: "default";
-	cartItem?: never;
+	data: Dish;
 	className?: string;
 };
 
 type CartDishCardProps = {
-	data: Dish;
 	variant: "cart";
-	cartItem: CartItem;
+	data: CartItem;
 	className?: string;
 };
 

@@ -23,7 +23,7 @@ export default function DishCard(props: DishCardProps) {
 	const { data, className = "" } = props;
 
 	if (props.variant === "cart") {
-		const { cartItem } = props;
+		const { data } = props;
 
 		return (
 			<Card className={`${styles.dishCard_cart} ${className}`}>
@@ -50,7 +50,7 @@ export default function DishCard(props: DishCardProps) {
 					</header>
 
 					<footer className={styles.contentFooter}>
-						<ItemCounter item={cartItem} />
+						<ItemCounter item={data} />
 
 						<Button
 							className={styles.addBtn}

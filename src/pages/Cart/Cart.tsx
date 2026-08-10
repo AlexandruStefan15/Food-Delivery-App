@@ -41,7 +41,7 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 			<ul className={styles.list}>
 				{items.map((item) => (
 					<li className={styles.listItem}>
-						<DishCard variant="cart" data={item} />
+						<DishCard variant="cart" data={item} key={item.id} />
 					</li>
 				))}
 			</ul>

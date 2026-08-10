@@ -3,7 +3,8 @@
 	grid-template-columns: auto 384px;
 	max-width: 1200px;
 	padding-inline: 2rem;
-	margin: auto;
+	margin-inline: auto;
+	margin-block: 2rem;
 
 	.itemListWrapper {
 		display: flex;

@@ -24,7 +24,7 @@
 		background-color: transparent;
 
 		&::placeholder {
-			color: grey;
+			color: var(--primary);
 		}
 	}
 

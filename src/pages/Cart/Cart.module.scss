@@ -1,6 +1,6 @@
 .main {
 	display: grid;
-	grid-template-columns: auto 384px;
+	grid-template-columns: auto 385px;
 	max-width: 1200px;
 	padding-inline: 2rem;
 	margin-inline: auto;
@@ -15,7 +15,7 @@
 		.list {
 			display: flex;
 			flex-direction: column;
-			gap: 1.5rem;
+			gap: 1rem;
 		}
 	}
 }

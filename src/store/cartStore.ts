@@ -10,7 +10,6 @@ export type CartItem = Dish & {
 
 type CartStore = {
 	items: CartItem[];
-
 	addItem: (dish: Dish) => void;
 	removeItem: (dishId: number) => void;
 	increaseQuantity: (dishId: number) => void;

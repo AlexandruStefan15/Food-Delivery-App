@@ -40,8 +40,8 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 			</h2>
 			<ul className={styles.list}>
 				{items.map((item) => (
-					<li className={styles.listItem}>
-						<DishCard variant="cart" data={item} key={item.id} />
+					<li className={styles.listItem} key={item.id}>
+						<DishCard variant="cart" data={item} />
 					</li>
 				))}
 			</ul>

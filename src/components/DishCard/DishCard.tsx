@@ -28,14 +28,12 @@ export default function DishCard(props: DishCardProps) {
 				<div className={styles.imgWrapper}>
 					<img className={styles.img} src={data.card_image} alt={data.title} />
 				</div>
-
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
 						<div className={styles.titleWrapper}>
 							<h2 className={styles.title}>{data.title}</h2>
 							<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
 						</div>
-
 						<div className={styles.labels}>
 							{(Object.entries(data.dietary) as [keyof Dietary, boolean][])
 								.filter(([, value]) => value)
@@ -46,10 +44,8 @@ export default function DishCard(props: DishCardProps) {
 								))}
 						</div>
 					</header>
-
 					<footer className={styles.contentFooter}>
 						<ItemCounter item={data} />
-
 						<Button
 							className={styles.addBtn}
 							onClick={(event) => {
@@ -73,16 +69,13 @@ export default function DishCard(props: DishCardProps) {
 			<div className={styles.imgWrapper}>
 				<img className={styles.img} src={data.card_image} alt={data.title} />
 			</div>
-
 			<div className={styles.content}>
 				<header className={styles.contentHeader}>
 					<div className={styles.titleWrapper}>
 						<h2 className={styles.title}>{data.title}</h2>
 						<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
 					</div>
-
 					<Card.Subtitle className={styles.description}>{data.description}</Card.Subtitle>
-
 					<div className={styles.labels}>
 						{(Object.entries(data.dietary) as [keyof Dietary, boolean][])
 							.filter(([, value]) => value)
@@ -93,7 +86,6 @@ export default function DishCard(props: DishCardProps) {
 							))}
 					</div>
 				</header>
-
 				<footer className={styles.contentFooter}>
 					<Button
 						className={styles.addBtn}
@@ -112,13 +104,19 @@ export default function DishCard(props: DishCardProps) {
 }
 
 const ItemCounter = ({ item, className = "" }: ItemCounterProps) => {
+	const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+	const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
 	const quantity = item?.quantity;
 
 	return (
-		<div className={styles.ItemCounter + ` ${className}`}>
-			<button className={styles.decrement}>-</button>
+		<div className={styles.itemCounter + ` ${className}`}>
+			<Button className={styles.decrementBtn} onClick={(e) => decreaseQuantity(item.id)}>
+				<span>–</span>
+			</Button>
 			<span className={styles.count}>{quantity}</span>
-			<button className={styles.increment}>+</button>
+			<Button className={styles.incrementBtn} onClick={(e) => increaseQuantity(item.id)}>
+				<span>+</span>
+			</Button>
 		</div>
 	);
 };

@@ -10,12 +10,14 @@ type DefaultDishCardProps = {
 	variant?: "default";
 	data: Dish;
 	className?: string;
+	classNames?: Record<string, string>;
 };
 
 type CartDishCardProps = {
 	variant: "cart";
 	data: CartItem;
 	className?: string;
+	classNames?: Record<string, string>;
 };
 
 export type DishCardProps = DefaultDishCardProps | CartDishCardProps;

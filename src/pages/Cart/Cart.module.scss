@@ -1,11 +1,12 @@
 .main {
 	display: grid;
 	grid-template-columns: auto 384px;
-	max-width: 1200px;
+	max-width: 1250px;
 	padding-inline: 2rem;
 	margin-inline: auto;
 	margin-block: 2rem;
 	min-height: 100vh;
+	gap: 1rem;
 
 	.itemListWrapper {
 		display: flex;

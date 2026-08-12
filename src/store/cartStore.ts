@@ -2,7 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 //types
-import { Dish } from "../types";
+import { Dish, Restaurant } from "../types";
 
 export type CartItem = Dish & {
 	quantity: number;
@@ -17,6 +17,7 @@ type CartStore = {
 	clearCart: () => void;
 	totalItems: () => number;
 	totalPrice: () => number;
+	totalDeliveryFee: (restaurants: Restaurant[]) => number;
 };
 
 export const useCartStore = create<CartStore>()(
@@ -100,6 +101,18 @@ export const useCartStore = create<CartStore>()(
 
 			totalPrice: () => {
 				return get().items.reduce((total, item) => total + item.price * item.quantity, 0);
+			},
+
+			totalDeliveryFee: (restaurants) => {
+				const items = get().items;
+				if (items.length === 0) return 0;
+
+				const restaurantIds = new Set(items.map((item) => item.restaurant_id));
+
+				return Array.from(restaurantIds).reduce((totalFee, restId) => {
+					const restaurant = restaurants.find((r) => r.id === restId);
+					return totalFee + (restaurant?.delivery_fee ?? 0);
+				}, 0);
 			},
 		}),
 		{

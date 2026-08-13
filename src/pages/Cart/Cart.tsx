@@ -64,7 +64,7 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 	const deliveryFee = useCartStore((state) => state.totalDeliveryFee(restaurants));
 
 	const subtotalPrice = () => {
-		return items.reduce((total, item) => total + item.price, 0);
+		return items.reduce((total, item) => total + item.price * item.quantity, 0);
 	};
 	const totalPrice = deliveryFee + subtotalPrice();
 

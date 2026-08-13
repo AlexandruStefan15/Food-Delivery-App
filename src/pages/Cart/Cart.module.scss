@@ -6,7 +6,7 @@
 	padding-inline: 2rem;
 	margin-inline: auto;
 	margin-block: 3rem;
-	min-height: 100vh;
+	min-height: calc(100vh - 70px);
 	gap: 2rem;
 
 	.itemListWrapper {

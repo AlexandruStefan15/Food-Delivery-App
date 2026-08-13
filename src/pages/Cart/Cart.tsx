@@ -66,7 +66,7 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 	const subtotalPrice = () => {
 		return items.reduce((total, item) => total + item.price * item.quantity, 0);
 	};
-	const totalPrice = deliveryFee + subtotalPrice();
+	const totalPrice: number = deliveryFee + subtotalPrice();
 
 	return (
 		<div className={styles.orderSummary + ` ${className}`}>
@@ -88,7 +88,7 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 				</div>
 				<div className={styles.row}>
 					<span className={styles.text}>Delivery Fee</span>
-					<span className={styles.value}>${deliveryFee}</span>
+					<span className={styles.value}>${deliveryFee.toFixed(2)}</span>
 				</div>
 				<div className={styles.row}>
 					<span className={styles.text}>Service Fee & Taxes</span>

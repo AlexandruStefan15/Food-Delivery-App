@@ -10,6 +10,7 @@ export type CartItem = Dish & {
 
 type CartStore = {
 	items: CartItem[];
+	isCartBadgeActive: boolean;
 	addItem: (dish: Dish) => void;
 	removeItem: (dishId: number) => void;
 	increaseQuantity: (dishId: number) => void;
@@ -18,12 +19,14 @@ type CartStore = {
 	totalItems: () => number;
 	totalPrice: () => number;
 	totalDeliveryFee: (restaurants: Restaurant[]) => number;
+	setIsCartBadgeActive: (x: boolean) => void;
 };
 
 export const useCartStore = create<CartStore>()(
 	persist(
 		(set, get) => ({
 			items: [],
+			isCartBadgeActive: false,
 
 			addItem: (dish) => {
 				const existingItem = get().items.find((item) => item.id === dish.id);
@@ -38,6 +41,7 @@ export const useCartStore = create<CartStore>()(
 									}
 								: item,
 						),
+						isCartBadgeActive: true,
 					});
 
 					return;
@@ -51,12 +55,14 @@ export const useCartStore = create<CartStore>()(
 							quantity: 1,
 						},
 					],
+					isCartBadgeActive: true,
 				});
 			},
 
 			removeItem: (dishId) => {
 				set({
 					items: get().items.filter((item) => item.id !== dishId),
+					isCartBadgeActive: true,
 				});
 			},
 
@@ -70,6 +76,7 @@ export const useCartStore = create<CartStore>()(
 								}
 							: item,
 					),
+					isCartBadgeActive: true,
 				});
 			},
 
@@ -85,6 +92,7 @@ export const useCartStore = create<CartStore>()(
 								: item,
 						)
 						.filter((item) => item.quantity > 0),
+					isCartBadgeActive: true,
 				});
 			},
 
@@ -113,6 +121,10 @@ export const useCartStore = create<CartStore>()(
 					const restaurant = restaurants.find((r) => r.id === restId);
 					return totalFee + (restaurant?.delivery_fee ?? 0);
 				}, 0);
+			},
+
+			setIsCartBadgeActive: (x: boolean) => {
+				set({ isCartBadgeActive: x });
 			},
 		}),
 		{

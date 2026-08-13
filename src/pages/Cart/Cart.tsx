@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Cart.module.scss";
 
 //api
@@ -29,6 +29,12 @@ interface OrderSummaryProps {
 
 export default function Cart() {
 	const cartItems = useCartStore((state) => state.items);
+	const setIsCartBadgeActive = useCartStore((state) => state.setIsCartBadgeActive);
+	const isCartBadgeActive = useCartStore((state) => state.isCartBadgeActive);
+
+	useEffect(() => {
+		setIsCartBadgeActive(false);
+	}, [isCartBadgeActive]);
 
 	return (
 		<div className={styles.page}>

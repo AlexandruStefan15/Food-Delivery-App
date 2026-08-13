@@ -12,6 +12,9 @@ import svgs from "../../assets/svgs/index";
 //context
 import { useSidebarContext } from "../../context/SidebarContext";
 
+//store
+import { useCartStore } from "../../store/cartStore";
+
 //hooks
 import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
@@ -42,10 +45,14 @@ export default function Header({
 }: HeaderProps) {
 	const [searchValue, setSearchValue] = useState("");
 	const [isSearchResultsListActive, setIsSearchResultsListActive] = useState(false);
+	const totalItems = useCartStore((state) => state.totalItems());
+	const isCartBadgeActive = useCartStore((state) => state.isCartBadgeActive);
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
 	const navigate = useNavigate();
 	const location = useLocation();
+
+	const showCartBadge = totalItems > 0 && isCartBadgeActive;
 
 	useEffect(() => {
 		setSearchValue("");
@@ -102,6 +109,7 @@ export default function Header({
 					)}
 					<NavLink className={styles.cartLink} to="/cart">
 						<MdOutlineShoppingBag className={styles.icon} />
+						{showCartBadge && <span className={styles.cartBadge}>{totalItems}</span>}
 					</NavLink>
 					{secondaryNavigation.length > 0 && (
 						<ul className={styles.navList}>

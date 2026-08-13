@@ -121,10 +121,26 @@
 
 	.cartLink {
 		flex: 0 0 33px;
+		position: relative;
 
 		.icon {
 			width: 100%;
 			cursor: pointer;
+		}
+
+		.cartBadge {
+			top: 0;
+			right: -7px;
+			color: var(--base);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.65rem;
+			width: 18px;
+			aspect-ratio: 1/1;
+			position: absolute;
+			border-radius: 100%;
+			background-color: red;
 		}
 	}
 }

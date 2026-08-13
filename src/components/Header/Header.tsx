@@ -45,8 +45,10 @@ export default function Header({
 }: HeaderProps) {
 	const [searchValue, setSearchValue] = useState("");
 	const [isSearchResultsListActive, setIsSearchResultsListActive] = useState(false);
+
 	const totalItems = useCartStore((state) => state.totalItems());
 	const isCartBadgeActive = useCartStore((state) => state.isCartBadgeActive);
+
 	const isTabletLarge = useIsTabletLarge();
 	const { setIsOpen } = useSidebarContext();
 	const navigate = useNavigate();

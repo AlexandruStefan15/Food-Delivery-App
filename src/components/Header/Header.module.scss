@@ -129,7 +129,7 @@
 		}
 
 		.cartBadge {
-			top: 0;
+			top: 0px;
 			right: -7px;
 			color: var(--base);
 			display: flex;
@@ -140,7 +140,7 @@
 			aspect-ratio: 1/1;
 			position: absolute;
 			border-radius: 100%;
-			background-color: red;
+			background-color: var(--accent);
 		}
 	}
 }

@@ -4,11 +4,15 @@ import styles from "./Cart.module.scss";
 //api
 import { useRestaurants } from "../../api/restaurants";
 
+//helpers
+import { getAverageTime } from "../../utils/helpers";
+
 //store
 import { useCartStore } from "../../store/cartStore";
 
 //types
 import type { CartItem } from "../../store/cartStore";
+import type { Restaurant } from "../../types";
 
 //components
 import Header from "../../components/Header/Header";
@@ -24,6 +28,8 @@ interface ItemListProps {
 
 interface OrderSummaryProps {
 	items: CartItem[];
+	restaurants: Restaurant[];
+	deliveryTime: number;
 	className?: string;
 }
 
@@ -31,6 +37,22 @@ export default function Cart() {
 	const cartItems = useCartStore((state) => state.items);
 	const setIsCartBadgeActive = useCartStore((state) => state.setIsCartBadgeActive);
 	const isCartBadgeActive = useCartStore((state) => state.isCartBadgeActive);
+	const { restaurants } = useRestaurants();
+
+	const restaurantIds = [...new Set(cartItems.map((item) => item.restaurant_id))];
+	const deliveryTimeArr = restaurants
+		.filter((restaurant) => restaurantIds.includes(restaurant.id))
+		.map((restaurant) => restaurant.delivery_time);
+
+	const getDeliveryTime = () => {
+		let totalDeliveryTime = 0;
+
+		deliveryTimeArr.forEach((item) => {
+			totalDeliveryTime = totalDeliveryTime + getAverageTime(item);
+		});
+
+		return totalDeliveryTime / deliveryTimeArr.length;
+	};
 
 	useEffect(() => {
 		setIsCartBadgeActive(false);
@@ -41,7 +63,7 @@ export default function Cart() {
 			<Header />
 			<main className={styles.main}>
 				<ItemList items={cartItems} />
-				<OrderSummary items={cartItems} />
+				<OrderSummary items={cartItems} deliveryTime={getDeliveryTime()} restaurants={restaurants} />
 			</main>
 			<Footer />
 		</div>
@@ -65,8 +87,7 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 	);
 };
 
-const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
-	const { restaurants } = useRestaurants();
+const OrderSummary = ({ items, restaurants, deliveryTime = 0, className = "" }: OrderSummaryProps) => {
 	const deliveryFee = useCartStore((state) => state.totalDeliveryFee(restaurants));
 
 	const subtotalPrice = () => {
@@ -109,7 +130,7 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 
 			<Button className={styles.checkoutBtn}>Proceed to Order</Button>
 			<footer className={styles.footer}>
-				<div className={styles.infoItem}>Estimated delivery time: 25 - 35 mins</div>
+				<div className={styles.infoItem}>Estimated delivery time: {deliveryTime} mins</div>
 				<div className={styles.infoItem}>Secure payments with end-to-end encryption</div>
 			</footer>
 		</div>

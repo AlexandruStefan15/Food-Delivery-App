@@ -107,7 +107,7 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 				<span className={styles.value}>${totalPrice}</span>
 			</div>
 
-			<Button className={styles.checkoutBtn}>Proceed to Checkout</Button>
+			<Button className={styles.checkoutBtn}>Proceed to Order</Button>
 			<footer className={styles.footer}>
 				<div className={styles.infoItem}>Estimated delivery time: 25 - 35 mins</div>
 				<div className={styles.infoItem}>Secure payments with end-to-end encryption</div>

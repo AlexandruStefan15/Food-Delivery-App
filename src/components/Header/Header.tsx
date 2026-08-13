@@ -26,8 +26,8 @@ import SearchResultsList from "../SearchResultsList/SearchResultsList";
 const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Home", path: "/" },
 	{ label: "Restaurants", path: "/restaurants" },
-	{ label: "Orders", path: "/orders" },
-	{ label: "Contact", path: "/contact" },
+	{ label: "Orders", path: "#" },
+	{ label: "Contact", path: "#" },
 ];
 
 const defaultSecondaryNavigation: NavigationItem[] = [];

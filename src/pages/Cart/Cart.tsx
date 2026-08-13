@@ -70,8 +70,9 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 
 	return (
 		<div className={styles.orderSummary + ` ${className}`}>
+			<h2 className={styles.title}>Order Summary</h2>
 			<div className={styles.promo}>
-				<h2 className={styles.title}>Promo code</h2>
+				<h3 className={styles.title}>Promo code</h3>
 				<SearchBar
 					className={styles.input}
 					wrapperClassname={styles.searchBarWrapper}
@@ -81,25 +82,26 @@ const OrderSummary = ({ items, className = "" }: OrderSummaryProps) => {
 				/>
 			</div>
 			<div className={styles.details}>
-				<div className={styles.subtotal}>
+				<div className={styles.row}>
 					<span className={styles.text}>Subtotal</span>
-					<span className={styles.value}>{subtotalPrice()}</span>
+					<span className={styles.value}>${subtotalPrice()}</span>
 				</div>
-				<div className={styles.deliveryFee}>
+				<div className={styles.row}>
 					<span className={styles.text}>Delivery Fee</span>
-					<span className={styles.value}>{deliveryFee}</span>
+					<span className={styles.value}>${deliveryFee}</span>
 				</div>
-				<div className={styles.serviceFee}>
+				<div className={styles.row}>
 					<span className={styles.text}>Service Fee & Taxes</span>
 					<span className={styles.value}>$0.00</span>
 				</div>
-				<hr style={{ border: "none", borderTop: " 2px dashed #ccc" }} />
-				<div className={styles.cartTotal}>
-					<span className={styles.text}>Total</span>
-					<span className={styles.value}>{totalPrice}</span>
-				</div>
 			</div>
-			<Button>Proceed to Checkout</Button>
+			<hr style={{ border: "none", borderTop: " 2px dashed #ccc" }} />
+			<div className={styles.cartTotal}>
+				<span className={styles.text}>Total</span>
+				<span className={styles.value}>${totalPrice}</span>
+			</div>
+
+			<Button className={styles.checkoutBtn}>Proceed to Checkout</Button>
 			<footer className={styles.footer}>
 				<div className={styles.infoItem}>Estimated delivery time: 25 - 35 mins</div>
 				<div className={styles.infoItem}>Secure payments with end-to-end encryption</div>

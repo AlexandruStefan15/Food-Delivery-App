@@ -14,6 +14,10 @@ import { useCartStore } from "../../store/cartStore";
 import type { CartItem } from "../../store/cartStore";
 import type { Restaurant } from "../../types";
 
+//icons
+import { MdLocalShipping } from "react-icons/md";
+import { MdOutlineSecurity } from "react-icons/md";
+
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -123,15 +127,22 @@ const OrderSummary = ({ items, restaurants, deliveryTime = 0, className = "" }: 
 				</div>
 			</div>
 			<hr style={{ border: "none", borderTop: " 2px dashed #ccc" }} />
-			<div className={styles.cartTotal}>
+			<div className={styles.cartTotalWrapper}>
 				<span className={styles.text}>Total</span>
 				<span className={styles.value}>${totalPrice}</span>
 			</div>
-
 			<Button className={styles.checkoutBtn}>Proceed to Order</Button>
 			<footer className={styles.footer}>
-				<div className={styles.infoItem}>Estimated delivery time: {deliveryTime} mins</div>
-				<div className={styles.infoItem}>Secure payments with end-to-end encryption</div>
+				<div className={styles.infoItem}>
+					<MdLocalShipping className={styles.icon} />
+					<span className={styles.text}>
+						Estimated delivery time: <b>{deliveryTime} mins</b>
+					</span>
+				</div>
+				<div className={styles.infoItem}>
+					<MdOutlineSecurity className={styles.icon} />
+					<span className={styles.text}> Secure payments with end-to-end encryption</span>
+				</div>
 			</footer>
 		</div>
 	);

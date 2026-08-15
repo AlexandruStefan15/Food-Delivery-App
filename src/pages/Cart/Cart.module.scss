@@ -95,7 +95,7 @@
 			}
 		}
 
-		.cartTotal {
+		.cartTotalWrapper {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -118,7 +118,32 @@
 			box-shadow:
 				0 10px 15px -3px rgba(236, 73, 19, 0.3),
 				0 4px 6px -4px rgba(236, 73, 19, 0.3);
+
+			outline: none;
 		}
-		outline: none;
+
+		.footer {
+			margin-top: 0.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.75rem;
+
+			.infoItem {
+				color: var(--secondary-v2);
+				background-color: var(--base-v2);
+				padding: 0.8rem;
+				font-size: 0.75rem;
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				border-radius: 30px;
+				font-weight: 500;
+
+				.icon {
+					width: 15px;
+					fill: var(--accent);
+				}
+			}
+		}
 	}
 }

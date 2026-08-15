@@ -33,7 +33,6 @@ interface ItemListProps {
 interface OrderSummaryProps {
 	items: CartItem[];
 	restaurants: Restaurant[];
-	deliveryTime: number;
 	className?: string;
 }
 
@@ -67,7 +66,7 @@ export default function Cart() {
 			<Header />
 			<main className={styles.main}>
 				<ItemList items={cartItems} />
-				<OrderSummary items={cartItems} deliveryTime={getDeliveryTime()} restaurants={restaurants} />
+				<OrderSummary items={cartItems} restaurants={restaurants} />
 			</main>
 			<Footer />
 		</div>
@@ -91,8 +90,9 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 	);
 };
 
-const OrderSummary = ({ items, restaurants, deliveryTime = 0, className = "" }: OrderSummaryProps) => {
+const OrderSummary = ({ items, restaurants, className = "" }: OrderSummaryProps) => {
 	const deliveryFee = useCartStore((state) => state.totalDeliveryFee(restaurants));
+	const deliveryTime = useCartStore((state) => state.totalDeliveryTime(restaurants, getAverageTime));
 
 	const subtotalPrice = () => {
 		return items.reduce((total, item) => total + item.price * item.quantity, 0);

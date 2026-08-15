@@ -19,6 +19,7 @@ type CartStore = {
 	totalItems: () => number;
 	totalPrice: () => number;
 	totalDeliveryFee: (restaurants: Restaurant[]) => number;
+	totalDeliveryTime: (restaurants: Restaurant[], getAverageTime: (time: string) => number) => number;
 	setIsCartBadgeActive: (x: boolean) => void;
 };
 
@@ -121,6 +122,23 @@ export const useCartStore = create<CartStore>()(
 					const restaurant = restaurants.find((r) => r.id === restId);
 					return totalFee + (restaurant?.delivery_fee ?? 0);
 				}, 0);
+			},
+
+			totalDeliveryTime: (restaurants, getAverageTime) => {
+				const items = get().items;
+				if (items.length === 0) return 0;
+
+				const restaurantIds = new Set(items.map((item) => item.restaurant_id));
+
+				const relevantRestaurants = restaurants.filter((restaurant) => restaurantIds.has(restaurant.id));
+
+				if (relevantRestaurants.length === 0) return 0;
+
+				const totalTime = relevantRestaurants.reduce((sum, restaurant) => {
+					return sum + getAverageTime(restaurant.delivery_time);
+				}, 0);
+
+				return totalTime / relevantRestaurants.length;
 			},
 
 			setIsCartBadgeActive: (x: boolean) => {

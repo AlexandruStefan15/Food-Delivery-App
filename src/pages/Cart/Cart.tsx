@@ -131,7 +131,7 @@ const OrderSummary = ({ items, restaurants, deliveryTime = 0, className = "" }: 
 				<span className={styles.text}>Total</span>
 				<span className={styles.value}>${totalPrice}</span>
 			</div>
-			<Button className={styles.checkoutBtn}>Proceed to Order</Button>
+			<Button className={styles.checkoutBtn}>Proceed to Checkout</Button>
 			<footer className={styles.footer}>
 				<div className={styles.infoItem}>
 					<MdLocalShipping className={styles.icon} />

@@ -1,0 +1,84 @@
+@use "../../styles/breakpoints" as media;
+
+.form {
+	margin: 0 auto;
+	padding-inline: 4em;
+	padding-top: 3.5em;
+	padding-bottom: 4em;
+	max-width: 450px;
+	background: rgb(0 0 0 / 77%);
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	@include media.mobile {
+		padding-inline: 2.5em;
+		padding-block: 2.5em;
+	}
+
+	.title {
+		margin-bottom: 0.5rem;
+	}
+
+	.formInput.invalid {
+		input {
+			outline: 1px solid rgb(235, 57, 66);
+		}
+	}
+
+	.button {
+		border-radius: 4px;
+		margin-top: 1em;
+		font-size: 1rem;
+		font-weight: 600;
+		padding-block: 1em;
+	}
+
+	.rememberMe_container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+
+		.rememberMe {
+			display: flex;
+			align-items: center;
+			font-size: 0.9rem;
+			gap: 7px;
+			accent-color: var(--accent);
+		}
+
+		.navLink {
+			color: var(--accent-light);
+			font-size: 0.9rem;
+		}
+	}
+
+	.footer {
+		margin-top: 2rem;
+		.signUp_container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.5rem;
+
+			.text {
+				white-space: nowrap;
+				color: var(--accent-light);
+			}
+		}
+
+		.recaptcha {
+			font-size: 0.8rem;
+			margin-top: 1rem;
+
+			.text {
+				color: var(--accent-light);
+
+				.navLink {
+					color: #0071eb;
+				}
+			}
+		}
+	}
+}

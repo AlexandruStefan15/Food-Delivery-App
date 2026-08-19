@@ -1,4 +1,5 @@
 import type { IconType } from "react-icons";
+import Card from "../Card/Card";
 
 export type IconData =
 	| {
@@ -15,13 +16,13 @@ export type IconData =
 			alt: string;
 	  };
 
-export interface CardData {
+export interface FeatureCardData {
 	id: number;
 	title: string;
 	subtitle?: string;
 	icon?: IconData;
 }
 
-export interface FeatureCardProps extends React.ComponentPropsWithoutRef<"div"> {
-	data: CardData;
+export interface FeatureCardProps extends React.ComponentPropsWithoutRef<typeof Card> {
+	data: FeatureCardData;
 }

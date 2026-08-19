@@ -13,12 +13,7 @@ export default function FeatureCard({ data, className = "", ...props }: FeatureC
 			<header className={styles.header}>
 				{data.icon && (
 					<div className={styles.iconWrapper}>
-						{data.icon.type === "reactIconsComponent" ? (
-							(() => {
-								const Icon = data.icon.component;
-								return <Icon className={styles.icon} />;
-							})()
-						) : data.icon.type === "reactComponent" ? (
+						{data.icon.type === "reactIconsComponent" || data.icon.type === "reactComponent" ? (
 							(() => {
 								const Icon = data.icon.component;
 								return <Icon className={styles.icon} />;

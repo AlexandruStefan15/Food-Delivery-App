@@ -5,32 +5,12 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { MdRestaurant } from "react-icons/md";
 import { MdOutlineDeliveryDining } from "react-icons/md";
 
-type ItemIcon =
-	| {
-			type: "reactIconsComponent";
-			component: IconType;
-	  }
-	| {
-			type: "reactComponent";
-			component: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>;
-	  }
-	| {
-			type: "image";
-			src: string;
-			alt: string;
-	  };
-
-interface CardItem {
-	id: number;
-	title: string;
-	subtitle: string;
-	icon: ItemIcon;
-}
+import type { CardData } from "../components/FeatureCard/FeatureCard.types";
 
 interface Data {
 	title: string;
 	subtitle: string;
-	cards: CardItem[];
+	cards: CardData[];
 }
 
 export const howItWorks_data: Data = {

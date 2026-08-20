@@ -2,12 +2,12 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: auto 384px;
-	max-width: 1250px;
+	max-width: 1275px;
 	padding-inline: 2rem;
 	margin-inline: auto;
 	margin-block: 3rem;
 	min-height: calc(100vh - 70px);
-	gap: 2rem;
+	gap: 2.5rem;
 
 	.itemListWrapper {
 		display: flex;

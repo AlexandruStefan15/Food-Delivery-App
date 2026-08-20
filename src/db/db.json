@@ -1,16 +1,52 @@
 {
-	"deliveryAddresses": [
+	"users": [{ "id": 1, "name": "Nastase Alexandru", "email": "alexandru.stefan.nastase@gmail.com" }],
+
+	"user_payment_options": [
+		{ "id": 1, "user_id": 1, "payment_option_id": 1 },
+		{ "id": 2, "user_id": 1, "payment_option_id": 2 }
+	],
+
+	"payment_options": [
+		{
+			"id": 1,
+			"name": "Visa"
+		},
+		{
+			"id": 2,
+			"name": "PayPal"
+		},
+		{
+			"id": 3,
+			"name": "Mastercard"
+		}
+	],
+
+	"delivery_addresses": [
 		{
 			"id": 1,
 			"user_id": 1,
-			"location": "Home",
-			"address": "Str. George Cosbuc, nr 24, Alba Iulia, 510118"
+			"label": "Home",
+			"recipient_name": "Nastase Alexandru",
+			"street_address": "Str. George Coșbuc, nr. 24",
+			"city": "Alba Iulia",
+			"county": "Alba",
+			"postal_code": "510118",
+			"country_code": "RO",
+			"phone_number": "+40700000000",
+			"is_default": true
 		},
 		{
 			"id": 2,
 			"user_id": 1,
-			"location": "Work",
-			"address": "Str. Aurel Vlaicu, nr 34, Alba Iulia, 531110"
+			"label": "Work",
+			"recipient_name": "Nastase Alexandru",
+			"street_address": "Str. Aurel Vlaicu, nr. 34",
+			"city": "Alba Iulia",
+			"county": "Alba",
+			"postal_code": "510000",
+			"country_code": "RO",
+			"phone_number": "+40700000000",
+			"is_default": false
 		}
 	],
 

@@ -1,4 +1,19 @@
 {
+	"deliveryAddresses": [
+		{
+			"id": 1,
+			"user_id": 1,
+			"location": "Home",
+			"address": "Str. George Cosbuc, nr 24, Alba Iulia, 510118"
+		},
+		{
+			"id": 2,
+			"user_id": 1,
+			"location": "Work",
+			"address": "Str. Aurel Vlaicu, nr 34, Alba Iulia, 531110"
+		}
+	],
+
 	"food_categories": [
 		{
 			"id": 1,

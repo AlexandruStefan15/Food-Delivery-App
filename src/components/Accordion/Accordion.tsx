@@ -10,32 +10,17 @@ import React, {
 	MouseEvent,
 } from "react";
 import styles from "./Accordion.module.scss";
-import { InlineSvgs } from "../../assets/svgs";
 
-// --- Types ---
-
-export interface AccordionDataItem {
-	id: string | number;
-	label: string;
-	details: Record<string, string>;
-}
-
-interface AccordionContextType {
-	itemSelected: number | null;
-	setItemSelected: React.Dispatch<React.SetStateAction<number | null>>;
-}
-
-interface ItemContextType {
-	index: number;
-}
+import { AccordionContextType, AccordionDataItem, ItemContextType } from "./Accordion.types";
 
 // Contexts
 const AccordionContext = createContext<AccordionContextType | null>(null);
 const ItemContext = createContext<ItemContextType | null>(null);
 
-// Component Props (using ComponentPropsWithoutRef)
+// Component Props
 export interface AccordionProps extends ComponentPropsWithoutRef<"ul"> {
 	data?: AccordionDataItem[];
+	allowMultiple?: boolean;
 }
 
 export interface AccordionItemProps extends ComponentPropsWithoutRef<"li"> {
@@ -53,8 +38,25 @@ export interface AccordionIconProps extends ComponentPropsWithoutRef<"span"> {
 	alt?: string;
 }
 
-export default function Accordion({ className = "", children, ...props }: AccordionProps) {
-	const [itemSelected, setItemSelected] = useState<number | null>(null);
+export default function Accordion({ className = "", children, allowMultiple = false, ...props }: AccordionProps) {
+	const [selected, setSelected] = useState<number | number[]>(allowMultiple ? [] : null!);
+
+	function toggleItem(index: number) {
+		setSelected((prev) => {
+			if (allowMultiple) {
+				const currentArr = Array.isArray(prev) ? prev : [];
+				return currentArr.includes(index) ? currentArr.filter((i) => i !== index) : [...currentArr, index];
+			}
+			return prev === index ? null! : index;
+		});
+	}
+
+	function isExpanded(index: number): boolean {
+		if (allowMultiple && Array.isArray(selected)) {
+			return selected.includes(index);
+		}
+		return selected === index;
+	}
 
 	let items: ReactNode = Children.map(children, (child, index) => {
 		if (React.isValidElement(child)) {
@@ -64,7 +66,7 @@ export default function Accordion({ className = "", children, ...props }: Accord
 	});
 
 	return (
-		<AccordionContext.Provider value={{ itemSelected, setItemSelected }}>
+		<AccordionContext.Provider value={{ isExpanded, toggleItem }}>
 			<ul className={`${styles.accordion} ${className}`} {...props}>
 				{items}
 			</ul>
@@ -92,15 +94,15 @@ Accordion.Label = function Accordion_Label({ className = "", children, ...props 
 		throw new Error("Accordion.Label must be rendered within Accordion and Accordion.Item");
 	}
 
-	const { itemSelected, setItemSelected } = accordionCtx;
+	const { toggleItem } = accordionCtx;
 	const { index } = itemCtx;
 
-	function handleClick(e: MouseEvent<HTMLDivElement>, i: number) {
-		setItemSelected((prev) => (prev === i ? null : i));
+	function handleClick(e: MouseEvent<HTMLDivElement>) {
+		toggleItem(index);
 	}
 
 	return (
-		<div className={`${styles.label} ${className}`} onClick={(event) => handleClick(event, index)} {...props}>
+		<div className={`${styles.label} ${className}`} onClick={handleClick} {...props}>
 			{children}
 		</div>
 	);
@@ -114,19 +116,20 @@ Accordion.Details = function Accordion_Details({ children, className = "", ...pr
 		throw new Error("Accordion.Details must be rendered within Accordion and Accordion.Item");
 	}
 
-	const { itemSelected } = accordionCtx;
+	const { isExpanded } = accordionCtx;
 	const { index } = itemCtx;
 	const el = useRef<HTMLDivElement>(null);
+	const expanded = isExpanded(index);
 
 	useEffect(() => {
 		if (!el.current) return;
 
-		if (itemSelected === index) {
+		if (expanded) {
 			el.current.classList.add(styles.active);
 		} else {
 			el.current.classList.remove(styles.active);
 		}
-	}, [itemSelected, index]);
+	}, [expanded]);
 
 	return (
 		<div className={`${styles.details} ${className}`} ref={el} {...props}>

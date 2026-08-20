@@ -8,6 +8,7 @@ import RestaurantDetails from "./pages/RestaurantDetails/RestaurantDetails";
 import Cart from "./pages/Cart/Cart";
 import Search from "./pages/Search/Search";
 import DishDetails from "./pages/DishDetails/DishDetails";
+import Checkout from "./pages/Checkout/Checkout";
 
 export default function App() {
 	return (
@@ -18,6 +19,7 @@ export default function App() {
 			<Route path="/restaurants/:restaurantId/dishes/:dishId" element={<DishDetails />} />
 			<Route path="/search" element={<Search />} />
 			<Route path="/cart" element={<Cart />} />
+			<Route path="/checkout" element={<Checkout />} />
 			<Route path="*" element={<h1>404 - Page Not Found</h1>} />
 		</Routes>
 	);

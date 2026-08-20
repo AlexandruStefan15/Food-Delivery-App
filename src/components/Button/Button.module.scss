@@ -1,4 +1,5 @@
 .btn_default {
+	text-align: center;
 	border: none;
 	background: transparent;
 	cursor: pointer;
@@ -42,4 +43,12 @@
 	cursor: pointer;
 	padding-right: 0.5rem;
 	padding-left: 0.75rem;
+}
+
+.btn_primary {
+	@extend .btn_default;
+	outline: none;
+	&:hover {
+		background-color: var(--accent-dark);
+	}
 }

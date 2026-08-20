@@ -1,0 +1,106 @@
+.orderSummary {
+	position: sticky;
+	top: 100px;
+	background-color: var(--base);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	height: fit-content;
+	padding: 2rem;
+	border-radius: 20px;
+
+	.promo {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+
+		.title {
+			font-size: 0.875rem;
+			color: var(--secondary-v2);
+			font-weight: 500;
+		}
+
+		.searchBarWrapper {
+			background-color: var(--base-v2);
+			width: 100%;
+			padding: 6px;
+			padding-inline: 7px;
+			flex-direction: row;
+			font-size: 1rem;
+		}
+
+		.input {
+			padding-inline: 1rem;
+			padding-block: 9px;
+		}
+
+		.searchBtn {
+			font-size: 0.9rem;
+			padding: 5px 17px;
+			font-weight: bold;
+		}
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		.row {
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+			color: var(--secondary-v2);
+			font-weight: 500;
+
+			.value {
+				font-weight: 700;
+				color: var(--generic);
+			}
+		}
+	}
+
+	.cartTotalWrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+
+		.text {
+			font-size: 1.15rem;
+			color: var(--generic);
+			font-weight: 700;
+		}
+
+		.value {
+			font-weight: 800;
+			font-size: 1.75rem;
+			color: var(--accent);
+		}
+	}
+
+	.footer {
+		margin-top: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+
+		.infoItem {
+			color: var(--secondary-v2);
+			background-color: var(--base-v2);
+			padding: 0.8rem;
+			font-size: 0.75rem;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			border-radius: 30px;
+			font-weight: 500;
+
+			.icon {
+				width: 15px;
+				fill: var(--accent);
+			}
+		}
+	}
+}

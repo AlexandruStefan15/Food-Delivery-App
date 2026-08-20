@@ -12,27 +12,17 @@ import { useCartStore } from "../../store/cartStore";
 
 //types
 import type { CartItem } from "../../store/cartStore";
-import type { Restaurant } from "../../types";
-
-//icons
-import { MdLocalShipping } from "react-icons/md";
-import { MdOutlineSecurity } from "react-icons/md";
 
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import DishCard from "../../components/DishCard/DishCard";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import OrderSummary from "../../components/OrderSummary/OrderSummary";
 import Button from "../../components/Button/Button";
+import { NavLink } from "react-router";
 
 interface ItemListProps {
 	items: CartItem[];
-	className?: string;
-}
-
-interface OrderSummaryProps {
-	items: CartItem[];
-	restaurants: Restaurant[];
 	className?: string;
 }
 
@@ -66,7 +56,11 @@ export default function Cart() {
 			<Header />
 			<main className={styles.main}>
 				<ItemList items={cartItems} />
-				<OrderSummary items={cartItems} restaurants={restaurants} />
+				<OrderSummary items={cartItems} restaurants={restaurants}>
+					<Button as={NavLink} variant="primary" to="/checkout">
+						Proceed to Checkout
+					</Button>
+				</OrderSummary>
 			</main>
 			<Footer />
 		</div>
@@ -86,64 +80,6 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 					</li>
 				))}
 			</ul>
-		</div>
-	);
-};
-
-const OrderSummary = ({ items, restaurants, className = "" }: OrderSummaryProps) => {
-	const deliveryFee = useCartStore((state) => state.totalDeliveryFee(restaurants));
-	const deliveryTime = useCartStore((state) => state.totalDeliveryTime(restaurants, getAverageTime));
-
-	const subtotalPrice = () => {
-		return items.reduce((total, item) => total + item.price * item.quantity, 0);
-	};
-	const totalPrice: number = deliveryFee + subtotalPrice();
-
-	return (
-		<div className={styles.orderSummary + ` ${className}`}>
-			<h2 className={styles.title}>Order Summary</h2>
-			<div className={styles.promo}>
-				<h3 className={styles.title}>Promo code</h3>
-				<SearchBar
-					className={styles.input}
-					wrapperClassname={styles.searchBarWrapper}
-					placeholder="Enter code"
-					searchButtonContent="Apply"
-					searchButtonProps={{ variant: "animated", className: styles.searchBtn }}
-				/>
-			</div>
-			<div className={styles.details}>
-				<div className={styles.row}>
-					<span className={styles.text}>Subtotal</span>
-					<span className={styles.value}>${subtotalPrice()}</span>
-				</div>
-				<div className={styles.row}>
-					<span className={styles.text}>Delivery Fee</span>
-					<span className={styles.value}>${deliveryFee.toFixed(2)}</span>
-				</div>
-				<div className={styles.row}>
-					<span className={styles.text}>Service Fee & Taxes</span>
-					<span className={styles.value}>$0.00</span>
-				</div>
-			</div>
-			<hr style={{ border: "none", borderTop: " 2px dashed #ccc" }} />
-			<div className={styles.cartTotalWrapper}>
-				<span className={styles.text}>Total</span>
-				<span className={styles.value}>${totalPrice}</span>
-			</div>
-			<Button className={styles.checkoutBtn}>Proceed to Checkout</Button>
-			<footer className={styles.footer}>
-				<div className={styles.infoItem}>
-					<MdLocalShipping className={styles.icon} />
-					<span className={styles.text}>
-						Estimated delivery time: <b>{deliveryTime} mins</b>
-					</span>
-				</div>
-				<div className={styles.infoItem}>
-					<MdOutlineSecurity className={styles.icon} />
-					<span className={styles.text}> Secure payments with end-to-end encryption</span>
-				</div>
-			</footer>
 		</div>
 	);
 };

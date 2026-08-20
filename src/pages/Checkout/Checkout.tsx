@@ -24,7 +24,20 @@ export default function Checkout() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<Accordion></Accordion>
+				<Accordion>
+					<Accordion.Item>
+						<Accordion.Label>Delivery Address</Accordion.Label>
+						<Accordion.Details>
+							<p className={styles.cls}>Choose where you want your food delivered.</p>
+							<ul className={styles.deliveryAddressList}>
+								<li className={styles.cls}></li>
+								<li className={styles.cls}></li>
+							</ul>
+						</Accordion.Details>
+					</Accordion.Item>
+					<Accordion.Item></Accordion.Item>
+					<Accordion.Item></Accordion.Item>
+				</Accordion>
 				<OrderSummary items={cartItems} restaurants={restaurants}>
 					<Button variant="primary">Place Order</Button>
 				</OrderSummary>

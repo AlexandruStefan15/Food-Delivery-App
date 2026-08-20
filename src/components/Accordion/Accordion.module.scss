@@ -8,7 +8,7 @@
 	gap: 0.5em;
 
 	.item {
-		background-color: #303030;
+		background-color: var(--base);
 
 		br:last-of-type {
 			display: none;

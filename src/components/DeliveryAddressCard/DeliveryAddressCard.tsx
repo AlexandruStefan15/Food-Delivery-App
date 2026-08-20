@@ -33,7 +33,7 @@ export default function DeliveryAddressCard({
 					<p className={styles.name}>{data.label}</p>
 					<p className={styles.address}>{data.street_address}</p>
 				</div>
-				{selectedAddress === data.id && <GrEdit />}
+				{selectedAddress === data.id && <GrEdit className={styles.editIcon} />}
 			</div>
 		</label>
 	);

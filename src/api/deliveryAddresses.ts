@@ -7,14 +7,14 @@ export const useDeliveryAddresses = () => {
 	return useQuery<DeliveryAddress[]>({
 		queryKey: ["delivery_addresses"],
 		queryFn: async (): Promise<DeliveryAddress[]> => {
-			const response = await fetch("/api/delivery-addresses");
+			const response = await fetch("http://localhost:3001/delivery_addresses");
 
 			if (!response.ok) {
 				throw new Error("Failed to fetch delivery addresses");
 			}
 
 			const data = await response.json();
-			return data.delivery_addresses;
+			return data;
 		},
 		staleTime: 1000 * 60 * 5,
 	});

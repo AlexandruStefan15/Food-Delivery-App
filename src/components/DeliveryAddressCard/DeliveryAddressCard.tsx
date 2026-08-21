@@ -15,7 +15,7 @@ export default function DeliveryAddressCard({
 }: DeliveryAddressCardProps) {
 	return (
 		<label className={`${styles.card} ${className} ${selectedAddress === data.id ? styles.selected : ""}`}>
-			{renderInput()}
+			{renderInput?.()}
 			<div className={styles.content}>
 				<div className={styles.details}>
 					<p className={styles.name}>{data.label}</p>

@@ -5,6 +5,6 @@ export interface DeliveryAddressCardProps {
 	data: DeliveryAddress;
 	className?: string;
 	renderInput?: () => ReactNode;
-	setSelectedAddress?: (value: number) => void;
+	onSelect?: (value: number) => void;
 	selectedAddress?: number;
 }

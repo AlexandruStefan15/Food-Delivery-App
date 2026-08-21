@@ -10,12 +10,24 @@ import { GrEdit } from "react-icons/gr";
 export default function DeliveryAddressCard({
 	data,
 	selectedAddress,
+	onSelect,
 	className = "",
-	renderInput,
 }: DeliveryAddressCardProps) {
+	function handleChange(e: ChangeEvent<HTMLInputElement>) {
+		if (e.target.checked) {
+			onSelect?.(data.id);
+		}
+	}
+
 	return (
 		<label className={`${styles.card} ${className} ${selectedAddress === data.id ? styles.selected : ""}`}>
-			{renderInput?.()}
+			<input
+				type="radio"
+				name="deliveryAddress"
+				className={styles.radioInput}
+				value={data.id}
+				onChange={handleChange}
+			/>
 			<div className={styles.content}>
 				<div className={styles.details}>
 					<p className={styles.name}>{data.label}</p>

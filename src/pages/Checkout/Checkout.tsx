@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Checkout.module.scss";
 
 //store
@@ -17,11 +17,23 @@ import OrderSummary from "../../components/OrderSummary/OrderSummary";
 import Button from "../../components/Button/Button";
 import { useGetUserById } from "../../api/users";
 
+export interface CheckoutState {
+	selectedAddressId: number | null;
+	deliveryInstructions: string;
+	selectedPaymentId: number | null;
+}
+
 export default function Checkout() {
 	const { restaurants } = useRestaurants();
 	const { data: deliveryAddresses } = useDeliveryAddresses();
 	const { data: user } = useGetUserById(1);
 	const cartItems = useCartStore((state) => state.items);
+
+	const [checkoutData, setCheckoutData] = useState<CheckoutState>({
+		selectedAddressId: null,
+		deliveryInstructions: "",
+		selectedPaymentId: null,
+	});
 
 	const userDeliveryAddresses = deliveryAddresses?.filter((item) => item.user_id === user?.id);
 
@@ -37,7 +49,10 @@ export default function Checkout() {
 							<ul className={styles.deliveryAddressList}>
 								{userDeliveryAddresses?.map((item) => (
 									<li className={styles.listItem} key={item.id}>
-										<DeliveryAddressCard data={item} />
+										<DeliveryAddressCard
+											onSelect={(value) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))}
+											data={item}
+										/>
 									</li>
 								))}
 							</ul>

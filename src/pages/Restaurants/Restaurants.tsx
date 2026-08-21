@@ -17,11 +17,17 @@ type Dietary = "vegan" | "gluten_free" | "vegetarian";
 
 const dietaryKeys: Dietary[] = ["vegan", "gluten_free", "vegetarian"];
 
+const popularFoodCategories = ["pizza", "burgers", "sushi", "vegan", "pasta", "fish"];
+
 export default function Restaurants() {
 	const { restaurants = [], restaurantsAreLoading, restaurantsError } = useRestaurants();
 	const { data: dishes = [], isLoading: dishesAreLoading, error: dishesError } = useAllDishes();
 	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 	const [searchParams] = useSearchParams();
+
+	const filtersFoodCategories = foodCategories.filter((item) =>
+		popularFoodCategories.includes(item.title.toLowerCase()),
+	);
 
 	const selectedDietary = searchParams
 		.getAll("dietary")
@@ -71,7 +77,7 @@ export default function Restaurants() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<RestaurantFilters className={styles.filters} categories={foodCategories} />
+				<RestaurantFilters className={styles.filters} categories={filtersFoodCategories} />
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
 						<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>

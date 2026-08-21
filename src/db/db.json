@@ -1,11 +1,6 @@
 {
 	"users": [{ "id": 1, "name": "Nastase Alexandru", "email": "alexandru.stefan.nastase@gmail.com" }],
 
-	"user_payment_options": [
-		{ "id": 1, "user_id": 1, "payment_option_id": 1 },
-		{ "id": 2, "user_id": 1, "payment_option_id": 2 }
-	],
-
 	"payment_options": [
 		{
 			"id": 1,

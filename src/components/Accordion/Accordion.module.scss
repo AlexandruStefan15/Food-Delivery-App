@@ -61,8 +61,8 @@
 			transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
 
 			&.active {
-				max-height: 1500px;
-				transition: max-height 1s linear;
+				max-height: 500px;
+				transition: max-height 0.5s ease;
 			}
 
 			.text {

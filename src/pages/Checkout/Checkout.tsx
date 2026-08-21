@@ -45,21 +45,21 @@ export default function Checkout() {
 					<Accordion.Item>
 						<Accordion.Label>Delivery Address</Accordion.Label>
 						<Accordion.Details>
-							<p className={styles.cls}>Choose where you want your food delivered.</p>
-							<ul className={styles.deliveryAddressList}>
-								{userDeliveryAddresses?.map((item) => (
-									<li className={styles.listItem} key={item.id}>
-										<DeliveryAddressCard
-											onSelect={(value) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))}
-											data={item}
-										/>
-									</li>
-								))}
-							</ul>
+							<Accordion.DetailsContent>
+								<p className={styles.text}>Choose where you want your food delivered.</p>
+								<ul className={styles.deliveryAddressList}>
+									{userDeliveryAddresses?.map((item) => (
+										<li className={styles.listItem} key={item.id}>
+											<DeliveryAddressCard
+												onSelect={(value) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))}
+												data={item}
+											/>
+										</li>
+									))}
+								</ul>
+							</Accordion.DetailsContent>
 						</Accordion.Details>
 					</Accordion.Item>
-					<Accordion.Item></Accordion.Item>
-					<Accordion.Item></Accordion.Item>
 				</Accordion>
 				<OrderSummary items={cartItems} restaurants={restaurants}>
 					<Button variant="primary">Place Order</Button>

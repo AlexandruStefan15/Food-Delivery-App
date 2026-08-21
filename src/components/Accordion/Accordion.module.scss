@@ -9,10 +9,9 @@
 
 	.item {
 		background-color: var(--base);
-
-		br:last-of-type {
-			display: none;
-		}
+		border-radius: 50px;
+		border-radius: 50px;
+		border: 1px solid lightgrey;
 
 		&:has(.details.active) {
 			.icon {
@@ -23,19 +22,13 @@
 		.label {
 			font-size: 1.55rem;
 			background-color: transparent;
-			padding: 0.8em 1.2em;
-			border-bottom: 1px solid black;
+			padding: 1rem 1.5rem;
 			cursor: pointer;
 			position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			gap: 1em;
-			transition: background-color 0.26s cubic-bezier(0.5, 0, 0.1, 1);
-
-			&:hover {
-				background-color: rgba(78, 78, 78, 1);
-			}
 
 			@include media.tablet_lg {
 				font-size: 1.25rem;
@@ -83,6 +76,11 @@
 					padding-bottom: 1.2em;
 				}
 			}
+		}
+
+		.detailsContent {
+			padding: 1rem 1.5rem;
+			padding-top: 0;
 		}
 	}
 }

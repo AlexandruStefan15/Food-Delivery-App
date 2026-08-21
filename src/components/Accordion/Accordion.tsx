@@ -27,10 +27,6 @@ export interface AccordionItemProps extends ComponentPropsWithoutRef<"li"> {
 	index?: number;
 }
 
-export interface AccordionLabelProps extends ComponentPropsWithoutRef<"div"> {}
-
-export interface AccordionDetailsProps extends ComponentPropsWithoutRef<"div"> {}
-
 export interface AccordionTextProps extends ComponentPropsWithoutRef<"p"> {}
 
 export interface AccordionIconProps extends ComponentPropsWithoutRef<"span"> {
@@ -86,7 +82,7 @@ Accordion.Item = function Accordion_Item({ className = "", children, index = 0, 
 	);
 };
 
-Accordion.Label = function Accordion_Label({ className = "", children, ...props }: AccordionLabelProps) {
+Accordion.Label = function Accordion_Label({ className = "", children, ...props }: ComponentPropsWithoutRef<"div">) {
 	const accordionCtx = useContext(AccordionContext);
 	const itemCtx = useContext(ItemContext);
 
@@ -108,7 +104,11 @@ Accordion.Label = function Accordion_Label({ className = "", children, ...props 
 	);
 };
 
-Accordion.Details = function Accordion_Details({ children, className = "", ...props }: AccordionDetailsProps) {
+Accordion.Details = function Accordion_Details({
+	children,
+	className = "",
+	...props
+}: ComponentPropsWithoutRef<"div">) {
 	const accordionCtx = useContext(AccordionContext);
 	const itemCtx = useContext(ItemContext);
 
@@ -138,7 +138,19 @@ Accordion.Details = function Accordion_Details({ children, className = "", ...pr
 	);
 };
 
-Accordion.Text = function Accordion_Text({ className = "", children, ...props }: AccordionTextProps) {
+Accordion.DetailsContent = function Accordion_Details_Content({
+	className = "",
+	children,
+	...props
+}: ComponentPropsWithoutRef<"div">) {
+	return (
+		<div className={`${styles.detailsContent} ${className}`} {...props}>
+			{children}
+		</div>
+	);
+};
+
+Accordion.Text = function Accordion_Text({ className = "", children, ...props }: ComponentPropsWithoutRef<"p">) {
 	return (
 		<p className={`${styles.text} ${className}`} {...props}>
 			{children}

@@ -13,7 +13,6 @@ import DeliveryAddressCard from "../../components/DeliveryAddressCard/DeliveryAd
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import OrderSummary from "../../components/OrderSummary/OrderSummary";
-import { NavLink } from "react-router";
 import Button from "../../components/Button/Button";
 
 export default function Checkout() {

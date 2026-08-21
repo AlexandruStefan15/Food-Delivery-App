@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Checkout.module.scss";
 
+//icons
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 //store
 import { useCartStore } from "../../store/cartStore";
 
@@ -43,7 +46,10 @@ export default function Checkout() {
 			<main className={styles.main}>
 				<Accordion>
 					<Accordion.Item>
-						<Accordion.Label>Delivery Address</Accordion.Label>
+						<Accordion.Label>
+							<span className={styles.text}>Delivery Address</span>
+							<MdKeyboardArrowDown />
+						</Accordion.Label>
 						<Accordion.Details>
 							<Accordion.DetailsContent>
 								<p className={styles.text}>Choose where you want your food delivered.</p>

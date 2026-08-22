@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useEffect } from "react";
 import styles from "./DeliveryAddressCard.module.scss";
 
 //types
@@ -10,6 +10,7 @@ import { GrEdit } from "react-icons/gr";
 export default function DeliveryAddressCard({
 	data,
 	selectedAddress,
+	setSelectedAddress,
 	onSelect,
 	className = "",
 }: DeliveryAddressCardProps) {
@@ -19,6 +20,10 @@ export default function DeliveryAddressCard({
 		}
 	}
 
+	useEffect(() => {
+		if (data.is_default) setSelectedAddress?.(data.id);
+	}, [data.is_default]);
+
 	return (
 		<label className={`${styles.card} ${className} ${selectedAddress === data.id ? styles.selected : ""}`}>
 			<input
@@ -27,6 +32,7 @@ export default function DeliveryAddressCard({
 				className={styles.radioInput}
 				value={data.id}
 				onChange={handleChange}
+				checked={selectedAddress === data.id}
 			/>
 			<div className={styles.content}>
 				<div className={styles.details}>

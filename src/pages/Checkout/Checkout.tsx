@@ -46,7 +46,7 @@ export default function Checkout() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<Accordion className={styles.checkoutAccordion} allowMultiple={true}>
+				<Accordion className={styles.checkoutAccordion} allowMultiple={true} defaultSelected={0}>
 					<Accordion.Item className={styles.deliveryAddressItem}>
 						<Accordion.Label>
 							<div className={styles.titleWrapper}>
@@ -63,6 +63,9 @@ export default function Checkout() {
 										<li className={styles.listItem} key={item.id}>
 											<DeliveryAddressCard
 												selectedAddress={checkoutData.selectedAddressId}
+												setSelectedAddress={(value) =>
+													setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))
+												}
 												onSelect={(value) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))}
 												data={item}
 											/>

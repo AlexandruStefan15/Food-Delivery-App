@@ -16,6 +16,7 @@ export interface ItemContextType {
 export interface AccordionProps extends React.ComponentPropsWithoutRef<"ul"> {
 	data?: AccordionDataItem[];
 	allowMultiple?: boolean;
+	defaultSelected?: number | number[];
 }
 
 export interface AccordionItemProps extends React.ComponentPropsWithoutRef<"li"> {

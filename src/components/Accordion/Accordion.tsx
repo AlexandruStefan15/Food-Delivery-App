@@ -23,8 +23,22 @@ import type {
 const AccordionContext = createContext<AccordionContextType | null>(null);
 const ItemContext = createContext<ItemContextType | null>(null);
 
-export default function Accordion({ className = "", children, allowMultiple = false, ...props }: AccordionProps) {
-	const [selected, setSelected] = useState<number | number[] | null>(allowMultiple ? [] : null);
+export default function Accordion({
+	className = "",
+	children,
+	allowMultiple = false,
+	defaultSelected,
+	...props
+}: AccordionProps) {
+	const [selected, setSelected] = useState<number | number[] | null>(() => {
+		if (defaultSelected !== undefined) {
+			if (allowMultiple) {
+				return Array.isArray(defaultSelected) ? defaultSelected : [defaultSelected];
+			}
+			return defaultSelected;
+		}
+		return allowMultiple ? [] : null;
+	});
 
 	function toggleItem(index: number) {
 		setSelected((prev) => {

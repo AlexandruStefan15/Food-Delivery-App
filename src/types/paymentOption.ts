@@ -1,4 +1,4 @@
-interface PaymentOption {
+export interface PaymentOption {
 	id: number;
 	name: string;
 }

@@ -49,6 +49,6 @@
 	@extend .btn_default;
 	outline: none;
 	&:hover {
-		background-color: var(--accent-dark);
+		filter: brightness(1.1);
 	}
 }

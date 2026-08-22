@@ -11,31 +11,20 @@ import React, {
 } from "react";
 import styles from "./Accordion.module.scss";
 
-import { AccordionContextType, AccordionDataItem, ItemContextType } from "./Accordion.types";
+import type {
+	AccordionContextType,
+	ItemContextType,
+	AccordionIconProps,
+	AccordionItemProps,
+	AccordionProps,
+} from "./Accordion.types";
 
 // Contexts
 const AccordionContext = createContext<AccordionContextType | null>(null);
 const ItemContext = createContext<ItemContextType | null>(null);
 
-// Component Props
-export interface AccordionProps extends ComponentPropsWithoutRef<"ul"> {
-	data?: AccordionDataItem[];
-	allowMultiple?: boolean;
-}
-
-export interface AccordionItemProps extends ComponentPropsWithoutRef<"li"> {
-	index?: number;
-}
-
-export interface AccordionTextProps extends ComponentPropsWithoutRef<"p"> {}
-
-export interface AccordionIconProps extends ComponentPropsWithoutRef<"span"> {
-	src?: string;
-	alt?: string;
-}
-
 export default function Accordion({ className = "", children, allowMultiple = false, ...props }: AccordionProps) {
-	const [selected, setSelected] = useState<number | number[]>(allowMultiple ? [] : null!);
+	const [selected, setSelected] = useState<number | number[] | null>(allowMultiple ? [] : null);
 
 	function toggleItem(index: number) {
 		setSelected((prev) => {
@@ -43,7 +32,7 @@ export default function Accordion({ className = "", children, allowMultiple = fa
 				const currentArr = Array.isArray(prev) ? prev : [];
 				return currentArr.includes(index) ? currentArr.filter((i) => i !== index) : [...currentArr, index];
 			}
-			return prev === index ? null! : index;
+			return prev === index ? null : index;
 		});
 	}
 
@@ -58,7 +47,6 @@ export default function Accordion({ className = "", children, allowMultiple = fa
 		if (React.isValidElement(child)) {
 			return React.cloneElement(child, { index } as AccordionItemProps);
 		}
-		return child;
 	});
 
 	return (
@@ -138,7 +126,7 @@ Accordion.Details = function Accordion_Details({
 	);
 };
 
-Accordion.DetailsContent = function Accordion_Details_Content({
+Accordion.DetailsContent = function Accordion_DetailsContent({
 	className = "",
 	children,
 	...props

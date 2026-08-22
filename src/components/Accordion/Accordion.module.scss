@@ -7,9 +7,8 @@
 
 	.item {
 		background-color: var(--base);
-		border-radius: 50px;
-		border-radius: 50px;
-		border: 1px solid lightgrey;
+		border-radius: 40px;
+		border: 1px solid var(--border-color);
 
 		&:has(.details.active) {
 			.icon {
@@ -20,7 +19,7 @@
 		.label {
 			font-size: 1.55rem;
 			background-color: transparent;
-			padding: 1rem 1.5rem;
+			padding: 1.25rem 1.5rem;
 			cursor: pointer;
 			position: relative;
 			display: flex;

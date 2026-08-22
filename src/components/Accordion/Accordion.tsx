@@ -11,6 +11,9 @@ import React, {
 } from "react";
 import styles from "./Accordion.module.scss";
 
+//icons
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 import type {
 	AccordionContextType,
 	ItemContextType,
@@ -92,7 +95,7 @@ Accordion.Label = function Accordion_Label({ className = "", children, ...props 
 		throw new Error("Accordion.Label must be rendered within Accordion and Accordion.Item");
 	}
 
-	const { toggleItem } = accordionCtx;
+	const { toggleItem, isExpanded } = accordionCtx;
 	const { index } = itemCtx;
 
 	function handleClick(e: MouseEvent<HTMLDivElement>) {
@@ -102,6 +105,7 @@ Accordion.Label = function Accordion_Label({ className = "", children, ...props 
 	return (
 		<div className={`${styles.label} ${className}`} onClick={handleClick} {...props}>
 			{children}
+			<MdKeyboardArrowDown className={`${styles.arrowIcon} ${isExpanded(index) ? styles.active : ""}`} />
 		</div>
 	);
 };

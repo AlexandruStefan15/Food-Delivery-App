@@ -42,6 +42,14 @@
 				position: relative;
 				transform: rotate(-45deg);
 			}
+
+			.arrowIcon {
+				transition: all 0.25s ease;
+
+				&.active {
+					transform: rotate(180deg);
+				}
+			}
 		}
 
 		.details {

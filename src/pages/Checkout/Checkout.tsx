@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Checkout.module.scss";
 
-//icons
-import { MdKeyboardArrowDown } from "react-icons/md";
-
 //store
 import { useCartStore } from "../../store/cartStore";
 
@@ -53,7 +50,6 @@ export default function Checkout() {
 								<div className={styles.step}>1</div>
 								<h3 className={styles.title}>Delivery Address</h3>
 							</div>
-							<MdKeyboardArrowDown />
 						</Accordion.Label>
 						<Accordion.Details>
 							<Accordion.DetailsContent className={styles.detailsContent}>
@@ -81,7 +77,6 @@ export default function Checkout() {
 								<div className={styles.step}>2</div>
 								<h3 className={styles.title}>Delivery Instructions</h3>
 							</div>
-							<MdKeyboardArrowDown />
 						</Accordion.Label>
 						<Accordion.Details>
 							<Accordion.DetailsContent className={styles.detailsContent}>
@@ -101,7 +96,6 @@ export default function Checkout() {
 								<div className={styles.step}>3</div>
 								<h3 className={styles.title}>Payment Method</h3>
 							</div>
-							<MdKeyboardArrowDown />
 						</Accordion.Label>
 						<Accordion.Details>
 							<Accordion.DetailsContent className={styles.detailsContent}>

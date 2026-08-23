@@ -19,11 +19,11 @@ export const paymentOptionConfig: Record<string, Config> = {
 	paypal: {
 		label: "PayPal",
 		icon: MdOutlineAccountBalanceWallet,
-		iconSize: 22,
+		iconSize: 22.5,
 	},
 	mastercard: {
 		label: "Mastercard",
 		icon: FaCcMastercard,
-		iconSize: 20,
+		iconSize: 21,
 	},
 };

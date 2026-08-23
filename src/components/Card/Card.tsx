@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "./Card.module.scss";
 
-export default function Card({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"div">) {
+interface CardProps extends React.ComponentPropsWithoutRef<"div"> {
+	variant?: "default" | "secondary";
+}
+
+export default function Card({ children, className = "", variant = "default", ...props }: CardProps) {
 	return (
-		<div className={styles.card + ` ${className}`} {...props}>
+		<div className={styles[`card_${variant}`] + ` ${className}`} {...props}>
 			{children}
 		</div>
 	);

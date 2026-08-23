@@ -6,6 +6,7 @@ import type { IconType } from "react-icons";
 export interface PaymentCardProps {
 	data: PaymentOption;
 	icon: IconType;
+	iconSize: number;
 	className?: string;
 	renderInput?: () => ReactNode;
 	onSelect?: (value: number) => void;

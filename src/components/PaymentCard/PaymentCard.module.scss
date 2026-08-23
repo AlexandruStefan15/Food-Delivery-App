@@ -3,7 +3,7 @@
 	background-color: var(--base);
 	display: flex;
 	gap: 1rem;
-	padding: 1rem;
+	padding: 1.2rem 1rem;
 	border: 1px solid var(--border-color);
 	cursor: pointer;
 
@@ -20,6 +20,11 @@
 		flex: 1;
 		display: flex;
 		justify-content: space-between;
+
+		.details {
+			display: flex;
+			gap: 0.7rem;
+		}
 
 		.name {
 			font-weight: bold;

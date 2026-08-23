@@ -62,12 +62,12 @@ export default function Checkout() {
 									{userDeliveryAddresses?.map((item) => (
 										<li className={styles.listItem} key={item.id}>
 											<DeliveryAddressCard
+												data={item}
 												selectedAddress={checkoutData.selectedAddressId}
 												setSelectedAddress={(value) =>
 													setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))
 												}
-												onSelect={(value) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: value }))}
-												data={item}
+												onSelect={(id) => setCheckoutData((prev) => ({ ...prev, selectedAddressId: id }))}
 											/>
 										</li>
 									))}
@@ -106,10 +106,14 @@ export default function Checkout() {
 								<ul className={styles.paymentOptionsList}>
 									{paymentOptions?.map((item) => {
 										const config = paymentOptionConfig[item.name.toLowerCase()];
-
 										return (
 											<li className={styles.listItem} key={item.id}>
-												<PaymentCard data={item} {...config} />
+												<PaymentCard
+													data={item}
+													selectedMethod={checkoutData.selectedPaymentId}
+													onSelect={(id) => setCheckoutData((prev) => ({ ...prev, selectedPaymentId: id }))}
+													{...config}
+												/>
 											</li>
 										);
 									})}

@@ -10,9 +10,9 @@ import { GrEdit } from "react-icons/gr";
 export default function PaymentCard({
 	data,
 	selectedMethod,
-	setSelectedMethod,
 	onSelect,
 	icon,
+	iconSize,
 	className = "",
 }: PaymentCardProps) {
 	function handleChange(e: ChangeEvent<HTMLInputElement>) {
@@ -25,7 +25,7 @@ export default function PaymentCard({
 		<label className={`${styles.card} ${className} ${selectedMethod === data.id ? styles.selected : ""}`}>
 			<input
 				type="radio"
-				name="deliveryAddress"
+				name="paymentMethod"
 				className={styles.radioInput}
 				value={data.id}
 				onChange={handleChange}
@@ -36,11 +36,10 @@ export default function PaymentCard({
 					{icon &&
 						(() => {
 							const Icon = icon;
-							return <Icon />;
+							return <Icon size={iconSize} />;
 						})()}
 					<p className={styles.name}>{data.name}</p>
 				</div>
-				{selectedMethod === data.id && <GrEdit className={styles.editIcon} />}
 			</div>
 		</label>
 	);

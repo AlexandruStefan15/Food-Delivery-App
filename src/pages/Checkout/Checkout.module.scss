@@ -67,5 +67,21 @@
 				}
 			}
 		}
+
+		.paymentMethodItem {
+			.detailsContent {
+				margin-top: 5px;
+			}
+
+			.paymentOptionsList {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+
+			.listItem {
+				flex: 1;
+			}
+		}
 	}
 }

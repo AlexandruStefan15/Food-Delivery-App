@@ -89,7 +89,7 @@ export default function Checkout() {
 									name="delivery_instructions"
 									id="delivery_instructions"
 									placeholder="Example: Gate code is 1234, please leave it at the front desk..."
-									rows={6}
+									rows={7}
 								/>
 							</Accordion.DetailsContent>
 						</Accordion.Details>

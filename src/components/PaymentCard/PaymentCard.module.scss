@@ -1,0 +1,32 @@
+.card {
+	border-radius: 3rem;
+	background-color: var(--base);
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+
+	&:hover {
+		outline: 1px solid var(--accent);
+	}
+
+	&.selected {
+		outline: 1px solid var(--accent);
+		background-color: var(--accent-alpha-v3);
+	}
+
+	.content {
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+
+		.name {
+			font-weight: bold;
+		}
+
+		.address {
+			color: var(--primary);
+		}
+	}
+}

@@ -4,10 +4,14 @@ import styles from "./Checkout.module.scss";
 //store
 import { useCartStore } from "../../store/cartStore";
 
+//configs
+import { paymentOptionConfig } from "../../config/paymentOption";
+
 //api
 import { useRestaurants } from "../../api/restaurants";
 import { useDeliveryAddresses } from "../../api/deliveryAddresses";
 import { usePaymentOptions } from "../../api/paymentOptions";
+import { useGetUserById } from "../../api/users";
 
 //components
 import Accordion from "../../components/Accordion/Accordion";
@@ -16,7 +20,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import OrderSummary from "../../components/OrderSummary/OrderSummary";
 import Button from "../../components/Button/Button";
-import { useGetUserById } from "../../api/users";
+import PaymentCard from "../../components/PaymentCard/PaymentCard";
 
 export interface CheckoutState {
 	selectedAddressId: number | null;
@@ -100,11 +104,15 @@ export default function Checkout() {
 						<Accordion.Details>
 							<Accordion.DetailsContent className={styles.detailsContent}>
 								<ul className={styles.paymentOptionsList}>
-									{paymentOptions?.map((item) => (
-										<li className={styles.listItem} key={item.id}>
-											asd
-										</li>
-									))}
+									{paymentOptions?.map((item) => {
+										const config = paymentOptionConfig[item.name.toLowerCase()];
+
+										return (
+											<li className={styles.listItem} key={item.id}>
+												<PaymentCard data={item} {...config} />
+											</li>
+										);
+									})}
 								</ul>
 							</Accordion.DetailsContent>
 						</Accordion.Details>

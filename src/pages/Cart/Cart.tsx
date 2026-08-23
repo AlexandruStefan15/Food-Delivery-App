@@ -32,24 +32,13 @@ export default function Cart() {
 	const isCartBadgeActive = useCartStore((state) => state.isCartBadgeActive);
 	const { restaurants } = useRestaurants();
 
-	const restaurantIds = [...new Set(cartItems.map((item) => item.restaurant_id))];
-	const deliveryTimeArr = restaurants
-		.filter((restaurant) => restaurantIds.includes(restaurant.id))
-		.map((restaurant) => restaurant.delivery_time);
-
-	const getDeliveryTime = () => {
-		let totalDeliveryTime = 0;
-
-		deliveryTimeArr.forEach((item) => {
-			totalDeliveryTime = totalDeliveryTime + getAverageTime(item);
-		});
-
-		return totalDeliveryTime / deliveryTimeArr.length;
-	};
-
 	useEffect(() => {
 		setIsCartBadgeActive(false);
 	}, [isCartBadgeActive]);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<div className={styles.page}>

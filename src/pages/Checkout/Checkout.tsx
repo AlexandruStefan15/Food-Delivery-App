@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Checkout.module.scss";
 
 //store
@@ -42,6 +42,10 @@ export default function Checkout() {
 	});
 
 	const userDeliveryAddresses = deliveryAddresses?.filter((item) => item.user_id === user?.id);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<div className={styles.page}>

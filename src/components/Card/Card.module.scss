@@ -25,3 +25,34 @@
 		font-weight: 600;
 	}
 }
+
+.card_selection {
+	border-radius: 3rem;
+	background-color: var(--base);
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+
+	&:hover {
+		outline: 1px solid var(--accent);
+	}
+
+	&.selected {
+		outline: 1px solid var(--accent);
+		background-color: var(--accent-alpha-v3);
+	}
+
+	.input[type="radio"] {
+		outline: none;
+	}
+
+	.title {
+		font-weight: bold;
+	}
+
+	.subtitle {
+		color: var(--primary);
+	}
+}

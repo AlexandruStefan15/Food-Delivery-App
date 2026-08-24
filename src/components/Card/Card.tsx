@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Card.module.scss";
 
 interface CardProps extends React.ComponentPropsWithoutRef<"div"> {
-	variant?: "default" | "secondary";
+	variant?: "default" | "selection";
 }
 
 export default function Card({ children, className = "", variant = "default", ...props }: CardProps) {
@@ -40,4 +40,8 @@ Card.Text = function CardText({
 			{children}
 		</Component>
 	);
+};
+
+Card.Input = function Input({ className = "", ...props }) {
+	return <input className={styles.input + ` ${className}`} {...props} />;
 };

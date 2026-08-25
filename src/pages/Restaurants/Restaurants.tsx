@@ -10,6 +10,9 @@ import { useFoodCategories } from "../../api/foodCategories";
 //icons
 import { LuSlidersHorizontal } from "react-icons/lu";
 
+//types
+import { Dietary } from "../../types";
+
 //hooks
 import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
 
@@ -20,9 +23,7 @@ import RestaurantFilters from "../../components/RestaurantFilters/RestaurantFilt
 import RestaurantList from "../../components/RestaurantList/RestaurantList";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
-type Dietary = "vegan" | "gluten_free" | "vegetarian";
-
-const dietaryKeys: Dietary[] = ["vegan", "gluten_free", "vegetarian"];
+const dietaryKeys: (keyof Dietary)[] = ["vegan", "gluten_free", "vegetarian"];
 
 const popularFoodCategories = ["pizza", "burgers", "sushi", "vegan", "pasta", "fish"];
 
@@ -39,7 +40,7 @@ export default function Restaurants() {
 
 	const selectedDietary = searchParams
 		.getAll("dietary")
-		.filter((item): item is Dietary => dietaryKeys.includes(item as Dietary));
+		.filter((item): item is keyof Dietary => dietaryKeys.includes(item as keyof Dietary));
 
 	const selectedCategories = searchParams.getAll("category");
 	const selectedRating = searchParams.get("rating");

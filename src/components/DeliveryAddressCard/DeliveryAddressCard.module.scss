@@ -32,5 +32,22 @@
 		.address {
 			color: var(--primary);
 		}
+
+		.editBtn {
+			background-color: transparent;
+			border: none;
+			outline: none;
+		}
+
+		.editIcon {
+			width: 26px;
+			align-self: center;
+			border-radius: 6px;
+			padding: 5px;
+
+			&:hover {
+				background-color: var(--accent-alpha-v2);
+			}
+		}
 	}
 }

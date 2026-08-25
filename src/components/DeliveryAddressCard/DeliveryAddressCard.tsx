@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect } from "react";
+import React, { ChangeEvent, MouseEvent, useEffect } from "react";
 import styles from "./DeliveryAddressCard.module.scss";
 
 //types
@@ -20,6 +20,11 @@ export default function DeliveryAddressCard({
 		}
 	}
 
+	function handleEdit(e: MouseEvent<HTMLButtonElement>) {
+		e.preventDefault();
+		e.stopPropagation();
+	}
+
 	useEffect(() => {
 		if (data.is_default) setSelectedAddress?.(data.id);
 	}, [data.is_default]);
@@ -39,7 +44,11 @@ export default function DeliveryAddressCard({
 					<p className={styles.name}>{data.label}</p>
 					<p className={styles.address}>{data.street_address}</p>
 				</div>
-				{selectedAddress === data.id && <GrEdit className={styles.editIcon} />}
+				{selectedAddress === data.id && (
+					<button type="button" className={styles.editBtn} onClick={handleEdit}>
+						<GrEdit className={styles.editIcon} />
+					</button>
+				)}
 			</div>
 		</label>
 	);

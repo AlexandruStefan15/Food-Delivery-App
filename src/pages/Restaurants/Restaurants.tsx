@@ -90,7 +90,7 @@ export default function Restaurants() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<RestaurantFilters className={styles.filters} categories={filtersFoodCategories} />
+				{!isTabletLarge && <RestaurantFilters className={styles.filters} categories={filtersFoodCategories} />}
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
 						<h1 className={styles.title}>

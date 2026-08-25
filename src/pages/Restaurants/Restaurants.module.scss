@@ -19,10 +19,6 @@
 			max-width: none;
 			flex: 0 0 290px;
 			margin-top: 2px;
-
-			@include media.tablet_lg {
-				display: none;
-			}
 		}
 
 		.content {

@@ -94,7 +94,7 @@ export default function Header({
 								value={searchValue}
 								onChange={(value) => setSearchValue(value)}
 								placeholder="Search restaurants..."
-								onSearch={(query) => navigate(`/restaurants?q=${query}`)}
+								onSearch={(query) => navigate(`/restaurants?searchValue=${query}`)}
 								onBlur={() => setIsSearchResultsListActive(false)}
 								onFocus={() => setIsSearchResultsListActive(true)}
 							/>

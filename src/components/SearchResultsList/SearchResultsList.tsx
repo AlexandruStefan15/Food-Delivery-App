@@ -108,7 +108,7 @@ export default function SearchResultsList({
 			)}
 
 			{showSeeAllBtn && itemsShowed && filteredRestaurants.length > itemsShowed && (
-				<NavLink className={styles.seeAllLink} to="/restaurants">
+				<NavLink className={styles.seeAllLink} to={`/restaurants?searchValue=${searchValue}`}>
 					See all results
 				</NavLink>
 			)}

@@ -85,7 +85,11 @@ export default function Restaurants() {
 				<RestaurantFilters className={styles.filters} categories={filtersFoodCategories} />
 				<div className={styles.content}>
 					<header className={styles.contentHeader}>
-						<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>
+						<h1 className={styles.title}>
+							{searchValue
+								? `Found ${filteredRestaurants.length} ${filteredRestaurants.length === 1 ? "restaurant" : "restaurants"}`
+								: `Showing ${filteredRestaurants.length} restaurants near downtown`}
+						</h1>
 						<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
 					</header>
 					<SearchBar

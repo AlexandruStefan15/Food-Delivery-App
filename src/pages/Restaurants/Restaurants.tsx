@@ -90,6 +90,7 @@ export default function Restaurants() {
 					</header>
 					<SearchBar
 						wrapperClassname={styles.searchBarWrapper}
+						value={searchParams.get("searchValue") || ""}
 						onChange={(value) =>
 							setSearchParams((prev) => {
 								if (!value) prev.delete("searchValue");

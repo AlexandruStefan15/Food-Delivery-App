@@ -30,6 +30,7 @@
 			min-height: 725px;
 			display: flex;
 			flex-direction: column;
+			gap: 1rem;
 
 			.title {
 				font-size: 1.875rem;
@@ -40,13 +41,19 @@
 				color: var(--text-color-v2);
 				font-weight: 500;
 			}
+
+			.searchBarWrapper {
+				width: 100%;
+				background-color: var(--base);
+				box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			}
 		}
 
 		.restaurantListWrapper {
 			flex: 1;
 
 			.restaurantList {
-				margin-top: 1.5rem;
+				margin-top: 0.5rem;
 			}
 		}
 	}

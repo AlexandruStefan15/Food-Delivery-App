@@ -12,6 +12,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import RestaurantFilters from "../../components/RestaurantFilters/RestaurantFilters";
 import RestaurantList from "../../components/RestaurantList/RestaurantList";
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 type Dietary = "vegan" | "gluten_free" | "vegetarian";
 
@@ -23,7 +24,7 @@ export default function Restaurants() {
 	const { restaurants = [], restaurantsAreLoading, restaurantsError } = useRestaurants();
 	const { data: dishes = [], isLoading: dishesAreLoading, error: dishesError } = useAllDishes();
 	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
-	const [searchParams] = useSearchParams();
+	const [searchParams, setSearchParams] = useSearchParams();
 
 	const filtersFoodCategories = foodCategories.filter((item) =>
 		popularFoodCategories.includes(item.title.toLowerCase()),
@@ -38,6 +39,7 @@ export default function Restaurants() {
 	const selectedMinPrice = searchParams.get("minPrice");
 	const selectedMaxPrice = searchParams.get("maxPrice");
 	const selectedDeliveryTime = searchParams.get("deliveryTime");
+	const searchValue = searchParams.get("searchValue");
 
 	const ratingFilter = selectedRating ? Number(selectedRating) : null;
 	const minPriceFilter = selectedMinPrice ? Number(selectedMinPrice) : null;
@@ -70,7 +72,10 @@ export default function Restaurants() {
 				({ id, title }) => selectedCategories.includes(title) && restaurant.food_categories_ids.includes(id),
 			);
 
-		return matchesDishFilters && matchesRating && matchesDeliveryTime && matchesCategory;
+		const matchesSearchValue =
+			!searchValue || restaurant.name.toLocaleLowerCase().includes(searchValue.trim().toLowerCase());
+
+		return matchesDishFilters && matchesRating && matchesDeliveryTime && matchesCategory && matchesSearchValue;
 	});
 
 	return (
@@ -83,6 +88,16 @@ export default function Restaurants() {
 						<h1 className={styles.title}>Showing {filteredRestaurants.length} restaurants near downtown</h1>
 						<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
 					</header>
+					<SearchBar
+						wrapperClassname={styles.searchBarWrapper}
+						onChange={(value) =>
+							setSearchParams((prev) => {
+								if (!value) prev.delete("searchValue");
+								else prev.set("searchValue", value);
+								return prev;
+							})
+						}
+					/>
 					<RestaurantList
 						className={styles.restaurantList}
 						wrapperClassname={styles.restaurantListWrapper}

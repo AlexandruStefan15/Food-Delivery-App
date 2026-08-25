@@ -7,6 +7,12 @@ import { useRestaurants } from "../../api/restaurants";
 import { useAllDishes } from "../../api/dishes";
 import { useFoodCategories } from "../../api/foodCategories";
 
+//icons
+import { LuSlidersHorizontal } from "react-icons/lu";
+
+//hooks
+import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
+
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -25,6 +31,7 @@ export default function Restaurants() {
 	const { data: dishes = [], isLoading: dishesAreLoading, error: dishesError } = useAllDishes();
 	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 	const [searchParams, setSearchParams] = useSearchParams();
+	const isTabletLarge = useIsTabletLarge();
 
 	const filtersFoodCategories = foodCategories.filter((item) =>
 		popularFoodCategories.includes(item.title.toLowerCase()),
@@ -92,17 +99,26 @@ export default function Restaurants() {
 						</h1>
 						<h3 className={styles.subtitle}>Discover the best food in your area today.</h3>
 					</header>
-					<SearchBar
-						wrapperClassname={styles.searchBarWrapper}
-						value={searchParams.get("searchValue") || ""}
-						onChange={(value) =>
-							setSearchParams((prev) => {
-								if (!value) prev.delete("searchValue");
-								else prev.set("searchValue", value);
-								return prev;
-							})
-						}
-					/>
+					<div className={styles.searchBarContainer}>
+						<SearchBar
+							wrapperClassname={styles.searchBarWrapper}
+							value={searchParams.get("searchValue") || ""}
+							onChange={(value) =>
+								setSearchParams((prev) => {
+									if (!value) prev.delete("searchValue");
+									else prev.set("searchValue", value);
+									return prev;
+								})
+							}
+						/>
+
+						{isTabletLarge && (
+							<button className={styles.filtersBtn}>
+								<LuSlidersHorizontal className={styles.icon} />
+							</button>
+						)}
+					</div>
+
 					<RestaurantList
 						className={styles.restaurantList}
 						wrapperClassname={styles.restaurantListWrapper}

@@ -9,7 +9,7 @@
 :root {
 	/* Semantic tokens  */
 
-	&.dark {
+	&[data-theme="dark"] {
 		--primary: #c58d79; //brown-350
 		--primary-v2: #2c1b15; //brown-dark-800
 		--primary-v3: #1b110d; //brown-dark-850
@@ -30,7 +30,7 @@
 		--generic-alpha: #ffffff33; //white-alpha
 	}
 
-	&.light {
+	&[data-theme="light"] {
 		--primary: #9a5f4c; //brown-500
 		--primary-v2: #f3eae7; //brown-light
 		--primary-v3: #1b110d; //brown-dark-900

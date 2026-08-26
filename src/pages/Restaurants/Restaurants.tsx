@@ -90,6 +90,11 @@ export default function Restaurants() {
 		return matchesDishFilters && matchesRating && matchesDeliveryTime && matchesCategory && matchesSearchValue;
 	});
 
+	useEffect(() => {
+		if (isMobile) document.body.style.overflow = "hidden";
+		else document.body.style.overflow = "auto";
+	}, [isFilterSidebarOpen, isMobile]);
+
 	return (
 		<div className={styles.page}>
 			<Header />

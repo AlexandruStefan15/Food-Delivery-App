@@ -60,6 +60,14 @@ export default function Restaurants() {
 
 	const hasDishFilters = selectedDietary.length > 0 || minPriceFilter !== null || maxPriceFilter !== null;
 
+	const hasActiveFilters =
+		selectedDietary.length > 0 ||
+		selectedCategories.length > 0 ||
+		ratingFilter !== null ||
+		minPriceFilter !== null ||
+		maxPriceFilter !== null ||
+		deliveryTimeFilter !== null;
+
 	const matchingRestaurantIds = new Set(
 		dishes
 			.filter((dish) => {
@@ -91,7 +99,7 @@ export default function Restaurants() {
 	});
 
 	useEffect(() => {
-		if (isMobile) document.body.style.overflow = "hidden";
+		if (isMobile && isFilterSidebarOpen) document.body.style.overflow = "hidden";
 		else document.body.style.overflow = "auto";
 	}, [isFilterSidebarOpen, isMobile]);
 
@@ -121,9 +129,11 @@ export default function Restaurants() {
 								})
 							}
 						/>
-
 						{isTabletLarge && (
-							<button className={styles.filtersBtn} onClick={() => setIsFilterSidebarOpen(true)}>
+							<button
+								className={`${styles.filtersBtn} ${hasActiveFilters ? styles.activeFilters : ""}`}
+								onClick={() => setIsFilterSidebarOpen(true)}
+							>
 								<LuSlidersHorizontal className={styles.icon} />
 							</button>
 						)}

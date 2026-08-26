@@ -52,6 +52,11 @@
 				border: none;
 				outline: none;
 
+				&.activeFilters {
+					background: var(--accent);
+					color: white;
+				}
+
 				.icon {
 					width: 20px;
 					margin: auto;

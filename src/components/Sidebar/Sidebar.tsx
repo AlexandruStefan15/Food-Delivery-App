@@ -22,18 +22,26 @@ const defaultNavigation: NavigationItem[] = [
 	{ label: "Contact", path: "/contact" },
 ];
 
-export default function Sidebar({ navigation = defaultNavigation }: SidebarProps) {
-	const { isOpen, setIsOpen } = useSidebarContext();
+export default function Sidebar({
+	navigation = defaultNavigation,
+	children,
+	isOpen,
+	onClose,
+	variant = "default",
+}: SidebarProps) {
 	const location = useLocation();
 
 	useEffect(() => {
-		setIsOpen(false);
+		onClose();
 	}, [location.pathname]);
+
+	if (variant === "blank")
+		return <aside className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>{children}</aside>;
 
 	return (
 		<aside className={`${styles.sidebar} ${isOpen ? styles.active : ""}`}>
 			<header className={styles.header}>
-				<InlineSvgs.cancel className={styles.cancelIcon} onClick={() => setIsOpen(false)} />
+				<InlineSvgs.cancel className={styles.cancelIcon} onClick={() => onClose()} />
 			</header>
 			<div className={styles.body}>
 				<nav className={styles.navigation}>

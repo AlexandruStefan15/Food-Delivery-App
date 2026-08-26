@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Restaurants.module.scss";
 import { useSearchParams } from "react-router";
 
@@ -22,6 +22,7 @@ import Footer from "../../components/Footer/Footer";
 import RestaurantFilters from "../../components/RestaurantFilters/RestaurantFilters";
 import RestaurantList from "../../components/RestaurantList/RestaurantList";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import Sidebar from "../../components/Sidebar/Sidebar";
 
 const dietaryKeys: (keyof Dietary)[] = ["vegan", "gluten_free", "vegetarian"];
 
@@ -33,6 +34,7 @@ export default function Restaurants() {
 	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 	const [searchParams, setSearchParams] = useSearchParams();
 	const isTabletLarge = useIsTabletLarge();
+	const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
 
 	const filtersFoodCategories = foodCategories.filter((item) =>
 		popularFoodCategories.includes(item.title.toLowerCase()),
@@ -114,7 +116,7 @@ export default function Restaurants() {
 						/>
 
 						{isTabletLarge && (
-							<button className={styles.filtersBtn}>
+							<button className={styles.filtersBtn} onClick={() => setIsFilterSidebarOpen(true)}>
 								<LuSlidersHorizontal className={styles.icon} />
 							</button>
 						)}
@@ -128,6 +130,10 @@ export default function Restaurants() {
 						showOnly={6}
 					/>
 				</div>
+
+				<Sidebar isOpen={isFilterSidebarOpen} onClose={() => setIsFilterSidebarOpen(false)} variant="blank">
+					<span className={styles.cls}>asdasdas</span>
+				</Sidebar>
 			</main>
 			<Footer />
 		</div>

@@ -7,7 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SidebarProvider } from "./context/SidebarContext";
 
 //components
-import Sidebar from "./components/Sidebar/Sidebar";
+import NavigationSidebar from "./components/NavigationSidebar/NavigationSidebar";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +18,7 @@ root.render(
 		<BrowserRouter>
 			<SidebarProvider>
 				<App />
-				<Sidebar />
+				<NavigationSidebar />
 			</SidebarProvider>
 		</BrowserRouter>
 	</QueryClientProvider>,

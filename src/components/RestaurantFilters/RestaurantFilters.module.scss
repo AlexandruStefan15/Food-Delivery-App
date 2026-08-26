@@ -119,13 +119,25 @@
 	@extend .filtersContainer_default;
 	background-color: var(--generic);
 
+	.content {
+		gap: 1.5rem;
+	}
+
 	.doubleRangeInputWrapper {
 		.sliderValues {
 			color: lightgrey;
 		}
 	}
 
-	.text {
+	.section {
+		gap: 1rem;
+	}
+
+	.title {
+		color: var(--base);
+	}
+
+	.label {
 		color: lightgrey;
 	}
 }

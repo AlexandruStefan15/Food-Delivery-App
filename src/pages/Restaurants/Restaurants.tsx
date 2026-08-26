@@ -138,6 +138,7 @@ export default function Restaurants() {
 				>
 					<RestaurantFilters
 						className={styles.filters}
+						classNames={{ checkbox: styles.checkbox }}
 						onApply={() => setIsFilterSidebarOpen(false)}
 						onReset={() => setIsFilterSidebarOpen(false)}
 						variant="dark"

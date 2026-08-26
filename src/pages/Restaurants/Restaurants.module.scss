@@ -78,6 +78,10 @@
 
 			.filters {
 				padding-bottom: 0;
+
+				.checkbox {
+					border: 3px solid var(--border-color);
+				}
 			}
 		}
 	}

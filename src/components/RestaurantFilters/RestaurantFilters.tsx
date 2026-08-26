@@ -24,6 +24,7 @@ const dietaryNeeds = [
 
 export default function RestaurantFilters({
 	className = "",
+	classNames = {},
 	variant = "default",
 	title = "Filters",
 	subtitle = "Narrow your search results",
@@ -106,7 +107,7 @@ export default function RestaurantFilters({
 			</header>
 			<div className={styles.content}>
 				{showPriceRange && (
-					<div className={styles.priceRange}>
+					<RestaurantFilters.Section className={styles.priceRange}>
 						<RestaurantFilters.Title>Price Range</RestaurantFilters.Title>
 						<DoubleRangeInput
 							wrapperClassname={styles.doubleRangeInputWrapper}
@@ -118,15 +119,16 @@ export default function RestaurantFilters({
 								setPriceRange({ min, max });
 							}}
 						/>
-					</div>
+					</RestaurantFilters.Section>
 				)}
 				{showCustomerRating && (
-					<div className={styles.customerRating}>
+					<RestaurantFilters.Section className={styles.customerRating}>
 						<RestaurantFilters.Title>Customer Rating</RestaurantFilters.Title>
 						<ul className={styles.list}>
 							{customerRating.map(({ rating: ratingValue, label }) => (
 								<li className={styles.listItem} key={label}>
 									<RestaurantFilters.Checkbox
+										className={classNames.checkbox}
 										value={ratingValue}
 										checked={rating === ratingValue}
 										onChange={(e) => {
@@ -138,21 +140,22 @@ export default function RestaurantFilters({
 										}}
 									/>
 
-									<RestaurantFilters.Text>
+									<RestaurantFilters.Label>
 										{ratingValue}+ &nbsp; ({label})
-									</RestaurantFilters.Text>
+									</RestaurantFilters.Label>
 								</li>
 							))}
 						</ul>
-					</div>
+					</RestaurantFilters.Section>
 				)}
 				{showDietary && (
-					<div className={styles.dietary}>
+					<RestaurantFilters.Section className={styles.dietary}>
 						<RestaurantFilters.Title>Dietary Needs</RestaurantFilters.Title>
 						<ul className={styles.list}>
 							{dietaryNeeds.map(({ label, value }) => (
 								<li className={styles.listItem} key={value}>
 									<RestaurantFilters.Checkbox
+										className={classNames.checkbox}
 										value={value}
 										checked={dietary.includes(value)}
 										onChange={(e) => {
@@ -163,19 +166,20 @@ export default function RestaurantFilters({
 											}
 										}}
 									/>
-									<RestaurantFilters.Text>{label}</RestaurantFilters.Text>
+									<RestaurantFilters.Label>{label}</RestaurantFilters.Label>
 								</li>
 							))}
 						</ul>
-					</div>
+					</RestaurantFilters.Section>
 				)}
 				{showCategories && (
-					<div className={styles.categories}>
+					<RestaurantFilters.Section className={styles.categories}>
 						<RestaurantFilters.Title>Popular categories</RestaurantFilters.Title>
 						<ul className={styles.list}>
 							{categories.map((category) => (
 								<li className={styles.listItem} key={category.id}>
 									<RestaurantFilters.Checkbox
+										className={classNames.checkbox}
 										value={category.title}
 										checked={selectedCategories.includes(category.title)}
 										onChange={(e) => {
@@ -186,14 +190,14 @@ export default function RestaurantFilters({
 											}
 										}}
 									/>
-									<RestaurantFilters.Text>{category.title}</RestaurantFilters.Text>
+									<RestaurantFilters.Label>{category.title}</RestaurantFilters.Label>
 								</li>
 							))}
 						</ul>
-					</div>
+					</RestaurantFilters.Section>
 				)}
 				{showDeliveryTime && (
-					<div className={styles.deliveryTime}>
+					<RestaurantFilters.Section className={styles.deliveryTime}>
 						<RestaurantFilters.Title>Delivery Time </RestaurantFilters.Title>
 						<RangeInput
 							className={styles.rangeInput}
@@ -211,7 +215,7 @@ export default function RestaurantFilters({
 								},
 							]}
 						/>
-					</div>
+					</RestaurantFilters.Section>
 				)}
 				<div className={styles.actions}>
 					<Button className={styles.btn} onClick={handleApplyFilters}>
@@ -225,6 +229,22 @@ export default function RestaurantFilters({
 		</div>
 	);
 }
+
+RestaurantFilters.Section = ({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"section">) => {
+	return (
+		<section className={`${styles.section} ${className}`} {...props}>
+			{children}
+		</section>
+	);
+};
+
+RestaurantFilters.Label = ({ children, className = "", ...props }: React.ComponentPropsWithoutRef<"label">) => {
+	return (
+		<label className={`${styles.label} ${className}`} {...props}>
+			{children}
+		</label>
+	);
+};
 
 RestaurantFilters.Text = ({ children, className = "", as: Element = "span", ...props }: TextProps) => {
 	return (
@@ -244,9 +264,9 @@ RestaurantFilters.Title = ({ className = "", children, ...props }: React.Compone
 
 RestaurantFilters.Checkbox = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"input">) => {
 	return (
-		<label className={styles.roundCheckbox}>
+		<div className={styles.checkboxWrapper}>
 			<input type="checkbox" className={`${styles.checkbox} ${className}`} {...props} />
 			<span className={styles.checkmark}></span>
-		</label>
+		</div>
 	);
 };

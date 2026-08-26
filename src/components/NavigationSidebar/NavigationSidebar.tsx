@@ -28,9 +28,6 @@ export default function NavigationSidebar({ navigation = defaultNavigation }: Na
 
 	return (
 		<Sidebar className={styles.sidebar} isOpen={isOpen} onClose={() => setIsOpen(false)}>
-			<header className={styles.header}>
-				<InlineSvgs.cancel className={styles.cancelIcon} onClick={() => setIsOpen(false)} />
-			</header>
 			<div className={styles.body}>
 				<nav className={styles.navigation}>
 					<ul className={styles.linkList}>

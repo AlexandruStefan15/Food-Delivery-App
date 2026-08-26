@@ -131,7 +131,7 @@ export default function Restaurants() {
 					/>
 				</div>
 
-				<Sidebar isOpen={isFilterSidebarOpen} onClose={() => setIsFilterSidebarOpen(false)} variant="blank">
+				<Sidebar isOpen={isFilterSidebarOpen} onClose={() => setIsFilterSidebarOpen(false)}>
 					<span className={styles.cls}>asdasdas</span>
 				</Sidebar>
 			</main>

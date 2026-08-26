@@ -75,6 +75,10 @@
 
 		.filterSidebar {
 			width: 300px;
+
+			.filters {
+				padding-bottom: 0;
+			}
 		}
 	}
 }

@@ -2,6 +2,7 @@ import { FoodCategory } from "../../types";
 
 export interface RestaurantFiltersProps {
 	className?: string;
+	variant?: "default" | "dark";
 	title?: string;
 	subtitle?: string;
 	showPriceRange?: boolean;

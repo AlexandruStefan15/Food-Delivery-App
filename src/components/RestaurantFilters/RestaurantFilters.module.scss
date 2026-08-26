@@ -1,4 +1,4 @@
-.filtersContainer {
+.filtersContainer_default {
 	max-width: 300px;
 	display: flex;
 	flex-direction: column;
@@ -110,6 +110,23 @@
 			border-radius: 25px;
 			padding-block: 0.85em;
 		}
+	}
+}
+
+/* variants */
+
+.filtersContainer_dark {
+	@extend .filtersContainer_default;
+	background-color: var(--generic);
+
+	.doubleRangeInputWrapper {
+		.sliderValues {
+			color: lightgrey;
+		}
+	}
+
+	.text {
+		color: lightgrey;
 	}
 }
 

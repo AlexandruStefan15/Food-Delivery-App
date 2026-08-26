@@ -6,6 +6,7 @@ interface DoubleRangeInputProps {
 	max: number;
 	step?: number;
 	wrapperClassname?: string;
+	classNames?: Record<string, string>;
 	valueIcon?: React.ReactNode;
 	onChange: (values: { min: number; max: number }) => void;
 }
@@ -15,6 +16,7 @@ export default function DoubleRangeInput({
 	max,
 	step = 1,
 	wrapperClassname = "",
+	classNames = {},
 	valueIcon,
 	onChange,
 }: DoubleRangeInputProps) {
@@ -81,7 +83,7 @@ export default function DoubleRangeInput({
 			<div className={styles.slider}>
 				<div className={styles.sliderTrack} />
 				<div ref={rangeRef} className={styles.sliderRange} />
-				<div className={styles.sliderValues}>
+				<div className={styles.sliderValues + ` ${classNames.sliderValues}`}>
 					<span className={styles.wrapper}>
 						{valueIcon && <span className={styles.valueIcon}>{valueIcon}</span>}
 						<span>{minVal}</span>

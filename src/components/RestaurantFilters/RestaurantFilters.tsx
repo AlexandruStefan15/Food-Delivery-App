@@ -24,6 +24,7 @@ const dietaryNeeds = [
 
 export default function RestaurantFilters({
 	className = "",
+	variant = "default",
 	title = "Filters",
 	subtitle = "Narrow your search results",
 	showPriceRange = true,
@@ -94,7 +95,7 @@ export default function RestaurantFilters({
 	};
 
 	return (
-		<div className={styles.filtersContainer + ` ${className}`}>
+		<div className={styles[`filtersContainer_${variant}`] + ` ${className}`}>
 			<header className={styles.header}>
 				<h2 className={styles.title}>{title}</h2>
 				<h3 className={styles.subtitle}>{subtitle}</h3>
@@ -104,6 +105,8 @@ export default function RestaurantFilters({
 					<div className={styles.priceRange}>
 						<RestaurantFilters.Title>Price Range</RestaurantFilters.Title>
 						<DoubleRangeInput
+							wrapperClassname={styles.doubleRangeInputWrapper}
+							classNames={{ sliderValues: styles.sliderValues }}
 							min={0}
 							max={100}
 							valueIcon="$"

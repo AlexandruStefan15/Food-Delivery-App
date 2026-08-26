@@ -33,6 +33,8 @@ export default function RestaurantFilters({
 	showDeliveryTime = true,
 	showCategories = true,
 	categories = [],
+	onApply,
+	onReset,
 }: RestaurantFiltersProps) {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const [priceRange, setPriceRange] = useState<PriceRange>({ min: null, max: null });
@@ -82,6 +84,7 @@ export default function RestaurantFilters({
 		});
 
 		setSearchParams(newParams);
+		onApply?.();
 	};
 
 	const handleResetFilters = () => {
@@ -92,6 +95,7 @@ export default function RestaurantFilters({
 		setSelectedCategories([]);
 
 		setSearchParams({});
+		onReset?.();
 	};
 
 	return (

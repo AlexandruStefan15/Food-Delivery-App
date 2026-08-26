@@ -11,6 +11,8 @@ export interface RestaurantFiltersProps {
 	showDeliveryTime?: boolean;
 	showCategories?: boolean;
 	categories?: FoodCategory[];
+	onApply?: () => void;
+	onReset?: () => void;
 }
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {

@@ -136,7 +136,13 @@ export default function Restaurants() {
 					isOpen={isFilterSidebarOpen}
 					onClose={() => setIsFilterSidebarOpen(false)}
 				>
-					<RestaurantFilters className={styles.filters} variant="dark" categories={filtersFoodCategories} />
+					<RestaurantFilters
+						className={styles.filters}
+						onApply={() => setIsFilterSidebarOpen(false)}
+						onReset={() => setIsFilterSidebarOpen(false)}
+						variant="dark"
+						categories={filtersFoodCategories}
+					/>
 				</Sidebar>
 			</main>
 			<Footer />

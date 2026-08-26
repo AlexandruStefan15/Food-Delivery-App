@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import styles from "./Restaurants.module.scss";
 import { useSearchParams } from "react-router";
 
@@ -15,6 +15,7 @@ import { Dietary } from "../../types";
 
 //hooks
 import { useIsTabletLarge } from "../../hooks/useIsTabletLarge";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 //components
 import Header from "../../components/Header/Header";
@@ -34,6 +35,7 @@ export default function Restaurants() {
 	const { foodCategories = [], foodCategoriesAreLoading, foodCategoriesError } = useFoodCategories();
 	const [searchParams, setSearchParams] = useSearchParams();
 	const isTabletLarge = useIsTabletLarge();
+	const isMobile = useIsMobile();
 	const [isFilterSidebarOpen, setIsFilterSidebarOpen] = useState(false);
 
 	const filtersFoodCategories = foodCategories.filter((item) =>
@@ -132,6 +134,11 @@ export default function Restaurants() {
 				</div>
 
 				<Sidebar
+					style={
+						isMobile
+							? ({ "--custom-width": "100%" } as CSSProperties)
+							: ({ "--custom-width": "300px" } as CSSProperties)
+					}
 					className={styles.filterSidebar}
 					isOpen={isFilterSidebarOpen}
 					onClose={() => setIsFilterSidebarOpen(false)}

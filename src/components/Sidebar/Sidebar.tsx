@@ -8,7 +8,14 @@ import { InlineSvgs } from "../../assets/svgs";
 //types
 import { SidebarProps } from "./Sidebar.types";
 
-export default function Sidebar({ children, className = "", isOpen, onClose, variant = "default" }: SidebarProps) {
+export default function Sidebar({
+	children,
+	className = "",
+	isOpen,
+	onClose,
+	variant = "default",
+	...props
+}: SidebarProps) {
 	const location = useLocation();
 
 	useEffect(() => {
@@ -16,7 +23,7 @@ export default function Sidebar({ children, className = "", isOpen, onClose, var
 	}, [location.pathname]);
 
 	return (
-		<aside className={`${styles.sidebar} ${className} ${isOpen ? styles.active : ""}`}>
+		<aside className={`${styles.sidebar} ${className} ${isOpen ? styles.active : ""}`} {...props}>
 			<header className={styles.header}>
 				<InlineSvgs.cancel className={styles.cancelIcon} onClick={() => onClose()} />
 			</header>

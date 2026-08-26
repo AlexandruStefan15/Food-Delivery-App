@@ -74,7 +74,7 @@
 		}
 
 		.filterSidebar {
-			width: 300px;
+			width: var(--custom-width);
 
 			.filters {
 				padding-bottom: 0;

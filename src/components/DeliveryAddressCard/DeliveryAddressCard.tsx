@@ -4,6 +4,9 @@ import styles from "./DeliveryAddressCard.module.scss";
 //types
 import type { DeliveryAddressCardProps } from "./DeliveryAddressCard.types";
 
+//components
+import Checkbox from "../Checkbox/Checkbox";
+
 //icons
 import { GrEdit } from "react-icons/gr";
 
@@ -31,14 +34,17 @@ export default function DeliveryAddressCard({
 
 	return (
 		<label className={`${styles.card} ${className} ${selectedAddress === data.id ? styles.selected : ""}`}>
-			<input
-				type="radio"
-				name="deliveryAddress"
+			<Checkbox
 				className={styles.radioInput}
+				shape="circle"
+				checkboxContent="dot"
 				value={data.id}
 				onChange={handleChange}
 				checked={selectedAddress === data.id}
+				type="radio"
+				name="deliveryAddress"
 			/>
+
 			<div className={styles.content}>
 				<div className={styles.details}>
 					<p className={styles.name}>{data.label}</p>

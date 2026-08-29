@@ -265,7 +265,7 @@ RestaurantFilters.Title = ({ className = "", children, ...props }: React.Compone
 
 RestaurantFilters.Checkbox = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"input">) => {
 	return (
-		<Checkbox className={`${styles.checkbox} ${className}`} shape="round" {...props}>
+		<Checkbox className={`${styles.checkbox} ${className}`} shape="circle" {...props}>
 			{children}
 		</Checkbox>
 	);

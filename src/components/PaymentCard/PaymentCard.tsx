@@ -4,6 +4,9 @@ import styles from "./PaymentCard.module.scss";
 //types
 import type { PaymentCardProps } from "./PaymentCard.types";
 
+//components
+import Checkbox from "../Checkbox/Checkbox";
+
 export default function PaymentCard({
 	data,
 	selectedMethod,
@@ -20,13 +23,15 @@ export default function PaymentCard({
 
 	return (
 		<label className={`${styles.card} ${className} ${selectedMethod === data.id ? styles.selected : ""}`}>
-			<input
-				type="radio"
-				name="paymentMethod"
+			<Checkbox
 				className={styles.radioInput}
+				shape="circle"
+				checkboxContent="dot"
 				value={data.id}
 				onChange={handleChange}
 				checked={selectedMethod === data.id}
+				type="radio"
+				name="paymentMethod"
 			/>
 			<div className={styles.content}>
 				<div className={styles.details}>

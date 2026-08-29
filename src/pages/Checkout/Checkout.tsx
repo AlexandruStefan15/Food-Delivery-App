@@ -12,6 +12,9 @@ import { useRestaurants } from "../../api/restaurants";
 import { useDeliveryAddresses } from "../../api/deliveryAddresses";
 import { usePaymentOptions } from "../../api/paymentOptions";
 import { useGetUserById } from "../../api/users";
+import { useCreateOrder } from "../../api/useOrders";
+import { usePaymentOptionById } from "../../api/paymentOptions";
+import { useDeliveryAddressById } from "../../api/deliveryAddresses";
 
 //components
 import Accordion from "../../components/Accordion/Accordion";
@@ -34,6 +37,7 @@ export default function Checkout() {
 	const { data: user } = useGetUserById(1);
 	const cartItems = useCartStore((state) => state.items);
 	const { data: paymentOptions } = usePaymentOptions();
+	const { mutate: createOrder, isPending, isError, error } = useCreateOrder();
 
 	const [checkoutData, setCheckoutData] = useState<CheckoutState>({
 		selectedAddressId: null,
@@ -42,6 +46,37 @@ export default function Checkout() {
 	});
 
 	const userDeliveryAddresses = deliveryAddresses?.filter((item) => item.user_id === user?.id);
+	const selectedAddress = userDeliveryAddresses?.find((item) => item.id === checkoutData.selectedAddressId);
+	const { data: selectedPayment } = usePaymentOptionById(checkoutData.selectedPaymentId);
+
+	function getCurrentTime(): string {
+		const now = new Date();
+
+		const hours = String(now.getHours()).padStart(2, "0");
+		const minutes = String(now.getMinutes()).padStart(2, "0");
+
+		return `${hours}:${minutes}`;
+	}
+
+	const onPlaceOrder = () => {
+		if (!user || !selectedPayment || !selectedAddress) return;
+
+		const orderData = {
+			user_id: user.id,
+			products: cartItems,
+			date: new Date().toISOString().split("T")[0].split("-").reverse().join("-"),
+			time: getCurrentTime(),
+			address: selectedAddress.street_address,
+			instructions: checkoutData.deliveryInstructions,
+			payment_method: selectedPayment.name,
+		};
+
+		createOrder(orderData, {
+			onSuccess: () => {
+				console.log("Order created successfully!");
+			},
+		});
+	};
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -127,7 +162,9 @@ export default function Checkout() {
 					</Accordion.Item>
 				</Accordion>
 				<OrderSummary items={cartItems} restaurants={restaurants}>
-					<Button variant="primary">Place Order</Button>
+					<Button onClick={onPlaceOrder} variant="primary">
+						Place Order
+					</Button>
 				</OrderSummary>
 			</main>
 			<Footer />

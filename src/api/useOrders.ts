@@ -8,7 +8,7 @@ export function useOrders(options?: Omit<UseQueryOptions<Order[], Error>, "query
 	return useQuery<Order[], Error>({
 		queryKey: QUERY_KEY_ORDERS,
 		queryFn: async (): Promise<Order[]> => {
-			const response = await fetch("/api/orders");
+			const response = await fetch("http://localhost:3001/orders");
 
 			if (!response.ok) {
 				throw new Error(`Failed to fetch orders: ${response.statusText}`);
@@ -27,7 +27,7 @@ export function useCreateOrder() {
 
 	return useMutation<Order, Error, CreateOrderInput>({
 		mutationFn: async (newOrder: CreateOrderInput): Promise<Order> => {
-			const response = await fetch("/api/orders", {
+			const response = await fetch("http://localhost:3001/orders", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

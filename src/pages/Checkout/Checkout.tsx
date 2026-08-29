@@ -14,7 +14,6 @@ import { usePaymentOptions } from "../../api/paymentOptions";
 import { useGetUserById } from "../../api/users";
 import { useCreateOrder } from "../../api/useOrders";
 import { usePaymentOptionById } from "../../api/paymentOptions";
-import { useDeliveryAddressById } from "../../api/deliveryAddresses";
 
 //components
 import Accordion from "../../components/Accordion/Accordion";
@@ -36,8 +35,9 @@ export default function Checkout() {
 	const { data: deliveryAddresses } = useDeliveryAddresses();
 	const { data: user } = useGetUserById(1);
 	const cartItems = useCartStore((state) => state.items);
+	const clearCart = useCartStore((state) => state.clearCart);
 	const { data: paymentOptions } = usePaymentOptions();
-	const { mutate: createOrder, isPending, isError, error } = useCreateOrder();
+	const { mutate: createOrder, isPending } = useCreateOrder();
 
 	const [checkoutData, setCheckoutData] = useState<CheckoutState>({
 		selectedAddressId: null,
@@ -49,12 +49,12 @@ export default function Checkout() {
 	const selectedAddress = userDeliveryAddresses?.find((item) => item.id === checkoutData.selectedAddressId);
 	const { data: selectedPayment } = usePaymentOptionById(checkoutData.selectedPaymentId);
 
+	const isOrderValid = Boolean(user && selectedPayment && selectedAddress && cartItems.length > 0);
+
 	function getCurrentTime(): string {
 		const now = new Date();
-
 		const hours = String(now.getHours()).padStart(2, "0");
 		const minutes = String(now.getMinutes()).padStart(2, "0");
-
 		return `${hours}:${minutes}`;
 	}
 
@@ -74,6 +74,7 @@ export default function Checkout() {
 		createOrder(orderData, {
 			onSuccess: () => {
 				console.log("Order created successfully!");
+				clearCart?.();
 			},
 		});
 	};
@@ -127,6 +128,8 @@ export default function Checkout() {
 									className={styles.textarea}
 									name="delivery_instructions"
 									id="delivery_instructions"
+									value={checkoutData.deliveryInstructions}
+									onChange={(e) => setCheckoutData((prev) => ({ ...prev, deliveryInstructions: e.target.value }))}
 									placeholder="Example: Gate code is 1234, please leave it at the front desk..."
 									rows={7}
 								/>
@@ -162,9 +165,11 @@ export default function Checkout() {
 					</Accordion.Item>
 				</Accordion>
 				<OrderSummary items={cartItems} restaurants={restaurants}>
-					<Button onClick={onPlaceOrder} variant="primary">
-						Place Order
-					</Button>
+					{cartItems.length > 0 && (
+						<Button onClick={onPlaceOrder} variant="primary" disabled={!isOrderValid || isPending}>
+							{isPending ? "Placing Order..." : "Place Order"}
+						</Button>
+					)}
 				</OrderSummary>
 			</main>
 			<Footer />

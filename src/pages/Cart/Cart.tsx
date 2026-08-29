@@ -46,9 +46,11 @@ export default function Cart() {
 			<main className={styles.main}>
 				<ItemList items={cartItems} />
 				<OrderSummary items={cartItems} restaurants={restaurants}>
-					<Button as={NavLink} variant="primary" to="/checkout">
-						Proceed to Checkout
-					</Button>
+					{cartItems.length > 0 && (
+						<Button as={NavLink} variant="primary" to="/checkout">
+							Proceed to Checkout
+						</Button>
+					)}
 				</OrderSummary>
 			</main>
 			<Footer />

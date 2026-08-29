@@ -73,7 +73,7 @@ export default function Checkout() {
 
 		createOrder(orderData, {
 			onSuccess: () => {
-				console.log("Order created successfully!");
+				alert("Order created successfully!");
 				clearCart?.();
 			},
 		});

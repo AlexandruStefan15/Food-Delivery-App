@@ -4,9 +4,6 @@ import styles from "./PaymentCard.module.scss";
 //types
 import type { PaymentCardProps } from "./PaymentCard.types";
 
-//icons
-import { GrEdit } from "react-icons/gr";
-
 export default function PaymentCard({
 	data,
 	selectedMethod,

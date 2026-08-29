@@ -9,6 +9,7 @@ import { TextProps, PriceRange, RestaurantFiltersProps } from "./RestaurantFilte
 import DoubleRangeInput from "../DoubleRangeInput/DoubleRangeInput";
 import RangeInput from "../RangeInput/RangeInput";
 import Button from "../Button/Button";
+import Checkbox from "../Checkbox/Checkbox";
 
 const customerRating = [
 	{ rating: 4.5, label: "Excellent" },
@@ -264,9 +265,8 @@ RestaurantFilters.Title = ({ className = "", children, ...props }: React.Compone
 
 RestaurantFilters.Checkbox = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"input">) => {
 	return (
-		<div className={styles.checkboxWrapper}>
-			<input type="checkbox" className={`${styles.checkbox} ${className}`} {...props} />
-			<span className={styles.checkmark}></span>
-		</div>
+		<Checkbox className={`${styles.checkbox} ${className}`} shape="round" {...props}>
+			{children}
+		</Checkbox>
 	);
 };

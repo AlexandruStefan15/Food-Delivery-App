@@ -57,10 +57,10 @@ const ProductItem = ({ productData, className = "" }: ProductItemProps) => {
 				</div>
 				<div className={styles.titleWrapper}>
 					<h2 className={styles.productTitle}>{productData.title}</h2>
-					<span className={styles.quantity}>X {productData.quantity}</span>
+					<span className={styles.quantity}>X &nbsp; {productData.quantity}</span>
 				</div>
 			</div>
-			<span className={styles.productPrice}>${productData.price}</span>
+			<span className={styles.productPrice}>${productData.price * productData.quantity}</span>
 		</div>
 	);
 };

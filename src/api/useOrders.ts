@@ -62,7 +62,7 @@ export function useOrdersByUserId(
 
 			return response.json();
 		},
-		// Don't run the query if userId is empty/undefined
+
 		enabled: Boolean(userId) && (options?.enabled ?? true),
 		...options,
 	});

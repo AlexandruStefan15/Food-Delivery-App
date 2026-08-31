@@ -4,9 +4,6 @@ import styles from "./Cart.module.scss";
 //api
 import { useRestaurants } from "../../api/restaurants";
 
-//helpers
-import { getAverageTime } from "../../utils/helpers";
-
 //store
 import { useCartStore } from "../../store/cartStore";
 

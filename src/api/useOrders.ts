@@ -17,10 +17,7 @@ export function useOrders() {
 	});
 }
 
-export type CreateOrderInput = {
-	newOrder: Omit<Order, "id" | "createdAt">;
-};
-
+export type CreateOrderInput = Omit<Order, "id" | "createdAt">;
 export function useCreateOrder() {
 	const queryClient = useQueryClient();
 

@@ -69,6 +69,7 @@ export default function Checkout() {
 			address: selectedAddress.street_address,
 			instructions: checkoutData.deliveryInstructions,
 			payment_method: selectedPayment.name,
+			delivered: false,
 		};
 
 		createOrder(orderData, {

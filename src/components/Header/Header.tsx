@@ -29,7 +29,7 @@ import SearchResultsList from "../SearchResultsList/SearchResultsList";
 const defaultPrimaryNavigation: NavigationItem[] = [
 	{ label: "Home", path: "/" },
 	{ label: "Restaurants", path: "/restaurants" },
-	{ label: "Orders", path: "#" },
+	{ label: "Orders", path: "/orders" },
 	{ label: "Contact", path: "#" },
 ];
 

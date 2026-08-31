@@ -9,6 +9,7 @@ import Cart from "./pages/Cart/Cart";
 import Search from "./pages/Search/Search";
 import DishDetails from "./pages/DishDetails/DishDetails";
 import Checkout from "./pages/Checkout/Checkout";
+import Orders from "./pages/Orders/Orders";
 
 export default function App() {
 	return (
@@ -20,6 +21,7 @@ export default function App() {
 			<Route path="/search" element={<Search />} />
 			<Route path="/cart" element={<Cart />} />
 			<Route path="/checkout" element={<Checkout />} />
+			<Route path="/orders" element={<Orders />} />
 			<Route path="*" element={<h1>404 - Page Not Found</h1>} />
 		</Routes>
 	);

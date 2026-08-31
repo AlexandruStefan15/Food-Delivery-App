@@ -2,11 +2,9 @@ import { useQuery, UseQueryOptions, useQueryClient, useMutation } from "@tanstac
 
 import type { Order } from "../types/order";
 
-export const QUERY_KEY_ORDERS = ["orders"] as const;
-
 export function useOrders(options?: Omit<UseQueryOptions<Order[], Error>, "queryKey" | "queryFn">) {
 	return useQuery<Order[], Error>({
-		queryKey: QUERY_KEY_ORDERS,
+		queryKey: ["orders"],
 		queryFn: async (): Promise<Order[]> => {
 			const response = await fetch("http://localhost:3001/orders");
 
@@ -20,7 +18,9 @@ export function useOrders(options?: Omit<UseQueryOptions<Order[], Error>, "query
 	});
 }
 
-export type CreateOrderInput = Omit<Order, "id" | "createdAt">;
+export type CreateOrderInput = {
+	newOrder: Omit<Order, "id" | "createdAt">;
+};
 
 export function useCreateOrder() {
 	const queryClient = useQueryClient();
@@ -42,7 +42,28 @@ export function useCreateOrder() {
 			return response.json();
 		},
 		onSuccess: () => {
-			queryClient.invalidateQueries({ queryKey: QUERY_KEY_ORDERS });
+			queryClient.invalidateQueries({ queryKey: ["orders"] });
 		},
+	});
+}
+
+export function useOrdersByUserId(
+	userId: number,
+	options?: Omit<UseQueryOptions<Order[], Error>, "queryKey" | "queryFn">,
+) {
+	return useQuery<Order[], Error>({
+		queryKey: ["orders", userId],
+		queryFn: async (): Promise<Order[]> => {
+			const response = await fetch(`http://localhost:3001/orders?userId=${encodeURIComponent(userId)}`);
+
+			if (!response.ok) {
+				throw new Error(`Failed to fetch orders for user ${userId}: ${response.statusText}`);
+			}
+
+			return response.json();
+		},
+		// Don't run the query if userId is empty/undefined
+		enabled: Boolean(userId) && (options?.enabled ?? true),
+		...options,
 	});
 }

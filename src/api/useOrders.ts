@@ -2,7 +2,7 @@ import { useQuery, UseQueryOptions, useQueryClient, useMutation } from "@tanstac
 
 import type { Order } from "../types/order";
 
-export function useOrders(options?: Omit<UseQueryOptions<Order[], Error>, "queryKey" | "queryFn">) {
+export function useOrders() {
 	return useQuery<Order[], Error>({
 		queryKey: ["orders"],
 		queryFn: async (): Promise<Order[]> => {
@@ -14,7 +14,6 @@ export function useOrders(options?: Omit<UseQueryOptions<Order[], Error>, "query
 
 			return response.json();
 		},
-		...options,
 	});
 }
 
@@ -47,10 +46,7 @@ export function useCreateOrder() {
 	});
 }
 
-export function useOrdersByUserId(
-	userId: number,
-	options?: Omit<UseQueryOptions<Order[], Error>, "queryKey" | "queryFn">,
-) {
+export function useOrdersByUserId(userId: number) {
 	return useQuery<Order[], Error>({
 		queryKey: ["orders", userId],
 		queryFn: async (): Promise<Order[]> => {
@@ -63,7 +59,8 @@ export function useOrdersByUserId(
 			return response.json();
 		},
 
-		enabled: Boolean(userId) && (options?.enabled ?? true),
-		...options,
+		enabled: Boolean(userId),
+		staleTime: 60_000,
+		refetchOnWindowFocus: false,
 	});
 }

@@ -43,14 +43,14 @@
 	}
 
 	.detailsTitle {
-		font-size: 1rem;
+		font-size: 1.05rem;
 		letter-spacing: 0.05em;
 		font-weight: 700;
 		color: var(--primary);
 	}
 
 	.productList {
-		margin-top: 1rem;
+		margin-top: 1.5rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
@@ -92,5 +92,11 @@
 
 	.productTitle {
 		font-size: 1rem;
+	}
+
+	.productPrice {
+		font-size: 1rem;
+		color: var(--primary);
+		font-weight: 500;
 	}
 }

@@ -8,13 +8,13 @@
 	],
 	"orders": [
 		{
+			"id": 1,
 			"user_id": 1,
 			"date": "29-08-2026",
 			"time": "14:04",
 			"address": "Str. George Coșbuc, nr. 24",
 			"instructions": "asdasd asd asd asd as",
 			"payment_method": "Visa",
-			"id": 1,
 			"delivered": false,
 			"products": [
 				{

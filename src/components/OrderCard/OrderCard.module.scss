@@ -122,3 +122,44 @@
 		font-weight: 600;
 	}
 }
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+
+	width: fit-content;
+	padding: 0.35rem 0.6rem;
+
+	border-radius: 999px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	line-height: 1;
+
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
+}
+
+.statusIcon {
+	flex-shrink: 0;
+}
+
+.statusLabel {
+	white-space: nowrap;
+}
+
+.delivered {
+	color: #15803d;
+	background-color: #dcfce7;
+}
+
+.pending {
+	color: #b45309;
+	background-color: #fef3c7;
+}
+
+.cancelled {
+	color: #b91c1c;
+	background-color: #fee2e2;
+}

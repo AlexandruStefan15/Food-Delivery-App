@@ -4,9 +4,13 @@ import styles from "./OrderCard.module.scss";
 //types
 import { OrderCardProps } from "./OrderCard.types";
 import { CartItem } from "../../store/cartStore";
+import { IconType } from "react-icons";
 
 //icons
 import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { IoIosCheckmarkCircle } from "react-icons/io";
+import { MdOutlineAccessTime } from "react-icons/md";
+import { MdCancel } from "react-icons/md";
 
 //components
 import Accordion from "../Accordion/Accordion";
@@ -28,6 +32,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 							<span className={styles.orderDate}>{orderData.date}</span>
 						</div>
 					</div>
+					<OrderBadge orderStatus={"pending"} />
 				</Accordion.Label>
 				<Accordion.Details>
 					<div className={styles.detailsContainer}>
@@ -68,6 +73,49 @@ const ProductItem = ({ productData, className = "" }: ProductItemProps) => {
 				</div>
 			</div>
 			<span className={styles.productPrice}>${(productData.price * productData.quantity).toFixed(2)}</span>
+		</div>
+	);
+};
+
+export type IconData =
+	| {
+			type: "reactIconsComponent";
+			component: IconType;
+	  }
+	| {
+			type: "reactComponent";
+			component: React.ComponentType<React.ComponentPropsWithoutRef<"svg">>;
+	  };
+
+interface OrderBadgeProps extends React.ComponentPropsWithoutRef<"div"> {
+	orderStatus: "pending" | "delivered" | "cancelled";
+}
+
+const OrderBadge = ({ orderStatus = "pending", className = "" }: OrderBadgeProps) => {
+	const statuses = {
+		delivered: {
+			label: "Delivered",
+			icon: IoIosCheckmarkCircle,
+		},
+
+		pending: {
+			label: "Pending",
+			icon: MdOutlineAccessTime,
+		},
+
+		cancelled: {
+			label: "Cancelled",
+			icon: MdCancel,
+		},
+	};
+
+	const currentStatus = statuses[orderStatus];
+	const Icon = currentStatus.icon;
+
+	return (
+		<div className={styles.badge + ` ${styles[orderStatus]} ${className}`}>
+			<Icon className={styles.statusIcon} size={15} />
+			<span className={styles.statusLabel}>{currentStatus.label}</span>
 		</div>
 	);
 };

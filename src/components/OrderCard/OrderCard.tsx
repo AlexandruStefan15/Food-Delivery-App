@@ -114,7 +114,7 @@ const OrderBadge = ({ orderStatus = "pending", className = "" }: OrderBadgeProps
 
 	return (
 		<div className={styles.badge + ` ${styles[orderStatus]} ${className}`}>
-			<Icon className={styles.statusIcon} size={15} />
+			<Icon className={styles.statusIcon} size={18} />
 			<span className={styles.statusLabel}>{currentStatus.label}</span>
 		</div>
 	);

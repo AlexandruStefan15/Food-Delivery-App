@@ -21,7 +21,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 
 	return (
 		<Card className={styles.card}>
-			<Accordion.Item className={styles.accordionItem}>
+			<Accordion.Item className={styles.accordionItem} as="div">
 				<Accordion.Label>
 					<div className={styles.wrapper}>
 						<div className={styles.orderIcon}>
@@ -39,7 +39,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 						<h2 className={styles.detailsTitle}>Order Summary</h2>
 						<ul className={styles.productList}>
 							{orderData.products.map((product) => (
-								<li className={styles.produtListItem}>
+								<li className={styles.produtListItem} key={product.id}>
 									<ProductItem productData={product} />
 								</li>
 							))}

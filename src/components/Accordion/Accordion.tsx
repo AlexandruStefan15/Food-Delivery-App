@@ -77,12 +77,18 @@ export default function Accordion({
 
 // --- Compound Components ---
 
-Accordion.Item = function Accordion_Item({ className = "", children, index = 0, ...props }: AccordionItemProps) {
+Accordion.Item = function Accordion_Item({
+	className = "",
+	as: Element = "li",
+	children,
+	index = 0,
+	...props
+}: AccordionItemProps) {
 	return (
 		<ItemContext.Provider value={{ index }}>
-			<li className={`${styles.item} ${className}`} {...props}>
+			<Element className={`${styles.item} ${className}`} {...props}>
 				{children}
-			</li>
+			</Element>
 		</ItemContext.Provider>
 	);
 };

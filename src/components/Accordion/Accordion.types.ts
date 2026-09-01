@@ -1,3 +1,5 @@
+import { ElementType } from "react";
+
 export interface AccordionDataItem {
 	id: string | number;
 	label: string;
@@ -21,6 +23,7 @@ export interface AccordionProps extends React.ComponentPropsWithoutRef<"ul"> {
 
 export interface AccordionItemProps extends React.ComponentPropsWithoutRef<"li"> {
 	index?: number;
+	as?: ElementType;
 }
 
 export interface AccordionIconProps extends React.ComponentPropsWithoutRef<"span"> {

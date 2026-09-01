@@ -18,15 +18,14 @@ export default function Orders() {
 			<Header />
 			<main className={styles.main}>
 				<h1 className={styles.title}>Your Orders:</h1>
-				<ul className={styles.orderList}>
-					<Accordion>
-						{orders.map((order) => (
-							<li className={styles.orderListItem} key={order.id}>
-								<OrderCard orderData={order} />
-							</li>
-						))}
-					</Accordion>
-				</ul>
+
+				<Accordion className={styles.orderList}>
+					{orders.map((order) => (
+						<li className={styles.orderListItem} key={order.id}>
+							<OrderCard orderData={order} />
+						</li>
+					))}
+				</Accordion>
 			</main>
 			<Footer />
 		</div>

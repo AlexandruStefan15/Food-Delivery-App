@@ -15,7 +15,6 @@ import { OrderSummaryProps } from "./OrderSummary.types";
 
 //components
 import SearchBar from "../SearchBar/SearchBar";
-import Button from "../Button/Button";
 
 const OrderSummary = ({ items, restaurants, children, className = "" }: OrderSummaryProps) => {
 	const deliveryFee = useCartStore((state) => state.totalDeliveryFee(restaurants));
@@ -28,18 +27,18 @@ const OrderSummary = ({ items, restaurants, children, className = "" }: OrderSum
 
 	return (
 		<div className={styles.orderSummary + ` ${className}`}>
-			<h2 className={styles.title}>Order Summary</h2>
-			<div className={styles.promo}>
-				<h3 className={styles.title}>Promo code</h3>
+			<h2 className={styles.orderSummaryTitle}>Order Summary</h2>
+			<div className={styles.orderSummaryPromo}>
+				<h3 className={styles.promoTitle}>Promo code</h3>
 				<SearchBar
-					className={styles.input}
-					wrapperClassname={styles.searchBarWrapper}
+					className={styles.promoInput}
+					wrapperClassname={styles.promoSearchBarWrapper}
 					placeholder="Enter code"
 					searchButtonContent="Apply"
-					searchButtonProps={{ variant: "animated", className: styles.searchBtn }}
+					searchButtonProps={{ variant: "animated", className: styles.promoSearchBarSearchBtn }}
 				/>
 			</div>
-			<div className={styles.details}>
+			<div className={styles.orderSummaryDetails}>
 				<div className={styles.row}>
 					<span className={styles.text}>Subtotal</span>
 					<span className={styles.value}>${subtotalPrice()}</span>
@@ -63,7 +62,7 @@ const OrderSummary = ({ items, restaurants, children, className = "" }: OrderSum
 				<div className={styles.infoItem}>
 					<MdLocalShipping className={styles.icon} />
 					<span className={styles.text}>
-						Estimated delivery time: <b>{deliveryTime} mins</b>
+						Estimated delivery time: <b>{deliveryTime.toFixed(0)} mins</b>
 					</span>
 				</div>
 				<div className={styles.infoItem}>

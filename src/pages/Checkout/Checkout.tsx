@@ -76,17 +76,34 @@ export default function Checkout() {
 		};
 
 		createOrder(orderData, {
-			onSuccess: () => {
+			onSuccess: (createdOrder) => {
 				alert("Order created successfully!");
 				clearCart?.();
+
+				setTimeout(
+					async () => {
+						try {
+							const res = await fetch(`http://localhost:3001/orders/${createdOrder.id}`, {
+								method: "PATCH",
+								headers: {
+									"Content-Type": "application/json",
+								},
+								body: JSON.stringify({
+									status: "delivered",
+								}),
+							});
+
+							if (!res.ok) throw new Error("failed to update order");
+
+							const data = await res.json();
+						} catch (error) {
+							console.error(error);
+						}
+					},
+					20 * 60 * 1000,
+				);
 			},
 		});
-
-		/* setTimeout(async () => {
-      
-      const data = await fetch(`http://localhost:3001/orders${}`)
-      
-    }, 20 * 60 * 1000); */
 	};
 
 	useEffect(() => {

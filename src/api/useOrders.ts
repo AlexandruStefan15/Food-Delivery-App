@@ -47,7 +47,7 @@ export function useOrdersByUserId(userId: number) {
 	return useQuery<Order[], Error>({
 		queryKey: ["orders", userId],
 		queryFn: async (): Promise<Order[]> => {
-			const response = await fetch(`http://localhost:3001/orders?userId=${encodeURIComponent(userId)}`);
+			const response = await fetch(`http://localhost:3001/orders?user_id=${encodeURIComponent(userId)}`);
 
 			if (!response.ok) {
 				throw new Error(`Failed to fetch orders for user ${userId}: ${response.statusText}`);

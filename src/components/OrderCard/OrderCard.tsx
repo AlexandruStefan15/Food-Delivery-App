@@ -32,7 +32,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 							<span className={styles.orderDate}>{orderData.date}</span>
 						</div>
 					</div>
-					<OrderBadge orderStatus={"pending"} />
+					<OrderBadge orderStatus={orderData.status} />
 				</Accordion.Label>
 				<Accordion.Details>
 					<div className={styles.detailsContainer}>
@@ -46,7 +46,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 						</ul>
 						<hr style={{ marginBlock: "2rem", height: "3px", background: "var(--primary-v2)", border: "none" }} />
 						<footer className={styles.detailsFooter}>
-							<span className={styles.totalLabel}>Order Total</span>
+							<span className={styles.totalLabel}>Total</span>
 							<span className={styles.totalPrice}>${totalPrice.toFixed(2)}</span>
 						</footer>
 					</div>

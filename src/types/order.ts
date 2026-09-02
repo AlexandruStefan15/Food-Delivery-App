@@ -9,5 +9,5 @@ export interface Order {
 	address: string;
 	instructions: string;
 	payment_method: string;
-	delivered: boolean;
+	status: "pending" | "delivered" | "cancelled";
 }

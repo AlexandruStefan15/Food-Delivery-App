@@ -4,6 +4,9 @@ import styles from "./Checkout.module.scss";
 //store
 import { useCartStore } from "../../store/cartStore";
 
+//types
+import { CreateOrderInput } from "../../api/useOrders";
+
 //configs
 import { paymentOptionConfig } from "../../config/paymentOption";
 
@@ -61,7 +64,7 @@ export default function Checkout() {
 	const onPlaceOrder = () => {
 		if (!user || !selectedPayment || !selectedAddress) return;
 
-		const orderData = {
+		const orderData: CreateOrderInput = {
 			user_id: user.id,
 			products: cartItems,
 			date: new Date().toISOString().split("T")[0].split("-").reverse().join("-"),
@@ -69,7 +72,7 @@ export default function Checkout() {
 			address: selectedAddress.street_address,
 			instructions: checkoutData.deliveryInstructions,
 			payment_method: selectedPayment.name,
-			delivered: false,
+			status: "pending",
 		};
 
 		createOrder(orderData, {

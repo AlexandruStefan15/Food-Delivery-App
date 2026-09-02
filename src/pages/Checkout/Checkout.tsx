@@ -83,28 +83,25 @@ export default function Checkout() {
 				clearCart?.();
 				navigate("/", { replace: true });
 
-				setTimeout(
-					async () => {
-						try {
-							const res = await fetch(`http://localhost:3001/orders/${createdOrder.id}`, {
-								method: "PATCH",
-								headers: {
-									"Content-Type": "application/json",
-								},
-								body: JSON.stringify({
-									status: "delivered",
-								}),
-							});
+				setTimeout(async () => {
+					try {
+						const res = await fetch(`http://localhost:3001/orders/${createdOrder.id}`, {
+							method: "PATCH",
+							headers: {
+								"Content-Type": "application/json",
+							},
+							body: JSON.stringify({
+								status: "delivered",
+							}),
+						});
 
-							if (!res.ok) throw new Error("failed to update order");
+						if (!res.ok) throw new Error("failed to update order");
 
-							const data = await res.json();
-						} catch (error) {
-							console.error(error);
-						}
-					},
-					20 * 60 * 1000,
-				);
+						const data = await res.json();
+					} catch (error) {
+						console.error(error);
+					}
+				}, 60 * 1000);
 			},
 		});
 	};

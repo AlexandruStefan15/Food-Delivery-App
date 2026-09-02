@@ -20,11 +20,11 @@ export default function Orders() {
 				<h1 className={styles.title}>Your Orders:</h1>
 				<div className={styles.content}>
 					{orders.length > 0 ? (
-						<Accordion className={styles.orderList}>
+						<Accordion className={styles.orderList} allowMultiple={true}>
 							{orders.map((order) => (
-								<li className={styles.orderListItem} key={order.id}>
+								<Accordion.Item className={styles.orderListItem} key={order.id}>
 									<OrderCard orderData={order} />
-								</li>
+								</Accordion.Item>
 							))}
 						</Accordion>
 					) : (

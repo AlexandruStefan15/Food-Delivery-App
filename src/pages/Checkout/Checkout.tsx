@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Checkout.module.scss";
+import { useNavigate } from "react-router";
 
 //store
 import { useCartStore } from "../../store/cartStore";
@@ -41,6 +42,7 @@ export default function Checkout() {
 	const clearCart = useCartStore((state) => state.clearCart);
 	const { data: paymentOptions } = usePaymentOptions();
 	const { mutate: createOrder, isPending } = useCreateOrder();
+	const navigate = useNavigate();
 
 	const [checkoutData, setCheckoutData] = useState<CheckoutState>({
 		selectedAddressId: null,
@@ -79,6 +81,7 @@ export default function Checkout() {
 			onSuccess: (createdOrder) => {
 				alert("Order created successfully!");
 				clearCart?.();
+				navigate("/", { replace: true });
 
 				setTimeout(
 					async () => {

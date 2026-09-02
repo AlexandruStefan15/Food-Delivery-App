@@ -4,88 +4,88 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5em;
+}
 
-	.item {
-		background-color: var(--base);
-		border-radius: 40px;
-		border: 1px solid var(--border-color);
+.item {
+	background-color: var(--base);
+	border-radius: 40px;
+	border: 1px solid var(--border-color);
 
-		&:has(.details.active) {
-			.icon {
-				transform: rotate(-90deg);
-			}
-		}
-
-		.label {
-			font-size: 1.55rem;
-			background-color: transparent;
-			padding: 1.25rem 1.5rem;
-			cursor: pointer;
-			position: relative;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 1em;
-
-			@include media.tablet_lg {
-				font-size: 1.25rem;
-			}
-
-			@include media.mobile {
-				font-size: 1.125rem;
-				padding-block: 1em;
-			}
-
-			.icon {
-				width: max(15.5px, 2.8%);
-				fill: white;
-				position: relative;
-				transform: rotate(-45deg);
-			}
-
-			.arrowIcon {
-				transition: all 0.25s ease;
-
-				&.active {
-					transform: rotate(180deg);
-				}
-			}
-		}
-
-		.details {
-			background-color: transparent;
-			overflow: hidden;
-			max-height: 0;
-			transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
-
-			&.active {
-				max-height: 700px;
-				transition: max-height 0.5s ease;
-			}
-
-			.text {
-				padding-top: 1.2em;
-				padding-inline: 1.2em;
-				line-height: 1.36;
-				font-size: 1.475rem;
-
-				@include media.tablet_lg {
-					font-size: 1.25rem;
-				}
-
-				@include media.mobile {
-					font-size: 1.125rem;
-				}
-
-				&:last-of-type {
-					padding-bottom: 1.2em;
-				}
-			}
-		}
-
-		.detailsContent {
-			padding: 1rem 1.5rem;
-			padding-top: 0;
+	&:has(.details.active) {
+		.icon {
+			transform: rotate(-90deg);
 		}
 	}
+}
+
+.label {
+	font-size: 1.55rem;
+	background-color: transparent;
+	padding: 1.25rem 1.5rem;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
+
+	@include media.tablet_lg {
+		font-size: 1.25rem;
+	}
+
+	@include media.mobile {
+		font-size: 1.125rem;
+		padding-block: 1em;
+	}
+
+	.icon {
+		width: max(15.5px, 2.8%);
+		fill: white;
+		position: relative;
+		transform: rotate(-45deg);
+	}
+
+	.arrowIcon {
+		transition: all 0.25s ease;
+
+		&.active {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.details {
+	background-color: transparent;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+
+	&.active {
+		max-height: 700px;
+		transition: max-height 0.5s ease;
+	}
+
+	.text {
+		padding-top: 1.2em;
+		padding-inline: 1.2em;
+		line-height: 1.36;
+		font-size: 1.475rem;
+
+		@include media.tablet_lg {
+			font-size: 1.25rem;
+		}
+
+		@include media.mobile {
+			font-size: 1.125rem;
+		}
+
+		&:last-of-type {
+			padding-bottom: 1.2em;
+		}
+	}
+}
+
+.detailsContent {
+	padding: 1rem 1.5rem;
+	padding-top: 0;
 }

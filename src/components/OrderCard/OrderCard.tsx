@@ -21,37 +21,35 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 
 	return (
 		<Card className={styles.card}>
-			<Accordion.Item className={styles.accordionItem} as="div">
-				<Accordion.Label>
-					<div className={styles.wrapper}>
-						<div className={styles.orderIcon}>
-							<MdOutlineRestaurantMenu className={styles.icon} />
-						</div>
-						<div className={styles.orderMeta}>
-							<span className={styles.orderId}>Order #{orderData.id}</span>
-							<span className={styles.orderDate}>{orderData.date}</span>
-						</div>
+			<Accordion.Label>
+				<div className={styles.wrapper}>
+					<div className={styles.orderIcon}>
+						<MdOutlineRestaurantMenu className={styles.icon} />
 					</div>
-					<OrderBadge orderStatus={orderData.status} />
-				</Accordion.Label>
-				<Accordion.Details>
-					<div className={styles.detailsContainer}>
-						<h2 className={styles.detailsTitle}>Order Summary</h2>
-						<ul className={styles.productList}>
-							{orderData.products.map((product) => (
-								<li className={styles.produtListItem} key={product.id}>
-									<ProductItem productData={product} />
-								</li>
-							))}
-						</ul>
-						<hr style={{ marginBlock: "2rem", height: "3px", background: "var(--primary-v2)", border: "none" }} />
-						<footer className={styles.detailsFooter}>
-							<span className={styles.totalLabel}>Total</span>
-							<span className={styles.totalPrice}>${totalPrice.toFixed(2)}</span>
-						</footer>
+					<div className={styles.orderMeta}>
+						<span className={styles.orderId}>Order #{orderData.id}</span>
+						<span className={styles.orderDate}>{orderData.date}</span>
 					</div>
-				</Accordion.Details>
-			</Accordion.Item>
+				</div>
+				<OrderBadge orderStatus={orderData.status} />
+			</Accordion.Label>
+			<Accordion.Details>
+				<div className={styles.detailsContainer}>
+					<h2 className={styles.detailsTitle}>Order Summary</h2>
+					<ul className={styles.productList}>
+						{orderData.products.map((product) => (
+							<li className={styles.produtListItem} key={product.id}>
+								<ProductItem productData={product} />
+							</li>
+						))}
+					</ul>
+					<hr style={{ marginBlock: "2rem", height: "3px", background: "var(--primary-v2)", border: "none" }} />
+					<footer className={styles.detailsFooter}>
+						<span className={styles.totalLabel}>Total</span>
+						<span className={styles.totalPrice}>${totalPrice.toFixed(2)}</span>
+					</footer>
+				</div>
+			</Accordion.Details>
 		</Card>
 	);
 }

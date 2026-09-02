@@ -8,12 +8,15 @@
 .title {
 	font-size: 1.875rem;
 	margin-top: 1rem;
-	padding-inline: 0.5rem;
+}
+
+.content {
+	margin-top: 0.5rem;
 }
 
 .orderList {
-	margin-top: 1.5rem;
 	max-height: 700px;
 	overflow: auto;
 	padding: 0.5rem;
+	padding-left: 0;
 }

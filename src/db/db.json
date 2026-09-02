@@ -1,1239 +1,1333 @@
 {
-	"users": [
-		{
-			"id": 1,
-			"name": "Nastase Alexandru",
-			"email": "alexandru.stefan.nastase@gmail.com"
-		}
-	],
-	"orders": [],
-	"payment_options": [
-		{
-			"id": 1,
-			"name": "Visa"
-		},
-		{
-			"id": 2,
-			"name": "PayPal"
-		},
-		{
-			"id": 3,
-			"name": "Mastercard"
-		}
-	],
-	"delivery_addresses": [
-		{
-			"id": 1,
-			"user_id": 1,
-			"label": "Home",
-			"recipient_name": "Nastase Alexandru",
-			"street_address": "Str. George Coșbuc, nr. 24",
-			"city": "Alba Iulia",
-			"county": "Alba",
-			"postal_code": "510118",
-			"country_code": "RO",
-			"phone_number": "+40700000000",
-			"is_default": true
-		},
-		{
-			"id": 2,
-			"user_id": 1,
-			"label": "Work",
-			"recipient_name": "Nastase Alexandru",
-			"street_address": "Str. Aurel Vlaicu, nr. 34",
-			"city": "Alba Iulia",
-			"county": "Alba",
-			"postal_code": "510000",
-			"country_code": "RO",
-			"phone_number": "+40700000000",
-			"is_default": false
-		}
-	],
-	"food_categories": [
-		{
-			"id": 1,
-			"title": "Pizza",
-			"image": {
-				"url": "/images/foodCategories/pizza.jpg",
-				"alt": "pizza"
-			}
-		},
-		{
-			"id": 2,
-			"title": "Burgers",
-			"image": {
-				"url": "/images/foodCategories/burgers.jpg",
-				"alt": "burgers"
-			}
-		},
-		{
-			"id": 3,
-			"title": "Sushi",
-			"image": {
-				"url": "/images/foodCategories/sushi.jpg",
-				"alt": "sushi"
-			}
-		},
-		{
-			"id": 4,
-			"title": "Vegan",
-			"image": {
-				"url": "/images/foodCategories/vegan.jpg",
-				"alt": "vegan"
-			}
-		},
-		{
-			"id": 5,
-			"title": "Desserts",
-			"image": {
-				"url": "/images/foodCategories/desserts.jpg",
-				"alt": "desserts"
-			}
-		},
-		{
-			"id": 6,
-			"title": "Tacos",
-			"image": {
-				"url": "/images/foodCategories/tacos.jpg",
-				"alt": "mexican"
-			}
-		},
-		{
-			"id": 7,
-			"title": "Pasta",
-			"image": {
-				"url": "/images/foodCategories/pasta.jpg",
-				"alt": "pasta"
-			}
-		},
-		{
-			"id": 8,
-			"title": "Ramen",
-			"image": {
-				"url": "",
-				"alt": "ramen"
-			}
-		},
-		{
-			"id": 9,
-			"title": "Fish",
-			"image": {
-				"url": "",
-				"alt": "Fish"
-			}
-		},
-		{
-			"id": 10,
-			"title": "Soup",
-			"image": {
-				"url": "",
-				"alt": "soup"
-			}
-		}
-	],
-	"menu_categories": [
-		{
-			"id": 1,
-			"title": "Appetizers"
-		},
-		{
-			"id": 2,
-			"title": "Signature Mains"
-		},
-		{
-			"id": 3,
-			"title": "Side Dishes"
-		},
-		{
-			"id": 4,
-			"title": "Beverages"
-		},
-		{
-			"id": 5,
-			"title": "Desserts"
-		}
-	],
-	"favorites_restaurants_ids": [],
-	"restaurants": [
-		{
-			"id": 1,
-			"name": "Sakura Sushi House",
-			"main_cuisine": "Japanese",
-			"card_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-card.jpg",
-			"cover_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-cover.jpg",
-			"delivery_time": "25-30 min",
-			"delivery_fee": 2.99,
-			"rating": 4.9,
-			"distance": 1.8,
-			"closing_time": "10:30 PM",
-			"food_categories_ids": [3]
-		},
-		{
-			"id": 2,
-			"name": "The Golden Olive Bistro",
-			"main_cuisine": "International",
-			"card_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-card.jpg",
-			"cover_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-cover.jpg",
-			"delivery_time": "30-35 min",
-			"delivery_fee": 3.9,
-			"rating": 4.5,
-			"distance": 1.2,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [2, 5, 7, 10]
-		},
-		{
-			"id": 3,
-			"name": "Luigi's Authentic Pizza",
-			"main_cuisine": "Italian",
-			"card_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-card.jpg",
-			"cover_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-cover.avif",
-			"delivery_time": "30-35 min",
-			"delivery_fee": 0,
-			"rating": 4.7,
-			"distance": 1.2,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [1]
-		},
-		{
-			"id": 4,
-			"name": "Cantina Street Tacos",
-			"main_cuisine": "Mexican",
-			"card_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-card.jpg",
-			"cover_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-cover.jpg",
-			"delivery_time": "35-45 min",
-			"delivery_fee": 0,
-			"rating": 4.6,
-			"distance": 10.2,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [6]
-		},
-		{
-			"id": 5,
-			"name": "Tokyo Ramen Bar",
-			"main_cuisine": "Japanese",
-			"card_image": "/images/restaurants/tokyoRamenBar/tokyoRamenBar-card.jpg",
-			"cover_image": "/images/restaurants/tokyoRamenBar/tokyoRamenBar-cover.jpg",
-			"delivery_time": "25-30 min",
-			"delivery_fee": 0,
-			"rating": 4.5,
-			"distance": 1.2,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [8]
-		},
-		{
-			"id": 6,
-			"name": "Fresh Poke & Bowls",
-			"main_cuisine": "Asian",
-			"card_image": "/images/restaurants/freshPokeBowls/freshPokeBowls-card.jpg",
-			"cover_image": "/images/restaurants/freshPokeBowls/freshPokeBowls-cover.jpg",
-			"delivery_time": "15-20 min",
-			"delivery_fee": 3,
-			"rating": 3.6,
-			"distance": 2.2,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [4, 9]
-		},
-		{
-			"id": 7,
-			"name": "Restaurant Meridian",
-			"main_cuisine": "Mediterranean",
-			"card_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-card.jpg",
-			"cover_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-cover.jpg",
-			"delivery_time": "10-25 min",
-			"delivery_fee": 4,
-			"rating": 4.9,
-			"distance": 5.4,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [9, 7, 10]
-		},
-		{
-			"id": 8,
-			"name": "Conacul Secuiesc",
-			"main_cuisine": "Traditional",
-			"card_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-card.jpg",
-			"cover_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-cover.png",
-			"delivery_time": "10-25 min",
-			"delivery_fee": 3.9,
-			"rating": 3.5,
-			"distance": 7.6,
-			"closing_time": "10:00 PM",
-			"food_categories_ids": [10, 9, 5]
-		}
-	],
-	"dishes": [
-		{
-			"id": 1,
-			"title": "Roasted Lamb Shoulder",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"price": 32,
-			"calories": 725,
-			"prep_time": "15-20 min",
-			"rating": 4.9,
-			"card_image": "/images/dishes/roastedLambShoulder.jpg",
-			"cover_image": "/images/dishes/roastedLambShoulder-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 2,
-			"title": "Rice",
-			"price": 4,
-			"description": "A fluffy, perfectly steamed long-grain rice—subtly fragrant and the perfect canvas for absorbing rich sauces and bold flavors.",
-			"card_image": "/images/dishes/rice.jpg",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 3
-		},
-		{
-			"id": 3,
-			"title": "French Fries",
-			"price": 5,
-			"card_image": "/images/dishes/frenchFries.jpg",
-			"description": "Crispy on the outside, fluffy on the inside—golden, perfectly seasoned potato fries served piping hot.",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 3
-		},
-		{
-			"id": 4,
-			"title": "Truffle Mushroom Risotto",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"price": 26.5,
-			"calories": 525,
-			"prep_time": "15-18 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/truffleMushroomRisotto.jpg",
-			"cover_image": "/images/dishes/truffleMushroomRisotto-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 5,
-			"title": "Classic Bruschetta",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"price": 12.5,
-			"calories": 125,
-			"prep_time": "5 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/classicBruschetta.jpg",
-			"cover_image": "/images/dishes/classicBruschetta-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 1
-		},
-		{
-			"id": 6,
-			"title": "Crispy Calamari",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-			"price": 15,
-			"calories": 110,
-			"prep_time": "5 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/crispyCalamari.jpg",
-			"cover_image": "/images/dishes/crispyCalamari-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 1
-		},
-		{
-			"id": 7,
-			"title": "Pan-Seared Sea Bass",
-			"description": "A delicate fillet of wild-caught sea bass served over a bed of wilted baby spinach and a citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts for a balanced, light, yet rich flavor profile.",
-			"price": 34.5,
-			"calories": 480,
-			"prep_time": "20-25 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/panSearedSeaBass.jpg",
-			"cover_image": "/images/dishes/panSearedSeaBass-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 8,
-			"title": "Braised Beef Short Rib",
-			"description": "Slow-cooked for 12 hours in a red wine reduction, served atop creamy Yukon Gold mashed potatoes and glazed heirloom carrots. The meat is fork-tender and deeply savory, making it a signature comfort classic.",
-			"price": 38,
-			"calories": 890,
-			"prep_time": "12-15 min",
-			"rating": 4.9,
-			"card_image": "/images/dishes/braisedBeefShortRib.jpg",
-			"cover_image": "/images/dishes/braisedBeefShortRib-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 9,
-			"title": "Eggplant Parmigiana Stack",
-			"description": "Crispy layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan. Baked until golden and bubbling, served with a side of arugula salad.",
-			"price": 24,
-			"calories": 610,
-			"prep_time": "18-22 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/eggplantParmigianaStack.jpg",
-			"cover_image": "/images/dishes/eggplantParmigianaStack-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 10,
-			"title": "Salmon Nigiri Set",
-			"description": "Fresh salmon slices served over seasoned sushi rice with soy sauce, wasabi, and pickled ginger.",
-			"price": 18.5,
-			"calories": 420,
-			"prep_time": "10-15 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/salmonNigiriSet.jpg",
-			"cover_image": "/images/dishes/salmonNigiriSet-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 2
-		},
-		{
-			"id": 11,
-			"title": "Spicy Tuna Roll",
-			"description": "Classic sushi roll filled with spicy tuna, cucumber, sesame seeds, and a light chili mayo.",
-			"price": 16,
-			"calories": 520,
-			"prep_time": "10-15 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/spicyTunaRoll.jpg",
-			"cover_image": "/images/dishes/spicyTunaRoll-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 2
-		},
-		{
-			"id": 12,
-			"title": "Miso Soup",
-			"description": "Warm Japanese soup with miso broth, tofu, seaweed, and spring onions.",
-			"price": 6,
-			"calories": 90,
-			"prep_time": "5 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/misoSoup.jpg",
-			"cover_image": "/images/dishes/misoSoup-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 1
-		},
-		{
-			"id": 13,
-			"title": "Margherita Pizza",
-			"description": "Classic Italian pizza with tomato sauce, fresh mozzarella, basil, and extra virgin olive oil.",
-			"price": 14.5,
-			"calories": 780,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/margheritaPizza.jpg",
-			"cover_image": "/images/dishes/margheritaPizza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 2
-		},
-		{
-			"id": 14,
-			"title": "Pepperoni Pizza",
-			"description": "Thin crust pizza topped with tomato sauce, mozzarella, spicy pepperoni, and oregano.",
-			"price": 16.5,
-			"calories": 920,
-			"prep_time": "15-20 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/pepperoniPizza.jpg",
-			"cover_image": "/images/dishes/pepperoniPizza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 2
-		},
-		{
-			"id": 15,
-			"title": "Garlic Focaccia",
-			"description": "Warm Italian focaccia brushed with garlic oil, rosemary, and sea salt.",
-			"price": 8,
-			"calories": 360,
-			"prep_time": "8-10 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/garlicFocaccia.jpg",
-			"cover_image": "/images/dishes/garlicFocaccia-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 1
-		},
-		{
-			"id": 16,
-			"title": "Beef Birria Tacos",
-			"description": "Slow-cooked beef tacos served with melted cheese, onion, cilantro, lime, and rich consommé for dipping.",
-			"price": 17.5,
-			"calories": 760,
-			"prep_time": "15-20 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/beefBirriaTacos.jpg",
-			"cover_image": "/images/dishes/beefBirriaTacos-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 4,
-			"menu_category_id": 2
-		},
-		{
-			"id": 17,
-			"title": "Chicken Quesadilla",
-			"description": "Grilled flour tortilla filled with chicken, melted cheese, peppers, and onions. Served with salsa and sour cream.",
-			"price": 14,
-			"calories": 690,
-			"prep_time": "12-15 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/chickenQuesadilla.jpg",
-			"cover_image": "/images/dishes/chickenQuesadilla-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 4,
-			"menu_category_id": 2
-		},
-		{
-			"id": 18,
-			"title": "Churros with Chocolate Sauce",
-			"description": "Crispy cinnamon-sugar churros served with warm chocolate dipping sauce.",
-			"price": 7.5,
-			"calories": 430,
-			"prep_time": "8-10 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/churrosChocolate.jpg",
-			"cover_image": "/images/dishes/churrosChocolate-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 4,
-			"menu_category_id": 5
-		},
-		{
-			"id": 19,
-			"title": "Tonkotsu Ramen",
-			"description": "Rich pork broth ramen with noodles, chashu pork, soft-boiled egg, spring onions, and nori.",
-			"price": 18,
-			"calories": 850,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/tonkotsuRamen.jpg",
-			"cover_image": "/images/dishes/tonkotsuRamen-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 5,
-			"menu_category_id": 2
-		},
-		{
-			"id": 20,
-			"title": "Vegetable Shoyu Ramen",
-			"description": "Soy-based ramen with vegetables, mushrooms, noodles, bamboo shoots, and spring onions.",
-			"price": 15.5,
-			"calories": 620,
-			"prep_time": "15-18 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/vegetableShoyuRamen.jpg",
-			"cover_image": "/images/dishes/vegetableShoyuRamen-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 5,
-			"menu_category_id": 2
-		},
-		{
-			"id": 21,
-			"title": "Pork Gyoza",
-			"description": "Pan-fried Japanese dumplings filled with pork, cabbage, ginger, and garlic.",
-			"price": 9.5,
-			"calories": 390,
-			"prep_time": "8-10 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/porkGyoza.jpg",
-			"cover_image": "/images/dishes/porkGyoza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 5,
-			"menu_category_id": 1
-		},
-		{
-			"id": 22,
-			"title": "Salmon Poke Bowl",
-			"description": "Fresh salmon served over rice with avocado, cucumber, edamame, seaweed, sesame seeds, and poke sauce.",
-			"price": 17,
-			"calories": 650,
-			"prep_time": "10-15 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/salmonPokeBowl.jpg",
-			"cover_image": "/images/dishes/salmonPokeBowl-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 2
-		},
-		{
-			"id": 23,
-			"title": "Tofu Buddha Bowl",
-			"description": "Plant-based bowl with crispy tofu, quinoa, avocado, roasted vegetables, greens, and sesame dressing.",
-			"price": 15,
-			"calories": 590,
-			"prep_time": "10-15 min",
-			"rating": 4.4,
-			"card_image": "/images/dishes/tofuBuddhaBowl.jpg",
-			"cover_image": "/images/dishes/tofuBuddhaBowl-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": true,
-				"vegetarian": true
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 2
-		},
-		{
-			"id": 24,
-			"title": "Grilled Sea Bream",
-			"description": "Mediterranean-style grilled sea bream served with lemon, herbs, olive oil, and roasted vegetables.",
-			"price": 29,
-			"calories": 540,
-			"prep_time": "20-25 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/grilledSeaBream.jpg",
-			"cover_image": "/images/dishes/grilledSeaBream-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 7,
-			"menu_category_id": 2
-		},
-		{
-			"id": 25,
-			"title": "Seafood Linguine",
-			"description": "Linguine pasta tossed with shrimp, mussels, calamari, cherry tomatoes, garlic, white wine, and parsley.",
-			"price": 24.5,
-			"calories": 760,
-			"prep_time": "18-22 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/seafoodLinguine.jpg",
-			"cover_image": "/images/dishes/seafoodLinguine-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 7,
-			"menu_category_id": 2
-		},
-		{
-			"id": 26,
-			"title": "Greek Salad",
-			"description": "Fresh tomatoes, cucumber, red onion, olives, feta cheese, oregano, and extra virgin olive oil.",
-			"price": 11,
-			"calories": 320,
-			"prep_time": "5-8 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/greekSalad.jpg",
-			"cover_image": "/images/dishes/greekSalad-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": true
-			},
-			"restaurant_id": 7,
-			"menu_category_id": 1
-		},
-		{
-			"id": 27,
-			"title": "Goulash Soup",
-			"description": "Traditional rich soup with tender beef, potatoes, paprika, vegetables, and fresh herbs.",
-			"price": 12.5,
-			"calories": 430,
-			"prep_time": "10-15 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/goulashSoup.jpg",
-			"cover_image": "/images/dishes/goulashSoup-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 1
-		},
-		{
-			"id": 28,
-			"title": "Szekler Pork Stew",
-			"description": "Traditional pork stew with smoked flavors, paprika sauce, and creamy mashed potatoes.",
-			"price": 21,
-			"calories": 820,
-			"prep_time": "15-20 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/szeklerPorkStew.jpg",
-			"cover_image": "/images/dishes/szeklerPorkStew-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 2
-		},
-		{
-			"id": 29,
-			"title": "Papanasi with Sour Cream and Jam",
-			"description": "Traditional Romanian fried cheese doughnuts served with sour cream and berry jam.",
-			"price": 10.5,
-			"calories": 680,
-			"prep_time": "12-15 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/papanasiWithSourCream&jam.jpg",
-			"cover_image": "/images/dishes/papanasiWithSourCream&jam-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 5
-		},
-		{
-			"id": 30,
-			"title": "Dragon Roll",
-			"description": "A sushi roll filled with shrimp tempura and cucumber, topped with avocado, eel sauce, sesame seeds, and a light spicy mayo.",
-			"price": 19.5,
-			"calories": 640,
-			"prep_time": "12-15 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/dragonRoll.jpg",
-			"cover_image": "/images/dishes/dragonRoll-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 2
-		},
-		{
-			"id": 31,
-			"title": "Chicken Katsu Curry",
-			"description": "Crispy breaded chicken cutlet served over steamed rice with rich Japanese curry sauce and pickled vegetables.",
-			"price": 17.5,
-			"calories": 820,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/chickenKatsuCurry.jpg",
-			"cover_image": "/images/dishes/chickenKatsuCurry-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 2
-		},
-		{
-			"id": 32,
-			"title": "Golden Olive Beef Burger",
-			"description": "Juicy beef patty with cheddar, lettuce, tomato, caramelized onions, pickles, and house sauce in a toasted brioche bun.",
-			"price": 18.5,
-			"calories": 920,
-			"prep_time": "15-18 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/goldenOliveBeefBurger.jpg",
-			"cover_image": "/images/dishes/goldenOliveBeefBurger-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 33,
-			"title": "Creamy Chicken Alfredo Pasta",
-			"description": "Tender chicken breast served with fettuccine pasta in a creamy parmesan Alfredo sauce, finished with parsley and cracked black pepper.",
-			"price": 22,
-			"calories": 880,
-			"prep_time": "15-20 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/chickenAlfredoPasta.jpg",
-			"cover_image": "/images/dishes/chickenAlfredoPasta-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 2
-		},
-		{
-			"id": 34,
-			"title": "Quattro Formaggi Pizza",
-			"description": "Italian pizza topped with mozzarella, gorgonzola, parmesan, and ricotta for a rich, creamy cheese flavor.",
-			"price": 17,
-			"calories": 860,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/quattroFormaggiPizza.jpg",
-			"cover_image": "/images/dishes/quattroFormaggiPizza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 2
-		},
-		{
-			"id": 35,
-			"title": "Prosciutto Arugula Pizza",
-			"description": "Wood-fired pizza with tomato sauce, mozzarella, prosciutto, fresh arugula, parmesan flakes, and olive oil.",
-			"price": 19,
-			"calories": 890,
-			"prep_time": "15-20 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/prosciuttoArugulaPizza.jpg",
-			"cover_image": "/images/dishes/prosciuttoArugulaPizza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 2
-		},
-		{
-			"id": 36,
-			"title": "Loaded Nachos",
-			"description": "Crispy tortilla chips topped with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro.",
-			"price": 12.5,
-			"calories": 720,
-			"prep_time": "8-10 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/loadedNachos.jpg",
-			"cover_image": "/images/dishes/loadedNachos-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": true
-			},
-			"restaurant_id": 4,
-			"menu_category_id": 1
-		},
-		{
-			"id": 37,
-			"title": "Spicy Miso Ramen",
-			"description": "A bold ramen bowl with spicy miso broth, noodles, chashu pork, soft-boiled egg, corn, spring onions, and chili oil.",
-			"price": 18.5,
-			"calories": 870,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/spicyMisoRamen.jpg",
-			"cover_image": "/images/dishes/spicyMisoRamen-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 5,
-			"menu_category_id": 2
-		},
-		{
-			"id": 38,
-			"title": "Tuna Poke Bowl",
-			"description": "Fresh tuna cubes served over rice with avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce.",
-			"price": 17.5,
-			"calories": 630,
-			"prep_time": "10-15 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/tunaPokeBowl.jpg",
-			"cover_image": "/images/dishes/tunaPokeBowl-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 2
-		},
-		{
-			"id": 39,
-			"title": "Grilled Salmon with Lemon Butter",
-			"description": "Tender grilled salmon fillet served with lemon butter sauce, seasonal vegetables, and fresh herbs.",
-			"price": 27.5,
-			"calories": 610,
-			"prep_time": "18-22 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/grilledSalmonLemonButter.jpg",
-			"cover_image": "/images/dishes/grilledSalmonLemonButter-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 7,
-			"menu_category_id": 2
-		},
-		{
-			"id": 40,
-			"title": "Stir-Fried Vegetables",
-			"price": 5,
-			"card_image": "/images/dishes/stirfriedVegetables.jpg",
-			"description": "Vibrant and crisp-tender—a colorful medley of fresh, seasonal vegetables wok-tossed in a light, savory garlic glaze.",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 3
-		},
-		{
-			"id": 41,
-			"title": "Fried Rice",
-			"price": 5,
-			"card_image": "/images/dishes/friedRice.jpg",
-			"description": "Fragrant, wok-tossed rice stir-fried with scrambled eggs, sweet peas, carrots, and green onions, lightly seasoned with savory soy sauce and sesame oil.",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 3
-		},
-		{
-			"id": 40,
-			"title": "Teriyaki Chicken Rice Bowl",
-			"description": "Grilled chicken glazed with teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions.",
-			"price": 15.5,
-			"calories": 720,
-			"prep_time": "12-15 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/teriyakiChickenRiceBowl.jpg",
-			"cover_image": "/images/dishes/teriyakiChickenRiceBowl-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 2
-		},
-		{
-			"id": 41,
-			"title": "Shrimp Avocado Poke Bowl",
-			"description": "Juicy shrimp served over rice with avocado, cucumber, edamame, seaweed salad, pickled ginger, sesame seeds, and a light citrus soy dressing.",
-			"price": 16.5,
-			"calories": 610,
-			"prep_time": "10-15 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/shrimpAvocadoPokeBowl.jpg",
-			"cover_image": "/images/dishes/shrimpAvocadoPokeBowl-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 2
-		},
-		{
-			"id": 42,
-			"title": "Mango Coconut Chia Pudding",
-			"description": "Creamy coconut chia pudding layered with fresh mango puree, toasted coconut flakes, and seasonal berries.",
-			"price": 7.5,
-			"calories": 340,
-			"prep_time": "5 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/mangoCoconutChiaPudding.jpg",
-			"cover_image": "/images/dishes/mangoCoconutChiaPudding-cover.png",
-			"dietary": {
-				"vegan": true,
-				"gluten_free": true,
-				"vegetarian": true
-			},
-			"restaurant_id": 6,
-			"menu_category_id": 5
-		},
-		{
-			"id": 43,
-			"title": "Matcha Cheesecake",
-			"description": "Creamy Japanese-style cheesecake flavored with matcha green tea, served with a light berry sauce and a dusting of powdered sugar.",
-			"price": 8.5,
-			"calories": 430,
-			"prep_time": "5 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/matchaCheesecake.jpg",
-			"cover_image": "/images/dishes/matchaCheesecake-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 1,
-			"menu_category_id": 5
-		},
-		{
-			"id": 44,
-			"title": "Chocolate Lava Cake",
-			"description": "Warm chocolate cake with a molten center, served with vanilla cream, fresh berries, and a light dusting of cocoa.",
-			"price": 9.5,
-			"calories": 560,
-			"prep_time": "8-10 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/chocolateLavaCake.jpg",
-			"cover_image": "/images/dishes/chocolateLavaCake-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 2,
-			"menu_category_id": 5
-		},
-		{
-			"id": 45,
-			"title": "Classic Tiramisu",
-			"description": "Traditional Italian dessert with espresso-soaked ladyfingers, mascarpone cream, cocoa powder, and a smooth coffee finish.",
-			"price": 8,
-			"calories": 470,
-			"prep_time": "5 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/classicTiramisu.jpg",
-			"cover_image": "/images/dishes/classicTiramisu-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 5
-		},
-		{
-			"id": 46,
-			"title": "Mochi Ice Cream Trio",
-			"description": "Three soft mochi pieces filled with creamy ice cream flavors: matcha, mango, and strawberry.",
-			"price": 7.5,
-			"calories": 360,
-			"prep_time": "5 min",
-			"rating": 4.5,
-			"card_image": "/images/dishes/mochiIceCreamTrio.jpg",
-			"cover_image": "/images/dishes/mochiIceCreamTrio-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": true
-			},
-			"restaurant_id": 5,
-			"menu_category_id": 5
-		},
-		{
-			"id": 47,
-			"title": "Baklava with Pistachios",
-			"description": "Flaky Mediterranean pastry layered with honey, crushed pistachios, walnuts, and a light citrus syrup.",
-			"price": 7,
-			"calories": 420,
-			"prep_time": "5 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/baklavaPistachios.jpg",
-			"cover_image": "/images/dishes/baklavaPistachios-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": true
-			},
-			"restaurant_id": 7,
-			"menu_category_id": 5
-		},
-		{
-			"id": 48,
-			"title": "Diavola Pizza",
-			"description": "Spicy Italian pizza topped with tomato sauce, mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil.",
-			"price": 18,
-			"calories": 910,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/diavolaPizza.jpg",
-			"cover_image": "/images/dishes/diavolaPizza-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 3,
-			"menu_category_id": 2
-		},
-		{
-			"id": 49,
-			"title": "Carne Asada Tacos",
-			"description": "Grilled marinated beef tacos served on warm corn tortillas with onion, cilantro, lime, salsa verde, and a touch of chili.",
-			"price": 16,
-			"calories": 680,
-			"prep_time": "12-15 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/carneAsadaTacos.jpg",
-			"cover_image": "/images/dishes/carneAsadaTacos-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 4,
-			"menu_category_id": 2
-		},
-		{
-			"id": 50,
-			"title": "Cabbage Rolls with Smoked Pork",
-			"description": "Traditional cabbage rolls filled with minced pork and rice, slowly cooked in tomato sauce and served with sour cream and fresh herbs.",
-			"price": 18.5,
-			"calories": 780,
-			"prep_time": "15-20 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/cabbageRollsSmokedPork.jpg",
-			"cover_image": "/images/dishes/cabbageRollsSmokedPork-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 2
-		},
-		{
-			"id": 51,
-			"title": "Transylvanian Bean Soup",
-			"description": "Hearty bean soup with smoked pork, vegetables, paprika, and fresh parsley, served warm with rustic bread.",
-			"price": 11.5,
-			"calories": 520,
-			"prep_time": "10-15 min",
-			"rating": 4.6,
-			"card_image": "/images/dishes/transylvanianBeanSoup.jpg",
-			"cover_image": "/images/dishes/transylvanianBeanSoup-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": false,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 1
-		},
-		{
-			"id": 52,
-			"title": "Grilled Trout with Polenta",
-			"description": "Fresh grilled trout served with creamy polenta, garlic sauce, lemon, and seasonal greens.",
-			"price": 23,
-			"calories": 610,
-			"prep_time": "18-22 min",
-			"rating": 4.7,
-			"card_image": "/images/dishes/grilledTroutPolenta.jpg",
-			"cover_image": "/images/dishes/grilledTroutPolenta-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 2
-		},
-		{
-			"id": 53,
-			"title": "Crispy Pork Knuckle",
-			"description": "Slow-roasted pork knuckle with crispy skin, served with roasted potatoes, pickled cabbage, mustard, and horseradish.",
-			"price": 28,
-			"calories": 1050,
-			"prep_time": "20-25 min",
-			"rating": 4.8,
-			"card_image": "/images/dishes/crispyPorkKnuckle.jpg",
-			"cover_image": "/images/dishes/crispyPorkKnuckle-cover.png",
-			"dietary": {
-				"vegan": false,
-				"gluten_free": true,
-				"vegetarian": false
-			},
-			"restaurant_id": 8,
-			"menu_category_id": 2
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "name": "Nastase Alexandru",
+      "email": "alexandru.stefan.nastase@gmail.com"
+    }
+  ],
+  "orders": [
+    {
+      "user_id": 1,
+      "products": [
+        {
+          "id": 12,
+          "title": "Miso Soup",
+          "description": "Warm Japanese soup with miso broth, tofu, seaweed, and spring onions.",
+          "price": 6,
+          "calories": 90,
+          "prep_time": "5 min",
+          "rating": 4.5,
+          "card_image": "/images/dishes/misoSoup.jpg",
+          "cover_image": "/images/dishes/misoSoup-cover.png",
+          "dietary": {
+            "vegan": true,
+            "gluten_free": false,
+            "vegetarian": true
+          },
+          "restaurant_id": 1,
+          "menu_category_id": 1,
+          "quantity": 1
+        },
+        {
+          "id": 36,
+          "title": "Loaded Nachos",
+          "description": "Crispy tortilla chips topped with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro.",
+          "price": 12.5,
+          "calories": 720,
+          "prep_time": "8-10 min",
+          "rating": 4.5,
+          "card_image": "/images/dishes/loadedNachos.jpg",
+          "cover_image": "/images/dishes/loadedNachos-cover.png",
+          "dietary": {
+            "vegan": false,
+            "gluten_free": true,
+            "vegetarian": true
+          },
+          "restaurant_id": 4,
+          "menu_category_id": 1,
+          "quantity": 2
+        },
+        {
+          "id": 6,
+          "title": "Crispy Calamari",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "price": 15,
+          "calories": 110,
+          "prep_time": "5 min",
+          "rating": 4.8,
+          "card_image": "/images/dishes/crispyCalamari.jpg",
+          "cover_image": "/images/dishes/crispyCalamari-cover.png",
+          "dietary": {
+            "vegan": false,
+            "gluten_free": false,
+            "vegetarian": false
+          },
+          "restaurant_id": 2,
+          "menu_category_id": 1,
+          "quantity": 1
+        }
+      ],
+      "date": "02-09-2026",
+      "time": "11:28",
+      "address": "Str. George Coșbuc, nr. 24",
+      "instructions": "asasdas dasd asd ad asdas",
+      "payment_method": "Visa",
+      "status": "pending",
+      "id": 1
+    }
+  ],
+  "payment_options": [
+    {
+      "id": 1,
+      "name": "Visa"
+    },
+    {
+      "id": 2,
+      "name": "PayPal"
+    },
+    {
+      "id": 3,
+      "name": "Mastercard"
+    }
+  ],
+  "delivery_addresses": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "label": "Home",
+      "recipient_name": "Nastase Alexandru",
+      "street_address": "Str. George Coșbuc, nr. 24",
+      "city": "Alba Iulia",
+      "county": "Alba",
+      "postal_code": "510118",
+      "country_code": "RO",
+      "phone_number": "+40700000000",
+      "is_default": true
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "label": "Work",
+      "recipient_name": "Nastase Alexandru",
+      "street_address": "Str. Aurel Vlaicu, nr. 34",
+      "city": "Alba Iulia",
+      "county": "Alba",
+      "postal_code": "510000",
+      "country_code": "RO",
+      "phone_number": "+40700000000",
+      "is_default": false
+    }
+  ],
+  "food_categories": [
+    {
+      "id": 1,
+      "title": "Pizza",
+      "image": {
+        "url": "/images/foodCategories/pizza.jpg",
+        "alt": "pizza"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Burgers",
+      "image": {
+        "url": "/images/foodCategories/burgers.jpg",
+        "alt": "burgers"
+      }
+    },
+    {
+      "id": 3,
+      "title": "Sushi",
+      "image": {
+        "url": "/images/foodCategories/sushi.jpg",
+        "alt": "sushi"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Vegan",
+      "image": {
+        "url": "/images/foodCategories/vegan.jpg",
+        "alt": "vegan"
+      }
+    },
+    {
+      "id": 5,
+      "title": "Desserts",
+      "image": {
+        "url": "/images/foodCategories/desserts.jpg",
+        "alt": "desserts"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Tacos",
+      "image": {
+        "url": "/images/foodCategories/tacos.jpg",
+        "alt": "mexican"
+      }
+    },
+    {
+      "id": 7,
+      "title": "Pasta",
+      "image": {
+        "url": "/images/foodCategories/pasta.jpg",
+        "alt": "pasta"
+      }
+    },
+    {
+      "id": 8,
+      "title": "Ramen",
+      "image": {
+        "url": "",
+        "alt": "ramen"
+      }
+    },
+    {
+      "id": 9,
+      "title": "Fish",
+      "image": {
+        "url": "",
+        "alt": "Fish"
+      }
+    },
+    {
+      "id": 10,
+      "title": "Soup",
+      "image": {
+        "url": "",
+        "alt": "soup"
+      }
+    }
+  ],
+  "menu_categories": [
+    {
+      "id": 1,
+      "title": "Appetizers"
+    },
+    {
+      "id": 2,
+      "title": "Signature Mains"
+    },
+    {
+      "id": 3,
+      "title": "Side Dishes"
+    },
+    {
+      "id": 4,
+      "title": "Beverages"
+    },
+    {
+      "id": 5,
+      "title": "Desserts"
+    }
+  ],
+  "favorites_restaurants_ids": [],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Sakura Sushi House",
+      "main_cuisine": "Japanese",
+      "card_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-card.jpg",
+      "cover_image": "/images/restaurants/sakuraSushiHouse/sakuraSushiHouse-cover.jpg",
+      "delivery_time": "25-30 min",
+      "delivery_fee": 2.99,
+      "rating": 4.9,
+      "distance": 1.8,
+      "closing_time": "10:30 PM",
+      "food_categories_ids": [
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "name": "The Golden Olive Bistro",
+      "main_cuisine": "International",
+      "card_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-card.jpg",
+      "cover_image": "/images/restaurants/goldenOliveBistro/goldenOliveBistro-cover.jpg",
+      "delivery_time": "30-35 min",
+      "delivery_fee": 3.9,
+      "rating": 4.5,
+      "distance": 1.2,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        2,
+        5,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Luigi's Authentic Pizza",
+      "main_cuisine": "Italian",
+      "card_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-card.jpg",
+      "cover_image": "/images/restaurants/luigisAuthenticPizza/luigisAuthenticPizza-cover.avif",
+      "delivery_time": "30-35 min",
+      "delivery_fee": 0,
+      "rating": 4.7,
+      "distance": 1.2,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cantina Street Tacos",
+      "main_cuisine": "Mexican",
+      "card_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-card.jpg",
+      "cover_image": "/images/restaurants/cantinaStreetTacos/cantinaStreetTacos-cover.jpg",
+      "delivery_time": "35-45 min",
+      "delivery_fee": 0,
+      "rating": 4.6,
+      "distance": 10.2,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        6
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Tokyo Ramen Bar",
+      "main_cuisine": "Japanese",
+      "card_image": "/images/restaurants/tokyoRamenBar/tokyoRamenBar-card.jpg",
+      "cover_image": "/images/restaurants/tokyoRamenBar/tokyoRamenBar-cover.jpg",
+      "delivery_time": "25-30 min",
+      "delivery_fee": 0,
+      "rating": 4.5,
+      "distance": 1.2,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        8
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Fresh Poke & Bowls",
+      "main_cuisine": "Asian",
+      "card_image": "/images/restaurants/freshPokeBowls/freshPokeBowls-card.jpg",
+      "cover_image": "/images/restaurants/freshPokeBowls/freshPokeBowls-cover.jpg",
+      "delivery_time": "15-20 min",
+      "delivery_fee": 3,
+      "rating": 3.6,
+      "distance": 2.2,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        4,
+        9
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Restaurant Meridian",
+      "main_cuisine": "Mediterranean",
+      "card_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-card.jpg",
+      "cover_image": "/images/restaurants/restaurantMeridian/restaurantMeridian-cover.jpg",
+      "delivery_time": "10-25 min",
+      "delivery_fee": 4,
+      "rating": 4.9,
+      "distance": 5.4,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        9,
+        7,
+        10
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Conacul Secuiesc",
+      "main_cuisine": "Traditional",
+      "card_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-card.jpg",
+      "cover_image": "/images/restaurants/conaculSecuiesc/conaculSecuiesc-cover.png",
+      "delivery_time": "10-25 min",
+      "delivery_fee": 3.9,
+      "rating": 3.5,
+      "distance": 7.6,
+      "closing_time": "10:00 PM",
+      "food_categories_ids": [
+        10,
+        9,
+        5
+      ]
+    }
+  ],
+  "dishes": [
+    {
+      "id": 1,
+      "title": "Roasted Lamb Shoulder",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": 32,
+      "calories": 725,
+      "prep_time": "15-20 min",
+      "rating": 4.9,
+      "card_image": "/images/dishes/roastedLambShoulder.jpg",
+      "cover_image": "/images/dishes/roastedLambShoulder-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 2,
+      "title": "Rice",
+      "price": 4,
+      "description": "A fluffy, perfectly steamed long-grain rice—subtly fragrant and the perfect canvas for absorbing rich sauces and bold flavors.",
+      "card_image": "/images/dishes/rice.jpg",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 3
+    },
+    {
+      "id": 3,
+      "title": "French Fries",
+      "price": 5,
+      "card_image": "/images/dishes/frenchFries.jpg",
+      "description": "Crispy on the outside, fluffy on the inside—golden, perfectly seasoned potato fries served piping hot.",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 3
+    },
+    {
+      "id": 4,
+      "title": "Truffle Mushroom Risotto",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": 26.5,
+      "calories": 525,
+      "prep_time": "15-18 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/truffleMushroomRisotto.jpg",
+      "cover_image": "/images/dishes/truffleMushroomRisotto-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 5,
+      "title": "Classic Bruschetta",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": 12.5,
+      "calories": 125,
+      "prep_time": "5 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/classicBruschetta.jpg",
+      "cover_image": "/images/dishes/classicBruschetta-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 1
+    },
+    {
+      "id": 6,
+      "title": "Crispy Calamari",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "price": 15,
+      "calories": 110,
+      "prep_time": "5 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/crispyCalamari.jpg",
+      "cover_image": "/images/dishes/crispyCalamari-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 1
+    },
+    {
+      "id": 7,
+      "title": "Pan-Seared Sea Bass",
+      "description": "A delicate fillet of wild-caught sea bass served over a bed of wilted baby spinach and a citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts for a balanced, light, yet rich flavor profile.",
+      "price": 34.5,
+      "calories": 480,
+      "prep_time": "20-25 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/panSearedSeaBass.jpg",
+      "cover_image": "/images/dishes/panSearedSeaBass-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 8,
+      "title": "Braised Beef Short Rib",
+      "description": "Slow-cooked for 12 hours in a red wine reduction, served atop creamy Yukon Gold mashed potatoes and glazed heirloom carrots. The meat is fork-tender and deeply savory, making it a signature comfort classic.",
+      "price": 38,
+      "calories": 890,
+      "prep_time": "12-15 min",
+      "rating": 4.9,
+      "card_image": "/images/dishes/braisedBeefShortRib.jpg",
+      "cover_image": "/images/dishes/braisedBeefShortRib-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 9,
+      "title": "Eggplant Parmigiana Stack",
+      "description": "Crispy layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan. Baked until golden and bubbling, served with a side of arugula salad.",
+      "price": 24,
+      "calories": 610,
+      "prep_time": "18-22 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/eggplantParmigianaStack.jpg",
+      "cover_image": "/images/dishes/eggplantParmigianaStack-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 10,
+      "title": "Salmon Nigiri Set",
+      "description": "Fresh salmon slices served over seasoned sushi rice with soy sauce, wasabi, and pickled ginger.",
+      "price": 18.5,
+      "calories": 420,
+      "prep_time": "10-15 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/salmonNigiriSet.jpg",
+      "cover_image": "/images/dishes/salmonNigiriSet-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 2
+    },
+    {
+      "id": 11,
+      "title": "Spicy Tuna Roll",
+      "description": "Classic sushi roll filled with spicy tuna, cucumber, sesame seeds, and a light chili mayo.",
+      "price": 16,
+      "calories": 520,
+      "prep_time": "10-15 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/spicyTunaRoll.jpg",
+      "cover_image": "/images/dishes/spicyTunaRoll-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 2
+    },
+    {
+      "id": 12,
+      "title": "Miso Soup",
+      "description": "Warm Japanese soup with miso broth, tofu, seaweed, and spring onions.",
+      "price": 6,
+      "calories": 90,
+      "prep_time": "5 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/misoSoup.jpg",
+      "cover_image": "/images/dishes/misoSoup-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 1
+    },
+    {
+      "id": 13,
+      "title": "Margherita Pizza",
+      "description": "Classic Italian pizza with tomato sauce, fresh mozzarella, basil, and extra virgin olive oil.",
+      "price": 14.5,
+      "calories": 780,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/margheritaPizza.jpg",
+      "cover_image": "/images/dishes/margheritaPizza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 2
+    },
+    {
+      "id": 14,
+      "title": "Pepperoni Pizza",
+      "description": "Thin crust pizza topped with tomato sauce, mozzarella, spicy pepperoni, and oregano.",
+      "price": 16.5,
+      "calories": 920,
+      "prep_time": "15-20 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/pepperoniPizza.jpg",
+      "cover_image": "/images/dishes/pepperoniPizza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 2
+    },
+    {
+      "id": 15,
+      "title": "Garlic Focaccia",
+      "description": "Warm Italian focaccia brushed with garlic oil, rosemary, and sea salt.",
+      "price": 8,
+      "calories": 360,
+      "prep_time": "8-10 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/garlicFocaccia.jpg",
+      "cover_image": "/images/dishes/garlicFocaccia-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 1
+    },
+    {
+      "id": 16,
+      "title": "Beef Birria Tacos",
+      "description": "Slow-cooked beef tacos served with melted cheese, onion, cilantro, lime, and rich consommé for dipping.",
+      "price": 17.5,
+      "calories": 760,
+      "prep_time": "15-20 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/beefBirriaTacos.jpg",
+      "cover_image": "/images/dishes/beefBirriaTacos-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 4,
+      "menu_category_id": 2
+    },
+    {
+      "id": 17,
+      "title": "Chicken Quesadilla",
+      "description": "Grilled flour tortilla filled with chicken, melted cheese, peppers, and onions. Served with salsa and sour cream.",
+      "price": 14,
+      "calories": 690,
+      "prep_time": "12-15 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/chickenQuesadilla.jpg",
+      "cover_image": "/images/dishes/chickenQuesadilla-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 4,
+      "menu_category_id": 2
+    },
+    {
+      "id": 18,
+      "title": "Churros with Chocolate Sauce",
+      "description": "Crispy cinnamon-sugar churros served with warm chocolate dipping sauce.",
+      "price": 7.5,
+      "calories": 430,
+      "prep_time": "8-10 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/churrosChocolate.jpg",
+      "cover_image": "/images/dishes/churrosChocolate-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 4,
+      "menu_category_id": 5
+    },
+    {
+      "id": 19,
+      "title": "Tonkotsu Ramen",
+      "description": "Rich pork broth ramen with noodles, chashu pork, soft-boiled egg, spring onions, and nori.",
+      "price": 18,
+      "calories": 850,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/tonkotsuRamen.jpg",
+      "cover_image": "/images/dishes/tonkotsuRamen-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 5,
+      "menu_category_id": 2
+    },
+    {
+      "id": 20,
+      "title": "Vegetable Shoyu Ramen",
+      "description": "Soy-based ramen with vegetables, mushrooms, noodles, bamboo shoots, and spring onions.",
+      "price": 15.5,
+      "calories": 620,
+      "prep_time": "15-18 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/vegetableShoyuRamen.jpg",
+      "cover_image": "/images/dishes/vegetableShoyuRamen-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 5,
+      "menu_category_id": 2
+    },
+    {
+      "id": 21,
+      "title": "Pork Gyoza",
+      "description": "Pan-fried Japanese dumplings filled with pork, cabbage, ginger, and garlic.",
+      "price": 9.5,
+      "calories": 390,
+      "prep_time": "8-10 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/porkGyoza.jpg",
+      "cover_image": "/images/dishes/porkGyoza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 5,
+      "menu_category_id": 1
+    },
+    {
+      "id": 22,
+      "title": "Salmon Poke Bowl",
+      "description": "Fresh salmon served over rice with avocado, cucumber, edamame, seaweed, sesame seeds, and poke sauce.",
+      "price": 17,
+      "calories": 650,
+      "prep_time": "10-15 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/salmonPokeBowl.jpg",
+      "cover_image": "/images/dishes/salmonPokeBowl-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 2
+    },
+    {
+      "id": 23,
+      "title": "Tofu Buddha Bowl",
+      "description": "Plant-based bowl with crispy tofu, quinoa, avocado, roasted vegetables, greens, and sesame dressing.",
+      "price": 15,
+      "calories": 590,
+      "prep_time": "10-15 min",
+      "rating": 4.4,
+      "card_image": "/images/dishes/tofuBuddhaBowl.jpg",
+      "cover_image": "/images/dishes/tofuBuddhaBowl-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": true,
+        "vegetarian": true
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 2
+    },
+    {
+      "id": 24,
+      "title": "Grilled Sea Bream",
+      "description": "Mediterranean-style grilled sea bream served with lemon, herbs, olive oil, and roasted vegetables.",
+      "price": 29,
+      "calories": 540,
+      "prep_time": "20-25 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/grilledSeaBream.jpg",
+      "cover_image": "/images/dishes/grilledSeaBream-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 7,
+      "menu_category_id": 2
+    },
+    {
+      "id": 25,
+      "title": "Seafood Linguine",
+      "description": "Linguine pasta tossed with shrimp, mussels, calamari, cherry tomatoes, garlic, white wine, and parsley.",
+      "price": 24.5,
+      "calories": 760,
+      "prep_time": "18-22 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/seafoodLinguine.jpg",
+      "cover_image": "/images/dishes/seafoodLinguine-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 7,
+      "menu_category_id": 2
+    },
+    {
+      "id": 26,
+      "title": "Greek Salad",
+      "description": "Fresh tomatoes, cucumber, red onion, olives, feta cheese, oregano, and extra virgin olive oil.",
+      "price": 11,
+      "calories": 320,
+      "prep_time": "5-8 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/greekSalad.jpg",
+      "cover_image": "/images/dishes/greekSalad-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": true
+      },
+      "restaurant_id": 7,
+      "menu_category_id": 1
+    },
+    {
+      "id": 27,
+      "title": "Goulash Soup",
+      "description": "Traditional rich soup with tender beef, potatoes, paprika, vegetables, and fresh herbs.",
+      "price": 12.5,
+      "calories": 430,
+      "prep_time": "10-15 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/goulashSoup.jpg",
+      "cover_image": "/images/dishes/goulashSoup-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 1
+    },
+    {
+      "id": 28,
+      "title": "Szekler Pork Stew",
+      "description": "Traditional pork stew with smoked flavors, paprika sauce, and creamy mashed potatoes.",
+      "price": 21,
+      "calories": 820,
+      "prep_time": "15-20 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/szeklerPorkStew.jpg",
+      "cover_image": "/images/dishes/szeklerPorkStew-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 2
+    },
+    {
+      "id": 29,
+      "title": "Papanasi with Sour Cream and Jam",
+      "description": "Traditional Romanian fried cheese doughnuts served with sour cream and berry jam.",
+      "price": 10.5,
+      "calories": 680,
+      "prep_time": "12-15 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/papanasiWithSourCream&jam.jpg",
+      "cover_image": "/images/dishes/papanasiWithSourCream&jam-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 5
+    },
+    {
+      "id": 30,
+      "title": "Dragon Roll",
+      "description": "A sushi roll filled with shrimp tempura and cucumber, topped with avocado, eel sauce, sesame seeds, and a light spicy mayo.",
+      "price": 19.5,
+      "calories": 640,
+      "prep_time": "12-15 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/dragonRoll.jpg",
+      "cover_image": "/images/dishes/dragonRoll-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 2
+    },
+    {
+      "id": 31,
+      "title": "Chicken Katsu Curry",
+      "description": "Crispy breaded chicken cutlet served over steamed rice with rich Japanese curry sauce and pickled vegetables.",
+      "price": 17.5,
+      "calories": 820,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/chickenKatsuCurry.jpg",
+      "cover_image": "/images/dishes/chickenKatsuCurry-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 2
+    },
+    {
+      "id": 32,
+      "title": "Golden Olive Beef Burger",
+      "description": "Juicy beef patty with cheddar, lettuce, tomato, caramelized onions, pickles, and house sauce in a toasted brioche bun.",
+      "price": 18.5,
+      "calories": 920,
+      "prep_time": "15-18 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/goldenOliveBeefBurger.jpg",
+      "cover_image": "/images/dishes/goldenOliveBeefBurger-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 33,
+      "title": "Creamy Chicken Alfredo Pasta",
+      "description": "Tender chicken breast served with fettuccine pasta in a creamy parmesan Alfredo sauce, finished with parsley and cracked black pepper.",
+      "price": 22,
+      "calories": 880,
+      "prep_time": "15-20 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/chickenAlfredoPasta.jpg",
+      "cover_image": "/images/dishes/chickenAlfredoPasta-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 2
+    },
+    {
+      "id": 34,
+      "title": "Quattro Formaggi Pizza",
+      "description": "Italian pizza topped with mozzarella, gorgonzola, parmesan, and ricotta for a rich, creamy cheese flavor.",
+      "price": 17,
+      "calories": 860,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/quattroFormaggiPizza.jpg",
+      "cover_image": "/images/dishes/quattroFormaggiPizza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 2
+    },
+    {
+      "id": 35,
+      "title": "Prosciutto Arugula Pizza",
+      "description": "Wood-fired pizza with tomato sauce, mozzarella, prosciutto, fresh arugula, parmesan flakes, and olive oil.",
+      "price": 19,
+      "calories": 890,
+      "prep_time": "15-20 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/prosciuttoArugulaPizza.jpg",
+      "cover_image": "/images/dishes/prosciuttoArugulaPizza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 2
+    },
+    {
+      "id": 36,
+      "title": "Loaded Nachos",
+      "description": "Crispy tortilla chips topped with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro.",
+      "price": 12.5,
+      "calories": 720,
+      "prep_time": "8-10 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/loadedNachos.jpg",
+      "cover_image": "/images/dishes/loadedNachos-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": true
+      },
+      "restaurant_id": 4,
+      "menu_category_id": 1
+    },
+    {
+      "id": 37,
+      "title": "Spicy Miso Ramen",
+      "description": "A bold ramen bowl with spicy miso broth, noodles, chashu pork, soft-boiled egg, corn, spring onions, and chili oil.",
+      "price": 18.5,
+      "calories": 870,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/spicyMisoRamen.jpg",
+      "cover_image": "/images/dishes/spicyMisoRamen-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 5,
+      "menu_category_id": 2
+    },
+    {
+      "id": 38,
+      "title": "Tuna Poke Bowl",
+      "description": "Fresh tuna cubes served over rice with avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce.",
+      "price": 17.5,
+      "calories": 630,
+      "prep_time": "10-15 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/tunaPokeBowl.jpg",
+      "cover_image": "/images/dishes/tunaPokeBowl-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 2
+    },
+    {
+      "id": 39,
+      "title": "Grilled Salmon with Lemon Butter",
+      "description": "Tender grilled salmon fillet served with lemon butter sauce, seasonal vegetables, and fresh herbs.",
+      "price": 27.5,
+      "calories": 610,
+      "prep_time": "18-22 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/grilledSalmonLemonButter.jpg",
+      "cover_image": "/images/dishes/grilledSalmonLemonButter-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 7,
+      "menu_category_id": 2
+    },
+    {
+      "id": 40,
+      "title": "Stir-Fried Vegetables",
+      "price": 5,
+      "card_image": "/images/dishes/stirfriedVegetables.jpg",
+      "description": "Vibrant and crisp-tender—a colorful medley of fresh, seasonal vegetables wok-tossed in a light, savory garlic glaze.",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 3
+    },
+    {
+      "id": 41,
+      "title": "Fried Rice",
+      "price": 5,
+      "card_image": "/images/dishes/friedRice.jpg",
+      "description": "Fragrant, wok-tossed rice stir-fried with scrambled eggs, sweet peas, carrots, and green onions, lightly seasoned with savory soy sauce and sesame oil.",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 3
+    },
+    {
+      "id": 40,
+      "title": "Teriyaki Chicken Rice Bowl",
+      "description": "Grilled chicken glazed with teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions.",
+      "price": 15.5,
+      "calories": 720,
+      "prep_time": "12-15 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/teriyakiChickenRiceBowl.jpg",
+      "cover_image": "/images/dishes/teriyakiChickenRiceBowl-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 2
+    },
+    {
+      "id": 41,
+      "title": "Shrimp Avocado Poke Bowl",
+      "description": "Juicy shrimp served over rice with avocado, cucumber, edamame, seaweed salad, pickled ginger, sesame seeds, and a light citrus soy dressing.",
+      "price": 16.5,
+      "calories": 610,
+      "prep_time": "10-15 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/shrimpAvocadoPokeBowl.jpg",
+      "cover_image": "/images/dishes/shrimpAvocadoPokeBowl-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 2
+    },
+    {
+      "id": 42,
+      "title": "Mango Coconut Chia Pudding",
+      "description": "Creamy coconut chia pudding layered with fresh mango puree, toasted coconut flakes, and seasonal berries.",
+      "price": 7.5,
+      "calories": 340,
+      "prep_time": "5 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/mangoCoconutChiaPudding.jpg",
+      "cover_image": "/images/dishes/mangoCoconutChiaPudding-cover.png",
+      "dietary": {
+        "vegan": true,
+        "gluten_free": true,
+        "vegetarian": true
+      },
+      "restaurant_id": 6,
+      "menu_category_id": 5
+    },
+    {
+      "id": 43,
+      "title": "Matcha Cheesecake",
+      "description": "Creamy Japanese-style cheesecake flavored with matcha green tea, served with a light berry sauce and a dusting of powdered sugar.",
+      "price": 8.5,
+      "calories": 430,
+      "prep_time": "5 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/matchaCheesecake.jpg",
+      "cover_image": "/images/dishes/matchaCheesecake-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 1,
+      "menu_category_id": 5
+    },
+    {
+      "id": 44,
+      "title": "Chocolate Lava Cake",
+      "description": "Warm chocolate cake with a molten center, served with vanilla cream, fresh berries, and a light dusting of cocoa.",
+      "price": 9.5,
+      "calories": 560,
+      "prep_time": "8-10 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/chocolateLavaCake.jpg",
+      "cover_image": "/images/dishes/chocolateLavaCake-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 2,
+      "menu_category_id": 5
+    },
+    {
+      "id": 45,
+      "title": "Classic Tiramisu",
+      "description": "Traditional Italian dessert with espresso-soaked ladyfingers, mascarpone cream, cocoa powder, and a smooth coffee finish.",
+      "price": 8,
+      "calories": 470,
+      "prep_time": "5 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/classicTiramisu.jpg",
+      "cover_image": "/images/dishes/classicTiramisu-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 5
+    },
+    {
+      "id": 46,
+      "title": "Mochi Ice Cream Trio",
+      "description": "Three soft mochi pieces filled with creamy ice cream flavors: matcha, mango, and strawberry.",
+      "price": 7.5,
+      "calories": 360,
+      "prep_time": "5 min",
+      "rating": 4.5,
+      "card_image": "/images/dishes/mochiIceCreamTrio.jpg",
+      "cover_image": "/images/dishes/mochiIceCreamTrio-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": true
+      },
+      "restaurant_id": 5,
+      "menu_category_id": 5
+    },
+    {
+      "id": 47,
+      "title": "Baklava with Pistachios",
+      "description": "Flaky Mediterranean pastry layered with honey, crushed pistachios, walnuts, and a light citrus syrup.",
+      "price": 7,
+      "calories": 420,
+      "prep_time": "5 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/baklavaPistachios.jpg",
+      "cover_image": "/images/dishes/baklavaPistachios-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": true
+      },
+      "restaurant_id": 7,
+      "menu_category_id": 5
+    },
+    {
+      "id": 48,
+      "title": "Diavola Pizza",
+      "description": "Spicy Italian pizza topped with tomato sauce, mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil.",
+      "price": 18,
+      "calories": 910,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/diavolaPizza.jpg",
+      "cover_image": "/images/dishes/diavolaPizza-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 3,
+      "menu_category_id": 2
+    },
+    {
+      "id": 49,
+      "title": "Carne Asada Tacos",
+      "description": "Grilled marinated beef tacos served on warm corn tortillas with onion, cilantro, lime, salsa verde, and a touch of chili.",
+      "price": 16,
+      "calories": 680,
+      "prep_time": "12-15 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/carneAsadaTacos.jpg",
+      "cover_image": "/images/dishes/carneAsadaTacos-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 4,
+      "menu_category_id": 2
+    },
+    {
+      "id": 50,
+      "title": "Cabbage Rolls with Smoked Pork",
+      "description": "Traditional cabbage rolls filled with minced pork and rice, slowly cooked in tomato sauce and served with sour cream and fresh herbs.",
+      "price": 18.5,
+      "calories": 780,
+      "prep_time": "15-20 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/cabbageRollsSmokedPork.jpg",
+      "cover_image": "/images/dishes/cabbageRollsSmokedPork-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 2
+    },
+    {
+      "id": 51,
+      "title": "Transylvanian Bean Soup",
+      "description": "Hearty bean soup with smoked pork, vegetables, paprika, and fresh parsley, served warm with rustic bread.",
+      "price": 11.5,
+      "calories": 520,
+      "prep_time": "10-15 min",
+      "rating": 4.6,
+      "card_image": "/images/dishes/transylvanianBeanSoup.jpg",
+      "cover_image": "/images/dishes/transylvanianBeanSoup-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": false,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 1
+    },
+    {
+      "id": 52,
+      "title": "Grilled Trout with Polenta",
+      "description": "Fresh grilled trout served with creamy polenta, garlic sauce, lemon, and seasonal greens.",
+      "price": 23,
+      "calories": 610,
+      "prep_time": "18-22 min",
+      "rating": 4.7,
+      "card_image": "/images/dishes/grilledTroutPolenta.jpg",
+      "cover_image": "/images/dishes/grilledTroutPolenta-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 2
+    },
+    {
+      "id": 53,
+      "title": "Crispy Pork Knuckle",
+      "description": "Slow-roasted pork knuckle with crispy skin, served with roasted potatoes, pickled cabbage, mustard, and horseradish.",
+      "price": 28,
+      "calories": 1050,
+      "prep_time": "20-25 min",
+      "rating": 4.8,
+      "card_image": "/images/dishes/crispyPorkKnuckle.jpg",
+      "cover_image": "/images/dishes/crispyPorkKnuckle-cover.png",
+      "dietary": {
+        "vegan": false,
+        "gluten_free": true,
+        "vegetarian": false
+      },
+      "restaurant_id": 8,
+      "menu_category_id": 2
+    }
+  ]
 }

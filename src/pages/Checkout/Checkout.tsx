@@ -81,6 +81,12 @@ export default function Checkout() {
 				clearCart?.();
 			},
 		});
+
+		/* setTimeout(async () => {
+      
+      const data = await fetch(`http://localhost:3001/orders${}`)
+      
+    }, 20 * 60 * 1000); */
 	};
 
 	useEffect(() => {

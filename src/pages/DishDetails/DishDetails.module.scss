@@ -1,0 +1,62 @@
+.main {
+	min-height: 100vh;
+	padding: 2rem;
+	display: grid;
+	align-items: start;
+	gap: 2rem;
+	grid-template-columns: 1fr 1fr;
+	max-width: 1120px;
+	margin-inline: auto;
+}
+
+.dishImg {
+	position: relative;
+	border-radius: 40px;
+	overflow: hidden;
+	min-height: 400px;
+
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+	}
+}
+
+.rating {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.rating {
+	font-weight: 700;
+	font-size: 0.9rem;
+	color: #f59e0b;
+}
+
+.dishTitle {
+	font-size: 2.25rem;
+	font-weight: 900;
+}
+
+.dishInfo {
+	display: flex;
+	gap: 1rem;
+	color: var(--primary);
+	font-weight: 500;
+	align-items: center;
+
+	.dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		background-color: lightgrey;
+	}
+}

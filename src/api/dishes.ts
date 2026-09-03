@@ -23,6 +23,28 @@ export const useDishesByRestaurant = (restaurantId: number | null) => {
 	return { dishes, dishesAreLoading, dishesError };
 };
 
+export const useDishById = (dishId: number | null) => {
+	const {
+		data: dish,
+		isLoading: dishIsLoading,
+		error: dishError,
+	} = useQuery<Dish, Error>({
+		queryKey: ["dishes", dishId],
+		enabled: !!dishId,
+		queryFn: async (): Promise<Dish> => {
+			const res = await fetch(`http://localhost:3001/dishes/${dishId}`);
+
+			if (!res.ok) {
+				throw new Error(`Failed to fetch the dish (Status: ${res.status})`);
+			}
+
+			return res.json();
+		},
+	});
+
+	return { dish, dishIsLoading, dishError };
+};
+
 export const useAllDishes = () => {
 	const {
 		data = [],

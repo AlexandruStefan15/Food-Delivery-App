@@ -3,15 +3,15 @@
 	padding: 2rem;
 	display: grid;
 	align-items: start;
-	gap: 2rem;
+	gap: 2.5rem;
 	grid-template-columns: 1fr 1fr;
-	max-width: 1120px;
+	max-width: 1150px;
 	margin-inline: auto;
 }
 
 .dishImg {
 	position: relative;
-	border-radius: 40px;
+	border-radius: 50px;
 	overflow: hidden;
 	min-height: 400px;
 
@@ -30,6 +30,7 @@
 }
 
 .content {
+	padding-top: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
@@ -59,4 +60,9 @@
 		border-radius: 100%;
 		background-color: lightgrey;
 	}
+}
+
+.caloriesWrapper {
+	display: flex;
+	gap: 0.25rem;
 }

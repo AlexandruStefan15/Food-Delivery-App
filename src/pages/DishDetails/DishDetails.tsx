@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 
 //icons
 import { IoStar } from "react-icons/io5";
+import { MdOutlineLocalFireDepartment } from "react-icons/md";
 
 //api
 import { useDishById } from "../../api/dishes";
@@ -36,7 +37,10 @@ export default function DishDetails() {
 					</span>
 					<h2 className={styles.dishTitle}>{dish?.title}</h2>
 					<div className={styles.dishInfo}>
-						<span className={styles.calories}>{dish?.calories} Cal</span>
+						<span className={styles.caloriesWrapper}>
+							<MdOutlineLocalFireDepartment size={18} />
+							<span className={styles.calories}>{dish?.calories} Cal</span>
+						</span>
 						<span className={styles.dot}></span>
 						<span className={styles.preparationTime}>Preparation: {dish?.prep_time}</span>
 					</div>

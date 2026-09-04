@@ -1,0 +1,13 @@
+.textarea {
+	margin-top: 2px;
+	width: 100%;
+	border-radius: 25px;
+	padding: 1rem;
+	border: 1px solid var(--border-color);
+	background-color: var(--base-v2);
+	outline: none;
+	resize: vertical;
+	&:focus {
+		outline: 1px solid var(--accent);
+	}
+}

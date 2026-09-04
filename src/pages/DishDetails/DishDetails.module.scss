@@ -67,8 +67,27 @@
 	gap: 0.25rem;
 }
 
+.dishDescription {
+	margin-top: 0.5rem;
+	line-height: 1.7;
+}
+
 .addToCartBtn {
 	margin-top: 1rem;
 	font-size: 1.1rem;
 	font-weight: 600;
+	width: 100%;
+	border-radius: 12px;
+	justify-content: center;
+}
+
+.instructions {
+	background-color: var(--base);
+	resize: none;
+	min-height: 100px;
+	margin-top: 0.5rem;
+}
+
+.instructionsTitle {
+	font-size: 1.125rem;
 }

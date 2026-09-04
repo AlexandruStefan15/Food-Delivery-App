@@ -18,6 +18,7 @@ import { useCartStore } from "../../store/cartStore";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
+import Textarea from "../../components/Textarea/Textarea";
 
 export default function DishDetails() {
 	const { dishId } = useParams();
@@ -57,6 +58,14 @@ export default function DishDetails() {
 						<span className={styles.preparationTime}>Preparation: {dish?.prep_time}</span>
 					</div>
 					<p className={styles.dishDescription}>{dish?.description}</p>
+
+					<Textarea
+						className={styles.instructions}
+						placeholder="Special instructions..."
+						name="instructions"
+						id="instructions"
+					></Textarea>
+
 					<Button
 						className={styles.addToCartBtn}
 						onClick={() => {

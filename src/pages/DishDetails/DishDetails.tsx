@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./DishDetails.module.scss";
 import { useParams } from "react-router";
+import { Navigate } from "react-router";
 
 //icons
 import { IoStar } from "react-icons/io5";
@@ -20,12 +21,17 @@ import Button from "../../components/Button/Button";
 
 export default function DishDetails() {
 	const { dishId } = useParams();
+	const numericDishId = dishId ? Number(dishId) : null;
 	const { dish, dishIsLoading, dishError } = useDishById(Number(dishId));
 	const addToCart = useCartStore((s) => s.addItem);
 
 	if (dishIsLoading) return null;
 
 	if (dishError) return <p className={styles.cls}>error</p>;
+
+	if (!numericDishId) {
+		return <Navigate to="/404" replace />;
+	}
 
 	return (
 		<div className={styles.page}>

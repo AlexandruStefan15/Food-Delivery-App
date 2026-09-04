@@ -2,13 +2,15 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import type { Dish } from "../types";
 
 export const useDishesByRestaurant = (restaurantId: number | null) => {
+	const isValidId = restaurantId !== null && !Number.isNaN(restaurantId);
+
 	const {
 		data: dishes = [],
 		isLoading: dishesAreLoading,
 		error: dishesError,
 	} = useQuery<Dish[], Error>({
 		queryKey: ["dishes", "restaurant", restaurantId],
-		enabled: !!restaurantId,
+		enabled: isValidId,
 		queryFn: async (): Promise<Dish[]> => {
 			const res = await fetch(`http://localhost:3001/dishes?restaurant_id=${restaurantId}`);
 
@@ -24,13 +26,15 @@ export const useDishesByRestaurant = (restaurantId: number | null) => {
 };
 
 export const useDishById = (dishId: number | null) => {
+	const isValidId = dishId !== null && !Number.isNaN(dishId);
+
 	const {
 		data: dish,
 		isLoading: dishIsLoading,
 		error: dishError,
 	} = useQuery<Dish, Error>({
 		queryKey: ["dishes", "dish", dishId],
-		enabled: !!dishId,
+		enabled: isValidId,
 		queryFn: async (): Promise<Dish> => {
 			const res = await fetch(`http://localhost:3001/dishes/${dishId}`);
 

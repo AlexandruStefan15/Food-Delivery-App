@@ -27,14 +27,16 @@ export const useRestaurants = () => {
 	};
 };
 
-export const useRestaurantById = (id: number | string | undefined) => {
+export const useRestaurantById = (id: number | null) => {
+	const isValidId = id !== null && !Number.isNaN(id);
+
 	const {
 		data: restaurant,
 		isLoading: restaurantIsLoading,
 		error: restaurantError,
 	} = useQuery<Restaurant, Error>({
 		queryKey: ["restaurant", id],
-		enabled: id !== undefined && id !== null,
+		enabled: isValidId,
 		queryFn: async (): Promise<Restaurant> => {
 			const response = await fetch(`http://localhost:3001/restaurants/${id}`);
 

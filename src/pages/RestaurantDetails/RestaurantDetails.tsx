@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./RestaurantDetails.module.scss";
-import { useParams } from "react-router";
+import { useParams, Navigate } from "react-router";
 
 //api
 import { useRestaurantById } from "../../api/restaurants";
@@ -32,7 +32,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 export default function RestaurantDetails() {
 	const { restaurantId } = useParams();
 	const numericRestaurantId = restaurantId ? Number(restaurantId) : null;
-	const { restaurant, restaurantIsLoading, restaurantError } = useRestaurantById(restaurantId);
+	const { restaurant, restaurantIsLoading, restaurantError } = useRestaurantById(numericRestaurantId);
 	const { dishes = [], dishesAreLoading, dishesError } = useDishesByRestaurant(numericRestaurantId);
 	const [searchValue, setSearchValue] = useState("");
 	const { menuCategories = [], menuCategoriesAreLoading, menuCategoriesError } = useMenuCategories(numericRestaurantId);
@@ -56,6 +56,10 @@ export default function RestaurantDetails() {
 
 	const isLoading = restaurantIsLoading || dishesAreLoading || menuCategoriesAreLoading;
 	const error = restaurantError || dishesError || menuCategoriesError;
+
+	if (!numericRestaurantId) {
+		return <Navigate to="/404" replace />;
+	}
 
 	if (isLoading) {
 		return (

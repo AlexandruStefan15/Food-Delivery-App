@@ -31,14 +31,11 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 
 export default function RestaurantDetails() {
 	const { restaurantId } = useParams();
+	const numericRestaurantId = restaurantId ? Number(restaurantId) : null;
 	const { restaurant, restaurantIsLoading, restaurantError } = useRestaurantById(restaurantId);
-	const { dishes = [], dishesAreLoading, dishesError } = useDishesByRestaurant(Number(restaurantId));
+	const { dishes = [], dishesAreLoading, dishesError } = useDishesByRestaurant(numericRestaurantId);
 	const [searchValue, setSearchValue] = useState("");
-	const {
-		menuCategories = [],
-		menuCategoriesAreLoading,
-		menuCategoriesError,
-	} = useMenuCategories(Number(restaurantId));
+	const { menuCategories = [], menuCategoriesAreLoading, menuCategoriesError } = useMenuCategories(numericRestaurantId);
 
 	const filteredDishes = dishes.filter((dish) =>
 		dish.title.trim().toLowerCase().includes(searchValue.trim().toLowerCase()),

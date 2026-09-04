@@ -5,17 +5,23 @@ import { useParams } from "react-router";
 //icons
 import { IoStar } from "react-icons/io5";
 import { MdOutlineLocalFireDepartment } from "react-icons/md";
+import { MdAddShoppingCart } from "react-icons/md";
 
 //api
 import { useDishById } from "../../api/dishes";
 
+//store
+import { useCartStore } from "../../store/cartStore";
+
 //components
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import Button from "../../components/Button/Button";
 
 export default function DishDetails() {
 	const { dishId } = useParams();
 	const { dish, dishIsLoading, dishError } = useDishById(Number(dishId));
+	const addToCart = useCartStore((s) => s.addItem);
 
 	if (dishIsLoading) return null;
 
@@ -45,6 +51,16 @@ export default function DishDetails() {
 						<span className={styles.preparationTime}>Preparation: {dish?.prep_time}</span>
 					</div>
 					<p className={styles.dishDescription}>{dish?.description}</p>
+					<Button
+						className={styles.addToCartBtn}
+						onClick={() => {
+							dish && addToCart(dish);
+						}}
+						variant="animated"
+					>
+						<MdAddShoppingCart size={22} />
+						<span className={styles.cls}>Add to cart — ${dish?.price?.toFixed(2)}</span>
+					</Button>
 				</div>
 			</main>
 			<Footer />

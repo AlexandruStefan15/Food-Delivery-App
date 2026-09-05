@@ -73,6 +73,7 @@
 }
 
 .addToCartBtn {
+	padding-block: 1em;
 	margin-top: 1rem;
 	font-size: 1.1rem;
 	font-weight: 600;
@@ -81,7 +82,7 @@
 	justify-content: center;
 }
 
-.instructions {
+textarea.instructions {
 	background-color: var(--base);
 	resize: none;
 	min-height: 100px;

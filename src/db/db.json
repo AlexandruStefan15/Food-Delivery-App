@@ -532,6 +532,7 @@
 	"dishes": [
 		{
 			"id": 1,
+			"discount": 0,
 			"title": "Roasted Lamb Shoulder",
 			"description": "Slow-roasted lamb shoulder cooked until exceptionally tender, with a rich, savory flavor and beautifully caramelized edges. Served as a hearty, comforting main course, it offers deep roasted notes, a juicy texture, and a satisfying finish that makes it perfect for anyone craving a classic meat dish.",
 			"price": 32,
@@ -550,6 +551,7 @@
 		},
 		{
 			"id": 2,
+			"discount": 0,
 			"title": "Rice",
 			"price": 4,
 			"description": "Light, fluffy long-grain rice steamed to a tender texture with a subtle natural fragrance. Its clean, delicate flavor makes it an ideal side for soaking up rich sauces, balancing spicy dishes, or complementing grilled meats, vegetables, curries, and other bold main courses.",
@@ -564,6 +566,7 @@
 		},
 		{
 			"id": 3,
+			"discount": 0,
 			"title": "French Fries",
 			"price": 5,
 			"card_image": "/images/dishes/frenchFries.jpg",
@@ -578,6 +581,7 @@
 		},
 		{
 			"id": 4,
+			"discount": 0,
 			"title": "Truffle Mushroom Risotto",
 			"description": "Creamy Italian-style risotto slowly cooked to a velvety consistency with earthy mushrooms and the deep, aromatic flavor of truffle. Rich, comforting, and elegantly balanced, every spoonful combines tender rice with savory notes and a luxurious finish.",
 			"price": 26.5,
@@ -596,6 +600,7 @@
 		},
 		{
 			"id": 5,
+			"discount": 0,
 			"title": "Classic Bruschetta",
 			"description": "Crisp toasted bread topped with a fresh mixture of ripe tomatoes, aromatic herbs, garlic, and olive oil. Bright, juicy, and full of Mediterranean flavor, this classic starter balances crunchy bread with a refreshing topping for a simple yet vibrant appetizer.",
 			"price": 12.5,
@@ -614,6 +619,7 @@
 		},
 		{
 			"id": 6,
+			"discount": 0,
 			"title": "Crispy Calamari",
 			"description": "Tender calamari lightly coated and fried until golden and crisp, creating a delicate crunch while keeping the seafood soft inside. Savory, satisfying, and perfect for sharing, this appetizer delivers a classic coastal flavor with every bite.",
 			"price": 15,
@@ -632,6 +638,7 @@
 		},
 		{
 			"id": 7,
+			"discount": 0,
 			"title": "Pan-Seared Sea Bass",
 			"description": "A delicate fillet of sea bass pan-seared until lightly golden, served over wilted baby spinach with a silky citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts, the dish balances fresh, buttery, and lightly nutty flavors in an elegant seafood main.",
 			"price": 34.5,
@@ -650,6 +657,7 @@
 		},
 		{
 			"id": 8,
+			"discount": 0,
 			"title": "Braised Beef Short Rib",
 			"description": "Beef short rib slowly braised for hours in a rich red wine reduction until deeply flavorful and fork-tender. Served over creamy Yukon Gold mashed potatoes with glazed heirloom carrots, this comforting signature dish combines savory meat, smooth potatoes, and subtle sweetness.",
 			"price": 38,
@@ -668,6 +676,7 @@
 		},
 		{
 			"id": 9,
+			"discount": 0,
 			"title": "Eggplant Parmigiana Stack",
 			"description": "Layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan, then baked until hot, golden, and bubbling. Served with arugula salad, this satisfying vegetarian main blends crisp, creamy, tangy, and savory flavors.",
 			"price": 24,
@@ -686,6 +695,7 @@
 		},
 		{
 			"id": 10,
+			"discount": 0,
 			"title": "Salmon Nigiri Set",
 			"description": "Fresh Atlantic salmon sliced into tender pieces and served over warm, lightly vinegared sushi rice. Accompanied by soy sauce, wasabi, and pickled ginger, the set offers a clean, balanced combination of buttery salmon, delicate rice, savory umami, and refreshing acidity.",
 			"price": 18.5,
@@ -704,6 +714,7 @@
 		},
 		{
 			"id": 11,
+			"discount": 0,
 			"title": "Spicy Tuna Roll",
 			"description": "A classic sushi roll filled with seasoned spicy tuna and crisp cucumber, finished with sesame seeds and a light chili mayo. Each bite combines soft rice, fresh fish, gentle heat, and a creamy finish for a balanced and satisfying sushi favorite.",
 			"price": 16,
@@ -722,6 +733,7 @@
 		},
 		{
 			"id": 12,
+			"discount": 0,
 			"title": "Miso Soup",
 			"description": "A warm and comforting Japanese soup made with savory miso broth, soft tofu, seaweed, and fresh spring onions. Light yet deeply umami, it is an ideal starter or side dish, offering delicate salty, earthy, and aromatic flavors in every spoonful.",
 			"price": 6,
@@ -740,6 +752,7 @@
 		},
 		{
 			"id": 13,
+			"discount": 0,
 			"title": "Margherita Pizza",
 			"description": "A timeless Italian pizza topped with bright tomato sauce, fresh mozzarella, fragrant basil, and a drizzle of extra virgin olive oil. Simple, balanced, and full of classic flavor, it combines a crisp crust with creamy cheese and fresh herbal notes.",
 			"price": 14.5,
@@ -758,6 +771,7 @@
 		},
 		{
 			"id": 14,
+			"discount": 0,
 			"title": "Pepperoni Pizza",
 			"description": "A thin-crust pizza layered with tomato sauce, melted mozzarella, spicy pepperoni, and aromatic oregano. Baked until the crust is crisp and the cheese is bubbling, it delivers a bold combination of savory, smoky, spicy, and cheesy flavors.",
 			"price": 16.5,
@@ -776,6 +790,7 @@
 		},
 		{
 			"id": 15,
+			"discount": 0,
 			"title": "Garlic Focaccia",
 			"description": "Warm Italian focaccia with a soft, airy center and lightly crisp edges, brushed generously with fragrant garlic oil. Finished with rosemary and sea salt, this simple bread is savory, aromatic, and perfect for sharing or pairing with soups, salads, and mains.",
 			"price": 8,
@@ -794,6 +809,7 @@
 		},
 		{
 			"id": 16,
+			"discount": 0,
 			"title": "Beef Birria Tacos",
 			"description": "Tender slow-cooked beef tucked into warm tacos with melted cheese, onion, fresh cilantro, and lime. Served with a rich, deeply savory consommé for dipping, these tacos combine juicy meat, bright herbs, gentle acidity, and indulgent, comforting flavor.",
 			"price": 17.5,
@@ -812,6 +828,7 @@
 		},
 		{
 			"id": 17,
+			"discount": 0,
 			"title": "Chicken Quesadilla",
 			"description": "A grilled flour tortilla filled with seasoned chicken, melted cheese, peppers, and onions, cooked until crisp outside and gooey inside. Served with salsa and sour cream, it offers a satisfying mix of smoky, creamy, fresh, and mildly tangy flavors.",
 			"price": 14,
@@ -830,6 +847,7 @@
 		},
 		{
 			"id": 18,
+			"discount": 0,
 			"title": "Churros with Chocolate Sauce",
 			"description": "Golden churros fried until crisp on the outside and soft inside, then coated in fragrant cinnamon sugar. Served with warm, rich chocolate sauce for dipping, this dessert combines crunchy texture, gentle spice, sweetness, and silky chocolate in every bite.",
 			"price": 7.5,
@@ -848,6 +866,7 @@
 		},
 		{
 			"id": 19,
+			"discount": 0,
 			"title": "Tonkotsu Ramen",
 			"description": "A deeply rich Japanese ramen built on a creamy pork broth and filled with springy noodles, tender chashu pork, a soft-boiled egg, spring onions, and nori. Hearty and savory, the bowl delivers layers of umami, richness, and comforting warmth.",
 			"price": 18,
@@ -866,6 +885,7 @@
 		},
 		{
 			"id": 20,
+			"discount": 0,
 			"title": "Vegetable Shoyu Ramen",
 			"description": "A lighter Japanese ramen with a savory soy-based broth, noodles, mushrooms, seasonal vegetables, bamboo shoots, and fresh spring onions. Balanced and aromatic, it offers a satisfying combination of earthy, fresh, and umami flavors in a comforting plant-based bowl.",
 			"price": 15.5,
@@ -884,6 +904,7 @@
 		},
 		{
 			"id": 21,
+			"discount": 0,
 			"title": "Pork Gyoza",
 			"description": "Japanese dumplings filled with seasoned pork, cabbage, ginger, and garlic, pan-fried until crisp and golden underneath while remaining soft and juicy inside. Savory and aromatic, they make a satisfying starter or side with a flavorful contrast of textures.",
 			"price": 9.5,
@@ -902,6 +923,7 @@
 		},
 		{
 			"id": 22,
+			"discount": 0,
 			"title": "Salmon Poke Bowl",
 			"description": "Fresh salmon served over a bed of rice with creamy avocado, crisp cucumber, edamame, seaweed, and sesame seeds, all finished with savory poke sauce. Colorful and refreshing, the bowl balances richness, freshness, texture, and clean umami flavor.",
 			"price": 17,
@@ -920,6 +942,7 @@
 		},
 		{
 			"id": 23,
+			"discount": 0,
 			"title": "Tofu Buddha Bowl",
 			"description": "A nourishing plant-based bowl featuring crispy tofu, fluffy quinoa, creamy avocado, roasted vegetables, fresh greens, and a sesame dressing. Packed with contrasting textures and vibrant flavors, it offers a wholesome mix of savory, nutty, fresh, and lightly roasted notes.",
 			"price": 15,
@@ -938,6 +961,7 @@
 		},
 		{
 			"id": 24,
+			"discount": 0,
 			"title": "Grilled Sea Bream",
 			"description": "Mediterranean-style sea bream grilled until tender and lightly charred, then finished with lemon, herbs, and extra virgin olive oil. Served with roasted vegetables, this fresh seafood main is bright, aromatic, and balanced with clean, naturally savory flavors.",
 			"price": 29,
@@ -956,6 +980,7 @@
 		},
 		{
 			"id": 25,
+			"discount": 0,
 			"title": "Seafood Linguine",
 			"description": "Linguine pasta tossed with shrimp, mussels, calamari, cherry tomatoes, garlic, white wine, and fresh parsley. Briny seafood, sweet tomatoes, aromatic garlic, and a light wine sauce come together in a vibrant pasta dish inspired by Mediterranean coastal cooking.",
 			"price": 24.5,
@@ -974,6 +999,7 @@
 		},
 		{
 			"id": 26,
+			"discount": 0,
 			"title": "Greek Salad",
 			"description": "A refreshing Mediterranean salad with ripe tomatoes, crisp cucumber, red onion, olives, feta cheese, oregano, and extra virgin olive oil. Fresh, salty, tangy, and aromatic, it offers a clean combination of crunchy vegetables and creamy feta in every bite.",
 			"price": 11,
@@ -992,6 +1018,7 @@
 		},
 		{
 			"id": 27,
+			"discount": 0,
 			"title": "Goulash Soup",
 			"description": "A hearty traditional soup made with tender beef, potatoes, vegetables, paprika, and fresh herbs, simmered until rich and deeply flavorful. Warm and comforting, it combines savory meat, earthy vegetables, and the distinctive sweetness and warmth of paprika.",
 			"price": 12.5,
@@ -1010,6 +1037,7 @@
 		},
 		{
 			"id": 28,
+			"discount": 0,
 			"title": "Szekler Pork Stew",
 			"description": "A traditional pork stew with tender pieces of meat simmered in a smoky paprika sauce and served alongside creamy mashed potatoes. Rich, warming, and satisfying, the dish blends deep savory flavors with gentle spice and a smooth, comforting side.",
 			"price": 21,
@@ -1028,6 +1056,7 @@
 		},
 		{
 			"id": 29,
+			"discount": 0,
 			"title": "Papanasi with Sour Cream and Jam",
 			"description": "Traditional Romanian cheese doughnuts fried until golden, with a soft, tender center and lightly crisp exterior. Served with cool sour cream and sweet berry jam, this beloved dessert combines creamy, tangy, fruity, and comforting flavors in every bite.",
 			"price": 10.5,
@@ -1046,6 +1075,7 @@
 		},
 		{
 			"id": 30,
+			"discount": 0,
 			"title": "Dragon Roll",
 			"description": "A sushi roll filled with crisp shrimp tempura and cucumber, then topped with creamy avocado, eel sauce, sesame seeds, and a light spicy mayo. Rich and colorful, it combines crunchy, creamy, sweet, savory, and mildly spicy flavors in a popular modern sushi style.",
 			"price": 19.5,
@@ -1064,6 +1094,7 @@
 		},
 		{
 			"id": 31,
+			"discount": 0,
 			"title": "Chicken Katsu Curry",
 			"description": "Crispy breaded chicken cutlet sliced and served over steamed rice with a rich Japanese curry sauce and pickled vegetables. The crunchy chicken, fluffy rice, gently spiced curry, and tangy pickles create a hearty and deeply comforting combination.",
 			"price": 17.5,
@@ -1082,6 +1113,7 @@
 		},
 		{
 			"id": 32,
+			"discount": 0,
 			"title": "Golden Olive Beef Burger",
 			"description": "A juicy beef patty layered with cheddar, crisp lettuce, ripe tomato, caramelized onions, pickles, and house sauce inside a toasted brioche bun. Rich, savory, fresh, and slightly sweet, this burger delivers a satisfying balance of flavors and textures.",
 			"price": 18.5,
@@ -1100,6 +1132,7 @@
 		},
 		{
 			"id": 33,
+			"discount": 0,
 			"title": "Creamy Chicken Alfredo Pasta",
 			"description": "Tender chicken breast served with fettuccine coated in a rich, creamy parmesan Alfredo sauce, then finished with parsley and cracked black pepper. Smooth, savory, and comforting, this pasta combines juicy chicken with silky sauce and a classic cheesy finish.",
 			"price": 22,
@@ -1118,6 +1151,7 @@
 		},
 		{
 			"id": 34,
+			"discount": 0,
 			"title": "Quattro Formaggi Pizza",
 			"description": "A rich Italian pizza topped with mozzarella, gorgonzola, parmesan, and ricotta, creating layers of creamy, salty, sharp, and mellow cheese flavor. Baked until bubbling and golden, it is an indulgent choice for anyone who loves bold, cheesy pizza.",
 			"price": 17,
@@ -1136,6 +1170,7 @@
 		},
 		{
 			"id": 35,
+			"discount": 0,
 			"title": "Prosciutto Arugula Pizza",
 			"description": "Wood-fired pizza topped with tomato sauce, melted mozzarella, delicate prosciutto, fresh peppery arugula, parmesan flakes, and olive oil. The combination brings together salty cured meat, creamy cheese, bright greens, and a crisp, lightly charred crust.",
 			"price": 19,
@@ -1154,6 +1189,7 @@
 		},
 		{
 			"id": 36,
+			"discount": 0,
 			"title": "Loaded Nachos",
 			"description": "Crispy tortilla chips piled high with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro. Perfect for sharing, this generous dish combines crunchy, creamy, spicy, tangy, and fresh flavors in every loaded bite.",
 			"price": 12.5,
@@ -1172,6 +1208,7 @@
 		},
 		{
 			"id": 37,
+			"discount": 0,
 			"title": "Spicy Miso Ramen",
 			"description": "A bold ramen bowl built on a spicy miso broth with noodles, tender chashu pork, a soft-boiled egg, corn, spring onions, and chili oil. Rich, warming, and deeply savory, it balances fermented umami with gentle sweetness and a satisfying kick of heat.",
 			"price": 18.5,
@@ -1190,6 +1227,7 @@
 		},
 		{
 			"id": 38,
+			"discount": 0,
 			"title": "Tuna Poke Bowl",
 			"description": "Fresh tuna cubes served over rice with creamy avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce. Light yet satisfying, the bowl delivers a colorful mix of clean seafood flavor, freshness, creaminess, crunch, and mild heat.",
 			"price": 17.5,
@@ -1208,6 +1246,7 @@
 		},
 		{
 			"id": 39,
+			"discount": 0,
 			"title": "Grilled Salmon with Lemon Butter",
 			"description": "Tender salmon fillet grilled until lightly charred and juicy, served with a bright lemon butter sauce, seasonal vegetables, and fresh herbs. Rich yet fresh, the dish balances buttery seafood flavor with citrus, herbs, and the natural sweetness of vegetables.",
 			"price": 27.5,
@@ -1226,6 +1265,7 @@
 		},
 		{
 			"id": 40,
+			"discount": 0,
 			"title": "Stir-Fried Vegetables",
 			"price": 5,
 			"card_image": "/images/dishes/stirfriedVegetables.jpg",
@@ -1240,6 +1280,7 @@
 		},
 		{
 			"id": 41,
+			"discount": 0,
 			"title": "Fried Rice",
 			"price": 5,
 			"card_image": "/images/dishes/friedRice.jpg",
@@ -1254,6 +1295,7 @@
 		},
 		{
 			"id": 40,
+			"discount": 0,
 			"title": "Teriyaki Chicken Rice Bowl",
 			"description": "Grilled chicken glazed with a glossy sweet-and-savory teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions. Balanced and filling, the bowl combines tender chicken, fresh vegetables, and comforting rice in every bite.",
 			"price": 15.5,
@@ -1272,6 +1314,7 @@
 		},
 		{
 			"id": 41,
+			"discount": 0,
 			"title": "Shrimp Avocado Poke Bowl",
 			"description": "Juicy shrimp served over rice with creamy avocado, crisp cucumber, edamame, seaweed salad, pickled ginger, and sesame seeds. Finished with a light citrus soy dressing, this refreshing bowl balances sweetness, acidity, umami, creaminess, and fresh texture.",
 			"price": 16.5,
@@ -1290,6 +1333,7 @@
 		},
 		{
 			"id": 42,
+			"discount": 0,
 			"title": "Mango Coconut Chia Pudding",
 			"description": "Creamy coconut chia pudding layered with smooth fresh mango puree, toasted coconut flakes, and seasonal berries. Light, tropical, and naturally refreshing, this dessert combines silky texture with fruity sweetness, gentle nuttiness, and a bright finish.",
 			"price": 7.5,
@@ -1308,6 +1352,7 @@
 		},
 		{
 			"id": 43,
+			"discount": 0,
 			"title": "Matcha Cheesecake",
 			"description": "A creamy Japanese-style cheesecake infused with the earthy, aromatic flavor of matcha green tea. Served with a light berry sauce and a delicate dusting of powdered sugar, it balances gentle bitterness, rich creaminess, fruity acidity, and soft sweetness.",
 			"price": 8.5,
@@ -1326,6 +1371,7 @@
 		},
 		{
 			"id": 44,
+			"discount": 0,
 			"title": "Chocolate Lava Cake",
 			"description": "A warm chocolate cake with a soft outer crumb and a rich molten chocolate center that flows when cut. Served with vanilla cream, fresh berries, and a light dusting of cocoa, this indulgent dessert balances deep chocolate flavor with cool, fresh accents.",
 			"price": 9.5,
@@ -1344,6 +1390,7 @@
 		},
 		{
 			"id": 45,
+			"discount": 0,
 			"title": "Classic Tiramisu",
 			"description": "A traditional Italian dessert layered with espresso-soaked ladyfingers and smooth mascarpone cream, then finished with cocoa powder. Soft, creamy, and aromatic, it offers a balanced combination of coffee, cocoa, gentle sweetness, and a luxurious melt-in-the-mouth texture.",
 			"price": 8,
@@ -1362,6 +1409,7 @@
 		},
 		{
 			"id": 46,
+			"discount": 0,
 			"title": "Mochi Ice Cream Trio",
 			"description": "Three soft and chewy mochi pieces filled with creamy ice cream in matcha, mango, and strawberry flavors. Each piece offers a different balance of earthy, tropical, and fruity sweetness, wrapped in the distinctive tender texture of traditional mochi dough.",
 			"price": 7.5,
@@ -1380,6 +1428,7 @@
 		},
 		{
 			"id": 47,
+			"discount": 0,
 			"title": "Baklava with Pistachios",
 			"description": "Flaky layers of Mediterranean pastry filled with crushed pistachios and walnuts, baked until crisp and golden, then finished with honey and a light citrus syrup. Sweet, nutty, buttery, and aromatic, every bite offers a delicate crunch and rich syrupy finish.",
 			"price": 7,
@@ -1398,6 +1447,7 @@
 		},
 		{
 			"id": 48,
+			"discount": 0,
 			"title": "Diavola Pizza",
 			"description": "A spicy Italian pizza topped with tomato sauce, melted mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil. Baked until crisp and bubbling, it delivers bold savory flavor, creamy cheese, fragrant herbs, and a lingering touch of heat.",
 			"price": 18,
@@ -1416,6 +1466,7 @@
 		},
 		{
 			"id": 49,
+			"discount": 0,
 			"title": "Carne Asada Tacos",
 			"description": "Grilled marinated beef served on warm corn tortillas with onion, fresh cilantro, lime, salsa verde, and a touch of chili. Juicy, smoky, bright, and lightly spicy, these tacos combine classic street-food flavors with fresh herbs and citrus.",
 			"price": 16,
@@ -1434,6 +1485,7 @@
 		},
 		{
 			"id": 50,
+			"discount": 0,
 			"title": "Cabbage Rolls with Smoked Pork",
 			"description": "Traditional cabbage rolls filled with seasoned minced pork and rice, slowly cooked in a savory tomato sauce until tender and flavorful. Served with sour cream and fresh herbs, they offer a hearty balance of smoky meat, soft cabbage, tangy cream, and comforting spices.",
 			"price": 18.5,
@@ -1452,6 +1504,7 @@
 		},
 		{
 			"id": 51,
+			"discount": 0,
 			"title": "Transylvanian Bean Soup",
 			"description": "A hearty Transylvanian-style bean soup made with smoked pork, tender beans, vegetables, paprika, and fresh parsley. Served warm with rustic bread, it is rich, smoky, and comforting, with deep savory flavor and a satisfying homemade character.",
 			"price": 11.5,
@@ -1470,6 +1523,7 @@
 		},
 		{
 			"id": 52,
+			"discount": 0,
 			"title": "Grilled Trout with Polenta",
 			"description": "Fresh trout grilled until tender and lightly charred, served with creamy polenta, aromatic garlic sauce, lemon, and seasonal greens. The dish combines delicate fish, smooth cornmeal, bright citrus, and savory garlic for a balanced Romanian-inspired main course.",
 			"price": 23,
@@ -1488,6 +1542,7 @@
 		},
 		{
 			"id": 53,
+			"discount": 0,
 			"title": "Crispy Pork Knuckle",
 			"description": "Slow-roasted pork knuckle cooked until the meat is exceptionally tender and the skin becomes deeply golden and crisp. Served with roasted potatoes, pickled cabbage, mustard, and horseradish, this generous dish delivers rich, savory flavor with sharp, tangy accompaniments.",
 			"price": 28,
@@ -1506,6 +1561,7 @@
 		},
 		{
 			"id": 54,
+			"discount": 0,
 			"title": "Edamame",
 			"description": "Steamed young soybeans served warm and lightly seasoned with sea salt. Simple, fresh, and naturally satisfying, this classic Japanese appetizer offers a tender bite, subtle sweetness, and a delicate savory finish that makes it perfect for sharing before your meal.",
 			"price": 6.5,
@@ -1524,6 +1580,7 @@
 		},
 		{
 			"id": 55,
+			"discount": 0,
 			"title": "Yuzu Coconut Panna Cotta",
 			"description": "A silky coconut panna cotta infused with bright yuzu citrus, topped with fresh mango, toasted coconut flakes, and a delicate passion fruit drizzle. Light, creamy, and refreshing, this tropical dessert balances gentle sweetness with vibrant citrus notes and a smooth, elegant finish.",
 			"price": 8,
@@ -1542,6 +1599,7 @@
 		},
 		{
 			"id": 56,
+			"discount": 0,
 			"title": "Elote Street Corn",
 			"description": "Grilled Mexican-style corn coated in a creamy lime dressing, sprinkled with crumbled cheese, chili powder, and fresh cilantro. Smoky, tangy, creamy, and slightly spicy, this classic street-food favorite delivers bold flavor in every bite and works perfectly as a shareable appetizer or side.",
 			"price": 8.5,
@@ -1560,6 +1618,7 @@
 		},
 		{
 			"id": 57,
+			"discount": 0,
 			"title": "Baja Fish Tacos",
 			"description": "Crispy battered white fish served in warm corn tortillas with crunchy cabbage slaw, fresh pico de gallo, avocado crema, cilantro, and a squeeze of lime. Light, crisp, and refreshing with a creamy finish, these tacos balance bright citrus, savory seafood, and mild spice.",
 			"price": 16.5,
@@ -1578,6 +1637,7 @@
 		},
 		{
 			"id": 58,
+			"discount": 0,
 			"title": "Capricciosa Pizza",
 			"description": "A classic Italian pizza topped with rich tomato sauce, melted mozzarella, savory ham, earthy mushrooms, artichoke hearts, black olives, and a touch of oregano. Baked until the crust is crisp and lightly charred, it offers a balanced combination of creamy, salty, tangy, and aromatic flavors in every slice.",
 			"price": 18.5,
@@ -1596,6 +1656,7 @@
 		},
 		{
 			"id": 59,
+			"discount": 0,
 			"title": "Shio Chicken Ramen",
 			"description": "A light Japanese ramen bowl with a clear salted chicken broth, thin noodles, tender grilled chicken slices, soft-boiled egg, bamboo shoots, spring onions, sesame seeds, and crisp nori. Clean, savory, and comforting, it offers a lighter alternative to rich pork-based ramen while still feeling full and satisfying.",
 			"price": 17,

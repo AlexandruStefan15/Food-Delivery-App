@@ -1,5 +1,3 @@
-import type { IconType } from "react-icons";
-
 //icons
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { MdRestaurant } from "react-icons/md";

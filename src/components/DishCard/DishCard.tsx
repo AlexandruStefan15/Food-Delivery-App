@@ -70,7 +70,7 @@ export default function DishCard(props: DishCardProps) {
 					<img className={styles.img} src={data.card_image} alt=""></img>
 				</div>
 				<h2 className={styles.dishTitle}>{data.title}</h2>
-				<span className={styles.dishPrice}>{data.price}</span>
+				<span className={styles.dishPrice}>${data.price}</span>
 			</Card>
 		);
 	}

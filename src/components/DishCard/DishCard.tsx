@@ -62,6 +62,19 @@ export default function DishCard(props: DishCardProps) {
 		);
 	}
 
+	if (props.variant === "featured") {
+		const { data, className = "" } = props;
+		return (
+			<Card className={`${styles.dishCard_featured} ${className}`}>
+				<div className={styles.dishImg}>
+					<img className={styles.img} src={data.card_image} alt=""></img>
+				</div>
+				<h2 className={styles.dishTitle}>{data.title}</h2>
+				<span className={styles.dishPrice}>{data.price}</span>
+			</Card>
+		);
+	}
+
 	const { data, className = "" } = props; // TypeScript correctly infers `props.data` as `Dish`
 
 	return (

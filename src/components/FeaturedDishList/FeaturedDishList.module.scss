@@ -1,0 +1,16 @@
+.listWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.dishList {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	.listItem {
+		flex: 0 160px;
+	}
+}

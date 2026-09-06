@@ -1,4 +1,4 @@
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient, useQueries } from "@tanstack/react-query";
 import type { Dish } from "../types";
 
 export const useDishesByRestaurant = (restaurantId: number | null) => {
@@ -47,6 +47,37 @@ export const useDishById = (dishId: number | null) => {
 	});
 
 	return { dish, dishIsLoading, dishError };
+};
+
+export const useDishesByIds = (dishIds: number[]) => {
+	const validIds = dishIds.filter((id) => id !== null && !Number.isNaN(id));
+
+	const queries = useQueries({
+		queries: validIds.map((dishId) => ({
+			queryKey: ["dishes", "dish", dishId],
+			queryFn: async (): Promise<Dish> => {
+				const res = await fetch(`http://localhost:3001/dishes/${dishId}`);
+
+				if (!res.ok) {
+					throw new Error(`Failed to fetch dish ${dishId} (Status: ${res.status})`);
+				}
+
+				return res.json();
+			},
+		})),
+	});
+
+	const dishes = queries.map((query) => query.data).filter((dish): dish is Dish => Boolean(dish));
+
+	const dishesAreLoading = queries.some((query) => query.isLoading);
+
+	const dishesError = queries.find((query) => query.error)?.error ?? null;
+
+	return {
+		dishes,
+		dishesAreLoading,
+		dishesError,
+	};
 };
 
 export const useAllDishes = () => {

@@ -55,7 +55,7 @@ const OrderSummary = ({ items, restaurants, children, className = "" }: OrderSum
 			<hr style={{ border: "none", borderTop: " 2px dashed #ccc" }} />
 			<div className={styles.cartTotalWrapper}>
 				<span className={styles.text}>Total</span>
-				<span className={styles.value}>${totalPrice}</span>
+				<span className={styles.value}>${totalPrice.toFixed(2)}</span>
 			</div>
 			{children}
 			<footer className={styles.footer}>

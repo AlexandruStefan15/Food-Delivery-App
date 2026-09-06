@@ -9,7 +9,8 @@ import { MdOutlineLocalFireDepartment } from "react-icons/md";
 import { MdAddShoppingCart } from "react-icons/md";
 
 //api
-import { useDishById } from "../../api/dishes";
+import { useDishById, useDishesByIds } from "../../api/dishes";
+import { useRestaurantById } from "../../api/restaurants";
 
 //store
 import { useCartStore } from "../../store/cartStore";
@@ -19,18 +20,22 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Button from "../../components/Button/Button";
 import Textarea from "../../components/Textarea/Textarea";
+import FeaturedDishList from "../../components/FeaturedDishList/FeaturedDishList";
 
 export default function DishDetails() {
-	const { dishId } = useParams();
-	const numericDishId = dishId ? Number(dishId) : null;
-	const { dish, dishIsLoading, dishError } = useDishById(Number(dishId));
+	const { dishId, restaurantId } = useParams();
+	const { restaurant, restaurantIsLoading, restaurantError } = useRestaurantById(Number(restaurantId) || null);
+	const { dish, dishIsLoading, dishError } = useDishById(Number(dishId) || null);
 	const addToCart = useCartStore((s) => s.addItem);
+
+	const featuredDishes = restaurant?.featuredDishesIds || [];
+	const { dishes, dishesAreLoading, dishesError } = useDishesByIds(featuredDishes);
 
 	if (dishIsLoading) return null;
 
 	if (dishError) return <p className={styles.cls}>error</p>;
 
-	if (!numericDishId) {
+	if (!Number(dishId)) {
 		return <Navigate to="/404" replace />;
 	}
 
@@ -38,9 +43,13 @@ export default function DishDetails() {
 		<div className={styles.page}>
 			<Header />
 			<main className={styles.main}>
-				<div className={styles.dishImg}>
-					<img className={styles.img} src={dish?.card_image} alt="food"></img>
+				<div className={styles.imageCol}>
+					<div className={styles.dishImg}>
+						<img className={styles.img} src={dish?.card_image} alt="food"></img>
+					</div>
+					<FeaturedDishList dishes={dishes} />
 				</div>
+
 				<div className={styles.content}>
 					<span className={styles.rating}>
 						<span className={styles.cls}>

@@ -20,7 +20,14 @@ type CartDishCardProps = {
 	classNames?: Record<string, string>;
 };
 
-export type DishCardProps = DefaultDishCardProps | CartDishCardProps;
+type FeaturedDishCardProps = {
+	variant?: "featured";
+	data: Dish;
+	className?: string;
+	classNames?: Record<string, string>;
+};
+
+export type DishCardProps = DefaultDishCardProps | CartDishCardProps | FeaturedDishCardProps;
 
 export interface DietaryBadgeProps extends React.ComponentPropsWithoutRef<"span"> {
 	value: keyof Dietary;

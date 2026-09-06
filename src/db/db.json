@@ -427,6 +427,7 @@
 			"rating": 4.9,
 			"distance": 1.8,
 			"closing_time": "10:30 PM",
+			"featuredDishesIds": [30, 10, 11],
 			"food_categories_ids": [3]
 		},
 		{
@@ -440,6 +441,7 @@
 			"rating": 4.5,
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [8, 7, 44],
 			"food_categories_ids": [2, 5, 7, 10]
 		},
 		{
@@ -453,6 +455,7 @@
 			"rating": 4.7,
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [58, 35, 13],
 			"food_categories_ids": [1]
 		},
 		{
@@ -466,6 +469,7 @@
 			"rating": 4.6,
 			"distance": 10.2,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [16, 57, 18],
 			"food_categories_ids": [6]
 		},
 		{
@@ -479,6 +483,7 @@
 			"rating": 4.5,
 			"distance": 1.2,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [37, 19, 59],
 			"food_categories_ids": [8]
 		},
 		{
@@ -492,6 +497,7 @@
 			"rating": 3.6,
 			"distance": 2.2,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [22, 38, 42],
 			"food_categories_ids": [4, 9]
 		},
 		{
@@ -505,6 +511,7 @@
 			"rating": 4.9,
 			"distance": 5.4,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [24, 39, 47],
 			"food_categories_ids": [9, 7, 10]
 		},
 		{
@@ -518,6 +525,7 @@
 			"rating": 3.5,
 			"distance": 7.6,
 			"closing_time": "10:00 PM",
+			"featuredDishesIds": [53, 50, 29],
 			"food_categories_ids": [10, 9, 5]
 		}
 	],
@@ -1134,8 +1142,8 @@
 			"calories": 890,
 			"prep_time": "15-20 min",
 			"rating": 4.8,
-			"card_image": "/images/dishes/prosciuttoArugulaPizza.jpg",
-			"cover_image": "/images/dishes/prosciuttoArugulaPizza-cover.png",
+			"card_image": "/images/dishes/prosciuttoArugulaPizza.webp",
+			"cover_image": "/images/dishes/prosciuttoArugulaPizza-cover.webp",
 			"dietary": {
 				"vegan": false,
 				"gluten_free": false,
@@ -1584,6 +1592,24 @@
 				"vegetarian": false
 			},
 			"restaurant_id": 3,
+			"menu_category_id": 2
+		},
+		{
+			"id": 59,
+			"title": "Shio Chicken Ramen",
+			"description": "A light Japanese ramen bowl with a clear salted chicken broth, thin noodles, tender grilled chicken slices, soft-boiled egg, bamboo shoots, spring onions, sesame seeds, and crisp nori. Clean, savory, and comforting, it offers a lighter alternative to rich pork-based ramen while still feeling full and satisfying.",
+			"price": 17,
+			"calories": 690,
+			"prep_time": "15-20 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/shioChickenRamen.webp",
+			"cover_image": "/images/dishes/shioChickenRamen-cover.webp",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 5,
 			"menu_category_id": 2
 		}
 	]

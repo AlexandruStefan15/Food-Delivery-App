@@ -9,5 +9,6 @@ export interface Restaurant {
 	rating: number;
 	distance: number;
 	closing_time: string;
+	featuredDishesIds: number[];
 	food_categories_ids: number[];
 }

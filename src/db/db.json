@@ -525,7 +525,7 @@
 		{
 			"id": 1,
 			"title": "Roasted Lamb Shoulder",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"description": "Slow-roasted lamb shoulder cooked until exceptionally tender, with a rich, savory flavor and beautifully caramelized edges. Served as a hearty, comforting main course, it offers deep roasted notes, a juicy texture, and a satisfying finish that makes it perfect for anyone craving a classic meat dish.",
 			"price": 32,
 			"calories": 725,
 			"prep_time": "15-20 min",
@@ -544,7 +544,7 @@
 			"id": 2,
 			"title": "Rice",
 			"price": 4,
-			"description": "A fluffy, perfectly steamed long-grain rice—subtly fragrant and the perfect canvas for absorbing rich sauces and bold flavors.",
+			"description": "Light, fluffy long-grain rice steamed to a tender texture with a subtle natural fragrance. Its clean, delicate flavor makes it an ideal side for soaking up rich sauces, balancing spicy dishes, or complementing grilled meats, vegetables, curries, and other bold main courses.",
 			"card_image": "/images/dishes/rice.jpg",
 			"dietary": {
 				"vegan": true,
@@ -559,7 +559,7 @@
 			"title": "French Fries",
 			"price": 5,
 			"card_image": "/images/dishes/frenchFries.jpg",
-			"description": "Crispy on the outside, fluffy on the inside—golden, perfectly seasoned potato fries served piping hot.",
+			"description": "Golden potato fries cooked until crisp on the outside and soft, fluffy, and tender in the center. Lightly seasoned and served hot, they deliver the familiar savory crunch that makes them a perfect side dish, snack, or companion to burgers, grilled meats, and saucy mains.",
 			"dietary": {
 				"vegan": true,
 				"gluten_free": false,
@@ -571,7 +571,7 @@
 		{
 			"id": 4,
 			"title": "Truffle Mushroom Risotto",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"description": "Creamy Italian-style risotto slowly cooked to a velvety consistency with earthy mushrooms and the deep, aromatic flavor of truffle. Rich, comforting, and elegantly balanced, every spoonful combines tender rice with savory notes and a luxurious finish.",
 			"price": 26.5,
 			"calories": 525,
 			"prep_time": "15-18 min",
@@ -589,7 +589,7 @@
 		{
 			"id": 5,
 			"title": "Classic Bruschetta",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"description": "Crisp toasted bread topped with a fresh mixture of ripe tomatoes, aromatic herbs, garlic, and olive oil. Bright, juicy, and full of Mediterranean flavor, this classic starter balances crunchy bread with a refreshing topping for a simple yet vibrant appetizer.",
 			"price": 12.5,
 			"calories": 125,
 			"prep_time": "5 min",
@@ -607,7 +607,7 @@
 		{
 			"id": 6,
 			"title": "Crispy Calamari",
-			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+			"description": "Tender calamari lightly coated and fried until golden and crisp, creating a delicate crunch while keeping the seafood soft inside. Savory, satisfying, and perfect for sharing, this appetizer delivers a classic coastal flavor with every bite.",
 			"price": 15,
 			"calories": 110,
 			"prep_time": "5 min",
@@ -625,7 +625,7 @@
 		{
 			"id": 7,
 			"title": "Pan-Seared Sea Bass",
-			"description": "A delicate fillet of wild-caught sea bass served over a bed of wilted baby spinach and a citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts for a balanced, light, yet rich flavor profile.",
+			"description": "A delicate fillet of sea bass pan-seared until lightly golden, served over wilted baby spinach with a silky citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts, the dish balances fresh, buttery, and lightly nutty flavors in an elegant seafood main.",
 			"price": 34.5,
 			"calories": 480,
 			"prep_time": "20-25 min",
@@ -643,7 +643,7 @@
 		{
 			"id": 8,
 			"title": "Braised Beef Short Rib",
-			"description": "Slow-cooked for 12 hours in a red wine reduction, served atop creamy Yukon Gold mashed potatoes and glazed heirloom carrots. The meat is fork-tender and deeply savory, making it a signature comfort classic.",
+			"description": "Beef short rib slowly braised for hours in a rich red wine reduction until deeply flavorful and fork-tender. Served over creamy Yukon Gold mashed potatoes with glazed heirloom carrots, this comforting signature dish combines savory meat, smooth potatoes, and subtle sweetness.",
 			"price": 38,
 			"calories": 890,
 			"prep_time": "12-15 min",
@@ -661,7 +661,7 @@
 		{
 			"id": 9,
 			"title": "Eggplant Parmigiana Stack",
-			"description": "Crispy layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan. Baked until golden and bubbling, served with a side of arugula salad.",
+			"description": "Layers of herb-breaded eggplant stacked with house-made marinara, fresh buffalo mozzarella, and aged parmesan, then baked until hot, golden, and bubbling. Served with arugula salad, this satisfying vegetarian main blends crisp, creamy, tangy, and savory flavors.",
 			"price": 24,
 			"calories": 610,
 			"prep_time": "18-22 min",
@@ -679,7 +679,7 @@
 		{
 			"id": 10,
 			"title": "Salmon Nigiri Set",
-			"description": "Fresh, high-quality Atlantic salmon sliced thin and served over warm, vinegared sushi rice. Paired with rich soy sauce, sharp wasabi, and tangy pickled ginger to balance every bite with clean, umami flavor.",
+			"description": "Fresh Atlantic salmon sliced into tender pieces and served over warm, lightly vinegared sushi rice. Accompanied by soy sauce, wasabi, and pickled ginger, the set offers a clean, balanced combination of buttery salmon, delicate rice, savory umami, and refreshing acidity.",
 			"price": 18.5,
 			"calories": 420,
 			"prep_time": "10-15 min",
@@ -697,7 +697,7 @@
 		{
 			"id": 11,
 			"title": "Spicy Tuna Roll",
-			"description": "Classic sushi roll filled with spicy tuna, cucumber, sesame seeds, and a light chili mayo.",
+			"description": "A classic sushi roll filled with seasoned spicy tuna and crisp cucumber, finished with sesame seeds and a light chili mayo. Each bite combines soft rice, fresh fish, gentle heat, and a creamy finish for a balanced and satisfying sushi favorite.",
 			"price": 16,
 			"calories": 520,
 			"prep_time": "10-15 min",
@@ -715,7 +715,7 @@
 		{
 			"id": 12,
 			"title": "Miso Soup",
-			"description": "Warm Japanese soup with miso broth, tofu, seaweed, and spring onions.",
+			"description": "A warm and comforting Japanese soup made with savory miso broth, soft tofu, seaweed, and fresh spring onions. Light yet deeply umami, it is an ideal starter or side dish, offering delicate salty, earthy, and aromatic flavors in every spoonful.",
 			"price": 6,
 			"calories": 90,
 			"prep_time": "5 min",
@@ -733,7 +733,7 @@
 		{
 			"id": 13,
 			"title": "Margherita Pizza",
-			"description": "Classic Italian pizza with tomato sauce, fresh mozzarella, basil, and extra virgin olive oil.",
+			"description": "A timeless Italian pizza topped with bright tomato sauce, fresh mozzarella, fragrant basil, and a drizzle of extra virgin olive oil. Simple, balanced, and full of classic flavor, it combines a crisp crust with creamy cheese and fresh herbal notes.",
 			"price": 14.5,
 			"calories": 780,
 			"prep_time": "15-20 min",
@@ -751,7 +751,7 @@
 		{
 			"id": 14,
 			"title": "Pepperoni Pizza",
-			"description": "Thin crust pizza topped with tomato sauce, mozzarella, spicy pepperoni, and oregano.",
+			"description": "A thin-crust pizza layered with tomato sauce, melted mozzarella, spicy pepperoni, and aromatic oregano. Baked until the crust is crisp and the cheese is bubbling, it delivers a bold combination of savory, smoky, spicy, and cheesy flavors.",
 			"price": 16.5,
 			"calories": 920,
 			"prep_time": "15-20 min",
@@ -769,7 +769,7 @@
 		{
 			"id": 15,
 			"title": "Garlic Focaccia",
-			"description": "Warm Italian focaccia brushed with garlic oil, rosemary, and sea salt.",
+			"description": "Warm Italian focaccia with a soft, airy center and lightly crisp edges, brushed generously with fragrant garlic oil. Finished with rosemary and sea salt, this simple bread is savory, aromatic, and perfect for sharing or pairing with soups, salads, and mains.",
 			"price": 8,
 			"calories": 360,
 			"prep_time": "8-10 min",
@@ -787,7 +787,7 @@
 		{
 			"id": 16,
 			"title": "Beef Birria Tacos",
-			"description": "Slow-cooked beef tacos served with melted cheese, onion, cilantro, lime, and rich consommé for dipping.",
+			"description": "Tender slow-cooked beef tucked into warm tacos with melted cheese, onion, fresh cilantro, and lime. Served with a rich, deeply savory consommé for dipping, these tacos combine juicy meat, bright herbs, gentle acidity, and indulgent, comforting flavor.",
 			"price": 17.5,
 			"calories": 760,
 			"prep_time": "15-20 min",
@@ -805,7 +805,7 @@
 		{
 			"id": 17,
 			"title": "Chicken Quesadilla",
-			"description": "Grilled flour tortilla filled with chicken, melted cheese, peppers, and onions. Served with salsa and sour cream.",
+			"description": "A grilled flour tortilla filled with seasoned chicken, melted cheese, peppers, and onions, cooked until crisp outside and gooey inside. Served with salsa and sour cream, it offers a satisfying mix of smoky, creamy, fresh, and mildly tangy flavors.",
 			"price": 14,
 			"calories": 690,
 			"prep_time": "12-15 min",
@@ -823,7 +823,7 @@
 		{
 			"id": 18,
 			"title": "Churros with Chocolate Sauce",
-			"description": "Crispy cinnamon-sugar churros served with warm chocolate dipping sauce.",
+			"description": "Golden churros fried until crisp on the outside and soft inside, then coated in fragrant cinnamon sugar. Served with warm, rich chocolate sauce for dipping, this dessert combines crunchy texture, gentle spice, sweetness, and silky chocolate in every bite.",
 			"price": 7.5,
 			"calories": 430,
 			"prep_time": "8-10 min",
@@ -841,7 +841,7 @@
 		{
 			"id": 19,
 			"title": "Tonkotsu Ramen",
-			"description": "Rich pork broth ramen with noodles, chashu pork, soft-boiled egg, spring onions, and nori.",
+			"description": "A deeply rich Japanese ramen built on a creamy pork broth and filled with springy noodles, tender chashu pork, a soft-boiled egg, spring onions, and nori. Hearty and savory, the bowl delivers layers of umami, richness, and comforting warmth.",
 			"price": 18,
 			"calories": 850,
 			"prep_time": "15-20 min",
@@ -859,7 +859,7 @@
 		{
 			"id": 20,
 			"title": "Vegetable Shoyu Ramen",
-			"description": "Soy-based ramen with vegetables, mushrooms, noodles, bamboo shoots, and spring onions.",
+			"description": "A lighter Japanese ramen with a savory soy-based broth, noodles, mushrooms, seasonal vegetables, bamboo shoots, and fresh spring onions. Balanced and aromatic, it offers a satisfying combination of earthy, fresh, and umami flavors in a comforting plant-based bowl.",
 			"price": 15.5,
 			"calories": 620,
 			"prep_time": "15-18 min",
@@ -877,7 +877,7 @@
 		{
 			"id": 21,
 			"title": "Pork Gyoza",
-			"description": "Pan-fried Japanese dumplings filled with pork, cabbage, ginger, and garlic.",
+			"description": "Japanese dumplings filled with seasoned pork, cabbage, ginger, and garlic, pan-fried until crisp and golden underneath while remaining soft and juicy inside. Savory and aromatic, they make a satisfying starter or side with a flavorful contrast of textures.",
 			"price": 9.5,
 			"calories": 390,
 			"prep_time": "8-10 min",
@@ -895,7 +895,7 @@
 		{
 			"id": 22,
 			"title": "Salmon Poke Bowl",
-			"description": "Fresh salmon served over rice with avocado, cucumber, edamame, seaweed, sesame seeds, and poke sauce.",
+			"description": "Fresh salmon served over a bed of rice with creamy avocado, crisp cucumber, edamame, seaweed, and sesame seeds, all finished with savory poke sauce. Colorful and refreshing, the bowl balances richness, freshness, texture, and clean umami flavor.",
 			"price": 17,
 			"calories": 650,
 			"prep_time": "10-15 min",
@@ -913,7 +913,7 @@
 		{
 			"id": 23,
 			"title": "Tofu Buddha Bowl",
-			"description": "Plant-based bowl with crispy tofu, quinoa, avocado, roasted vegetables, greens, and sesame dressing.",
+			"description": "A nourishing plant-based bowl featuring crispy tofu, fluffy quinoa, creamy avocado, roasted vegetables, fresh greens, and a sesame dressing. Packed with contrasting textures and vibrant flavors, it offers a wholesome mix of savory, nutty, fresh, and lightly roasted notes.",
 			"price": 15,
 			"calories": 590,
 			"prep_time": "10-15 min",
@@ -931,7 +931,7 @@
 		{
 			"id": 24,
 			"title": "Grilled Sea Bream",
-			"description": "Mediterranean-style grilled sea bream served with lemon, herbs, olive oil, and roasted vegetables.",
+			"description": "Mediterranean-style sea bream grilled until tender and lightly charred, then finished with lemon, herbs, and extra virgin olive oil. Served with roasted vegetables, this fresh seafood main is bright, aromatic, and balanced with clean, naturally savory flavors.",
 			"price": 29,
 			"calories": 540,
 			"prep_time": "20-25 min",
@@ -949,7 +949,7 @@
 		{
 			"id": 25,
 			"title": "Seafood Linguine",
-			"description": "Linguine pasta tossed with shrimp, mussels, calamari, cherry tomatoes, garlic, white wine, and parsley.",
+			"description": "Linguine pasta tossed with shrimp, mussels, calamari, cherry tomatoes, garlic, white wine, and fresh parsley. Briny seafood, sweet tomatoes, aromatic garlic, and a light wine sauce come together in a vibrant pasta dish inspired by Mediterranean coastal cooking.",
 			"price": 24.5,
 			"calories": 760,
 			"prep_time": "18-22 min",
@@ -967,7 +967,7 @@
 		{
 			"id": 26,
 			"title": "Greek Salad",
-			"description": "Fresh tomatoes, cucumber, red onion, olives, feta cheese, oregano, and extra virgin olive oil.",
+			"description": "A refreshing Mediterranean salad with ripe tomatoes, crisp cucumber, red onion, olives, feta cheese, oregano, and extra virgin olive oil. Fresh, salty, tangy, and aromatic, it offers a clean combination of crunchy vegetables and creamy feta in every bite.",
 			"price": 11,
 			"calories": 320,
 			"prep_time": "5-8 min",
@@ -985,7 +985,7 @@
 		{
 			"id": 27,
 			"title": "Goulash Soup",
-			"description": "Traditional rich soup with tender beef, potatoes, paprika, vegetables, and fresh herbs.",
+			"description": "A hearty traditional soup made with tender beef, potatoes, vegetables, paprika, and fresh herbs, simmered until rich and deeply flavorful. Warm and comforting, it combines savory meat, earthy vegetables, and the distinctive sweetness and warmth of paprika.",
 			"price": 12.5,
 			"calories": 430,
 			"prep_time": "10-15 min",
@@ -1003,7 +1003,7 @@
 		{
 			"id": 28,
 			"title": "Szekler Pork Stew",
-			"description": "Traditional pork stew with smoked flavors, paprika sauce, and creamy mashed potatoes.",
+			"description": "A traditional pork stew with tender pieces of meat simmered in a smoky paprika sauce and served alongside creamy mashed potatoes. Rich, warming, and satisfying, the dish blends deep savory flavors with gentle spice and a smooth, comforting side.",
 			"price": 21,
 			"calories": 820,
 			"prep_time": "15-20 min",
@@ -1021,7 +1021,7 @@
 		{
 			"id": 29,
 			"title": "Papanasi with Sour Cream and Jam",
-			"description": "Traditional Romanian fried cheese doughnuts served with sour cream and berry jam.",
+			"description": "Traditional Romanian cheese doughnuts fried until golden, with a soft, tender center and lightly crisp exterior. Served with cool sour cream and sweet berry jam, this beloved dessert combines creamy, tangy, fruity, and comforting flavors in every bite.",
 			"price": 10.5,
 			"calories": 680,
 			"prep_time": "12-15 min",
@@ -1039,7 +1039,7 @@
 		{
 			"id": 30,
 			"title": "Dragon Roll",
-			"description": "A sushi roll filled with shrimp tempura and cucumber, topped with avocado, eel sauce, sesame seeds, and a light spicy mayo.",
+			"description": "A sushi roll filled with crisp shrimp tempura and cucumber, then topped with creamy avocado, eel sauce, sesame seeds, and a light spicy mayo. Rich and colorful, it combines crunchy, creamy, sweet, savory, and mildly spicy flavors in a popular modern sushi style.",
 			"price": 19.5,
 			"calories": 640,
 			"prep_time": "12-15 min",
@@ -1057,7 +1057,7 @@
 		{
 			"id": 31,
 			"title": "Chicken Katsu Curry",
-			"description": "Crispy breaded chicken cutlet served over steamed rice with rich Japanese curry sauce and pickled vegetables.",
+			"description": "Crispy breaded chicken cutlet sliced and served over steamed rice with a rich Japanese curry sauce and pickled vegetables. The crunchy chicken, fluffy rice, gently spiced curry, and tangy pickles create a hearty and deeply comforting combination.",
 			"price": 17.5,
 			"calories": 820,
 			"prep_time": "15-20 min",
@@ -1075,7 +1075,7 @@
 		{
 			"id": 32,
 			"title": "Golden Olive Beef Burger",
-			"description": "Juicy beef patty with cheddar, lettuce, tomato, caramelized onions, pickles, and house sauce in a toasted brioche bun.",
+			"description": "A juicy beef patty layered with cheddar, crisp lettuce, ripe tomato, caramelized onions, pickles, and house sauce inside a toasted brioche bun. Rich, savory, fresh, and slightly sweet, this burger delivers a satisfying balance of flavors and textures.",
 			"price": 18.5,
 			"calories": 920,
 			"prep_time": "15-18 min",
@@ -1093,7 +1093,7 @@
 		{
 			"id": 33,
 			"title": "Creamy Chicken Alfredo Pasta",
-			"description": "Tender chicken breast served with fettuccine pasta in a creamy parmesan Alfredo sauce, finished with parsley and cracked black pepper.",
+			"description": "Tender chicken breast served with fettuccine coated in a rich, creamy parmesan Alfredo sauce, then finished with parsley and cracked black pepper. Smooth, savory, and comforting, this pasta combines juicy chicken with silky sauce and a classic cheesy finish.",
 			"price": 22,
 			"calories": 880,
 			"prep_time": "15-20 min",
@@ -1111,7 +1111,7 @@
 		{
 			"id": 34,
 			"title": "Quattro Formaggi Pizza",
-			"description": "Italian pizza topped with mozzarella, gorgonzola, parmesan, and ricotta for a rich, creamy cheese flavor.",
+			"description": "A rich Italian pizza topped with mozzarella, gorgonzola, parmesan, and ricotta, creating layers of creamy, salty, sharp, and mellow cheese flavor. Baked until bubbling and golden, it is an indulgent choice for anyone who loves bold, cheesy pizza.",
 			"price": 17,
 			"calories": 860,
 			"prep_time": "15-20 min",
@@ -1129,7 +1129,7 @@
 		{
 			"id": 35,
 			"title": "Prosciutto Arugula Pizza",
-			"description": "Wood-fired pizza with tomato sauce, mozzarella, prosciutto, fresh arugula, parmesan flakes, and olive oil.",
+			"description": "Wood-fired pizza topped with tomato sauce, melted mozzarella, delicate prosciutto, fresh peppery arugula, parmesan flakes, and olive oil. The combination brings together salty cured meat, creamy cheese, bright greens, and a crisp, lightly charred crust.",
 			"price": 19,
 			"calories": 890,
 			"prep_time": "15-20 min",
@@ -1147,7 +1147,7 @@
 		{
 			"id": 36,
 			"title": "Loaded Nachos",
-			"description": "Crispy tortilla chips topped with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro.",
+			"description": "Crispy tortilla chips piled high with melted cheese, jalapeños, salsa, sour cream, guacamole, beans, and fresh cilantro. Perfect for sharing, this generous dish combines crunchy, creamy, spicy, tangy, and fresh flavors in every loaded bite.",
 			"price": 12.5,
 			"calories": 720,
 			"prep_time": "8-10 min",
@@ -1165,7 +1165,7 @@
 		{
 			"id": 37,
 			"title": "Spicy Miso Ramen",
-			"description": "A bold ramen bowl with spicy miso broth, noodles, chashu pork, soft-boiled egg, corn, spring onions, and chili oil.",
+			"description": "A bold ramen bowl built on a spicy miso broth with noodles, tender chashu pork, a soft-boiled egg, corn, spring onions, and chili oil. Rich, warming, and deeply savory, it balances fermented umami with gentle sweetness and a satisfying kick of heat.",
 			"price": 18.5,
 			"calories": 870,
 			"prep_time": "15-20 min",
@@ -1183,7 +1183,7 @@
 		{
 			"id": 38,
 			"title": "Tuna Poke Bowl",
-			"description": "Fresh tuna cubes served over rice with avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce.",
+			"description": "Fresh tuna cubes served over rice with creamy avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce. Light yet satisfying, the bowl delivers a colorful mix of clean seafood flavor, freshness, creaminess, crunch, and mild heat.",
 			"price": 17.5,
 			"calories": 630,
 			"prep_time": "10-15 min",
@@ -1201,7 +1201,7 @@
 		{
 			"id": 39,
 			"title": "Grilled Salmon with Lemon Butter",
-			"description": "Tender grilled salmon fillet served with lemon butter sauce, seasonal vegetables, and fresh herbs.",
+			"description": "Tender salmon fillet grilled until lightly charred and juicy, served with a bright lemon butter sauce, seasonal vegetables, and fresh herbs. Rich yet fresh, the dish balances buttery seafood flavor with citrus, herbs, and the natural sweetness of vegetables.",
 			"price": 27.5,
 			"calories": 610,
 			"prep_time": "18-22 min",
@@ -1221,7 +1221,7 @@
 			"title": "Stir-Fried Vegetables",
 			"price": 5,
 			"card_image": "/images/dishes/stirfriedVegetables.jpg",
-			"description": "Vibrant and crisp-tender—a colorful medley of fresh, seasonal vegetables wok-tossed in a light, savory garlic glaze.",
+			"description": "A colorful mix of fresh seasonal vegetables wok-tossed over high heat until vibrant, crisp-tender, and lightly caramelized. Finished in a savory garlic glaze, this side dish delivers fresh texture, aromatic flavor, and a satisfying balance of sweetness and umami.",
 			"dietary": {
 				"vegan": true,
 				"gluten_free": false,
@@ -1235,7 +1235,7 @@
 			"title": "Fried Rice",
 			"price": 5,
 			"card_image": "/images/dishes/friedRice.jpg",
-			"description": "Fragrant, wok-tossed rice stir-fried with scrambled eggs, sweet peas, carrots, and green onions, lightly seasoned with savory soy sauce and sesame oil.",
+			"description": "Fragrant rice wok-tossed with scrambled eggs, sweet peas, carrots, and green onions, then lightly seasoned with soy sauce and sesame oil. Savory, aromatic, and satisfying, this classic side offers a comforting mix of fluffy rice, vegetables, and toasted wok flavor.",
 			"dietary": {
 				"vegan": true,
 				"gluten_free": false,
@@ -1247,7 +1247,7 @@
 		{
 			"id": 40,
 			"title": "Teriyaki Chicken Rice Bowl",
-			"description": "Grilled chicken glazed with teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions.",
+			"description": "Grilled chicken glazed with a glossy sweet-and-savory teriyaki sauce, served over steamed rice with cucumber, edamame, carrots, sesame seeds, and spring onions. Balanced and filling, the bowl combines tender chicken, fresh vegetables, and comforting rice in every bite.",
 			"price": 15.5,
 			"calories": 720,
 			"prep_time": "12-15 min",
@@ -1265,7 +1265,7 @@
 		{
 			"id": 41,
 			"title": "Shrimp Avocado Poke Bowl",
-			"description": "Juicy shrimp served over rice with avocado, cucumber, edamame, seaweed salad, pickled ginger, sesame seeds, and a light citrus soy dressing.",
+			"description": "Juicy shrimp served over rice with creamy avocado, crisp cucumber, edamame, seaweed salad, pickled ginger, and sesame seeds. Finished with a light citrus soy dressing, this refreshing bowl balances sweetness, acidity, umami, creaminess, and fresh texture.",
 			"price": 16.5,
 			"calories": 610,
 			"prep_time": "10-15 min",
@@ -1283,7 +1283,7 @@
 		{
 			"id": 42,
 			"title": "Mango Coconut Chia Pudding",
-			"description": "Creamy coconut chia pudding layered with fresh mango puree, toasted coconut flakes, and seasonal berries.",
+			"description": "Creamy coconut chia pudding layered with smooth fresh mango puree, toasted coconut flakes, and seasonal berries. Light, tropical, and naturally refreshing, this dessert combines silky texture with fruity sweetness, gentle nuttiness, and a bright finish.",
 			"price": 7.5,
 			"calories": 340,
 			"prep_time": "5 min",
@@ -1301,7 +1301,7 @@
 		{
 			"id": 43,
 			"title": "Matcha Cheesecake",
-			"description": "Creamy Japanese-style cheesecake flavored with matcha green tea, served with a light berry sauce and a dusting of powdered sugar.",
+			"description": "A creamy Japanese-style cheesecake infused with the earthy, aromatic flavor of matcha green tea. Served with a light berry sauce and a delicate dusting of powdered sugar, it balances gentle bitterness, rich creaminess, fruity acidity, and soft sweetness.",
 			"price": 8.5,
 			"calories": 430,
 			"prep_time": "5 min",
@@ -1319,7 +1319,7 @@
 		{
 			"id": 44,
 			"title": "Chocolate Lava Cake",
-			"description": "Warm chocolate cake with a molten center, served with vanilla cream, fresh berries, and a light dusting of cocoa.",
+			"description": "A warm chocolate cake with a soft outer crumb and a rich molten chocolate center that flows when cut. Served with vanilla cream, fresh berries, and a light dusting of cocoa, this indulgent dessert balances deep chocolate flavor with cool, fresh accents.",
 			"price": 9.5,
 			"calories": 560,
 			"prep_time": "8-10 min",
@@ -1337,7 +1337,7 @@
 		{
 			"id": 45,
 			"title": "Classic Tiramisu",
-			"description": "Traditional Italian dessert with espresso-soaked ladyfingers, mascarpone cream, cocoa powder, and a smooth coffee finish.",
+			"description": "A traditional Italian dessert layered with espresso-soaked ladyfingers and smooth mascarpone cream, then finished with cocoa powder. Soft, creamy, and aromatic, it offers a balanced combination of coffee, cocoa, gentle sweetness, and a luxurious melt-in-the-mouth texture.",
 			"price": 8,
 			"calories": 470,
 			"prep_time": "5 min",
@@ -1355,7 +1355,7 @@
 		{
 			"id": 46,
 			"title": "Mochi Ice Cream Trio",
-			"description": "Three soft mochi pieces filled with creamy ice cream flavors: matcha, mango, and strawberry.",
+			"description": "Three soft and chewy mochi pieces filled with creamy ice cream in matcha, mango, and strawberry flavors. Each piece offers a different balance of earthy, tropical, and fruity sweetness, wrapped in the distinctive tender texture of traditional mochi dough.",
 			"price": 7.5,
 			"calories": 360,
 			"prep_time": "5 min",
@@ -1373,7 +1373,7 @@
 		{
 			"id": 47,
 			"title": "Baklava with Pistachios",
-			"description": "Flaky Mediterranean pastry layered with honey, crushed pistachios, walnuts, and a light citrus syrup.",
+			"description": "Flaky layers of Mediterranean pastry filled with crushed pistachios and walnuts, baked until crisp and golden, then finished with honey and a light citrus syrup. Sweet, nutty, buttery, and aromatic, every bite offers a delicate crunch and rich syrupy finish.",
 			"price": 7,
 			"calories": 420,
 			"prep_time": "5 min",
@@ -1391,7 +1391,7 @@
 		{
 			"id": 48,
 			"title": "Diavola Pizza",
-			"description": "Spicy Italian pizza topped with tomato sauce, mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil.",
+			"description": "A spicy Italian pizza topped with tomato sauce, melted mozzarella, spicy salami, chili flakes, oregano, and a drizzle of olive oil. Baked until crisp and bubbling, it delivers bold savory flavor, creamy cheese, fragrant herbs, and a lingering touch of heat.",
 			"price": 18,
 			"calories": 910,
 			"prep_time": "15-20 min",
@@ -1409,7 +1409,7 @@
 		{
 			"id": 49,
 			"title": "Carne Asada Tacos",
-			"description": "Grilled marinated beef tacos served on warm corn tortillas with onion, cilantro, lime, salsa verde, and a touch of chili.",
+			"description": "Grilled marinated beef served on warm corn tortillas with onion, fresh cilantro, lime, salsa verde, and a touch of chili. Juicy, smoky, bright, and lightly spicy, these tacos combine classic street-food flavors with fresh herbs and citrus.",
 			"price": 16,
 			"calories": 680,
 			"prep_time": "12-15 min",
@@ -1427,7 +1427,7 @@
 		{
 			"id": 50,
 			"title": "Cabbage Rolls with Smoked Pork",
-			"description": "Traditional cabbage rolls filled with minced pork and rice, slowly cooked in tomato sauce and served with sour cream and fresh herbs.",
+			"description": "Traditional cabbage rolls filled with seasoned minced pork and rice, slowly cooked in a savory tomato sauce until tender and flavorful. Served with sour cream and fresh herbs, they offer a hearty balance of smoky meat, soft cabbage, tangy cream, and comforting spices.",
 			"price": 18.5,
 			"calories": 780,
 			"prep_time": "15-20 min",
@@ -1445,7 +1445,7 @@
 		{
 			"id": 51,
 			"title": "Transylvanian Bean Soup",
-			"description": "Hearty bean soup with smoked pork, vegetables, paprika, and fresh parsley, served warm with rustic bread.",
+			"description": "A hearty Transylvanian-style bean soup made with smoked pork, tender beans, vegetables, paprika, and fresh parsley. Served warm with rustic bread, it is rich, smoky, and comforting, with deep savory flavor and a satisfying homemade character.",
 			"price": 11.5,
 			"calories": 520,
 			"prep_time": "10-15 min",
@@ -1463,7 +1463,7 @@
 		{
 			"id": 52,
 			"title": "Grilled Trout with Polenta",
-			"description": "Fresh grilled trout served with creamy polenta, garlic sauce, lemon, and seasonal greens.",
+			"description": "Fresh trout grilled until tender and lightly charred, served with creamy polenta, aromatic garlic sauce, lemon, and seasonal greens. The dish combines delicate fish, smooth cornmeal, bright citrus, and savory garlic for a balanced Romanian-inspired main course.",
 			"price": 23,
 			"calories": 610,
 			"prep_time": "18-22 min",
@@ -1481,7 +1481,7 @@
 		{
 			"id": 53,
 			"title": "Crispy Pork Knuckle",
-			"description": "Slow-roasted pork knuckle with crispy skin, served with roasted potatoes, pickled cabbage, mustard, and horseradish.",
+			"description": "Slow-roasted pork knuckle cooked until the meat is exceptionally tender and the skin becomes deeply golden and crisp. Served with roasted potatoes, pickled cabbage, mustard, and horseradish, this generous dish delivers rich, savory flavor with sharp, tangy accompaniments.",
 			"price": 28,
 			"calories": 1050,
 			"prep_time": "20-25 min",
@@ -1494,6 +1494,96 @@
 				"vegetarian": false
 			},
 			"restaurant_id": 8,
+			"menu_category_id": 2
+		},
+		{
+			"id": 54,
+			"title": "Edamame",
+			"description": "Steamed young soybeans served warm and lightly seasoned with sea salt. Simple, fresh, and naturally satisfying, this classic Japanese appetizer offers a tender bite, subtle sweetness, and a delicate savory finish that makes it perfect for sharing before your meal.",
+			"price": 6.5,
+			"calories": 190,
+			"prep_time": "5-7 min",
+			"rating": 4.6,
+			"card_image": "/images/dishes/edamame.webp",
+			"cover_image": "/images/dishes/edamame-cover.webp",
+			"dietary": {
+				"vegan": true,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 1,
+			"menu_category_id": 1
+		},
+		{
+			"id": 55,
+			"title": "Yuzu Coconut Panna Cotta",
+			"description": "A silky coconut panna cotta infused with bright yuzu citrus, topped with fresh mango, toasted coconut flakes, and a delicate passion fruit drizzle. Light, creamy, and refreshing, this tropical dessert balances gentle sweetness with vibrant citrus notes and a smooth, elegant finish.",
+			"price": 8,
+			"calories": 360,
+			"prep_time": "5 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/yuzuCoconutPannaCotta.webp",
+			"cover_image": "/images/dishes/yuzuCoconutPannaCotta-cover.webp",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 6,
+			"menu_category_id": 5
+		},
+		{
+			"id": 56,
+			"title": "Elote Street Corn",
+			"description": "Grilled Mexican-style corn coated in a creamy lime dressing, sprinkled with crumbled cheese, chili powder, and fresh cilantro. Smoky, tangy, creamy, and slightly spicy, this classic street-food favorite delivers bold flavor in every bite and works perfectly as a shareable appetizer or side.",
+			"price": 8.5,
+			"calories": 390,
+			"prep_time": "8-10 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/eloteStreetCorn.webp",
+			"cover_image": "/images/dishes/eloteStreetCorn-cover.webp",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": true,
+				"vegetarian": true
+			},
+			"restaurant_id": 4,
+			"menu_category_id": 1
+		},
+		{
+			"id": 57,
+			"title": "Baja Fish Tacos",
+			"description": "Crispy battered white fish served in warm corn tortillas with crunchy cabbage slaw, fresh pico de gallo, avocado crema, cilantro, and a squeeze of lime. Light, crisp, and refreshing with a creamy finish, these tacos balance bright citrus, savory seafood, and mild spice.",
+			"price": 16.5,
+			"calories": 690,
+			"prep_time": "12-15 min",
+			"rating": 4.8,
+			"card_image": "/images/dishes/bajaFishTacos.webp",
+			"cover_image": "/images/dishes/bajaFishTacos-cover.webp",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 4,
+			"menu_category_id": 2
+		},
+		{
+			"id": 58,
+			"title": "Capricciosa Pizza",
+			"description": "A classic Italian pizza topped with rich tomato sauce, melted mozzarella, savory ham, earthy mushrooms, artichoke hearts, black olives, and a touch of oregano. Baked until the crust is crisp and lightly charred, it offers a balanced combination of creamy, salty, tangy, and aromatic flavors in every slice.",
+			"price": 18.5,
+			"calories": 880,
+			"prep_time": "15-20 min",
+			"rating": 4.7,
+			"card_image": "/images/dishes/capricciosaPizza.webp",
+			"cover_image": "/images/dishes/capricciosaPizza-cover.webp",
+			"dietary": {
+				"vegan": false,
+				"gluten_free": false,
+				"vegetarian": false
+			},
+			"restaurant_id": 3,
 			"menu_category_id": 2
 		}
 	]

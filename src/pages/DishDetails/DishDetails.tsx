@@ -86,7 +86,8 @@ export default function DishDetails() {
 					>
 						<MdAddShoppingCart size={22} />
 						<span className={styles.cls}>
-							Add to cart — ${dish?.discounted_price ? dish?.discounted_price?.toFixed(2) : dish?.price?.toFixed(2)}
+							Add to cart — $
+							{dish?.discounted_price != null ? dish?.discounted_price?.toFixed(2) : dish?.price?.toFixed(2)}
 						</span>
 					</Button>
 				</div>

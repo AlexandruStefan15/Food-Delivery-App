@@ -60,12 +60,14 @@
 		color: var(--accent);
 		font-size: 1.11rem;
 		font-weight: 700;
+		margin-right: 0.7rem;
 	}
 
 	.normalPrice {
 		color: var(--secondary-v2);
 		text-decoration: line-through;
 		font-size: 0.8rem;
+		font-weight: 600;
 	}
 
 	.discountedPrice {

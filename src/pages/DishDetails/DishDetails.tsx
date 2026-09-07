@@ -31,7 +31,7 @@ export default function DishDetails() {
 	const featuredDishes = restaurant?.featuredDishesIds || [];
 	const { dishes, dishesAreLoading, dishesError } = useDishesByIds(featuredDishes);
 
-	if (dishIsLoading) return null;
+	if (dishIsLoading || restaurantIsLoading) return null;
 
 	if (dishError) return <p className={styles.cls}>error</p>;
 

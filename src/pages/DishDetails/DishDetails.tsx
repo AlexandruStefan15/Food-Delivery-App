@@ -44,19 +44,21 @@ export default function DishDetails() {
 			<Header />
 			<main className={styles.main}>
 				<div className={styles.imageCol}>
-					<div className={styles.dishImg}>
+					<div className={styles.dishImgWrapper}>
 						<img className={styles.img} src={dish?.card_image} alt="food"></img>
 					</div>
 					<FeaturedDishList dishes={dishes} />
 				</div>
 
 				<div className={styles.content}>
-					<span className={styles.rating}>
-						<span className={styles.cls}>
+					<div className={styles.flexWrapper}>
+						{dish?.discounted_price && <span className={styles.discountBadge}>Discounted</span>}
+						<span className={styles.ratingWrapper}>
 							<IoStar size={15} />
+							<span className={styles.rating}>{dish?.rating} (rating)</span>
 						</span>
-						<span className={styles.cls}>{dish?.rating} (rating)</span>
-					</span>
+					</div>
+
 					<h2 className={styles.dishTitle}>{dish?.title}</h2>
 					<div className={styles.dishInfo}>
 						<span className={styles.caloriesWrapper}>

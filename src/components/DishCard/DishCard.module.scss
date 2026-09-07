@@ -50,7 +50,25 @@
 		-webkit-box-orient: vertical;
 	}
 
+	.priceWrapper {
+		display: flex;
+		gap: 0.5rem;
+		align-items: baseline;
+	}
+
 	.priceTag {
+		color: var(--accent);
+		font-size: 1.11rem;
+		font-weight: 700;
+	}
+
+	.normalPrice {
+		color: var(--secondary-v2);
+		text-decoration: line-through;
+		font-size: 0.8rem;
+	}
+
+	.discountedPrice {
 		font-size: 1.11rem;
 		color: var(--accent);
 		font-weight: 700;
@@ -153,7 +171,7 @@
 	.priceWrapper {
 		font-weight: 600;
 		display: flex;
-		align-items: center;
+		align-items: end;
 		gap: 0.5rem;
 		font-size: 0.875rem;
 	}
@@ -166,6 +184,7 @@
 		text-decoration: line-through;
 		color: var(--secondary-v2);
 		opacity: 0.5;
+		font-size: 0.75rem;
 	}
 }
 
@@ -189,6 +208,7 @@
 	.priceTag {
 		color: var(--generic);
 		font-size: 1.25rem;
+		font-weight: 700;
 	}
 
 	.content {

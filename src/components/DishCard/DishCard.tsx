@@ -32,7 +32,9 @@ export default function DishCard(props: DishCardProps) {
 					<header className={styles.contentHeader}>
 						<div className={styles.titleWrapper}>
 							<h2 className={styles.title}>{data.title}</h2>
-							<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
+							<span className={styles.priceTag}>
+								${data.discounted_price ? data.discounted_price.toFixed(2) : data.price.toFixed(2)}
+							</span>
 						</div>
 						<div className={styles.labels}>
 							{(Object.entries(data.dietary) as [keyof Dietary, boolean][])
@@ -89,7 +91,14 @@ export default function DishCard(props: DishCardProps) {
 				<header className={styles.contentHeader}>
 					<div className={styles.titleWrapper}>
 						<h2 className={styles.title}>{data.title}</h2>
-						<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
+						{data?.discounted_price ? (
+							<div className={styles.priceWrapper}>
+								<span className={styles.normalPrice}>${data.price.toFixed(2)}</span>
+								<span className={styles.discountedPrice}>${data.discounted_price.toFixed(2)}</span>
+							</div>
+						) : (
+							<span className={styles.priceTag}>${data.price.toFixed(2)}</span>
+						)}
 					</div>
 					<Card.Subtitle className={styles.description}>{data.description}</Card.Subtitle>
 					<div className={styles.labels}>

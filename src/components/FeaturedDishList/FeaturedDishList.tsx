@@ -1,5 +1,6 @@
-import React from "react";
+import React, { use } from "react";
 import styles from "./FeaturedDishList.module.scss";
+import { NavLink, useParams } from "react-router";
 
 //types
 import { FeaturedDishListProps } from "./FeaturedDishList.types";
@@ -18,7 +19,9 @@ export default function FeaturedDishList({
 			<ul className={styles.dishList + ` ${className}`}>
 				{dishes.map((dish) => (
 					<li className={styles.listItem}>
-						<DishCard data={dish} variant="featured" />
+						<NavLink style={{ display: "block" }} to={`/restaurants/${dish.restaurant_id}/dishes/${dish.id}`}>
+							<DishCard data={dish} variant="featured" />
+						</NavLink>
 					</li>
 				))}
 			</ul>

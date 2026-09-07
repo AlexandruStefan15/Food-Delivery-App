@@ -66,11 +66,14 @@ export default function DishCard(props: DishCardProps) {
 		const { data, className = "" } = props;
 		return (
 			<Card className={`${styles.dishCard_featured} ${className}`}>
-				<div className={styles.dishImg}>
+				<div className={styles.dishImgWrapper}>
 					<img className={styles.img} src={data.card_image} alt=""></img>
 				</div>
 				<h2 className={styles.dishTitle}>{data.title}</h2>
-				<span className={styles.dishPrice}>${data.price}</span>
+				<div className={styles.priceWrapper}>
+					<span className={styles.dishPrice}>${data.price.toFixed(2)}</span>
+					<span className={styles.dishDiscountedPrice}>${data.discounted_price?.toFixed(2)}</span>
+				</div>
 			</Card>
 		);
 	}

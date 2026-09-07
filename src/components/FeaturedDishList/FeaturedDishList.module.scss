@@ -6,11 +6,14 @@
 
 .dishList {
 	display: flex;
-	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap;
 
 	.listItem {
 		flex: 0 160px;
 	}
+}
+
+.link {
+	display: block;
 }

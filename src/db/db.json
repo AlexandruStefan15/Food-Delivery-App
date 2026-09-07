@@ -638,7 +638,7 @@
 		},
 		{
 			"id": 7,
-			"discounted_price": null,
+			"discounted_price": 27.6,
 			"title": "Pan-Seared Sea Bass",
 			"description": "A delicate fillet of sea bass pan-seared until lightly golden, served over wilted baby spinach with a silky citrus-infused beurre blanc. Finished with microgreens and toasted pine nuts, the dish balances fresh, buttery, and lightly nutty flavors in an elegant seafood main.",
 			"price": 34.5,
@@ -657,7 +657,7 @@
 		},
 		{
 			"id": 8,
-			"discounted_price": null,
+			"discounted_price": 30.4,
 			"title": "Braised Beef Short Rib",
 			"description": "Beef short rib slowly braised for hours in a rich red wine reduction until deeply flavorful and fork-tender. Served over creamy Yukon Gold mashed potatoes with glazed heirloom carrots, this comforting signature dish combines savory meat, smooth potatoes, and subtle sweetness.",
 			"price": 38,
@@ -752,7 +752,7 @@
 		},
 		{
 			"id": 13,
-			"discounted_price": null,
+			"discounted_price": 11.6,
 			"title": "Margherita Pizza",
 			"description": "A timeless Italian pizza topped with bright tomato sauce, fresh mozzarella, fragrant basil, and a drizzle of extra virgin olive oil. Simple, balanced, and full of classic flavor, it combines a crisp crust with creamy cheese and fresh herbal notes.",
 			"price": 14.5,
@@ -809,7 +809,7 @@
 		},
 		{
 			"id": 16,
-			"discounted_price": null,
+			"discounted_price": 14.0,
 			"title": "Beef Birria Tacos",
 			"description": "Tender slow-cooked beef tucked into warm tacos with melted cheese, onion, fresh cilantro, and lime. Served with a rich, deeply savory consommé for dipping, these tacos combine juicy meat, bright herbs, gentle acidity, and indulgent, comforting flavor.",
 			"price": 17.5,
@@ -847,7 +847,7 @@
 		},
 		{
 			"id": 18,
-			"discounted_price": null,
+			"discounted_price": 6.0,
 			"title": "Churros with Chocolate Sauce",
 			"description": "Golden churros fried until crisp on the outside and soft inside, then coated in fragrant cinnamon sugar. Served with warm, rich chocolate sauce for dipping, this dessert combines crunchy texture, gentle spice, sweetness, and silky chocolate in every bite.",
 			"price": 7.5,
@@ -866,7 +866,7 @@
 		},
 		{
 			"id": 19,
-			"discounted_price": null,
+			"discounted_price": 14.4,
 			"title": "Tonkotsu Ramen",
 			"description": "A deeply rich Japanese ramen built on a creamy pork broth and filled with springy noodles, tender chashu pork, a soft-boiled egg, spring onions, and nori. Hearty and savory, the bowl delivers layers of umami, richness, and comforting warmth.",
 			"price": 18,
@@ -923,7 +923,7 @@
 		},
 		{
 			"id": 22,
-			"discounted_price": null,
+			"discounted_price": 13.6,
 			"title": "Salmon Poke Bowl",
 			"description": "Fresh salmon served over a bed of rice with creamy avocado, crisp cucumber, edamame, seaweed, and sesame seeds, all finished with savory poke sauce. Colorful and refreshing, the bowl balances richness, freshness, texture, and clean umami flavor.",
 			"price": 17,
@@ -961,7 +961,7 @@
 		},
 		{
 			"id": 24,
-			"discounted_price": null,
+			"discounted_price": 23.2,
 			"title": "Grilled Sea Bream",
 			"description": "Mediterranean-style sea bream grilled until tender and lightly charred, then finished with lemon, herbs, and extra virgin olive oil. Served with roasted vegetables, this fresh seafood main is bright, aromatic, and balanced with clean, naturally savory flavors.",
 			"price": 29,
@@ -1056,7 +1056,7 @@
 		},
 		{
 			"id": 29,
-			"discounted_price": null,
+			"discounted_price": 8.4,
 			"title": "Papanasi with Sour Cream and Jam",
 			"description": "Traditional Romanian cheese doughnuts fried until golden, with a soft, tender center and lightly crisp exterior. Served with cool sour cream and sweet berry jam, this beloved dessert combines creamy, tangy, fruity, and comforting flavors in every bite.",
 			"price": 10.5,
@@ -1170,7 +1170,7 @@
 		},
 		{
 			"id": 35,
-			"discounted_price": null,
+			"discounted_price": 15.2,
 			"title": "Prosciutto Arugula Pizza",
 			"description": "Wood-fired pizza topped with tomato sauce, melted mozzarella, delicate prosciutto, fresh peppery arugula, parmesan flakes, and olive oil. The combination brings together salty cured meat, creamy cheese, bright greens, and a crisp, lightly charred crust.",
 			"price": 19,
@@ -1208,7 +1208,7 @@
 		},
 		{
 			"id": 37,
-			"discounted_price": null,
+			"discounted_price": 14.8,
 			"title": "Spicy Miso Ramen",
 			"description": "A bold ramen bowl built on a spicy miso broth with noodles, tender chashu pork, a soft-boiled egg, corn, spring onions, and chili oil. Rich, warming, and deeply savory, it balances fermented umami with gentle sweetness and a satisfying kick of heat.",
 			"price": 18.5,
@@ -1227,7 +1227,7 @@
 		},
 		{
 			"id": 38,
-			"discounted_price": null,
+			"discounted_price": 14.0,
 			"title": "Tuna Poke Bowl",
 			"description": "Fresh tuna cubes served over rice with creamy avocado, cucumber, edamame, seaweed salad, sesame seeds, and spicy poke sauce. Light yet satisfying, the bowl delivers a colorful mix of clean seafood flavor, freshness, creaminess, crunch, and mild heat.",
 			"price": 17.5,
@@ -1246,7 +1246,7 @@
 		},
 		{
 			"id": 39,
-			"discounted_price": null,
+			"discounted_price": 22.0,
 			"title": "Grilled Salmon with Lemon Butter",
 			"description": "Tender salmon fillet grilled until lightly charred and juicy, served with a bright lemon butter sauce, seasonal vegetables, and fresh herbs. Rich yet fresh, the dish balances buttery seafood flavor with citrus, herbs, and the natural sweetness of vegetables.",
 			"price": 27.5,
@@ -1333,7 +1333,7 @@
 		},
 		{
 			"id": 42,
-			"discounted_price": null,
+			"discounted_price": 6.0,
 			"title": "Mango Coconut Chia Pudding",
 			"description": "Creamy coconut chia pudding layered with smooth fresh mango puree, toasted coconut flakes, and seasonal berries. Light, tropical, and naturally refreshing, this dessert combines silky texture with fruity sweetness, gentle nuttiness, and a bright finish.",
 			"price": 7.5,
@@ -1371,7 +1371,7 @@
 		},
 		{
 			"id": 44,
-			"discounted_price": null,
+			"discounted_price": 7.6,
 			"title": "Chocolate Lava Cake",
 			"description": "A warm chocolate cake with a soft outer crumb and a rich molten chocolate center that flows when cut. Served with vanilla cream, fresh berries, and a light dusting of cocoa, this indulgent dessert balances deep chocolate flavor with cool, fresh accents.",
 			"price": 9.5,
@@ -1428,7 +1428,7 @@
 		},
 		{
 			"id": 47,
-			"discounted_price": null,
+			"discounted_price": 5.6,
 			"title": "Baklava with Pistachios",
 			"description": "Flaky layers of Mediterranean pastry filled with crushed pistachios and walnuts, baked until crisp and golden, then finished with honey and a light citrus syrup. Sweet, nutty, buttery, and aromatic, every bite offers a delicate crunch and rich syrupy finish.",
 			"price": 7,
@@ -1485,7 +1485,7 @@
 		},
 		{
 			"id": 50,
-			"discounted_price": null,
+			"discounted_price": 14.8,
 			"title": "Cabbage Rolls with Smoked Pork",
 			"description": "Traditional cabbage rolls filled with seasoned minced pork and rice, slowly cooked in a savory tomato sauce until tender and flavorful. Served with sour cream and fresh herbs, they offer a hearty balance of smoky meat, soft cabbage, tangy cream, and comforting spices.",
 			"price": 18.5,
@@ -1542,7 +1542,7 @@
 		},
 		{
 			"id": 53,
-			"discounted_price": null,
+			"discounted_price": 22.4,
 			"title": "Crispy Pork Knuckle",
 			"description": "Slow-roasted pork knuckle cooked until the meat is exceptionally tender and the skin becomes deeply golden and crisp. Served with roasted potatoes, pickled cabbage, mustard, and horseradish, this generous dish delivers rich, savory flavor with sharp, tangy accompaniments.",
 			"price": 28,
@@ -1618,7 +1618,7 @@
 		},
 		{
 			"id": 57,
-			"discounted_price": null,
+			"discounted_price": 13.2,
 			"title": "Baja Fish Tacos",
 			"description": "Crispy battered white fish served in warm corn tortillas with crunchy cabbage slaw, fresh pico de gallo, avocado crema, cilantro, and a squeeze of lime. Light, crisp, and refreshing with a creamy finish, these tacos balance bright citrus, savory seafood, and mild spice.",
 			"price": 16.5,
@@ -1637,7 +1637,7 @@
 		},
 		{
 			"id": 58,
-			"discounted_price": null,
+			"discounted_price": 14.8,
 			"title": "Capricciosa Pizza",
 			"description": "A classic Italian pizza topped with rich tomato sauce, melted mozzarella, savory ham, earthy mushrooms, artichoke hearts, black olives, and a touch of oregano. Baked until the crust is crisp and lightly charred, it offers a balanced combination of creamy, salty, tangy, and aromatic flavors in every slice.",
 			"price": 18.5,
@@ -1656,7 +1656,7 @@
 		},
 		{
 			"id": 59,
-			"discounted_price": null,
+			"discounted_price": 13.6,
 			"title": "Shio Chicken Ramen",
 			"description": "A light Japanese ramen bowl with a clear salted chicken broth, thin noodles, tender grilled chicken slices, soft-boiled egg, bamboo shoots, spring onions, sesame seeds, and crisp nori. Clean, savory, and comforting, it offers a lighter alternative to rich pork-based ramen while still feeling full and satisfying.",
 			"price": 17,

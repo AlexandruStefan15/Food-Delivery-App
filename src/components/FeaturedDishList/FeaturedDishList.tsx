@@ -19,7 +19,7 @@ export default function FeaturedDishList({
 			<ul className={styles.dishList + ` ${className}`}>
 				{dishes.map((dish) => (
 					<li className={styles.listItem}>
-						<NavLink style={{ display: "block" }} to={`/restaurants/${dish.restaurant_id}/dishes/${dish.id}`}>
+						<NavLink className={styles.link} to={`/restaurants/${dish.restaurant_id}/dishes/${dish.id}`}>
 							<DishCard data={dish} variant="featured" />
 						</NavLink>
 					</li>

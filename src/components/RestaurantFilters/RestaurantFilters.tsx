@@ -11,7 +11,7 @@ import RangeInput from "../RangeInput/RangeInput";
 import Button from "../Button/Button";
 import Checkbox from "../Checkbox/Checkbox";
 
-const customerRating = [
+const customerRatings = [
 	{ rating: 4.5, label: "Excellent" },
 	{ rating: 4, label: "Verry good" },
 	{ rating: 3.5, label: "Good" },
@@ -123,10 +123,10 @@ export default function RestaurantFilters({
 					</RestaurantFilters.Section>
 				)}
 				{showCustomerRating && (
-					<RestaurantFilters.Section className={styles.customerRating}>
+					<RestaurantFilters.Section className={styles.customerRatings}>
 						<RestaurantFilters.Title>Customer Rating</RestaurantFilters.Title>
 						<ul className={styles.list}>
-							{customerRating.map(({ rating: ratingValue, label }) => (
+							{customerRatings.map(({ rating: ratingValue, label }) => (
 								<li className={styles.listItem} key={label}>
 									<RestaurantFilters.Checkbox
 										className={classNames.checkbox}
@@ -141,7 +141,7 @@ export default function RestaurantFilters({
 										}}
 									/>
 
-									<RestaurantFilters.Label>
+									<RestaurantFilters.Label className={classNames.label}>
 										{ratingValue}+ &nbsp; ({label})
 									</RestaurantFilters.Label>
 								</li>
@@ -167,7 +167,7 @@ export default function RestaurantFilters({
 											}
 										}}
 									/>
-									<RestaurantFilters.Label>{label}</RestaurantFilters.Label>
+									<RestaurantFilters.Label className={classNames.label}>{label}</RestaurantFilters.Label>
 								</li>
 							))}
 						</ul>
@@ -191,7 +191,7 @@ export default function RestaurantFilters({
 											}
 										}}
 									/>
-									<RestaurantFilters.Label>{category.title}</RestaurantFilters.Label>
+									<RestaurantFilters.Label className={classNames.label}>{category.title}</RestaurantFilters.Label>
 								</li>
 							))}
 						</ul>
@@ -255,7 +255,7 @@ RestaurantFilters.Text = ({ children, className = "", as: Element = "span", ...p
 	);
 };
 
-RestaurantFilters.Title = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"div">) => {
+RestaurantFilters.Title = ({ className = "", children, ...props }: React.ComponentPropsWithoutRef<"h2">) => {
 	return (
 		<h2 className={`${styles.title} ${className}`} {...props}>
 			{children}

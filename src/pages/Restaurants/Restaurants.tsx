@@ -159,11 +159,11 @@ export default function Restaurants() {
 					onClose={() => setIsFilterSidebarOpen(false)}
 				>
 					<RestaurantFilters
+						variant="dark"
 						className={styles.filters}
-						classNames={{ checkbox: styles.checkbox }}
+						classNames={{ checkbox: styles.checkbox, label: styles.label }}
 						onApply={() => setIsFilterSidebarOpen(false)}
 						onReset={() => setIsFilterSidebarOpen(false)}
-						variant="dark"
 						categories={filtersFoodCategories}
 					/>
 				</Sidebar>

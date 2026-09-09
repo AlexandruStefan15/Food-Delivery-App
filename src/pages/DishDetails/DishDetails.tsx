@@ -31,9 +31,11 @@ export default function DishDetails() {
 	const featuredDishes = restaurant?.featuredDishesIds || [];
 	const { dishes, dishesAreLoading, dishesError } = useDishesByIds(featuredDishes);
 
-	if (dishIsLoading || restaurantIsLoading) return null;
+	if (dishIsLoading || restaurantIsLoading || dishesAreLoading) return null;
 
-	if (dishError) return <p className={styles.cls}>error</p>;
+	if (dishError) return <p className={styles.error}>error fetching dish</p>;
+	if (restaurantError) return <p className={styles.error}>error fetching restaurant</p>;
+	if (dishesError) return <p className={styles.error}>error fetching featured dishes</p>;
 
 	if (!Number(dishId)) {
 		return <Navigate to="/404" replace />;
@@ -50,7 +52,7 @@ export default function DishDetails() {
 					<FeaturedDishList dishes={dishes} />
 				</div>
 
-				<div className={styles.content}>
+				<div className={styles.contentCol}>
 					<div className={styles.flexWrapper}>
 						{dish?.discounted_price && <span className={styles.discountBadge}>Discounted</span>}
 						<span className={styles.ratingWrapper}>

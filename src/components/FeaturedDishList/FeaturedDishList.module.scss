@@ -8,9 +8,14 @@
 	display: flex;
 	gap: 1rem;
 	flex-wrap: wrap;
+	container-type: inline-size;
 
 	.listItem {
 		flex: 0 160px;
+
+		@container (width < 500px) {
+			flex: 0 47%;
+		}
 	}
 }
 

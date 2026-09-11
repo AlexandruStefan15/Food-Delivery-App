@@ -43,7 +43,7 @@ export default function OrderCard({ orderData }: OrderCardProps) {
 							</li>
 						))}
 					</ul>
-					<hr style={{ marginBlock: "2rem", height: "3px", background: "var(--primary-v2)", border: "none" }} />
+					<hr className={styles.divider} />
 					<footer className={styles.detailsFooter}>
 						<span className={styles.totalLabel}>Total</span>
 						<span className={styles.totalPrice}>${totalPrice.toFixed(2)}</span>

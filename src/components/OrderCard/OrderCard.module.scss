@@ -1,6 +1,7 @@
 .card {
 	outline: 4px solid var(--border-color);
 	border: none;
+	container-type: inline-size;
 
 	.accordionItem {
 		border: none;
@@ -41,6 +42,10 @@
 	.detailsContainer {
 		padding: 2rem;
 		padding-top: 1rem;
+
+		@container (max-width:500px) {
+			padding: 1rem;
+		}
 	}
 
 	.detailsTitle {
@@ -60,11 +65,27 @@
 		padding-right: 1rem;
 	}
 
+	.divider {
+		margin-block: 2rem;
+		height: 3px;
+		background: var(--primary-v2);
+		border: none;
+
+		@container (max-width:500px) {
+			margin-block: 1rem;
+		}
+	}
+
 	.detailsFooter {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-right: 1rem;
+
+		@container (max-width:500px) {
+			padding-inline: 0.5rem;
+			padding-block: 0.25rem;
+		}
 	}
 
 	.totalLabel {
@@ -77,6 +98,10 @@
 		color: var(--accent);
 		font-size: 1.5rem;
 		font-weight: 700;
+
+		@container (max-width:500px) {
+			font-size: 22px;
+		}
 	}
 }
 
@@ -99,6 +124,7 @@
 		border-radius: 50%;
 		overflow: hidden;
 		aspect-ratio: 1/1;
+		flex-shrink: 0;
 
 		.img {
 			height: 100%;
@@ -115,6 +141,15 @@
 
 	.productTitle {
 		font-size: 1rem;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 1;
+		line-clamp: 1;
+		overflow: hidden;
+	}
+
+	.quantity {
+		flex-shrink: 0;
 	}
 
 	.productPrice {
@@ -135,10 +170,13 @@
 	font-size: 0.9rem;
 	font-weight: 600;
 	line-height: 1;
-
 	transition:
 		background-color 0.2s ease,
 		color 0.2s ease;
+
+	@container (max-width:450px) {
+		display: none;
+	}
 }
 
 .statusIcon {

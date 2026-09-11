@@ -3,9 +3,6 @@ import styles from "./NavigationSidebar.module.scss";
 
 import Sidebar from "../Sidebar/Sidebar";
 
-//svgs
-import { InlineSvgs } from "../../assets/svgs";
-
 //types
 import type { NavigationSidebarProps, NavigationItem } from "./NavigationSidebar.types";
 
@@ -19,7 +16,7 @@ const defaultNavigation: NavigationItem[] = [
 	{ label: "Home", path: "/" },
 	{ label: "Restaurants", path: "/restaurants" },
 	{ label: "Search", path: "/search" },
-	{ label: "My orders", path: "/my-orders" },
+	{ label: "My orders", path: "/orders" },
 	{ label: "Contact", path: "/contact" },
 ];
 

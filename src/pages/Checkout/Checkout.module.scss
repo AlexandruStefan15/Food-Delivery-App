@@ -1,3 +1,5 @@
+@use "../../styles//breakpoints" as media;
+
 .main {
 	position: relative;
 	display: grid;
@@ -8,6 +10,11 @@
 	margin-block: 3rem;
 	min-height: calc(100vh - 70px);
 	gap: 2.5rem;
+
+	@include media.tablet_lg {
+		grid-template-columns: 1fr;
+		min-height: none;
+	}
 
 	.checkoutAccordion {
 		gap: 0.75rem;
@@ -46,6 +53,10 @@
 			.deliveryAddressList {
 				display: flex;
 				gap: 1rem;
+
+				@include media.tablet_sm {
+					flex-direction: column;
+				}
 			}
 
 			.listItem {

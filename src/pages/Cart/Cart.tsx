@@ -61,13 +61,15 @@ const ItemList = function ({ items, className = "" }: ItemListProps) {
 			<h2 className={styles.title}>
 				Your Cart <span className={styles.itemsCount}>({items.length === 1 ? `1 item` : `${items.length} items`})</span>
 			</h2>
-			<ul className={styles.list}>
-				{items.map((item) => (
-					<li className={styles.listItem} key={item.id}>
-						<DishCard variant="cart" data={item} />
-					</li>
-				))}
-			</ul>
+			{items.length > 0 && (
+				<ul className={styles.list}>
+					{items.map((item) => (
+						<li className={styles.listItem} key={item.id}>
+							<DishCard variant="cart" data={item} />
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };

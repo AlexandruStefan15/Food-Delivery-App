@@ -101,6 +101,7 @@
 			.icon {
 				width: 15px;
 				fill: var(--accent);
+				flex-shrink: 0;
 			}
 		}
 	}

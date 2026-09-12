@@ -24,6 +24,7 @@ npm start
 <br>
 
 ![Overview photo1](src/design/design.png)
+![Overview photo1](src/design2/design.png)
 
 
 
